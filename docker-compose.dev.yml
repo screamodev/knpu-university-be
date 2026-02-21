@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile
-    image: school-erp-strapi:latest
+    image: knpu-university-be:latest
     restart: unless-stopped
     env_file: .env
     environment:
@@ -11,7 +11,7 @@ services:
       DATABASE_CLIENT: ${DATABASE_CLIENT:-postgres}
       DATABASE_HOST: db
       DATABASE_PORT: ${DATABASE_PORT:-5432}
-      DATABASE_NAME: ${DATABASE_NAME:-school_erp}
+      DATABASE_NAME: ${DATABASE_NAME:-knpu_university_be}
       DATABASE_USERNAME: ${DATABASE_USERNAME:-postgres}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD:-postgres}
       APP_KEYS: ${APP_KEYS}
@@ -33,7 +33,7 @@ services:
     ports:
       - "1337:1337"
     networks:
-      - school-erp
+      - knpu-university-be
     depends_on:
       db:
         condition: service_healthy
@@ -44,11 +44,11 @@ services:
     environment:
       POSTGRES_USER: ${DATABASE_USERNAME:-postgres}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-postgres}
-      POSTGRES_DB: ${DATABASE_NAME:-school_erp}
+      POSTGRES_DB: ${DATABASE_NAME:-knpu_university_be}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - school-erp
+      - knpu-university-be
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
       interval: 5s
@@ -59,6 +59,6 @@ volumes:
   postgres_data:
 
 networks:
-  school-erp:
-    name: school-erp-be
+  knpu-university-be:
+    name: knpu-university-be
     driver: bridge
