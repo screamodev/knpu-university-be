@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programmes",
+  "info": {
+    "singularName": "programme",
+    "pluralName": "programmes",
+    "displayName": "Programme",
+    "description": "Study programme (bachelor, master, graduate)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleEn": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": ["bachelor", "master", "graduate"],
+      "required": true
+    },
+    "faculty": {
+      "type": "string"
+    },
+    "facultyEn": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "descriptionEn": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "contentEn": {
+      "type": "richtext"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "duration": {
+      "type": "string"
+    },
+    "formOfStudy": {
+      "type": "string"
+    }
+  }
+}
