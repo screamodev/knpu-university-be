@@ -1,0 +1,33 @@
+---
+description: Code style rules - clean and readable code
+globs: ["**/*.ts"]
+alwaysApply: true
+---
+
+# Code Style
+
+## General Principles
+
+- Code must be clean and easy to understand
+- Readability is more important than brevity — DO NOT shorten code if it hurts readability
+- Use descriptive names for variables and functions
+- Avoid abbreviations unless they are commonly accepted (e.g., `id`, `url`, `env`)
+
+## Naming Conventions
+
+- Variables and functions: `camelCase`
+- Types and interfaces: `PascalCase`
+- Constants: `UPPER_SNAKE_CASE` for global, `camelCase` for local
+- Files: `kebab-case.ts` or descriptive name based on purpose
+- TypeBox schemas: use descriptive, self-explanatory names ending with `Schema`. Schema files should be named `*Schema.ts`
+
+## Formatting
+
+- Use Prettier for formatting (config already exists in the project)
+- One blank line between logical code blocks
+- Group imports: external libraries first, then internal modules
+
+## Comments
+
+- Write comments only when code is not self-documenting
+- Use JSDoc for public functions and exported types

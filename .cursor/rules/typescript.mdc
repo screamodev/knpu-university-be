@@ -1,0 +1,42 @@
+---
+description: TypeScript rules - strict typing
+globs: ["**/*.ts"]
+alwaysApply: true
+---
+
+# TypeScript
+
+## Strict Typing
+
+- All code must be strictly typed
+- NEVER use `any` — use `unknown` if the type is unknown
+- Avoid `@ts-ignore` and `@ts-expect-error` — fix the problem instead of suppressing it
+- Always specify return type for public functions
+
+## Types vs Interfaces
+
+- Use `type` for union types, mapped types, utility types
+- Use `interface` for objects that can be extended
+- Be consistent within a module
+
+## Type Imports
+
+- Use `import type` for importing only types — this improves tree-shaking
+
+## Generics
+
+- Use descriptive names for generics: `TUser`, `TResponse`, `TInput`
+- Or standard names: `T`, `K`, `V` for simple cases
+
+## Validation Schemas
+
+The project uses TypeBox and Zod for validation. Extract types from schemas using `Static` (TypeBox) or `z.infer` (Zod).
+
+## Nullable Types
+
+- Use `null` for explicit "absence of value"
+- Use `undefined` for "not set" or optional fields
+
+## Utility Types
+
+Use built-in TypeScript utility types: `Partial`, `Pick`, `Omit`, `Required`, etc.
