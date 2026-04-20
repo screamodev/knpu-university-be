@@ -1,29 +1,65 @@
 services:
   postgres:
     image: postgres:16-alpine
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: ${DATABASE_USERNAME}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_DB: ${DB_DATABASE:-knpu_university}
+      POSTGRES_USER: ${DB_USER:-directus}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-directus}
     volumes:
-      - postgres-data:/var/lib/postgresql/data
-    env_file:
-      - .env
-
-  strapi:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
-    depends_on:
-      - postgres
-    env_file:
-      - .env
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-directus} -d ${DB_DATABASE:-knpu_university}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    # Expose on localhost only so tools like psql can connect during development.
     ports:
-      - "1337:1337"
+      - "127.0.0.1:5432:5432"
+
+  directus:
+    image: directus/directus:11
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8055:8055"
+    environment:
+      KEY: ${KEY}
+      SECRET: ${SECRET}
+
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:8055}
+
+      DB_CLIENT: ${DB_CLIENT:-pg}
+      DB_HOST: ${DB_HOST:-postgres}
+      DB_PORT: ${DB_PORT:-5432}
+      DB_DATABASE: ${DB_DATABASE:-knpu_university}
+      DB_USER: ${DB_USER:-directus}
+      DB_PASSWORD: ${DB_PASSWORD:-directus}
+
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@example.com}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin}
+
+      CORS_ENABLED: ${CORS_ENABLED:-true}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
+
+      WEBSOCKETS_ENABLED: ${WEBSOCKETS_ENABLED:-true}
+
+      ACCESS_TOKEN_TTL: ${ACCESS_TOKEN_TTL:-15m}
+      REFRESH_TOKEN_TTL: ${REFRESH_TOKEN_TTL:-7d}
+
+      # Local file storage driver; uploads land in the named volume below.
+      STORAGE_LOCATIONS: local
+      STORAGE_LOCAL_DRIVER: local
+      STORAGE_LOCAL_ROOT: /directus/uploads
     volumes:
-      - ./src:/opt/app/src
-      - strapi-uploads:/opt/app/public/uploads
+      - uploads:/directus/uploads
+      - extensions:/directus/extensions
+      - ./database/migrations:/directus/database/migrations
+      - ./snapshots:/directus/snapshots
 
 volumes:
-  postgres-data:
-  strapi-uploads:
+  pg_data:
+  uploads:
+  extensions:

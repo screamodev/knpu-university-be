@@ -1,0 +1,2055 @@
+version: 1
+directus: 11.1.2
+vendor: postgres
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Collections
+# ──────────────────────────────────────────────────────────────────────────────
+collections:
+  - collection: categories
+    meta:
+      collection: categories
+      icon: bookmark
+      note: "Categories used to group articles (no draft/publish workflow)."
+      display_template: "{{ name }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 1
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: categories
+
+  - collection: articles
+    meta:
+      collection: articles
+      icon: newspaper
+      note: "News articles. Uses draft/published/archived status workflow."
+      display_template: "{{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 2
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: articles
+
+  - collection: articles_files
+    meta:
+      collection: articles_files
+      icon: import_export
+      note: "Junction: articles ↔ directus_files (attachments)."
+      display_template: null
+      hidden: true
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: null
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: articles_files
+
+  - collection: events
+    meta:
+      collection: events
+      icon: event
+      note: "Calendar/news events. Uses draft/published/archived status workflow."
+      display_template: "{{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 3
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: events
+
+  - collection: partners
+    meta:
+      collection: partners
+      icon: handshake
+      note: "Partner organizations. Uses draft/published/archived status workflow."
+      display_template: "{{ name }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 4
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: partners
+
+  - collection: programmes
+    meta:
+      collection: programmes
+      icon: school
+      note: "Academic programmes (bachelor/master/graduate). Uses status workflow."
+      display_template: "{{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 5
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: programmes
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields
+# ──────────────────────────────────────────────────────────────────────────────
+fields:
+  # ── categories ──────────────────────────────────────────────────────────────
+  - collection: categories
+    field: id
+    type: uuid
+    meta:
+      collection: categories
+      field: id
+      special:
+        - uuid
+      interface: input
+      options: null
+      display: null
+      display_options: null
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+      validation: null
+      validation_message: null
+    schema:
+      name: id
+      table: categories
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+      foreign_key_column: null
+      foreign_key_table: null
+
+  - collection: categories
+    field: name
+    type: string
+    meta:
+      collection: categories
+      field: name
+      interface: input
+      required: true
+      sort: 2
+      width: full
+      translations: null
+    schema:
+      name: name
+      table: categories
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: categories
+    field: nameEn
+    type: string
+    meta:
+      collection: categories
+      field: nameEn
+      interface: input
+      required: false
+      sort: 3
+      width: full
+      translations:
+        - language: en-US
+          translation: Name (English)
+    schema:
+      name: nameEn
+      table: categories
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: categories
+    field: slug
+    type: string
+    meta:
+      collection: categories
+      field: slug
+      interface: input
+      options:
+        slug: true
+        trim: true
+      required: true
+      sort: 4
+      width: full
+      note: "URL-safe identifier, auto-generated from name."
+    schema:
+      name: slug
+      table: categories
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: categories
+    field: date_created
+    type: timestamp
+    meta:
+      collection: categories
+      field: date_created
+      special:
+        - date-created
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 90
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_created
+      table: categories
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: categories
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: categories
+      field: date_updated
+      special:
+        - date-updated
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 91
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_updated
+      table: categories
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # Reverse o2m alias so admins can see articles listed under a category.
+  - collection: categories
+    field: articles
+    type: alias
+    meta:
+      collection: categories
+      field: articles
+      special:
+        - o2m
+      interface: list-o2m
+      sort: 10
+      width: full
+    schema: null
+
+  # ── articles ────────────────────────────────────────────────────────────────
+  - collection: articles
+    field: id
+    type: uuid
+    meta:
+      collection: articles
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: articles
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: articles
+    field: status
+    type: string
+    meta:
+      collection: articles
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: articles
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: title
+    type: string
+    meta:
+      collection: articles
+      field: title
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: title
+      table: articles
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: titleEn
+    type: string
+    meta:
+      collection: articles
+      field: titleEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: titleEn
+      table: articles
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: slug
+    type: string
+    meta:
+      collection: articles
+      field: slug
+      interface: input
+      options:
+        slug: true
+        trim: true
+      required: true
+      sort: 5
+      width: full
+    schema:
+      name: slug
+      table: articles
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: excerpt
+    type: text
+    meta:
+      collection: articles
+      field: excerpt
+      interface: input-multiline
+      sort: 6
+      width: full
+    schema:
+      name: excerpt
+      table: articles
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: excerptEn
+    type: text
+    meta:
+      collection: articles
+      field: excerptEn
+      interface: input-multiline
+      sort: 7
+      width: full
+    schema:
+      name: excerptEn
+      table: articles
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: content
+    type: text
+    meta:
+      collection: articles
+      field: content
+      interface: input-rich-text-md
+      sort: 8
+      width: full
+    schema:
+      name: content
+      table: articles
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: contentEn
+    type: text
+    meta:
+      collection: articles
+      field: contentEn
+      interface: input-rich-text-md
+      sort: 9
+      width: full
+    schema:
+      name: contentEn
+      table: articles
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: author
+    type: string
+    meta:
+      collection: articles
+      field: author
+      interface: input
+      sort: 10
+      width: half
+    schema:
+      name: author
+      table: articles
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: date_published
+    type: timestamp
+    meta:
+      collection: articles
+      field: date_published
+      interface: datetime
+      sort: 11
+      width: half
+      display: datetime
+    schema:
+      name: date_published
+      table: articles
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: category
+    type: uuid
+    meta:
+      collection: articles
+      field: category
+      special:
+        - m2o
+      interface: select-dropdown-m2o
+      options:
+        template: "{{ name }}"
+      display: related-values
+      display_options:
+        template: "{{ name }}"
+      sort: 12
+      width: half
+    schema:
+      name: category
+      table: articles
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: categories
+
+  - collection: articles
+    field: cover
+    type: uuid
+    meta:
+      collection: articles
+      field: cover
+      special:
+        - file
+      interface: file-image
+      display: image
+      sort: 13
+      width: half
+    schema:
+      name: cover
+      table: articles
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: articles
+    field: attachments
+    type: alias
+    meta:
+      collection: articles
+      field: attachments
+      special:
+        - m2m
+        - files
+      interface: files
+      sort: 14
+      width: full
+    schema: null
+
+  - collection: articles
+    field: date_created
+    type: timestamp
+    meta:
+      collection: articles
+      field: date_created
+      special:
+        - date-created
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 90
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_created
+      table: articles
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: articles
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: articles
+      field: date_updated
+      special:
+        - date-updated
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 91
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_updated
+      table: articles
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── articles_files (M2M junction) ───────────────────────────────────────────
+  - collection: articles_files
+    field: id
+    type: integer
+    meta:
+      collection: articles_files
+      field: id
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: articles_files
+      data_type: integer
+      default_value: "nextval('articles_files_id_seq'::regclass)"
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: true
+
+  - collection: articles_files
+    field: articles_id
+    type: uuid
+    meta:
+      collection: articles_files
+      field: articles_id
+      interface: select-dropdown-m2o
+      sort: 2
+      width: full
+      hidden: true
+    schema:
+      name: articles_id
+      table: articles_files
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: articles
+
+  - collection: articles_files
+    field: directus_files_id
+    type: uuid
+    meta:
+      collection: articles_files
+      field: directus_files_id
+      interface: file
+      sort: 3
+      width: full
+      hidden: true
+    schema:
+      name: directus_files_id
+      table: articles_files
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  # ── events ──────────────────────────────────────────────────────────────────
+  - collection: events
+    field: id
+    type: uuid
+    meta:
+      collection: events
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: events
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: events
+    field: status
+    type: string
+    meta:
+      collection: events
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: events
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: title
+    type: string
+    meta:
+      collection: events
+      field: title
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: title
+      table: events
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: titleEn
+    type: string
+    meta:
+      collection: events
+      field: titleEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: titleEn
+      table: events
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: slug
+    type: string
+    meta:
+      collection: events
+      field: slug
+      interface: input
+      options:
+        slug: true
+        trim: true
+      required: true
+      sort: 5
+      width: full
+    schema:
+      name: slug
+      table: events
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: description
+    type: text
+    meta:
+      collection: events
+      field: description
+      interface: input-multiline
+      sort: 6
+      width: full
+    schema:
+      name: description
+      table: events
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: descriptionEn
+    type: text
+    meta:
+      collection: events
+      field: descriptionEn
+      interface: input-multiline
+      sort: 7
+      width: full
+    schema:
+      name: descriptionEn
+      table: events
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: content
+    type: text
+    meta:
+      collection: events
+      field: content
+      interface: input-rich-text-md
+      sort: 8
+      width: full
+    schema:
+      name: content
+      table: events
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: contentEn
+    type: text
+    meta:
+      collection: events
+      field: contentEn
+      interface: input-rich-text-md
+      sort: 9
+      width: full
+    schema:
+      name: contentEn
+      table: events
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: date
+    type: timestamp
+    meta:
+      collection: events
+      field: date
+      interface: datetime
+      display: datetime
+      required: true
+      sort: 10
+      width: half
+    schema:
+      name: date
+      table: events
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: endDate
+    type: timestamp
+    meta:
+      collection: events
+      field: endDate
+      interface: datetime
+      display: datetime
+      sort: 11
+      width: half
+    schema:
+      name: endDate
+      table: events
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: location
+    type: string
+    meta:
+      collection: events
+      field: location
+      interface: input
+      sort: 12
+      width: half
+    schema:
+      name: location
+      table: events
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: locationEn
+    type: string
+    meta:
+      collection: events
+      field: locationEn
+      interface: input
+      sort: 13
+      width: half
+    schema:
+      name: locationEn
+      table: events
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: tag
+    type: string
+    meta:
+      collection: events
+      field: tag
+      interface: input
+      sort: 14
+      width: half
+    schema:
+      name: tag
+      table: events
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: tagEn
+    type: string
+    meta:
+      collection: events
+      field: tagEn
+      interface: input
+      sort: 15
+      width: half
+    schema:
+      name: tagEn
+      table: events
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: cover
+    type: uuid
+    meta:
+      collection: events
+      field: cover
+      special:
+        - file
+      interface: file-image
+      display: image
+      sort: 16
+      width: full
+    schema:
+      name: cover
+      table: events
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: events
+    field: date_created
+    type: timestamp
+    meta:
+      collection: events
+      field: date_created
+      special:
+        - date-created
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 90
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_created
+      table: events
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: events
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: events
+      field: date_updated
+      special:
+        - date-updated
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 91
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_updated
+      table: events
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── partners ────────────────────────────────────────────────────────────────
+  - collection: partners
+    field: id
+    type: uuid
+    meta:
+      collection: partners
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: partners
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: partners
+    field: status
+    type: string
+    meta:
+      collection: partners
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: partners
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: name
+    type: string
+    meta:
+      collection: partners
+      field: name
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: name
+      table: partners
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: nameEn
+    type: string
+    meta:
+      collection: partners
+      field: nameEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: nameEn
+      table: partners
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: slug
+    type: string
+    meta:
+      collection: partners
+      field: slug
+      interface: input
+      options:
+        slug: true
+        trim: true
+      required: true
+      sort: 5
+      width: full
+    schema:
+      name: slug
+      table: partners
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: description
+    type: text
+    meta:
+      collection: partners
+      field: description
+      interface: input-multiline
+      sort: 6
+      width: full
+    schema:
+      name: description
+      table: partners
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: descriptionEn
+    type: text
+    meta:
+      collection: partners
+      field: descriptionEn
+      interface: input-multiline
+      sort: 7
+      width: full
+    schema:
+      name: descriptionEn
+      table: partners
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: website
+    type: string
+    meta:
+      collection: partners
+      field: website
+      interface: input
+      options:
+        iconRight: link
+        placeholder: "https://example.com"
+      sort: 8
+      width: full
+    schema:
+      name: website
+      table: partners
+      data_type: varchar
+      default_value: null
+      max_length: 500
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: country
+    type: string
+    meta:
+      collection: partners
+      field: country
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: country
+      table: partners
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: countryEn
+    type: string
+    meta:
+      collection: partners
+      field: countryEn
+      interface: input
+      sort: 10
+      width: half
+    schema:
+      name: countryEn
+      table: partners
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: logo
+    type: uuid
+    meta:
+      collection: partners
+      field: logo
+      special:
+        - file
+      interface: file-image
+      display: image
+      sort: 11
+      width: full
+    schema:
+      name: logo
+      table: partners
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: partners
+    field: date_created
+    type: timestamp
+    meta:
+      collection: partners
+      field: date_created
+      special:
+        - date-created
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 90
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_created
+      table: partners
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: partners
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: partners
+      field: date_updated
+      special:
+        - date-updated
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 91
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_updated
+      table: partners
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── programmes ──────────────────────────────────────────────────────────────
+  - collection: programmes
+    field: id
+    type: uuid
+    meta:
+      collection: programmes
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: programmes
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: programmes
+    field: status
+    type: string
+    meta:
+      collection: programmes
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: programmes
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: title
+    type: string
+    meta:
+      collection: programmes
+      field: title
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: title
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: titleEn
+    type: string
+    meta:
+      collection: programmes
+      field: titleEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: titleEn
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: slug
+    type: string
+    meta:
+      collection: programmes
+      field: slug
+      interface: input
+      options:
+        slug: true
+        trim: true
+      required: true
+      sort: 5
+      width: full
+    schema:
+      name: slug
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: level
+    type: string
+    meta:
+      collection: programmes
+      field: level
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Bachelor
+            value: bachelor
+          - text: Master
+            value: master
+          - text: Graduate
+            value: graduate
+      display: labels
+      display_options:
+        choices:
+          - text: Bachelor
+            value: bachelor
+          - text: Master
+            value: master
+          - text: Graduate
+            value: graduate
+      required: true
+      sort: 6
+      width: half
+    schema:
+      name: level
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: faculty
+    type: string
+    meta:
+      collection: programmes
+      field: faculty
+      interface: input
+      sort: 7
+      width: half
+    schema:
+      name: faculty
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: facultyEn
+    type: string
+    meta:
+      collection: programmes
+      field: facultyEn
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: facultyEn
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: description
+    type: text
+    meta:
+      collection: programmes
+      field: description
+      interface: input-multiline
+      sort: 9
+      width: full
+    schema:
+      name: description
+      table: programmes
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: descriptionEn
+    type: text
+    meta:
+      collection: programmes
+      field: descriptionEn
+      interface: input-multiline
+      sort: 10
+      width: full
+    schema:
+      name: descriptionEn
+      table: programmes
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: content
+    type: text
+    meta:
+      collection: programmes
+      field: content
+      interface: input-rich-text-md
+      sort: 11
+      width: full
+    schema:
+      name: content
+      table: programmes
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: contentEn
+    type: text
+    meta:
+      collection: programmes
+      field: contentEn
+      interface: input-rich-text-md
+      sort: 12
+      width: full
+    schema:
+      name: contentEn
+      table: programmes
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: duration
+    type: string
+    meta:
+      collection: programmes
+      field: duration
+      interface: input
+      sort: 13
+      width: half
+      note: "Free-form, e.g. '4 years'."
+    schema:
+      name: duration
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: formOfStudy
+    type: string
+    meta:
+      collection: programmes
+      field: formOfStudy
+      interface: input
+      sort: 14
+      width: half
+      note: "Free-form, e.g. 'Full-time' / 'Part-time'."
+    schema:
+      name: formOfStudy
+      table: programmes
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: cover
+    type: uuid
+    meta:
+      collection: programmes
+      field: cover
+      special:
+        - file
+      interface: file-image
+      display: image
+      sort: 15
+      width: full
+    schema:
+      name: cover
+      table: programmes
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: programmes
+    field: date_created
+    type: timestamp
+    meta:
+      collection: programmes
+      field: date_created
+      special:
+        - date-created
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 90
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_created
+      table: programmes
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: programmes
+    field: date_updated
+    type: timestamp
+    meta:
+      collection: programmes
+      field: date_updated
+      special:
+        - date-updated
+      interface: datetime
+      readonly: true
+      hidden: true
+      sort: 91
+      width: half
+      display: datetime
+      display_options:
+        relative: true
+    schema:
+      name: date_updated
+      table: programmes
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Relations
+# ──────────────────────────────────────────────────────────────────────────────
+relations:
+  # articles.category → categories (M2O, reverse o2m = categories.articles)
+  - collection: articles
+    field: category
+    related_collection: categories
+    meta:
+      many_collection: articles
+      many_field: category
+      one_collection: categories
+      one_field: articles
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: articles
+      column: category
+      foreign_key_table: categories
+      foreign_key_column: id
+      constraint_name: articles_category_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # articles.cover → directus_files (M2O file)
+  - collection: articles
+    field: cover
+    related_collection: directus_files
+    meta:
+      many_collection: articles
+      many_field: cover
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: articles
+      column: cover
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: articles_cover_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # events.cover → directus_files (M2O file)
+  - collection: events
+    field: cover
+    related_collection: directus_files
+    meta:
+      many_collection: events
+      many_field: cover
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: events
+      column: cover
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: events_cover_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # partners.logo → directus_files (M2O file)
+  - collection: partners
+    field: logo
+    related_collection: directus_files
+    meta:
+      many_collection: partners
+      many_field: logo
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: partners
+      column: logo
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: partners_logo_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # programmes.cover → directus_files (M2O file)
+  - collection: programmes
+    field: cover
+    related_collection: directus_files
+    meta:
+      many_collection: programmes
+      many_field: cover
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: programmes
+      column: cover
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: programmes_cover_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # articles ↔ directus_files M2M via articles_files junction
+  - collection: articles_files
+    field: articles_id
+    related_collection: articles
+    meta:
+      many_collection: articles_files
+      many_field: articles_id
+      one_collection: articles
+      one_field: attachments
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: directus_files_id
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: articles_files
+      column: articles_id
+      foreign_key_table: articles
+      foreign_key_column: id
+      constraint_name: articles_files_articles_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  - collection: articles_files
+    field: directus_files_id
+    related_collection: directus_files
+    meta:
+      many_collection: articles_files
+      many_field: directus_files_id
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: articles_id
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: articles_files
+      column: directus_files_id
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: articles_files_directus_files_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
