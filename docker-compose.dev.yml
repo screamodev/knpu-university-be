@@ -48,6 +48,7 @@ services:
 
       ACCESS_TOKEN_TTL: ${ACCESS_TOKEN_TTL:-15m}
       REFRESH_TOKEN_TTL: ${REFRESH_TOKEN_TTL:-7d}
+      SEED_CONTENT: ${SEED_CONTENT:-false}
 
       # Local file storage driver; uploads land in the named volume below.
       STORAGE_LOCATIONS: local

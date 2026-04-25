@@ -156,6 +156,406 @@ collections:
     schema:
       name: programmes
 
+  - collection: memorial_entries
+    meta:
+      collection: memorial_entries
+      icon: groups
+      note: "Memorial entries shown on the memorial page."
+      display_template: "{{ name }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 6
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: memorial_entries
+
+  - collection: gallery_categories
+    meta:
+      collection: gallery_categories
+      icon: photo_library
+      note: "Gallery categories used for filtering gallery items."
+      display_template: "{{ name }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 7
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: gallery_categories
+
+  - collection: gallery_items
+    meta:
+      collection: gallery_items
+      icon: image
+      note: "Gallery items shown in category-specific grids."
+      display_template: "{{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 8
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: gallery_items
+
+  - collection: faculties
+    meta:
+      collection: faculties
+      icon: account_balance
+      note: "Faculties with localized metadata and aggregated counters."
+      display_template: "{{ name }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 9
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: faculties
+
+  - collection: faculty_departments
+    meta:
+      collection: faculty_departments
+      icon: domain
+      note: "Departments assigned to faculties."
+      display_template: "{{ name }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 10
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: faculty_departments
+
+  - collection: vacancies
+    meta:
+      collection: vacancies
+      icon: work
+      note: "Student vacancies list with localized company and position."
+      display_template: "{{ company }} — {{ position }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 11
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: vacancies
+
+  - collection: student_schedule_documents
+    meta:
+      collection: student_schedule_documents
+      icon: calendar_month
+      note: "Student schedule documents with faculty/group/semester metadata."
+      display_template: "{{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 12
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: student_schedule_documents
+
+  - collection: education_schedule_periods
+    meta:
+      collection: education_schedule_periods
+      icon: date_range
+      note: "Academic schedule periods by semester and period type."
+      display_template: "{{ name }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 13
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: education_schedule_periods
+
+  - collection: education_schedule_key_dates
+    meta:
+      collection: education_schedule_key_dates
+      icon: event_note
+      note: "Key academic dates grouped by academic year."
+      display_template: "{{ event }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 14
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: education_schedule_key_dates
+
+  - collection: admission_open_days
+    meta:
+      collection: admission_open_days
+      icon: event_available
+      note: "Admissions open-day announcements."
+      display_template: "{{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 15
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: admission_open_days
+
+  - collection: admission_exam_programs
+    meta:
+      collection: admission_exam_programs
+      icon: description
+      note: "Admissions exam programs with downloadable files."
+      display_template: "{{ subject }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 16
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: admission_exam_programs
+
+  - collection: university_orders
+    meta:
+      collection: university_orders
+      icon: gavel
+      note: "University orders and circulars with attached documents."
+      display_template: "{{ orderNumber }} — {{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 17
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: university_orders
+
+  - collection: prozorro_procurements
+    meta:
+      collection: prozorro_procurements
+      icon: request_quote
+      note: "Procurement entries with external Prozorro links."
+      display_template: "{{ tenderNumber }} — {{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 18
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: prozorro_procurements
+
+  - collection: financial_reports
+    meta:
+      collection: financial_reports
+      icon: account_balance_wallet
+      note: "Annual financial reports with figures and file attachments."
+      display_template: "{{ reportYear }} — {{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 19
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: financial_reports
+
+  - collection: science_defenses
+    meta:
+      collection: science_defenses
+      icon: workspace_premium
+      note: "Dissertation defense announcements and outcomes."
+      display_template: "{{ candidateName }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 20
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: science_defenses
+
+  - collection: science_conferences
+    meta:
+      collection: science_conferences
+      icon: groups
+      note: "Scientific conferences with upcoming/past segmentation."
+      display_template: "{{ title }}"
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: status
+      archive_app_filter: true
+      archive_value: archived
+      unarchive_value: draft
+      sort_field: order
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: 21
+      group: null
+      collapse: open
+      preview_url: null
+      versioning: false
+    schema:
+      name: science_conferences
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Fields
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1890,6 +2290,3863 @@ fields:
       is_primary_key: false
       has_auto_increment: false
 
+  # ── memorial_entries ────────────────────────────────────────────────────────
+  - collection: memorial_entries
+    field: id
+    type: uuid
+    meta:
+      collection: memorial_entries
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: memorial_entries
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: memorial_entries
+    field: status
+    type: string
+    meta:
+      collection: memorial_entries
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: memorial_entries
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: memorial_entries
+    field: name
+    type: string
+    meta:
+      collection: memorial_entries
+      field: name
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: name
+      table: memorial_entries
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: memorial_entries
+    field: nameEn
+    type: string
+    meta:
+      collection: memorial_entries
+      field: nameEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: nameEn
+      table: memorial_entries
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: memorial_entries
+    field: role
+    type: string
+    meta:
+      collection: memorial_entries
+      field: role
+      interface: input
+      sort: 5
+      width: full
+    schema:
+      name: role
+      table: memorial_entries
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: memorial_entries
+    field: roleEn
+    type: string
+    meta:
+      collection: memorial_entries
+      field: roleEn
+      interface: input
+      sort: 6
+      width: full
+    schema:
+      name: roleEn
+      table: memorial_entries
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: memorial_entries
+    field: photo
+    type: uuid
+    meta:
+      collection: memorial_entries
+      field: photo
+      special:
+        - file
+      interface: file-image
+      display: image
+      sort: 7
+      width: half
+    schema:
+      name: photo
+      table: memorial_entries
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: memorial_entries
+    field: order
+    type: integer
+    meta:
+      collection: memorial_entries
+      field: order
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: order
+      table: memorial_entries
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── gallery_categories ──────────────────────────────────────────────────────
+  - collection: gallery_categories
+    field: id
+    type: uuid
+    meta:
+      collection: gallery_categories
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: gallery_categories
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: gallery_categories
+    field: status
+    type: string
+    meta:
+      collection: gallery_categories
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: gallery_categories
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_categories
+    field: name
+    type: string
+    meta:
+      collection: gallery_categories
+      field: name
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: name
+      table: gallery_categories
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_categories
+    field: nameEn
+    type: string
+    meta:
+      collection: gallery_categories
+      field: nameEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: nameEn
+      table: gallery_categories
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_categories
+    field: slug
+    type: string
+    meta:
+      collection: gallery_categories
+      field: slug
+      interface: input
+      options:
+        slug: true
+        trim: true
+      required: true
+      sort: 5
+      width: half
+    schema:
+      name: slug
+      table: gallery_categories
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_categories
+    field: order
+    type: integer
+    meta:
+      collection: gallery_categories
+      field: order
+      interface: input
+      sort: 6
+      width: half
+    schema:
+      name: order
+      table: gallery_categories
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # Reverse o2m alias so admins can see category items.
+  - collection: gallery_categories
+    field: items
+    type: alias
+    meta:
+      collection: gallery_categories
+      field: items
+      special:
+        - o2m
+      interface: list-o2m
+      sort: 7
+      width: full
+    schema: null
+
+  # ── gallery_items ───────────────────────────────────────────────────────────
+  - collection: gallery_items
+    field: id
+    type: uuid
+    meta:
+      collection: gallery_items
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: gallery_items
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: gallery_items
+    field: status
+    type: string
+    meta:
+      collection: gallery_items
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: gallery_items
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_items
+    field: title
+    type: string
+    meta:
+      collection: gallery_items
+      field: title
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: title
+      table: gallery_items
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_items
+    field: titleEn
+    type: string
+    meta:
+      collection: gallery_items
+      field: titleEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: titleEn
+      table: gallery_items
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_items
+    field: image
+    type: uuid
+    meta:
+      collection: gallery_items
+      field: image
+      special:
+        - file
+      interface: file-image
+      display: image
+      sort: 5
+      width: half
+    schema:
+      name: image
+      table: gallery_items
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: gallery_items
+    field: category
+    type: uuid
+    meta:
+      collection: gallery_items
+      field: category
+      special:
+        - m2o
+      interface: select-dropdown-m2o
+      options:
+        template: "{{ name }}"
+      display: related-values
+      display_options:
+        template: "{{ name }}"
+      required: true
+      sort: 6
+      width: half
+    schema:
+      name: category
+      table: gallery_items
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: gallery_categories
+
+  - collection: gallery_items
+    field: order
+    type: integer
+    meta:
+      collection: gallery_items
+      field: order
+      interface: input
+      sort: 7
+      width: third
+    schema:
+      name: order
+      table: gallery_items
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_items
+    field: colSpan
+    type: integer
+    meta:
+      collection: gallery_items
+      field: colSpan
+      interface: input
+      sort: 8
+      width: third
+    schema:
+      name: colSpan
+      table: gallery_items
+      data_type: integer
+      default_value: 1
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: gallery_items
+    field: rowSpan
+    type: integer
+    meta:
+      collection: gallery_items
+      field: rowSpan
+      interface: input
+      sort: 9
+      width: third
+    schema:
+      name: rowSpan
+      table: gallery_items
+      data_type: integer
+      default_value: 1
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── faculties ───────────────────────────────────────────────────────────────
+  - collection: faculties
+    field: id
+    type: uuid
+    meta:
+      collection: faculties
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: faculties
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: faculties
+    field: status
+    type: string
+    meta:
+      collection: faculties
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: faculties
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: name
+    type: string
+    meta:
+      collection: faculties
+      field: name
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: name
+      table: faculties
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: nameEn
+    type: string
+    meta:
+      collection: faculties
+      field: nameEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: nameEn
+      table: faculties
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: slug
+    type: string
+    meta:
+      collection: faculties
+      field: slug
+      interface: input
+      options:
+        slug: true
+        trim: true
+      required: true
+      sort: 5
+      width: half
+    schema:
+      name: slug
+      table: faculties
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: dean
+    type: string
+    meta:
+      collection: faculties
+      field: dean
+      interface: input
+      sort: 6
+      width: half
+    schema:
+      name: dean
+      table: faculties
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: deanEn
+    type: string
+    meta:
+      collection: faculties
+      field: deanEn
+      interface: input
+      sort: 7
+      width: half
+    schema:
+      name: deanEn
+      table: faculties
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: departmentsCount
+    type: integer
+    meta:
+      collection: faculties
+      field: departmentsCount
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: departmentsCount
+      table: faculties
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: studentsCount
+    type: integer
+    meta:
+      collection: faculties
+      field: studentsCount
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: studentsCount
+      table: faculties
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculties
+    field: order
+    type: integer
+    meta:
+      collection: faculties
+      field: order
+      interface: input
+      sort: 10
+      width: half
+    schema:
+      name: order
+      table: faculties
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # Reverse o2m alias so admins can see faculty departments.
+  - collection: faculties
+    field: departments
+    type: alias
+    meta:
+      collection: faculties
+      field: departments
+      special:
+        - o2m
+      interface: list-o2m
+      sort: 11
+      width: full
+    schema: null
+
+  # ── faculty_departments ─────────────────────────────────────────────────────
+  - collection: faculty_departments
+    field: id
+    type: uuid
+    meta:
+      collection: faculty_departments
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: faculty_departments
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: faculty_departments
+    field: faculty
+    type: uuid
+    meta:
+      collection: faculty_departments
+      field: faculty
+      special:
+        - m2o
+      interface: select-dropdown-m2o
+      options:
+        template: "{{ name }}"
+      display: related-values
+      display_options:
+        template: "{{ name }}"
+      required: true
+      sort: 2
+      width: full
+    schema:
+      name: faculty
+      table: faculty_departments
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: faculties
+
+  - collection: faculty_departments
+    field: name
+    type: string
+    meta:
+      collection: faculty_departments
+      field: name
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: name
+      table: faculty_departments
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculty_departments
+    field: nameEn
+    type: string
+    meta:
+      collection: faculty_departments
+      field: nameEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: nameEn
+      table: faculty_departments
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: faculty_departments
+    field: order
+    type: integer
+    meta:
+      collection: faculty_departments
+      field: order
+      interface: input
+      sort: 5
+      width: full
+    schema:
+      name: order
+      table: faculty_departments
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── vacancies ───────────────────────────────────────────────────────────────
+  - collection: vacancies
+    field: id
+    type: uuid
+    meta:
+      collection: vacancies
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: vacancies
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: status
+    type: string
+    meta:
+      collection: vacancies
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      width: full
+      sort: 2
+    schema:
+      name: status
+      table: vacancies
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: company
+    type: string
+    meta:
+      collection: vacancies
+      field: company
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: company
+      table: vacancies
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: companyEn
+    type: string
+    meta:
+      collection: vacancies
+      field: companyEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: companyEn
+      table: vacancies
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: position
+    type: string
+    meta:
+      collection: vacancies
+      field: position
+      interface: input
+      required: true
+      sort: 5
+      width: full
+    schema:
+      name: position
+      table: vacancies
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: positionEn
+    type: string
+    meta:
+      collection: vacancies
+      field: positionEn
+      interface: input
+      sort: 6
+      width: full
+    schema:
+      name: positionEn
+      table: vacancies
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: type
+    type: string
+    meta:
+      collection: vacancies
+      field: type
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Full Time
+            value: fullTime
+          - text: Part Time
+            value: partTime
+          - text: Internship
+            value: internship
+      display: labels
+      display_options:
+        choices:
+          - text: Full Time
+            value: fullTime
+          - text: Part Time
+            value: partTime
+          - text: Internship
+            value: internship
+      required: true
+      sort: 7
+      width: half
+    schema:
+      name: type
+      table: vacancies
+      data_type: varchar
+      default_value: fullTime
+      max_length: 32
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: location
+    type: string
+    meta:
+      collection: vacancies
+      field: location
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: location
+      table: vacancies
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: locationEn
+    type: string
+    meta:
+      collection: vacancies
+      field: locationEn
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: locationEn
+      table: vacancies
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: postedAt
+    type: timestamp
+    meta:
+      collection: vacancies
+      field: postedAt
+      interface: datetime
+      sort: 10
+      width: half
+      display: datetime
+    schema:
+      name: postedAt
+      table: vacancies
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: vacancies
+    field: order
+    type: integer
+    meta:
+      collection: vacancies
+      field: order
+      interface: input
+      sort: 11
+      width: half
+    schema:
+      name: order
+      table: vacancies
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── student_schedule_documents ───────────────────────────────────────────────
+  - collection: student_schedule_documents
+    field: id
+    type: uuid
+    meta:
+      collection: student_schedule_documents
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: student_schedule_documents
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: status
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: title
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: title
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: title
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: titleEn
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: titleEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: titleEn
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: faculty
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: faculty
+      interface: input
+      sort: 5
+      width: half
+    schema:
+      name: faculty
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: facultyEn
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: facultyEn
+      interface: input
+      sort: 6
+      width: half
+    schema:
+      name: facultyEn
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: groupCode
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: groupCode
+      interface: input
+      sort: 7
+      width: third
+    schema:
+      name: groupCode
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: null
+      max_length: 128
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: semester
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: semester
+      interface: input
+      sort: 8
+      width: third
+    schema:
+      name: semester
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: academicYear
+    type: string
+    meta:
+      collection: student_schedule_documents
+      field: academicYear
+      interface: input
+      sort: 9
+      width: third
+    schema:
+      name: academicYear
+      table: student_schedule_documents
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: validFrom
+    type: date
+    meta:
+      collection: student_schedule_documents
+      field: validFrom
+      interface: datetime
+      display: datetime
+      sort: 10
+      width: half
+    schema:
+      name: validFrom
+      table: student_schedule_documents
+      data_type: date
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: validTo
+    type: date
+    meta:
+      collection: student_schedule_documents
+      field: validTo
+      interface: datetime
+      display: datetime
+      sort: 11
+      width: half
+    schema:
+      name: validTo
+      table: student_schedule_documents
+      data_type: date
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: student_schedule_documents
+    field: file
+    type: uuid
+    meta:
+      collection: student_schedule_documents
+      field: file
+      special:
+        - file
+      interface: file
+      sort: 12
+      width: half
+    schema:
+      name: file
+      table: student_schedule_documents
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: student_schedule_documents
+    field: order
+    type: integer
+    meta:
+      collection: student_schedule_documents
+      field: order
+      interface: input
+      sort: 13
+      width: half
+    schema:
+      name: order
+      table: student_schedule_documents
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── education_schedule_periods ───────────────────────────────────────────────
+  - collection: education_schedule_periods
+    field: id
+    type: uuid
+    meta:
+      collection: education_schedule_periods
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: education_schedule_periods
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: status
+    type: string
+    meta:
+      collection: education_schedule_periods
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: education_schedule_periods
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: name
+    type: string
+    meta:
+      collection: education_schedule_periods
+      field: name
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: name
+      table: education_schedule_periods
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: nameEn
+    type: string
+    meta:
+      collection: education_schedule_periods
+      field: nameEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: nameEn
+      table: education_schedule_periods
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: semesterType
+    type: string
+    meta:
+      collection: education_schedule_periods
+      field: semesterType
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Autumn
+            value: autumn
+          - text: Spring
+            value: spring
+      display: labels
+      display_options:
+        choices:
+          - text: Autumn
+            value: autumn
+          - text: Spring
+            value: spring
+      sort: 5
+      width: half
+    schema:
+      name: semesterType
+      table: education_schedule_periods
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: periodType
+    type: string
+    meta:
+      collection: education_schedule_periods
+      field: periodType
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Study
+            value: study
+          - text: Exam
+            value: exam
+          - text: Vacation
+            value: vacation
+          - text: Internship
+            value: internship
+      display: labels
+      display_options:
+        choices:
+          - text: Study
+            value: study
+          - text: Exam
+            value: exam
+          - text: Vacation
+            value: vacation
+          - text: Internship
+            value: internship
+      sort: 6
+      width: half
+    schema:
+      name: periodType
+      table: education_schedule_periods
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: dateStart
+    type: date
+    meta:
+      collection: education_schedule_periods
+      field: dateStart
+      interface: datetime
+      display: datetime
+      sort: 7
+      width: half
+    schema:
+      name: dateStart
+      table: education_schedule_periods
+      data_type: date
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: dateEnd
+    type: date
+    meta:
+      collection: education_schedule_periods
+      field: dateEnd
+      interface: datetime
+      display: datetime
+      sort: 8
+      width: half
+    schema:
+      name: dateEnd
+      table: education_schedule_periods
+      data_type: date
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: academicYear
+    type: string
+    meta:
+      collection: education_schedule_periods
+      field: academicYear
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: academicYear
+      table: education_schedule_periods
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_periods
+    field: order
+    type: integer
+    meta:
+      collection: education_schedule_periods
+      field: order
+      interface: input
+      sort: 10
+      width: half
+    schema:
+      name: order
+      table: education_schedule_periods
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── education_schedule_key_dates ─────────────────────────────────────────────
+  - collection: education_schedule_key_dates
+    field: id
+    type: uuid
+    meta:
+      collection: education_schedule_key_dates
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: education_schedule_key_dates
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: education_schedule_key_dates
+    field: status
+    type: string
+    meta:
+      collection: education_schedule_key_dates
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: education_schedule_key_dates
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_key_dates
+    field: event
+    type: string
+    meta:
+      collection: education_schedule_key_dates
+      field: event
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: event
+      table: education_schedule_key_dates
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_key_dates
+    field: eventEn
+    type: string
+    meta:
+      collection: education_schedule_key_dates
+      field: eventEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: eventEn
+      table: education_schedule_key_dates
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_key_dates
+    field: dateLabel
+    type: string
+    meta:
+      collection: education_schedule_key_dates
+      field: dateLabel
+      interface: input
+      sort: 5
+      width: half
+    schema:
+      name: dateLabel
+      table: education_schedule_key_dates
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_key_dates
+    field: dateLabelEn
+    type: string
+    meta:
+      collection: education_schedule_key_dates
+      field: dateLabelEn
+      interface: input
+      sort: 6
+      width: half
+    schema:
+      name: dateLabelEn
+      table: education_schedule_key_dates
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_key_dates
+    field: academicYear
+    type: string
+    meta:
+      collection: education_schedule_key_dates
+      field: academicYear
+      interface: input
+      sort: 7
+      width: half
+    schema:
+      name: academicYear
+      table: education_schedule_key_dates
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: education_schedule_key_dates
+    field: order
+    type: integer
+    meta:
+      collection: education_schedule_key_dates
+      field: order
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: order
+      table: education_schedule_key_dates
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── admission_open_days ──────────────────────────────────────────────────────
+  - collection: admission_open_days
+    field: id
+    type: uuid
+    meta:
+      collection: admission_open_days
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: admission_open_days
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: status
+    type: string
+    meta:
+      collection: admission_open_days
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: admission_open_days
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: title
+    type: string
+    meta:
+      collection: admission_open_days
+      field: title
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: title
+      table: admission_open_days
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: titleEn
+    type: string
+    meta:
+      collection: admission_open_days
+      field: titleEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: titleEn
+      table: admission_open_days
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: description
+    type: text
+    meta:
+      collection: admission_open_days
+      field: description
+      interface: input-multiline
+      sort: 5
+      width: full
+    schema:
+      name: description
+      table: admission_open_days
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: descriptionEn
+    type: text
+    meta:
+      collection: admission_open_days
+      field: descriptionEn
+      interface: input-multiline
+      sort: 6
+      width: full
+    schema:
+      name: descriptionEn
+      table: admission_open_days
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: eventDate
+    type: timestamp
+    meta:
+      collection: admission_open_days
+      field: eventDate
+      interface: datetime
+      display: datetime
+      sort: 7
+      width: half
+    schema:
+      name: eventDate
+      table: admission_open_days
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: location
+    type: string
+    meta:
+      collection: admission_open_days
+      field: location
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: location
+      table: admission_open_days
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: locationEn
+    type: string
+    meta:
+      collection: admission_open_days
+      field: locationEn
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: locationEn
+      table: admission_open_days
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: registrationUrl
+    type: string
+    meta:
+      collection: admission_open_days
+      field: registrationUrl
+      interface: input
+      options:
+        iconRight: link
+      sort: 10
+      width: full
+    schema:
+      name: registrationUrl
+      table: admission_open_days
+      data_type: varchar
+      default_value: null
+      max_length: 500
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_open_days
+    field: order
+    type: integer
+    meta:
+      collection: admission_open_days
+      field: order
+      interface: input
+      sort: 11
+      width: half
+    schema:
+      name: order
+      table: admission_open_days
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── admission_exam_programs ──────────────────────────────────────────────────
+  - collection: admission_exam_programs
+    field: id
+    type: uuid
+    meta:
+      collection: admission_exam_programs
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: admission_exam_programs
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: admission_exam_programs
+    field: status
+    type: string
+    meta:
+      collection: admission_exam_programs
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: admission_exam_programs
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_exam_programs
+    field: subject
+    type: string
+    meta:
+      collection: admission_exam_programs
+      field: subject
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: subject
+      table: admission_exam_programs
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_exam_programs
+    field: subjectEn
+    type: string
+    meta:
+      collection: admission_exam_programs
+      field: subjectEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: subjectEn
+      table: admission_exam_programs
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_exam_programs
+    field: level
+    type: string
+    meta:
+      collection: admission_exam_programs
+      field: level
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Bachelor
+            value: bachelor
+          - text: Master
+            value: master
+          - text: Graduate
+            value: graduate
+      display: labels
+      display_options:
+        choices:
+          - text: Bachelor
+            value: bachelor
+          - text: Master
+            value: master
+          - text: Graduate
+            value: graduate
+      required: true
+      sort: 5
+      width: half
+    schema:
+      name: level
+      table: admission_exam_programs
+      data_type: varchar
+      default_value: null
+      max_length: 64
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_exam_programs
+    field: description
+    type: text
+    meta:
+      collection: admission_exam_programs
+      field: description
+      interface: input-multiline
+      sort: 6
+      width: full
+    schema:
+      name: description
+      table: admission_exam_programs
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_exam_programs
+    field: descriptionEn
+    type: text
+    meta:
+      collection: admission_exam_programs
+      field: descriptionEn
+      interface: input-multiline
+      sort: 7
+      width: full
+    schema:
+      name: descriptionEn
+      table: admission_exam_programs
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: admission_exam_programs
+    field: programmeFile
+    type: uuid
+    meta:
+      collection: admission_exam_programs
+      field: programmeFile
+      special:
+        - file
+      interface: file
+      sort: 8
+      width: half
+    schema:
+      name: programmeFile
+      table: admission_exam_programs
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: admission_exam_programs
+    field: order
+    type: integer
+    meta:
+      collection: admission_exam_programs
+      field: order
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: order
+      table: admission_exam_programs
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── university_orders ────────────────────────────────────────────────────────
+  - collection: university_orders
+    field: id
+    type: uuid
+    meta:
+      collection: university_orders
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: university_orders
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: status
+    type: string
+    meta:
+      collection: university_orders
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: university_orders
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: orderNumber
+    type: string
+    meta:
+      collection: university_orders
+      field: orderNumber
+      interface: input
+      sort: 3
+      width: half
+    schema:
+      name: orderNumber
+      table: university_orders
+      data_type: varchar
+      default_value: null
+      max_length: 128
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: orderDate
+    type: date
+    meta:
+      collection: university_orders
+      field: orderDate
+      interface: datetime
+      display: datetime
+      sort: 4
+      width: half
+    schema:
+      name: orderDate
+      table: university_orders
+      data_type: date
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: title
+    type: string
+    meta:
+      collection: university_orders
+      field: title
+      interface: input
+      required: true
+      sort: 5
+      width: full
+    schema:
+      name: title
+      table: university_orders
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: titleEn
+    type: string
+    meta:
+      collection: university_orders
+      field: titleEn
+      interface: input
+      sort: 6
+      width: full
+    schema:
+      name: titleEn
+      table: university_orders
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: category
+    type: string
+    meta:
+      collection: university_orders
+      field: category
+      interface: input
+      sort: 7
+      width: half
+    schema:
+      name: category
+      table: university_orders
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: categoryEn
+    type: string
+    meta:
+      collection: university_orders
+      field: categoryEn
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: categoryEn
+      table: university_orders
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: year
+    type: integer
+    meta:
+      collection: university_orders
+      field: year
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: year
+      table: university_orders
+      data_type: integer
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: university_orders
+    field: documentFile
+    type: uuid
+    meta:
+      collection: university_orders
+      field: documentFile
+      special:
+        - file
+      interface: file
+      sort: 10
+      width: half
+    schema:
+      name: documentFile
+      table: university_orders
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: university_orders
+    field: order
+    type: integer
+    meta:
+      collection: university_orders
+      field: order
+      interface: input
+      sort: 11
+      width: half
+    schema:
+      name: order
+      table: university_orders
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── prozorro_procurements ────────────────────────────────────────────────────
+  - collection: prozorro_procurements
+    field: id
+    type: uuid
+    meta:
+      collection: prozorro_procurements
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: prozorro_procurements
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: status
+    type: string
+    meta:
+      collection: prozorro_procurements
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: prozorro_procurements
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: tenderNumber
+    type: string
+    meta:
+      collection: prozorro_procurements
+      field: tenderNumber
+      interface: input
+      sort: 3
+      width: half
+    schema:
+      name: tenderNumber
+      table: prozorro_procurements
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: title
+    type: string
+    meta:
+      collection: prozorro_procurements
+      field: title
+      interface: input
+      required: true
+      sort: 4
+      width: full
+    schema:
+      name: title
+      table: prozorro_procurements
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: titleEn
+    type: string
+    meta:
+      collection: prozorro_procurements
+      field: titleEn
+      interface: input
+      sort: 5
+      width: full
+    schema:
+      name: titleEn
+      table: prozorro_procurements
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: amount
+    type: decimal
+    meta:
+      collection: prozorro_procurements
+      field: amount
+      interface: input
+      sort: 6
+      width: third
+    schema:
+      name: amount
+      table: prozorro_procurements
+      data_type: numeric
+      default_value: null
+      numeric_precision: 14
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: currency
+    type: string
+    meta:
+      collection: prozorro_procurements
+      field: currency
+      interface: input
+      sort: 7
+      width: third
+    schema:
+      name: currency
+      table: prozorro_procurements
+      data_type: varchar
+      default_value: UAH
+      max_length: 8
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: procurementDate
+    type: date
+    meta:
+      collection: prozorro_procurements
+      field: procurementDate
+      interface: datetime
+      display: datetime
+      sort: 8
+      width: third
+    schema:
+      name: procurementDate
+      table: prozorro_procurements
+      data_type: date
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: state
+    type: string
+    meta:
+      collection: prozorro_procurements
+      field: state
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Completed
+            value: completed
+          - text: Active
+            value: active
+          - text: Planned
+            value: planned
+      display: labels
+      display_options:
+        choices:
+          - text: Completed
+            value: completed
+          - text: Active
+            value: active
+          - text: Planned
+            value: planned
+      sort: 9
+      width: half
+    schema:
+      name: state
+      table: prozorro_procurements
+      data_type: varchar
+      default_value: planned
+      max_length: 64
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: prozorroUrl
+    type: string
+    meta:
+      collection: prozorro_procurements
+      field: prozorroUrl
+      interface: input
+      options:
+        iconRight: link
+      sort: 10
+      width: full
+    schema:
+      name: prozorroUrl
+      table: prozorro_procurements
+      data_type: varchar
+      default_value: null
+      max_length: 500
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: prozorro_procurements
+    field: order
+    type: integer
+    meta:
+      collection: prozorro_procurements
+      field: order
+      interface: input
+      sort: 11
+      width: half
+    schema:
+      name: order
+      table: prozorro_procurements
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── financial_reports ────────────────────────────────────────────────────────
+  - collection: financial_reports
+    field: id
+    type: uuid
+    meta:
+      collection: financial_reports
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: financial_reports
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: status
+    type: string
+    meta:
+      collection: financial_reports
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: financial_reports
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: reportYear
+    type: integer
+    meta:
+      collection: financial_reports
+      field: reportYear
+      interface: input
+      sort: 3
+      width: half
+    schema:
+      name: reportYear
+      table: financial_reports
+      data_type: integer
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: title
+    type: string
+    meta:
+      collection: financial_reports
+      field: title
+      interface: input
+      required: true
+      sort: 4
+      width: full
+    schema:
+      name: title
+      table: financial_reports
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: titleEn
+    type: string
+    meta:
+      collection: financial_reports
+      field: titleEn
+      interface: input
+      sort: 5
+      width: full
+    schema:
+      name: titleEn
+      table: financial_reports
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: summary
+    type: text
+    meta:
+      collection: financial_reports
+      field: summary
+      interface: input-multiline
+      sort: 6
+      width: full
+    schema:
+      name: summary
+      table: financial_reports
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: summaryEn
+    type: text
+    meta:
+      collection: financial_reports
+      field: summaryEn
+      interface: input-multiline
+      sort: 7
+      width: full
+    schema:
+      name: summaryEn
+      table: financial_reports
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: revenue
+    type: decimal
+    meta:
+      collection: financial_reports
+      field: revenue
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: revenue
+      table: financial_reports
+      data_type: numeric
+      default_value: null
+      numeric_precision: 14
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: expenses
+    type: decimal
+    meta:
+      collection: financial_reports
+      field: expenses
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: expenses
+      table: financial_reports
+      data_type: numeric
+      default_value: null
+      numeric_precision: 14
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: stateFunding
+    type: decimal
+    meta:
+      collection: financial_reports
+      field: stateFunding
+      interface: input
+      sort: 10
+      width: half
+    schema:
+      name: stateFunding
+      table: financial_reports
+      data_type: numeric
+      default_value: null
+      numeric_precision: 14
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: ownRevenue
+    type: decimal
+    meta:
+      collection: financial_reports
+      field: ownRevenue
+      interface: input
+      sort: 11
+      width: half
+    schema:
+      name: ownRevenue
+      table: financial_reports
+      data_type: numeric
+      default_value: null
+      numeric_precision: 14
+      numeric_scale: 2
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: financial_reports
+    field: reportFile
+    type: uuid
+    meta:
+      collection: financial_reports
+      field: reportFile
+      special:
+        - file
+      interface: file
+      sort: 12
+      width: half
+    schema:
+      name: reportFile
+      table: financial_reports
+      data_type: uuid
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_column: id
+      foreign_key_table: directus_files
+
+  - collection: financial_reports
+    field: order
+    type: integer
+    meta:
+      collection: financial_reports
+      field: order
+      interface: input
+      sort: 13
+      width: half
+    schema:
+      name: order
+      table: financial_reports
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── science_defenses ─────────────────────────────────────────────────────────
+  - collection: science_defenses
+    field: id
+    type: uuid
+    meta:
+      collection: science_defenses
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: science_defenses
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: status
+    type: string
+    meta:
+      collection: science_defenses
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: science_defenses
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: candidateName
+    type: string
+    meta:
+      collection: science_defenses
+      field: candidateName
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: candidateName
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: candidateNameEn
+    type: string
+    meta:
+      collection: science_defenses
+      field: candidateNameEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: candidateNameEn
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: dissertationTitle
+    type: string
+    meta:
+      collection: science_defenses
+      field: dissertationTitle
+      interface: input
+      sort: 5
+      width: full
+    schema:
+      name: dissertationTitle
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 500
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: dissertationTitleEn
+    type: string
+    meta:
+      collection: science_defenses
+      field: dissertationTitleEn
+      interface: input
+      sort: 6
+      width: full
+    schema:
+      name: dissertationTitleEn
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 500
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: specialty
+    type: string
+    meta:
+      collection: science_defenses
+      field: specialty
+      interface: input
+      sort: 7
+      width: half
+    schema:
+      name: specialty
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: specialtyEn
+    type: string
+    meta:
+      collection: science_defenses
+      field: specialtyEn
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: specialtyEn
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: defenseDate
+    type: timestamp
+    meta:
+      collection: science_defenses
+      field: defenseDate
+      interface: datetime
+      display: datetime
+      sort: 9
+      width: half
+    schema:
+      name: defenseDate
+      table: science_defenses
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: board
+    type: string
+    meta:
+      collection: science_defenses
+      field: board
+      interface: input
+      sort: 10
+      width: half
+    schema:
+      name: board
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: boardEn
+    type: string
+    meta:
+      collection: science_defenses
+      field: boardEn
+      interface: input
+      sort: 11
+      width: half
+    schema:
+      name: boardEn
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: result
+    type: string
+    meta:
+      collection: science_defenses
+      field: result
+      interface: input
+      sort: 12
+      width: half
+    schema:
+      name: result
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: resultEn
+    type: string
+    meta:
+      collection: science_defenses
+      field: resultEn
+      interface: input
+      sort: 13
+      width: half
+    schema:
+      name: resultEn
+      table: science_defenses
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: isUpcoming
+    type: boolean
+    meta:
+      collection: science_defenses
+      field: isUpcoming
+      interface: boolean
+      sort: 14
+      width: half
+    schema:
+      name: isUpcoming
+      table: science_defenses
+      data_type: boolean
+      default_value: false
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_defenses
+    field: order
+    type: integer
+    meta:
+      collection: science_defenses
+      field: order
+      interface: input
+      sort: 15
+      width: half
+    schema:
+      name: order
+      table: science_defenses
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  # ── science_conferences ──────────────────────────────────────────────────────
+  - collection: science_conferences
+    field: id
+    type: uuid
+    meta:
+      collection: science_conferences
+      field: id
+      special:
+        - uuid
+      interface: input
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+    schema:
+      name: id
+      table: science_conferences
+      data_type: uuid
+      default_value: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: status
+    type: string
+    meta:
+      collection: science_conferences
+      field: status
+      interface: select-dropdown
+      options:
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      display: labels
+      display_options:
+        showAsDot: true
+        choices:
+          - text: "$t:published"
+            value: published
+            color: "#2ECDA7"
+          - text: "$t:draft"
+            value: draft
+            color: "#D3DAE4"
+          - text: "$t:archived"
+            value: archived
+            color: "#A2B5CD"
+      sort: 2
+      width: full
+    schema:
+      name: status
+      table: science_conferences
+      data_type: varchar
+      default_value: draft
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: title
+    type: string
+    meta:
+      collection: science_conferences
+      field: title
+      interface: input
+      required: true
+      sort: 3
+      width: full
+    schema:
+      name: title
+      table: science_conferences
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: titleEn
+    type: string
+    meta:
+      collection: science_conferences
+      field: titleEn
+      interface: input
+      sort: 4
+      width: full
+    schema:
+      name: titleEn
+      table: science_conferences
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: description
+    type: text
+    meta:
+      collection: science_conferences
+      field: description
+      interface: input-multiline
+      sort: 5
+      width: full
+    schema:
+      name: description
+      table: science_conferences
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: descriptionEn
+    type: text
+    meta:
+      collection: science_conferences
+      field: descriptionEn
+      interface: input-multiline
+      sort: 6
+      width: full
+    schema:
+      name: descriptionEn
+      table: science_conferences
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: conferenceType
+    type: string
+    meta:
+      collection: science_conferences
+      field: conferenceType
+      interface: input
+      sort: 7
+      width: half
+    schema:
+      name: conferenceType
+      table: science_conferences
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: location
+    type: string
+    meta:
+      collection: science_conferences
+      field: location
+      interface: input
+      sort: 8
+      width: half
+    schema:
+      name: location
+      table: science_conferences
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: locationEn
+    type: string
+    meta:
+      collection: science_conferences
+      field: locationEn
+      interface: input
+      sort: 9
+      width: half
+    schema:
+      name: locationEn
+      table: science_conferences
+      data_type: varchar
+      default_value: null
+      max_length: 255
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: eventDate
+    type: timestamp
+    meta:
+      collection: science_conferences
+      field: eventDate
+      interface: datetime
+      display: datetime
+      sort: 10
+      width: half
+    schema:
+      name: eventDate
+      table: science_conferences
+      data_type: timestamp with time zone
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: isUpcoming
+    type: boolean
+    meta:
+      collection: science_conferences
+      field: isUpcoming
+      interface: boolean
+      sort: 11
+      width: half
+    schema:
+      name: isUpcoming
+      table: science_conferences
+      data_type: boolean
+      default_value: false
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: participantsSummary
+    type: text
+    meta:
+      collection: science_conferences
+      field: participantsSummary
+      interface: input-multiline
+      sort: 12
+      width: full
+    schema:
+      name: participantsSummary
+      table: science_conferences
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: participantsSummaryEn
+    type: text
+    meta:
+      collection: science_conferences
+      field: participantsSummaryEn
+      interface: input-multiline
+      sort: 13
+      width: full
+    schema:
+      name: participantsSummaryEn
+      table: science_conferences
+      data_type: text
+      default_value: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
+  - collection: science_conferences
+    field: order
+    type: integer
+    meta:
+      collection: science_conferences
+      field: order
+      interface: input
+      sort: 14
+      width: half
+    schema:
+      name: order
+      table: science_conferences
+      data_type: integer
+      default_value: 0
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Relations
 # ──────────────────────────────────────────────────────────────────────────────
@@ -2009,6 +6266,98 @@ relations:
       on_update: NO ACTION
       on_delete: SET NULL
 
+  # memorial_entries.photo → directus_files (M2O file)
+  - collection: memorial_entries
+    field: photo
+    related_collection: directus_files
+    meta:
+      many_collection: memorial_entries
+      many_field: photo
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: memorial_entries
+      column: photo
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: memorial_entries_photo_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # gallery_items.image → directus_files (M2O file)
+  - collection: gallery_items
+    field: image
+    related_collection: directus_files
+    meta:
+      many_collection: gallery_items
+      many_field: image
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: gallery_items
+      column: image
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: gallery_items_image_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # gallery_items.category → gallery_categories (M2O, reverse o2m = gallery_categories.items)
+  - collection: gallery_items
+    field: category
+    related_collection: gallery_categories
+    meta:
+      many_collection: gallery_items
+      many_field: category
+      one_collection: gallery_categories
+      one_field: items
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: gallery_items
+      column: category
+      foreign_key_table: gallery_categories
+      foreign_key_column: id
+      constraint_name: gallery_items_category_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # faculty_departments.faculty → faculties (M2O, reverse o2m = faculties.departments)
+  - collection: faculty_departments
+    field: faculty
+    related_collection: faculties
+    meta:
+      many_collection: faculty_departments
+      many_field: faculty
+      one_collection: faculties
+      one_field: departments
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: faculty_departments
+      column: faculty
+      foreign_key_table: faculties
+      foreign_key_column: id
+      constraint_name: faculty_departments_faculty_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
   # articles ↔ directus_files M2M via articles_files junction
   - collection: articles_files
     field: articles_id
@@ -2051,5 +6400,97 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: articles_files_directus_files_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # student_schedule_documents.file → directus_files (M2O file)
+  - collection: student_schedule_documents
+    field: file
+    related_collection: directus_files
+    meta:
+      many_collection: student_schedule_documents
+      many_field: file
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: student_schedule_documents
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: student_schedule_documents_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # admission_exam_programs.programmeFile → directus_files (M2O file)
+  - collection: admission_exam_programs
+    field: programmeFile
+    related_collection: directus_files
+    meta:
+      many_collection: admission_exam_programs
+      many_field: programmeFile
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: admission_exam_programs
+      column: programmeFile
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: admission_exam_programs_programmefile_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # university_orders.documentFile → directus_files (M2O file)
+  - collection: university_orders
+    field: documentFile
+    related_collection: directus_files
+    meta:
+      many_collection: university_orders
+      many_field: documentFile
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: university_orders
+      column: documentFile
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: university_orders_documentfile_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+
+  # financial_reports.reportFile → directus_files (M2O file)
+  - collection: financial_reports
+    field: reportFile
+    related_collection: directus_files
+    meta:
+      many_collection: financial_reports
+      many_field: reportFile
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+    schema:
+      table: financial_reports
+      column: reportFile
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: financial_reports_reportfile_foreign
       on_update: NO ACTION
       on_delete: SET NULL

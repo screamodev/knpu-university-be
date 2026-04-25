@@ -63,4 +63,12 @@ npx directus schema apply /directus/snapshots/schema.yaml -y
 log "Seeding Public role permissions ..."
 sh "$SCRIPT_DIR/bootstrap-public-access.sh"
 
+# ── 5. Optionally seed dynamic content ────────────────────────────────────────
+if [ "${SEED_CONTENT:-false}" = "true" ]; then
+  log "SEED_CONTENT=true -> seeding dynamic content ..."
+  sh "$SCRIPT_DIR/seed-content.sh"
+else
+  log "SEED_CONTENT is not true -> skipping content seed."
+fi
+
 log "Bootstrap complete. Admin UI: $API (login: $EMAIL)"
