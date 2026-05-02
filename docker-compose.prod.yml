@@ -1,0 +1,59 @@
+services:
+  directus:
+    image: directus/directus:11.1.2
+    container_name: knpu-university-directus
+    restart: unless-stopped
+    mem_limit: 512m
+    environment:
+      KEY: ${KEY}
+      SECRET: ${SECRET}
+
+      PUBLIC_URL: ${PUBLIC_URL}
+
+      DB_CLIENT: ${DB_CLIENT:-pg}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT:-5432}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+
+      CORS_ENABLED: ${CORS_ENABLED:-true}
+      CORS_ORIGIN: ${CORS_ORIGIN}
+
+      WEBSOCKETS_ENABLED: ${WEBSOCKETS_ENABLED:-true}
+
+      ACCESS_TOKEN_TTL: ${ACCESS_TOKEN_TTL:-15m}
+      REFRESH_TOKEN_TTL: ${REFRESH_TOKEN_TTL:-7d}
+
+      SEED_CONTENT: ${SEED_CONTENT:-false}
+
+      STORAGE_LOCATIONS: local
+      STORAGE_LOCAL_DRIVER: local
+      STORAGE_LOCAL_ROOT: /directus/uploads
+    volumes:
+      - uploads:/directus/uploads
+      - extensions:/directus/extensions
+      - ./database/migrations:/directus/database/migrations
+      - ./snapshots:/directus/snapshots
+    networks:
+      - webnet
+      - dbnet
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8055/server/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  uploads:
+  extensions:
+
+networks:
+  webnet:
+    external: true
+  dbnet:
+    external: true
