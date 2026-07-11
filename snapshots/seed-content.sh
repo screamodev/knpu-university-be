@@ -17,6 +17,10 @@ set -eu
 API="${PUBLIC_URL:-http://localhost:8055}"
 EMAIL="${ADMIN_EMAIL:?ADMIN_EMAIL must be set}"
 PASSWORD="${ADMIN_PASSWORD:?ADMIN_PASSWORD must be set}"
+SCRIPT_DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
+
+# shellcheck source=./http.sh
+. "$SCRIPT_DIR/http.sh"
 
 log() { printf '[seed-content] %s\n' "$*"; }
 
@@ -27,17 +31,15 @@ extract_first_id() {
 api_json() {
   # $1 = method, $2 = path, $3 (optional) = json body
   if [ "$#" -ge 3 ]; then
-    curl -sS -X "$1" "$API$2" -H "$AUTH" -H 'Content-Type: application/json' -d "$3"
+    http_json "$1" "$API$2" "$3" "$TOKEN"
   else
-    curl -sS -X "$1" "$API$2" -H "$AUTH"
+    http_json "$1" "$API$2" "" "$TOKEN"
   fi
 }
 
 api_file_upload() {
   # $1 = file path, $2 = filename_download
-  curl -sS -X POST "$API/files" \
-    -H "$AUTH" \
-    -F "file=@$1;filename=$2"
+  http_upload "$API/files" "$1" "$2" "$TOKEN"
 }
 
 upsert_single() {
@@ -87,16 +89,14 @@ ensure_file() {
 
 log "Logging in as $EMAIL..."
 LOGIN_RESPONSE=$(
-  curl -sS -X POST "$API/auth/login" \
-    -H 'Content-Type: application/json' \
-    -d "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}"
+  http_json POST "$API/auth/login" \
+    "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}"
 )
 TOKEN=$(printf '%s' "$LOGIN_RESPONSE" | sed -n 's/.*"access_token":"\([^"]*\)".*/\1/p')
 if [ -z "$TOKEN" ]; then
   log "Login failed: $LOGIN_RESPONSE"
   exit 1
 fi
-AUTH="Authorization: Bearer $TOKEN"
 
 TMP_DIR=$(mktemp -d)
 trap 'rm -rf "$TMP_DIR"' EXIT INT TERM

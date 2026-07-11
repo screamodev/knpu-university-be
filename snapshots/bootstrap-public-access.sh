@@ -20,29 +20,31 @@ set -eu
 API="${PUBLIC_URL:-http://localhost:8055}"
 EMAIL="${ADMIN_EMAIL:?ADMIN_EMAIL must be set}"
 PASSWORD="${ADMIN_PASSWORD:?ADMIN_PASSWORD must be set}"
+SCRIPT_DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
+
+# shellcheck source=./http.sh
+. "$SCRIPT_DIR/http.sh"
 
 log() { printf '[bootstrap] %s\n' "$*"; }
 
 # ── 1. Login as admin ────────────────────────────────────────────────────────
 log "Logging in as $EMAIL..."
 LOGIN_RESPONSE=$(
-  curl -sS -X POST "$API/auth/login" \
-    -H 'Content-Type: application/json' \
-    -d "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}"
+  http_json POST "$API/auth/login" \
+    "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}"
 )
 TOKEN=$(printf '%s' "$LOGIN_RESPONSE" | sed -n 's/.*"access_token":"\([^"]*\)".*/\1/p')
 if [ -z "$TOKEN" ]; then
   log "Login failed: $LOGIN_RESPONSE"
   exit 1
 fi
-AUTH="Authorization: Bearer $TOKEN"
 
 api() {
   # $1 = method, $2 = path, $3 (optional) = json body
   if [ "$#" -ge 3 ]; then
-    curl -sS -X "$1" "$API$2" -H "$AUTH" -H 'Content-Type: application/json' -d "$3"
+    http_json "$1" "$API$2" "$3" "$TOKEN"
   else
-    curl -sS -X "$1" "$API$2" -H "$AUTH"
+    http_json "$1" "$API$2" "" "$TOKEN"
   fi
 }
 

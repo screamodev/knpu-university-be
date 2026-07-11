@@ -24,12 +24,15 @@ EMAIL="${ADMIN_EMAIL:?ADMIN_EMAIL must be set}"
 PASSWORD="${ADMIN_PASSWORD:?ADMIN_PASSWORD must be set}"
 SCRIPT_DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
 
+# shellcheck source=./http.sh
+. "$SCRIPT_DIR/http.sh"
+
 log() { printf '[bootstrap] %s\n' "$*"; }
 
 # ── 1. Wait for Directus ─────────────────────────────────────────────────────
 log "Waiting for Directus at $API ..."
 i=0
-until curl -sSf -o /dev/null "$API/server/health"; do
+until http_ok "$API/server/health"; do
   i=$((i + 1))
   if [ "$i" -gt 60 ]; then
     log "Directus did not become healthy within 60s. Aborting."
@@ -42,9 +45,8 @@ log "Directus is up."
 # ── 2. Verify admin login (proves the env-seeded admin user exists) ──────────
 log "Verifying admin login for $EMAIL ..."
 LOGIN=$(
-  curl -sS -X POST "$API/auth/login" \
-    -H 'Content-Type: application/json' \
-    -d "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}"
+  http_json POST "$API/auth/login" \
+    "{\"email\":\"$EMAIL\",\"password\":\"$PASSWORD\"}"
 )
 if ! printf '%s' "$LOGIN" | grep -q '"access_token"'; then
   log "Admin login failed. Directus did not seed the admin user, or credentials are wrong."
