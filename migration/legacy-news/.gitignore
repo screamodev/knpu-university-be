@@ -1,0 +1,6 @@
+# Regenerable migration artefacts — never commit legacy content or environment state
+news.raw.jsonl
+articles.json
+covers.map.json
+*.log
+subset.sql
