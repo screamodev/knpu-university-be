@@ -35,6 +35,15 @@ from pathlib import Path
 HERE = Path(__file__).parent
 DEFAULT_CATEGORY_SLUG = 'university-news'
 
+# Production sits behind Cloudflare, which answers "error code: 1010" (banned browser
+# signature) to urllib's default User-Agent. Presenting normal browser headers clears it.
+BROWSER_HEADERS = {
+    'User-Agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+                   '(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36'),
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'en-US,en;q=0.9,uk;q=0.8',
+}
+
 
 class DirectusError(RuntimeError):
     pass
@@ -49,7 +58,7 @@ class Directus:
                 raw_body: bytes | None = None, content_type: str | None = None) -> dict:
         url = f'{self.base}{path}'
         data = raw_body
-        headers = {'Authorization': f'Bearer {self.token}'}
+        headers = {**BROWSER_HEADERS, 'Authorization': f'Bearer {self.token}'}
         if payload is not None:
             data = json.dumps(payload).encode('utf-8')
             headers['Content-Type'] = 'application/json'
@@ -75,7 +84,7 @@ def login(base_url: str, email: str, password: str) -> str:
     req = urllib.request.Request(
         f'{base_url.rstrip("/")}/auth/login',
         data=json.dumps({'email': email, 'password': password}).encode('utf-8'),
-        headers={'Content-Type': 'application/json'},
+        headers={**BROWSER_HEADERS, 'Content-Type': 'application/json'},
         method='POST',
     )
     try:
@@ -87,7 +96,7 @@ def login(base_url: str, email: str, password: str) -> str:
 
 def download(url: str, timeout: int = 60) -> tuple[bytes, str]:
     """Fetch a legacy asset. The old host is http-only (its certificate expired)."""
-    req = urllib.request.Request(url, headers={'User-Agent': 'knpu-news-migration/1.0'})
+    req = urllib.request.Request(url, headers=BROWSER_HEADERS)
     with urllib.request.urlopen(req, timeout=timeout) as response:
         content_type = (response.headers.get('Content-Type') or '').split(';')[0].strip()
         return response.read(), content_type
@@ -111,13 +120,19 @@ def multipart_body(field_name: str, filename: str, content: bytes, content_type:
     return b''.join(parts), f'multipart/form-data; boundary={boundary}'
 
 
+def env(name: str, fallback: str | None = None) -> str | None:
+    """`docker run -e VAR=$UNSET` passes an *empty* value, so treat blank as unset."""
+    value = (os.environ.get(name) or '').strip()
+    return value or fallback
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--in', dest='src', default=str(HERE / 'articles.json'))
-    parser.add_argument('--url', default=os.environ.get('DIRECTUS_URL', 'http://localhost:8055'))
-    parser.add_argument('--token', default=os.environ.get('DIRECTUS_TOKEN'))
-    parser.add_argument('--email', default=os.environ.get('DIRECTUS_EMAIL', 'admin@example.com'))
-    parser.add_argument('--password', default=os.environ.get('DIRECTUS_PASSWORD', 'admin'))
+    parser.add_argument('--url', default=env('DIRECTUS_URL', 'http://localhost:8055'))
+    parser.add_argument('--token', default=env('DIRECTUS_TOKEN'))
+    parser.add_argument('--email', default=env('DIRECTUS_EMAIL', 'admin@example.com'))
+    parser.add_argument('--password', default=env('DIRECTUS_PASSWORD', 'admin'))
     parser.add_argument('--category-slug', default=DEFAULT_CATEGORY_SLUG,
                         help='category assigned to every migrated article')
     parser.add_argument('--limit', type=int, default=0, help='only process the first N articles')
@@ -129,15 +144,45 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+
+    # Fail loudly on a blank/typo'd target instead of building a relative URL.
+    if not str(args.url).startswith(('http://', 'https://')):
+        print(
+            f'! DIRECTUS_URL is {args.url!r} — it must start with http:// or https://\n'
+            '  If you passed -e DIRECTUS_URL=$PROD_URL, that variable is empty in this shell.\n'
+            '  Check with:  echo $PROD_URL',
+            file=sys.stderr,
+        )
+        return 2
+
     articles = json.loads(Path(args.src).read_text(encoding='utf-8'))
     if args.limit:
         articles = articles[: args.limit]
 
-    token = args.token or login(args.url, args.email, args.password)
-    api = Directus(args.url, token)
+    if args.token:
+        print(f'Authenticating to {args.url} with a static token', file=sys.stderr)
+    else:
+        print(f'No DIRECTUS_TOKEN given — logging in to {args.url} as {args.email}', file=sys.stderr)
 
-    # Sanity check + category lookup
-    me = api.get('/users/me?fields=email')
+    try:
+        token = args.token or login(args.url, args.email, args.password)
+        api = Directus(args.url, token)
+        me = api.get('/users/me?fields=email')
+    except (DirectusError, urllib.error.URLError) as exc:
+        print(
+            f'! Could not authenticate against {args.url}\n'
+            f'  {exc}\n'
+            + ('  This is Cloudflare, not Directus: code 1010 = blocked browser signature.\n'
+               '  Add a WAF skip rule for your IP, or run the loader from the prod host itself.\n'
+               if 'error code: 1010' in str(exc) or 'Cloudflare' in str(exc) else '')
+            + '  Common causes:\n'
+            '    - DIRECTUS_URL/DIRECTUS_TOKEN are empty in this shell (check: echo $PROD_URL $PROD_TOKEN)\n'
+            '    - the token is wrong, expired, or has no access to articles/files\n'
+            '    - running against localhost from a container: use http://host.docker.internal:8055',
+            file=sys.stderr,
+        )
+        return 2
+
     categories = api.get(f'/items/categories?filter[slug][_eq]={args.category_slug}&fields=id,name&limit=1')['data']
     if not categories:
         print(f'! category {args.category_slug!r} not found in {args.url}', file=sys.stderr)
