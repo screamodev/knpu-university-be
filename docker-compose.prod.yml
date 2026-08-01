@@ -55,7 +55,9 @@ services:
       - webnet
       - dbnet
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://localhost:8055/server/health || exit 1"]
+      # 127.0.0.1, not localhost: BusyBox wget resolves localhost to ::1 first and Directus
+      # listens on IPv4, so the probe failed forever on a perfectly healthy container.
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8055/server/health || exit 1"]
       interval: 30s
       timeout: 5s
       retries: 5
