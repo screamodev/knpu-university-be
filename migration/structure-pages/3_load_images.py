@@ -7,8 +7,10 @@ picture is downloaded and uploaded into a `structure-pages` folder. The mapping
 `source URL → Directus file id` is cached in `images.map.json`; stage 4 uses it to rewrite
 `<img src>` to `/assets/<uuid>`.
 
-The cache is **environment specific** — file ids from a local Directus do not exist in
-production. Move or delete it when switching targets.
+`images.map.json` is **committed on purpose**. Directus accepts an explicit `id` on upload, so
+the same source URL keeps the same file id in every environment — which is what lets the emitted
+content in the frontend (`/assets/<uuid>`) work on production without re-running stage 4. A file
+whose id is already present on the target is skipped.
 
 Usage:
     export DIRECTUS_URL=http://host.docker.internal:8055
@@ -133,24 +135,36 @@ def main() -> int:
     map_path = Path(args.map_path)
     mapping: dict[str, str] = json.loads(map_path.read_text(encoding='utf-8')) if map_path.exists() else {}
 
-    todo = [url for url in urls if url not in mapping]
-    if args.limit:
-        todo = todo[: args.limit]
-
-    print(f'{len(urls)} images referenced · {len(mapping)} already uploaded · {len(todo)} to do',
-          file=sys.stderr)
-    if args.dry_run or not todo:
-        for url in todo[:20]:
-            print(f'would upload {url}')
-        return 0
-
     if not str(args.url).startswith(('http://', 'https://')):
         print(f'! DIRECTUS_URL is {args.url!r} — it must start with http:// or https://', file=sys.stderr)
         return 2
 
+    if args.dry_run:
+        print(f'{len(urls)} images referenced · {len(mapping)} have a mapped id', file=sys.stderr)
+        for url in urls[:20]:
+            print(f'would upload {url} as {mapping.get(url, "<new id>")}')
+        return 0
+
     token = args.token or login(args.url, args.email, args.password)
     api = Directus(args.url, token)
     folder = ensure_folder(api)
+
+    # Which of the mapped ids the target already has — those uploads are done.
+    present = set()
+    for chunk_start in range(0, len(mapping), 100):
+        ids = [i for i in list(mapping.values())[chunk_start:chunk_start + 100]]
+        if not ids:
+            continue
+        found = api.request('GET', '/files?fields=id&limit=-1&filter[id][_in]=' + ','.join(ids))['data']
+        present.update(row['id'] for row in found)
+
+    todo = [url for url in urls if mapping.get(url) not in present]
+    if args.limit:
+        todo = todo[: args.limit]
+    print(f'{len(urls)} images referenced · {len(present)} already on the target · {len(todo)} to do',
+          file=sys.stderr)
+    if not todo:
+        return 0
 
     uploaded = failed = 0
     for index, url in enumerate(todo, start=1):
@@ -164,6 +178,10 @@ def main() -> int:
             fields = {'title': filename}
             if folder:
                 fields['folder'] = folder
+            # Reuse the mapped id so this image has the same uuid in every environment.
+            known_id = mapping.get(url)
+            if known_id:
+                fields['id'] = known_id
             body, boundary = multipart(filename, content, content_type, fields)
             result = api.request('POST', '/files', raw_body=body, content_type=boundary)
             mapping[url] = result['data']['id']

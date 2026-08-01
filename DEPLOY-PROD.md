@@ -96,31 +96,33 @@ curl -sD - -o /dev/null "$PROD_URL/admin/" | grep -i content-security-policy | t
 
 ## 5. Картинки страниц факультетов → прод
 
-**Это шаг, который легко пропустить и получить ~1800 битых картинок.**
+Статический контент факультетов лежит в репозитории фронта (`app/content/structure/**`) и
+ссылается на файлы по UUID: `/assets/<uuid>`. Те же UUID должны существовать в проде — иначе
+~1800 битых картинок.
 
-Статический контент факультетов лежит в репозитории фронта
-(`app/content/structure/**`) и ссылается на файлы по UUID: `/assets/<uuid>`. UUID в
-закоммиченных файлах — **локальные**. Пока те же файлы не окажутся на проде, картинок не будет.
+`images.map.json` (URL → UUID) закоммичен, а Directus принимает явный `id` при загрузке, поэтому
+файлы приезжают на прод под теми же идентификаторами и контент пересобирать не нужно.
 
-С машины разработчика (не с сервера), имея доступ к прод-Directus:
+Прямо на сервере:
 
 ```bash
-cd knpu-university-be/migration/structure-pages
+cd ~/knpu-university-be/migration/structure-pages
 
-mv images.map.json images.map.local.json          # карта привязана к окружению
+# сеть, в которой видно контейнер Directus
+docker inspect -f '{{range $k,$v := .NetworkSettings.Networks}}{{$k}} {{end}}' knpu-university-directus
 
-DIRECTUS_URL=$PROD_URL DIRECTUS_TOKEN=$PROD_TOKEN python3 3_load_images.py --dry-run
-DIRECTUS_URL=$PROD_URL DIRECTUS_TOKEN=$PROD_TOKEN python3 3_load_images.py   # ~1800 файлов, ~370 МБ
+read -s PROD_TOKEN; export PROD_TOKEN        # админский статик-токен, не в истории
 
-python3 4_emit.py                                  # перезапишет контент с прод-UUID
-cd ../../../knpu-university-fe && git add app/content/structure && git commit && git push
+docker run --rm --network webnet -v "$PWD":/work -w /work \
+  -e DIRECTUS_URL=http://knpu-university-directus:8055 -e DIRECTUS_TOKEN="$PROD_TOKEN" \
+  python:3.12-slim python 3_load_images.py --dry-run
+
+# то же без --dry-run: ~1800 файлов, ~370 МБ, 20–40 минут
 ```
 
-Только после этого на сервере `git pull` во фронте и деплой (шаг 6).
-
-> Упрощение на будущее: Directus принимает явный `id` при загрузке файла (проверено), поэтому
-> `3_load_images.py` может переиспользовать те же UUID на любом окружении, и пересборка контента
-> не понадобится. Сейчас так не сделано — скажи, если делать.
+Скрипт сам пропускает то, что уже загружено (сверяет id по `/files`), так что повторный запуск
+безопасен и дешёв. 32 картинки отдают 404 на старом сайте — они и в контенте отсутствуют,
+в выводе будут как `failed`.
 
 ## 6. Фронт + схема (подряд, тут окно даунтайма новостей)
 
