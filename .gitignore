@@ -14,7 +14,10 @@ Thumbs.db
 
 # Runtime artefacts from docker volumes if someone bind-mounts them locally.
 uploads/
-extensions/
+# Extensions ship with the repo (prod bind-mounts ./extensions), but their builds and
+# dependencies do not need to be rebuilt on the server — only dist/ + package.json.
+extensions/*/node_modules/
+extensions/*/package-lock.json
 database/migrations/*
 !database/migrations/.gitkeep
 
