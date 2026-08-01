@@ -74,6 +74,30 @@ collections:
       versioning: false
     schema:
       name: articles
+  - collection: articles_categories
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: articles_categories
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: null
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: articles_categories
   - collection: articles_files
     meta:
       accountability: all
@@ -194,54 +218,6 @@ collections:
       versioning: false
     schema:
       name: events
-  - collection: faculties
-    meta:
-      accountability: all
-      archive_app_filter: true
-      archive_field: status
-      archive_value: archived
-      collapse: open
-      collection: faculties
-      color: null
-      display_template: '{{ name }}'
-      group: null
-      hidden: false
-      icon: account_balance
-      item_duplication_fields: null
-      note: Faculties with localized metadata and aggregated counters.
-      preview_url: null
-      singleton: false
-      sort: 9
-      sort_field: order
-      translations: null
-      unarchive_value: draft
-      versioning: false
-    schema:
-      name: faculties
-  - collection: faculty_departments
-    meta:
-      accountability: all
-      archive_app_filter: true
-      archive_field: null
-      archive_value: null
-      collapse: open
-      collection: faculty_departments
-      color: null
-      display_template: '{{ name }}'
-      group: null
-      hidden: false
-      icon: domain
-      item_duplication_fields: null
-      note: Departments assigned to faculties.
-      preview_url: null
-      singleton: false
-      sort: 10
-      sort_field: order
-      translations: null
-      unarchive_value: null
-      versioning: false
-    schema:
-      name: faculty_departments
   - collection: financial_reports
     meta:
       accountability: all
@@ -338,6 +314,32 @@ collections:
       versioning: false
     schema:
       name: memorial_entries
+  - collection: newspaper_issues
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: newspaper_issues
+      color: null
+      display_template: № {{ number }} ({{ serial }})
+      group: null
+      hidden: false
+      icon: newspaper
+      item_duplication_fields: null
+      note: >-
+        Issues of the university newspaper «Учитель». The site builds the label
+        from number, serial and issueDate — no need to type it.
+      preview_url: null
+      singleton: false
+      sort: 20
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: newspaper_issues
   - collection: partners
     meta:
       accountability: all
@@ -1584,10 +1586,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
-      note: null
+      interface: url-helpers-slug
+      note: Auto-generated from title (editable).
       options:
-        slug: true
+        autoGenerate:
+          - create
+        source: '{{title}}'
         trim: true
       readonly: false
       required: true
@@ -1706,9 +1710,43 @@ fields:
       field: content
       group: null
       hidden: false
-      interface: input-rich-text-md
+      interface: input-rich-text-html
       note: null
-      options: null
+      options:
+        folder: 9f1d4e2a-6c3b-4a51-9e77-1c0b5d2f8a10
+        font: sans-serif
+        toolbar:
+          - undo
+          - redo
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - subscript
+          - superscript
+          - h2
+          - h3
+          - h4
+          - alignleft
+          - aligncenter
+          - alignright
+          - alignjustify
+          - bullist
+          - numlist
+          - outdent
+          - indent
+          - blockquote
+          - customPre
+          - customInlineCode
+          - customLink
+          - unlink
+          - customImage
+          - customMedia
+          - table
+          - hr
+          - removeformat
+          - code
+          - fullscreen
       readonly: false
       required: false
       searchable: true
@@ -1746,13 +1784,47 @@ fields:
       field: contentEn
       group: null
       hidden: false
-      interface: input-rich-text-md
+      interface: input-rich-text-html
       note: null
-      options: null
+      options:
+        folder: 9f1d4e2a-6c3b-4a51-9e77-1c0b5d2f8a10
+        font: sans-serif
+        toolbar:
+          - undo
+          - redo
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - subscript
+          - superscript
+          - h2
+          - h3
+          - h4
+          - alignleft
+          - aligncenter
+          - alignright
+          - alignjustify
+          - bullist
+          - numlist
+          - outdent
+          - indent
+          - blockquote
+          - customPre
+          - customInlineCode
+          - customLink
+          - unlink
+          - customImage
+          - customMedia
+          - table
+          - hr
+          - removeformat
+          - code
+          - fullscreen
       readonly: false
       required: false
       searchable: true
-      sort: 9
+      sort: 10
       special: null
       translations: null
       validation: null
@@ -1792,7 +1864,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 10
+      sort: 11
       special: null
       translations: null
       validation: null
@@ -1832,7 +1904,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 11
+      sort: 12
       special: null
       translations: null
       validation: null
@@ -1856,49 +1928,6 @@ fields:
       foreign_key_table: null
       foreign_key_column: null
   - collection: articles
-    field: category
-    type: uuid
-    meta:
-      collection: articles
-      conditions: null
-      display: related-values
-      display_options:
-        template: '{{ name }}'
-      field: category
-      group: null
-      hidden: false
-      interface: select-dropdown-m2o
-      note: null
-      options:
-        template: '{{ name }}'
-      readonly: false
-      required: false
-      searchable: true
-      sort: 12
-      special:
-        - m2o
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: category
-      table: articles
-      data_type: uuid
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: categories
-      foreign_key_column: id
-  - collection: articles
     field: cover
     type: uuid
     meta:
@@ -1915,7 +1944,7 @@ fields:
       readonly: false
       required: false
       searchable: true
-      sort: 13
+      sort: 14
       special:
         - file
       translations: null
@@ -1951,12 +1980,14 @@ fields:
       group: null
       hidden: false
       interface: files
-      note: null
-      options: null
+      note: Documents and other downloadable files (PDF, DOCX, etc.).
+      options:
+        enableCreate: true
+        enableSelect: true
       readonly: false
       required: false
       searchable: true
-      sort: 14
+      sort: 15
       special:
         - m2m
         - files
@@ -2048,6 +2079,183 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: articles
+    field: batch_content_images
+    type: alias
+    meta:
+      collection: articles
+      conditions: null
+      display: null
+      display_options: null
+      field: batch_content_images
+      group: null
+      hidden: false
+      interface: batch-content-images
+      note: Оберіть кілька зображень і вставте їх у Content / Content En одразу.
+      options:
+        primaryField: content
+        secondaryField: contentEn
+      readonly: false
+      required: false
+      searchable: false
+      sort: 9
+      special:
+        - alias
+        - no-data
+      translations:
+        - language: en-US
+          translation: Пакетне додавання фото
+        - language: uk-UA
+          translation: Пакетне додавання фото
+      validation: null
+      validation_message: null
+      width: full
+  - collection: articles
+    field: categories
+    type: alias
+    meta:
+      collection: articles
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{categories_id.name}}'
+      field: categories
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: Categories this article belongs to (multiple allowed).
+      options:
+        template: '{{categories_id.name}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 13
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+  - collection: articles_categories
+    field: id
+    type: integer
+    meta:
+      collection: articles_categories
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: articles_categories
+      data_type: integer
+      default_value: nextval('articles_categories_id_seq'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: articles_categories
+    field: articles_id
+    type: uuid
+    meta:
+      collection: articles_categories
+      conditions: null
+      display: null
+      display_options: null
+      field: articles_id
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: articles_id
+      table: articles_categories
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: articles
+      foreign_key_column: id
+  - collection: articles_categories
+    field: categories_id
+    type: uuid
+    meta:
+      collection: articles_categories
+      conditions: null
+      display: null
+      display_options: null
+      field: categories_id
+      group: null
+      hidden: true
+      interface: select-dropdown-m2o
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: categories_id
+      table: articles_categories
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: categories
+      foreign_key_column: id
   - collection: articles_files
     field: id
     type: integer
@@ -2302,10 +2510,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
-      note: URL-safe identifier, auto-generated from name.
+      interface: url-helpers-slug
+      note: Auto-generated from name (editable).
       options:
-        slug: true
+        autoGenerate:
+          - create
+        source: '{{name}}'
         trim: true
       readonly: false
       required: true
@@ -2423,20 +2633,22 @@ fields:
     meta:
       collection: categories
       conditions: null
-      display: null
-      display_options: null
+      display: related-values
+      display_options:
+        template: '{{articles_id.title}}'
       field: articles
       group: null
       hidden: false
-      interface: list-o2m
-      note: null
-      options: null
+      interface: list-m2m
+      note: Articles in this category (edit from the article as well).
+      options:
+        template: '{{articles_id.title}}'
       readonly: false
       required: false
       searchable: true
       sort: 10
       special:
-        - o2m
+        - m2m
       translations: null
       validation: null
       validation_message: null
@@ -3426,10 +3638,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
-      note: null
+      interface: url-helpers-slug
+      note: Auto-generated from title (editable).
       options:
-        slug: true
+        autoGenerate:
+          - create
+        source: '{{title}}'
         trim: true
       readonly: false
       required: true
@@ -3974,658 +4188,6 @@ fields:
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: id
-    type: uuid
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: true
-      interface: input
-      note: null
-      options: null
-      readonly: true
-      required: false
-      searchable: true
-      sort: 1
-      special:
-        - uuid
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: faculties
-      data_type: uuid
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: true
-      is_indexed: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: status
-    type: string
-    meta:
-      collection: faculties
-      conditions: null
-      display: labels
-      display_options:
-        choices:
-          - color: '#2ECDA7'
-            text: $t:published
-            value: published
-          - color: '#D3DAE4'
-            text: $t:draft
-            value: draft
-          - color: '#A2B5CD'
-            text: $t:archived
-            value: archived
-        showAsDot: true
-      field: status
-      group: null
-      hidden: false
-      interface: select-dropdown
-      note: null
-      options:
-        choices:
-          - color: '#2ECDA7'
-            text: $t:published
-            value: published
-          - color: '#D3DAE4'
-            text: $t:draft
-            value: draft
-          - color: '#A2B5CD'
-            text: $t:archived
-            value: archived
-      readonly: false
-      required: false
-      searchable: true
-      sort: 2
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: status
-      table: faculties
-      data_type: character varying
-      default_value: draft
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: name
-    type: string
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: name
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: true
-      searchable: true
-      sort: 3
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: name
-      table: faculties
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: nameEn
-    type: string
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: nameEn
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 4
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: nameEn
-      table: faculties
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: slug
-    type: string
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: slug
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options:
-        slug: true
-        trim: true
-      readonly: false
-      required: true
-      searchable: true
-      sort: 5
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: slug
-      table: faculties
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: true
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: dean
-    type: string
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: dean
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 6
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: dean
-      table: faculties
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: deanEn
-    type: string
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: deanEn
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 7
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: deanEn
-      table: faculties
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: departmentsCount
-    type: integer
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: departmentsCount
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 8
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: departmentsCount
-      table: faculties
-      data_type: integer
-      default_value: 0
-      max_length: null
-      numeric_precision: 32
-      numeric_scale: 0
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: studentsCount
-    type: integer
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: studentsCount
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 9
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: studentsCount
-      table: faculties
-      data_type: integer
-      default_value: 0
-      max_length: null
-      numeric_precision: 32
-      numeric_scale: 0
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: order
-    type: integer
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: order
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 10
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: order
-      table: faculties
-      data_type: integer
-      default_value: 0
-      max_length: null
-      numeric_precision: 32
-      numeric_scale: 0
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculties
-    field: departments
-    type: alias
-    meta:
-      collection: faculties
-      conditions: null
-      display: null
-      display_options: null
-      field: departments
-      group: null
-      hidden: false
-      interface: list-o2m
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 11
-      special:
-        - o2m
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-  - collection: faculty_departments
-    field: id
-    type: uuid
-    meta:
-      collection: faculty_departments
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: true
-      interface: input
-      note: null
-      options: null
-      readonly: true
-      required: false
-      searchable: true
-      sort: 1
-      special:
-        - uuid
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: faculty_departments
-      data_type: uuid
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: true
-      is_indexed: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculty_departments
-    field: faculty
-    type: uuid
-    meta:
-      collection: faculty_departments
-      conditions: null
-      display: related-values
-      display_options:
-        template: '{{ name }}'
-      field: faculty
-      group: null
-      hidden: false
-      interface: select-dropdown-m2o
-      note: null
-      options:
-        template: '{{ name }}'
-      readonly: false
-      required: true
-      searchable: true
-      sort: 2
-      special:
-        - m2o
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: faculty
-      table: faculty_departments
-      data_type: uuid
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: faculties
-      foreign_key_column: id
-  - collection: faculty_departments
-    field: name
-    type: string
-    meta:
-      collection: faculty_departments
-      conditions: null
-      display: null
-      display_options: null
-      field: name
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: true
-      searchable: true
-      sort: 3
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: name
-      table: faculty_departments
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculty_departments
-    field: nameEn
-    type: string
-    meta:
-      collection: faculty_departments
-      conditions: null
-      display: null
-      display_options: null
-      field: nameEn
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 4
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: nameEn
-      table: faculty_departments
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: faculty_departments
-    field: order
-    type: integer
-    meta:
-      collection: faculty_departments
-      conditions: null
-      display: null
-      display_options: null
-      field: order
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 5
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: order
-      table: faculty_departments
-      data_type: integer
-      default_value: 0
-      max_length: null
-      numeric_precision: 32
-      numeric_scale: 0
-      is_nullable: false
       is_unique: false
       is_indexed: false
       is_primary_key: false
@@ -5370,10 +4932,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
-      note: null
+      interface: url-helpers-slug
+      note: Auto-generated from name (editable).
       options:
-        slug: true
+        autoGenerate:
+          - create
+        source: '{{name}}'
         trim: true
       readonly: false
       required: true
@@ -6194,6 +5758,430 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: newspaper_issues
+    field: id
+    type: uuid
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: newspaper_issues
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: newspaper_issues
+    field: status
+    type: string
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: status
+      table: newspaper_issues
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: newspaper_issues
+    field: number
+    type: string
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: null
+      display_options: null
+      field: number
+      group: null
+      hidden: false
+      interface: input
+      note: 'Як надруковано: 7, 8-9'
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: number
+      table: newspaper_issues
+      data_type: character varying
+      default_value: null
+      max_length: 32
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: newspaper_issues
+    field: serial
+    type: string
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: null
+      display_options: null
+      field: serial
+      group: null
+      hidden: false
+      interface: input
+      note: 'Наскрізний номер у дужках: 360, 349-350'
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: serial
+      table: newspaper_issues
+      data_type: character varying
+      default_value: null
+      max_length: 32
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: newspaper_issues
+    field: issueDate
+    type: date
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: datetime
+      display_options: null
+      field: issueDate
+      group: null
+      hidden: false
+      interface: datetime
+      note: Перше число місяця випуску — за ним сортується архів.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: issueDate
+      table: newspaper_issues
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: newspaper_issues
+    field: title
+    type: string
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: 'Необов’язково: тема номера'
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: newspaper_issues
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: newspaper_issues
+    field: titleEn
+    type: string
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: null
+      display_options: null
+      field: titleEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: titleEn
+      table: newspaper_issues
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: newspaper_issues
+    field: pdfFile
+    type: uuid
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: null
+      display_options: null
+      field: pdfFile
+      group: null
+      hidden: false
+      interface: file
+      note: PDF номера — те, що завантажують відвідувачі.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: pdfFile
+      table: newspaper_issues
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: newspaper_issues
+    field: cover
+    type: uuid
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: image
+      display_options: null
+      field: cover
+      group: null
+      hidden: false
+      interface: file-image
+      note: 'Необов’язково: обкладинка номера.'
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: cover
+      table: newspaper_issues
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: newspaper_issues
+    field: order
+    type: integer
+    meta:
+      collection: newspaper_issues
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: newspaper_issues
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: partners
     field: id
     type: uuid
@@ -6387,10 +6375,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
-      note: null
+      interface: url-helpers-slug
+      note: Auto-generated from name (editable).
       options:
-        slug: true
+        autoGenerate:
+          - create
+        source: '{{name}}'
         trim: true
       readonly: false
       required: true
@@ -6938,10 +6928,12 @@ fields:
       field: slug
       group: null
       hidden: false
-      interface: input
-      note: null
+      interface: url-helpers-slug
+      note: Auto-generated from title (editable).
       options:
-        slug: true
+        autoGenerate:
+          - create
+        source: '{{title}}'
         trim: true
       readonly: false
       required: true
@@ -10655,27 +10647,6 @@ relations:
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: articles
-    field: category
-    related_collection: categories
-    meta:
-      junction_field: null
-      many_collection: articles
-      many_field: category
-      one_allowed_collections: null
-      one_collection: categories
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: articles
-      sort_field: null
-    schema:
-      table: articles
-      column: category
-      foreign_key_table: categories
-      foreign_key_column: id
-      constraint_name: articles_category_foreign
-      on_update: NO ACTION
-      on_delete: SET NULL
-  - collection: articles
     field: cover
     related_collection: directus_files
     meta:
@@ -10696,6 +10667,48 @@ relations:
       constraint_name: articles_cover_foreign
       on_update: NO ACTION
       on_delete: SET NULL
+  - collection: articles_categories
+    field: articles_id
+    related_collection: articles
+    meta:
+      junction_field: categories_id
+      many_collection: articles_categories
+      many_field: articles_id
+      one_allowed_collections: null
+      one_collection: articles
+      one_collection_field: null
+      one_deselect_action: delete
+      one_field: categories
+      sort_field: null
+    schema:
+      table: articles_categories
+      column: articles_id
+      foreign_key_table: articles
+      foreign_key_column: id
+      constraint_name: articles_categories_articles_id_foreign
+      on_update: NO ACTION
+      on_delete: CASCADE
+  - collection: articles_categories
+    field: categories_id
+    related_collection: categories
+    meta:
+      junction_field: articles_id
+      many_collection: articles_categories
+      many_field: categories_id
+      one_allowed_collections: null
+      one_collection: categories
+      one_collection_field: null
+      one_deselect_action: delete
+      one_field: articles
+      sort_field: null
+    schema:
+      table: articles_categories
+      column: categories_id
+      foreign_key_table: categories
+      foreign_key_column: id
+      constraint_name: articles_categories_categories_id_foreign
+      on_update: NO ACTION
+      on_delete: CASCADE
   - collection: articles_files
     field: articles_id
     related_collection: articles
@@ -10757,27 +10770,6 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: events_cover_foreign
-      on_update: NO ACTION
-      on_delete: SET NULL
-  - collection: faculty_departments
-    field: faculty
-    related_collection: faculties
-    meta:
-      junction_field: null
-      many_collection: faculty_departments
-      many_field: faculty
-      one_allowed_collections: null
-      one_collection: faculties
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: departments
-      sort_field: null
-    schema:
-      table: faculty_departments
-      column: faculty
-      foreign_key_table: faculties
-      foreign_key_column: id
-      constraint_name: faculty_departments_faculty_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: financial_reports
@@ -10862,6 +10854,48 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: memorial_entries_photo_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: newspaper_issues
+    field: pdfFile
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: newspaper_issues
+      many_field: pdfFile
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: newspaper_issues
+      column: pdfFile
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: newspaper_issues_pdffile_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: newspaper_issues
+    field: cover
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: newspaper_issues
+      many_field: cover
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: newspaper_issues
+      column: cover
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: newspaper_issues_cover_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: partners

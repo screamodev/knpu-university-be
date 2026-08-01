@@ -1,6 +1,10 @@
 services:
   directus:
-    image: directus/directus:11.1.2
+    # Must match the version that produced snapshots/schema.yaml — `directus schema apply`
+    # validates it — and 11.17.x is also where the file editor gained focal points, which the
+    # site uses to anchor cover crops. Directus runs its own DB migrations on start: back the
+    # database up before the first `up -d` after a version change.
+    image: directus/directus:11.17.4
     container_name: knpu-university-directus
     restart: unless-stopped
     mem_limit: 512m
@@ -25,6 +29,15 @@ services:
 
       WEBSOCKETS_ENABLED: ${WEBSOCKETS_ENABLED:-true}
 
+      # The admin app's default CSP is `child-src 'self' blob:`, which blocks the video preview
+      # inside the WYSIWYG. Allow the same embed hosts the public site's sanitizer allows.
+      CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC: >-
+        'self' blob: https://www.youtube.com https://www.youtube-nocookie.com
+        https://youtube.com https://player.vimeo.com
+      CONTENT_SECURITY_POLICY_DIRECTIVES__CHILD_SRC: >-
+        'self' blob: https://www.youtube.com https://www.youtube-nocookie.com
+        https://youtube.com https://player.vimeo.com
+
       ACCESS_TOKEN_TTL: ${ACCESS_TOKEN_TTL:-15m}
       REFRESH_TOKEN_TTL: ${REFRESH_TOKEN_TTL:-7d}
 
@@ -35,7 +48,7 @@ services:
       STORAGE_LOCAL_ROOT: /directus/uploads
     volumes:
       - uploads:/directus/uploads
-      - extensions:/directus/extensions
+      - ./extensions:/directus/extensions
       - ./database/migrations:/directus/database/migrations
       - ./snapshots:/directus/snapshots
     networks:
@@ -50,7 +63,6 @@ services:
 
 volumes:
   uploads:
-  extensions:
 
 networks:
   webnet:

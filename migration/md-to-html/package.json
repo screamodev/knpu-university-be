@@ -1,0 +1,9 @@
+{
+  "name": "knpu-md-to-html",
+  "private": true,
+  "type": "module",
+  "description": "Converts stored article bodies from Markdown to HTML for the Directus WYSIWYG.",
+  "dependencies": {
+    "markdown-it": "14.1.1"
+  }
+}

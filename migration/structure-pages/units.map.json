@@ -1,0 +1,40 @@
+{
+  "_comment": [
+    "Current unit (slug in knpu-university-fe/app/utils/structure.ts) → page(s) on the old site.",
+    "Aliases are drupal_url_alias values without a leading slash or language prefix.",
+    "The 30.06.2026 chart split «Факультет природничої, спеціальної і здоров'язбережувальної",
+    "освіти» across two units, so `fac-prirodn` appears twice — confirm this split before",
+    "treating the emitted content as final."
+  ],
+  "units": {
+    "ukrainian-philology": {
+      "legacy": ["division/ukrayinskyy-movno-literaturnyy-fakultet-imeni-gf-kvitky-osnovyanenka"]
+    },
+    "special-education": {
+      "legacy": ["fac-prirodn"],
+      "note": "спеціальна освіта half of the old природничий факультет — needs review"
+    },
+    "history-law": {
+      "legacy": ["division/fakultet-istoriyi-i-prava"]
+    },
+    "mathematics-informatics": {
+      "legacy": ["division/fizyko-matematychnyy-fakultet", "fac-prirodn"],
+      "note": "fizmat + природнича освіта half of the old природничий факультет — needs review"
+    },
+    "arts": {
+      "legacy": ["division/fakultet-mystectv"]
+    },
+    "foreign-philology": {
+      "legacy": ["fac-inoz-fil"]
+    },
+    "preschool": {
+      "legacy": ["division/fakultet-doshkilnoyi-osvity"]
+    },
+    "physical-education": {
+      "legacy": ["fac-fizvosp"]
+    },
+    "social-humanities": {
+      "legacy": ["division/fakultet-socialnyh-i-povedinkovyh-nauk"]
+    }
+  }
+}

@@ -127,7 +127,6 @@ add_perm programmes read "$ALL" "$PUBLISHED_FILTER"
 add_perm memorial_entries  read "$ALL" "$PUBLISHED_FILTER"
 add_perm gallery_categories read "$ALL" "$PUBLISHED_FILTER"
 add_perm gallery_items read "$ALL" "$PUBLISHED_FILTER"
-add_perm faculties read "$ALL" "$PUBLISHED_FILTER"
 add_perm vacancies read "$ALL" "$PUBLISHED_FILTER"
 add_perm student_schedule_documents read "$ALL" "$PUBLISHED_FILTER"
 add_perm education_schedule_periods read "$ALL" "$PUBLISHED_FILTER"
@@ -139,13 +138,14 @@ add_perm prozorro_procurements read "$ALL" "$PUBLISHED_FILTER"
 add_perm science_defenses read "$ALL" "$PUBLISHED_FILTER"
 add_perm science_conferences read "$ALL" "$PUBLISHED_FILTER"
 add_perm financial_reports read "$ALL" "$PUBLISHED_FILTER"
+add_perm newspaper_issues read "$ALL" "$PUBLISHED_FILTER"
 
 # Categories has no status — read everything.
 add_perm categories read "$ALL" ""
-add_perm faculty_departments read "$ALL" ""
 
-# Junction collection — must be readable so M2M expansion works.
+# Junction collections — must be readable so M2M expansion works.
 add_perm articles_files read "$ALL" ""
+add_perm articles_categories read "$ALL" ""
 
 # Files — needed so the frontend can fetch /assets/<uuid> and file metadata.
 add_perm directus_files read "$ALL" ""

@@ -235,7 +235,9 @@ def main() -> int:
             'content': article['content'],
             'status': article['status'],
             'date_published': article['date_published'],
-            'category': category_id,
+            # M2M through `articles_categories`; on PATCH this list replaces the
+            # article's existing links, which is what a re-run should do.
+            'categories': [{'categories_id': category_id}],
         }
         if cover_id:
             payload['cover'] = cover_id

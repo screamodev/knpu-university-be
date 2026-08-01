@@ -14,8 +14,9 @@ services:
       timeout: 5s
       retries: 20
     # Expose on localhost only so tools like psql can connect during development.
+    # Host 5433 avoids clash with other local Postgres containers on 5432.
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:5433:5432"
 
   directus:
     image: directus/directus:11
@@ -46,6 +47,15 @@ services:
 
       WEBSOCKETS_ENABLED: ${WEBSOCKETS_ENABLED:-true}
 
+      # The admin app's default CSP is `child-src 'self' blob:`, which blocks the video preview
+      # inside the WYSIWYG. Allow the same embed hosts the public site's sanitizer allows.
+      CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC: >-
+        'self' blob: https://www.youtube.com https://www.youtube-nocookie.com
+        https://youtube.com https://player.vimeo.com
+      CONTENT_SECURITY_POLICY_DIRECTIVES__CHILD_SRC: >-
+        'self' blob: https://www.youtube.com https://www.youtube-nocookie.com
+        https://youtube.com https://player.vimeo.com
+
       ACCESS_TOKEN_TTL: ${ACCESS_TOKEN_TTL:-15m}
       REFRESH_TOKEN_TTL: ${REFRESH_TOKEN_TTL:-7d}
       SEED_CONTENT: ${SEED_CONTENT:-false}
@@ -56,11 +66,10 @@ services:
       STORAGE_LOCAL_ROOT: /directus/uploads
     volumes:
       - uploads:/directus/uploads
-      - extensions:/directus/extensions
+      - ./extensions:/directus/extensions
       - ./database/migrations:/directus/database/migrations
       - ./snapshots:/directus/snapshots
 
 volumes:
   pg_data:
   uploads:
-  extensions:

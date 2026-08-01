@@ -6,8 +6,6 @@
 #   - memorial_entries
 #   - gallery_categories
 #   - gallery_items
-#   - faculties
-#   - faculty_departments
 #   - vacancies
 #
 # Also uploads mock image files (if missing) and links them from memorial/gallery.
@@ -235,30 +233,6 @@ upsert_single "memorial_entries" \
   "{\"status\":\"published\",\"nameEn\":\"Hero B\",\"role\":\"Захисник України\",\"roleEn\":\"Defender of Ukraine\",\"photo\":\"$MEMORIAL_IMAGE_2_ID\",\"order\":2}" \
   >/dev/null
 
-log "Upserting faculties..."
-FAC_PED_ID=$(upsert_single "faculties" \
-  "/items/faculties?filter%5Bslug%5D%5B_eq%5D=pedagogy-and-psychology&fields=id,slug&limit=1" \
-  '{"status":"published","name":"Факультет педагогіки та психології","nameEn":"Faculty of Pedagogy and Psychology","slug":"pedagogy-and-psychology","dean":"проф. Олена Коваль","deanEn":"Prof. Olena Koval","departmentsCount":3,"studentsCount":850,"order":1}' \
-  '{"status":"published","name":"Факультет педагогіки та психології","nameEn":"Faculty of Pedagogy and Psychology","dean":"проф. Олена Коваль","deanEn":"Prof. Olena Koval","departmentsCount":3,"studentsCount":850,"order":1}')
-
-FAC_IT_ID=$(upsert_single "faculties" \
-  "/items/faculties?filter%5Bslug%5D%5B_eq%5D=information-technologies&fields=id,slug&limit=1" \
-  '{"status":"published","name":"Факультет інформаційних технологій","nameEn":"Faculty of Information Technologies","slug":"information-technologies","dean":"доц. Ігор Мельник","deanEn":"Assoc. Prof. Ihor Melnyk","departmentsCount":2,"studentsCount":620,"order":2}' \
-  '{"status":"published","name":"Факультет інформаційних технологій","nameEn":"Faculty of Information Technologies","dean":"доц. Ігор Мельник","deanEn":"Assoc. Prof. Ihor Melnyk","departmentsCount":2,"studentsCount":620,"order":2}')
-
-log "Upserting faculty departments..."
-upsert_single "faculty_departments" \
-  "/items/faculty_departments?filter%5Bfaculty%5D%5B_eq%5D=$FAC_PED_ID&filter%5Border%5D%5B_eq%5D=1&fields=id&limit=1" \
-  "{\"faculty\":\"$FAC_PED_ID\",\"name\":\"Кафедра педагогіки\",\"nameEn\":\"Department of Pedagogy\",\"order\":1}" \
-  "{\"faculty\":\"$FAC_PED_ID\",\"nameEn\":\"Department of Pedagogy\",\"order\":1}" \
-  >/dev/null
-
-upsert_single "faculty_departments" \
-  "/items/faculty_departments?filter%5Bfaculty%5D%5B_eq%5D=$FAC_IT_ID&filter%5Border%5D%5B_eq%5D=1&fields=id&limit=1" \
-  "{\"faculty\":\"$FAC_IT_ID\",\"name\":\"Кафедра програмної інженерії\",\"nameEn\":\"Department of Software Engineering\",\"order\":1}" \
-  "{\"faculty\":\"$FAC_IT_ID\",\"nameEn\":\"Department of Software Engineering\",\"order\":1}" \
-  >/dev/null
-
 log "Upserting vacancies..."
 upsert_single "vacancies" \
   "/items/vacancies?filter%5Bcompany%5D%5B_eq%5D=SoftServe&filter%5Bposition%5D%5B_eq%5D=Junior%20Frontend%20Developer&fields=id&limit=1" \
@@ -287,14 +261,14 @@ log "Upserting news articles..."
 NEWS_COVER_ID=$(ensure_file "news-cover-a.png" "$GALLERY_IMAGE_1")
 upsert_single "articles" \
   "/items/articles?filter%5Bslug%5D%5B_eq%5D=open-day-2026&fields=id,slug&limit=1" \
-  "{\"status\":\"published\",\"title\":\"День відкритих дверей 2026\",\"titleEn\":\"Open Day 2026\",\"slug\":\"open-day-2026\",\"excerpt\":\"Запрошуємо абітурієнтів на презентацію освітніх програм.\",\"excerptEn\":\"Join our presentation of academic programmes.\",\"content\":\"## День відкритих дверей\\n\\nПриходьте познайомитися з викладачами та кампусом.\",\"contentEn\":\"## Open Day\\n\\nMeet faculty members and explore our campus.\",\"author\":\"Пресслужба\",\"category\":\"$CAT_UNIVERSITY_ID\",\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-10T09:00:00.000Z\"}" \
-  "{\"status\":\"published\",\"title\":\"День відкритих дверей 2026\",\"titleEn\":\"Open Day 2026\",\"excerpt\":\"Запрошуємо абітурієнтів на презентацію освітніх програм.\",\"excerptEn\":\"Join our presentation of academic programmes.\",\"content\":\"## День відкритих дверей\\n\\nПриходьте познайомитися з викладачами та кампусом.\",\"contentEn\":\"## Open Day\\n\\nMeet faculty members and explore our campus.\",\"author\":\"Пресслужба\",\"category\":\"$CAT_UNIVERSITY_ID\",\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-10T09:00:00.000Z\"}" \
+  "{\"status\":\"published\",\"title\":\"День відкритих дверей 2026\",\"titleEn\":\"Open Day 2026\",\"slug\":\"open-day-2026\",\"excerpt\":\"Запрошуємо абітурієнтів на презентацію освітніх програм.\",\"excerptEn\":\"Join our presentation of academic programmes.\",\"content\":\"## День відкритих дверей\\n\\nПриходьте познайомитися з викладачами та кампусом.\",\"contentEn\":\"## Open Day\\n\\nMeet faculty members and explore our campus.\",\"author\":\"Пресслужба\",\"categories\":[{\"categories_id\":\"$CAT_UNIVERSITY_ID\"}],\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-10T09:00:00.000Z\"}" \
+  "{\"status\":\"published\",\"title\":\"День відкритих дверей 2026\",\"titleEn\":\"Open Day 2026\",\"excerpt\":\"Запрошуємо абітурієнтів на презентацію освітніх програм.\",\"excerptEn\":\"Join our presentation of academic programmes.\",\"content\":\"## День відкритих дверей\\n\\nПриходьте познайомитися з викладачами та кампусом.\",\"contentEn\":\"## Open Day\\n\\nMeet faculty members and explore our campus.\",\"author\":\"Пресслужба\",\"categories\":[{\"categories_id\":\"$CAT_UNIVERSITY_ID\"}],\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-10T09:00:00.000Z\"}" \
   >/dev/null
 
 upsert_single "articles" \
   "/items/articles?filter%5Bslug%5D%5B_eq%5D=student-research-grants&fields=id,slug&limit=1" \
-  "{\"status\":\"published\",\"title\":\"Гранти для студентських досліджень\",\"titleEn\":\"Student Research Grants\",\"slug\":\"student-research-grants\",\"excerpt\":\"Оголошено конкурс мінігрантів для молодих дослідників.\",\"excerptEn\":\"Mini-grant competition announced for young researchers.\",\"content\":\"## Конкурс грантів\\n\\nПодати заявку можна до 15 травня.\",\"contentEn\":\"## Grant Competition\\n\\nApplications are open until May 15.\",\"author\":\"Науковий відділ\",\"category\":\"$CAT_SCIENCE_ID\",\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-15T09:00:00.000Z\"}" \
-  "{\"status\":\"published\",\"title\":\"Гранти для студентських досліджень\",\"titleEn\":\"Student Research Grants\",\"excerpt\":\"Оголошено конкурс мінігрантів для молодих дослідників.\",\"excerptEn\":\"Mini-grant competition announced for young researchers.\",\"content\":\"## Конкурс грантів\\n\\nПодати заявку можна до 15 травня.\",\"contentEn\":\"## Grant Competition\\n\\nApplications are open until May 15.\",\"author\":\"Науковий відділ\",\"category\":\"$CAT_SCIENCE_ID\",\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-15T09:00:00.000Z\"}" \
+  "{\"status\":\"published\",\"title\":\"Гранти для студентських досліджень\",\"titleEn\":\"Student Research Grants\",\"slug\":\"student-research-grants\",\"excerpt\":\"Оголошено конкурс мінігрантів для молодих дослідників.\",\"excerptEn\":\"Mini-grant competition announced for young researchers.\",\"content\":\"## Конкурс грантів\\n\\nПодати заявку можна до 15 травня.\",\"contentEn\":\"## Grant Competition\\n\\nApplications are open until May 15.\",\"author\":\"Науковий відділ\",\"categories\":[{\"categories_id\":\"$CAT_SCIENCE_ID\"}],\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-15T09:00:00.000Z\"}" \
+  "{\"status\":\"published\",\"title\":\"Гранти для студентських досліджень\",\"titleEn\":\"Student Research Grants\",\"excerpt\":\"Оголошено конкурс мінігрантів для молодих дослідників.\",\"excerptEn\":\"Mini-grant competition announced for young researchers.\",\"content\":\"## Конкурс грантів\\n\\nПодати заявку можна до 15 травня.\",\"contentEn\":\"## Grant Competition\\n\\nApplications are open until May 15.\",\"author\":\"Науковий відділ\",\"categories\":[{\"categories_id\":\"$CAT_SCIENCE_ID\"}],\"cover\":\"$NEWS_COVER_ID\",\"date_published\":\"2026-04-15T09:00:00.000Z\"}" \
   >/dev/null
 
 log "Upserting partners..."

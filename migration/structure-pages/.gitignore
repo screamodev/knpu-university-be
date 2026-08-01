@@ -1,0 +1,8 @@
+pages.raw.jsonl
+menu.draft.json
+tabs.map.draft.json
+content.draft.json
+images.list.json
+images.map.json
+alias.redirects.json
+*.log
