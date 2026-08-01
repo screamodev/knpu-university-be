@@ -6,3 +6,4 @@ images.list.json
 images.map.json
 alias.redirects.json
 *.log
+__pycache__/
