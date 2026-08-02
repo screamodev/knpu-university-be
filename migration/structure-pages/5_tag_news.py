@@ -3,9 +3,10 @@
 Stage 5 — give every unit a news category and tag the articles that belong to it.
 
 The Новини tab on a faculty page is not a separate collection: it is the shared `articles`
-collection filtered by a category whose slug equals the unit slug. This script
+collection filtered by that unit's category (`newsCategorySlug` in structure.ts). This script
 
-  1. creates the missing categories (idempotent, matched by slug), and
+  1. makes sure each unit's category exists — matched on the slug it already has in Directus,
+     which is transliterated from the Ukrainian name — and
   2. adds the category to every article whose title or body matches one of the unit's phrases
      in `news.keywords.json`.
 
@@ -31,19 +32,32 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 
-# Ukrainian / English display names, keyed by unit slug. Kept here rather than read out of the
-# frontend's structure.ts so this script stays dependency-free.
-CATEGORY_NAMES = {
-    'ukrainian-philology': ('ННІ української філології', 'Institute of Ukrainian Philology'),
-    'special-education': ('ННІ спеціальної освіти та інклюзії', 'Institute of Special Education and Inclusion'),
-    'history-law': ('Факультет історії і права', 'Faculty of History and Law'),
-    'mathematics-informatics': ('Факультет математики, інформатики і природничої освіти',
+# Unit slug → (category slug in Directus, uk name, en name).
+#
+# The category slugs are transliterated from the Ukrainian names, because the categories were
+# seeded that way before this script existed. They must match `newsCategorySlug` in the
+# frontend's app/utils/structure.ts — that is what the faculty News tab queries.
+CATEGORIES = {
+    'ukrainian-philology': ('navchalno-naukovyi-instytut-ukrainskoi-filolohii',
+                            'ННІ української філології', 'Institute of Ukrainian Philology'),
+    'special-education': ('instytut-spetsialnoyi-osvity-ta-inklyuziyi',
+                          'ННІ спеціальної освіти та інклюзії',
+                          'Institute of Special Education and Inclusion'),
+    'history-law': ('fakultet-istoriyi-i-prava',
+                    'Факультет історії і права', 'Faculty of History and Law'),
+    'mathematics-informatics': ('fakultet-matematyky-informatyky-i-pryrodnychoyi-osvity',
+                                'Факультет математики, інформатики і природничої освіти',
                                 'Faculty of Mathematics, Computer Science and Natural Science Education'),
-    'arts': ('Факультет мистецтв', 'Faculty of Arts'),
-    'foreign-philology': ('Факультет іноземної філології', 'Faculty of Foreign Philology'),
-    'preschool': ('Факультет дошкільної освіти', 'Faculty of Preschool Education'),
-    'physical-education': ('Факультет фізичного виховання і спорту', 'Faculty of Physical Education and Sports'),
-    'social-humanities': ('Факультет соціально-гуманітарних наук і соціальних технологій',
+    'arts': ('fakultet-mystetstv', 'Факультет мистецтв', 'Faculty of Arts'),
+    'foreign-philology': ('fakultet-inozemnoyi-filolohiyi',
+                          'Факультет іноземної філології', 'Faculty of Foreign Philology'),
+    'preschool': ('fakultet-doshkilnoyi-osvity',
+                  'Факультет дошкільної освіти', 'Faculty of Preschool Education'),
+    'physical-education': ('fakultet-fizychnoho-vykhovannya-i-sportu',
+                           'Факультет фізичного виховання і спорту',
+                           'Faculty of Physical Education and Sports'),
+    'social-humanities': ('fakultet-sotsialno-humanitarnykh-nauk-i-sotsialnykh-tekhnolohiy',
+                          'Факультет соціально-гуманітарних наук і соціальних технологій',
                           'Faculty of Social and Humanitarian Sciences and Social Technologies'),
 }
 
@@ -116,17 +130,17 @@ def main() -> int:
     existing = {row['slug']: row['id']
                 for row in api.request('GET', '/items/categories?fields=id,slug&limit=-1')['data']}
     category_ids: dict[str, str] = {}
-    for slug, (name, name_en) in CATEGORY_NAMES.items():
-        if slug in existing:
-            category_ids[slug] = existing[slug]
+    for unit, (category_slug, name, name_en) in CATEGORIES.items():
+        if category_slug in existing:
+            category_ids[unit] = existing[category_slug]
             continue
         if args.dry_run:
-            print(f'would create category {slug} ({name})')
+            print(f'would create category {category_slug} ({name})')
             continue
         created = api.request('POST', '/items/categories',
-                              payload={'slug': slug, 'name': name, 'nameEn': name_en})
-        category_ids[slug] = created['data']['id']
-        print(f'+ category {slug}', file=sys.stderr)
+                              payload={'slug': category_slug, 'name': name, 'nameEn': name_en})
+        category_ids[unit] = created['data']['id']
+        print(f'+ category {category_slug}', file=sys.stderr)
 
     # ---- articles ------------------------------------------------------------
     articles = api.request(
