@@ -30,10 +30,21 @@ import uuid as uuid_mod
 from pathlib import Path
 
 HERE = Path(__file__).parent
-CONTENT_ROOTS = [
-    HERE.parents[2] / 'knpu-university-fe' / 'app' / 'content' / 'pages',
-    HERE.parents[2] / 'knpu-university-fe' / 'app' / 'content' / 'structure',
-]
+
+
+def default_content_roots() -> list[Path]:
+    """
+    Where the committed static content lives, relative to this file.
+
+    Resolved on demand rather than at import: `--from-dir` runs the script from a bind mount that
+    has no repository above it, and computing this eagerly made the module fail to load there.
+    """
+    if len(HERE.parents) < 3:
+        return []
+    frontend = HERE.parents[2] / 'knpu-university-fe' / 'app' / 'content'
+    return [frontend / 'pages', frontend / 'structure']
+
+
 ASSET_RE = re.compile(r'/assets/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})', re.I)
 
 # Production sits behind Cloudflare, which answers `Python-urllib/3.x` with "error code: 1010"
@@ -163,8 +174,9 @@ def main() -> int:
     parser.add_argument('--target-token', default=(os.environ.get('TARGET_TOKEN') or '').strip() or None)
     parser.add_argument('--path', action='append', metavar='DIR',
                         help='limit the scan to these content directories; repeatable. '
-                             'Defaults to every static content root, which on a deploy means '
-                             're-checking the ~1 800 faculty images already on the target.')
+                             'Defaults to every static content root next to this repository, '
+                             'which on a deploy means re-checking the ~1 800 faculty images '
+                             'already on the target.')
     parser.add_argument('--dump-dir', metavar='DIR',
                         help='write the files and their metadata here instead of uploading — for '
                              'when the target is behind a bot filter that blocks this script')
@@ -177,7 +189,7 @@ def main() -> int:
     if args.from_dir:
         return upload_from_dir(Path(args.from_dir), args)
 
-    roots = [Path(path) for path in args.path] if args.path else CONTENT_ROOTS
+    roots = [Path(path) for path in args.path] if args.path else default_content_roots()
     ids = sorted(referenced_ids(roots))
     print(f'{len(ids)} asset(s) referenced by the static content', file=sys.stderr)
     if not (args.dry_run or args.dump_dir) and not (args.target_url and args.target_token):
