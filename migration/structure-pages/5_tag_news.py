@@ -135,13 +135,31 @@ def main() -> int:
     api = Directus(args.url, token)
 
     # ---- categories ----------------------------------------------------------
-    existing = {row['slug']: row['id']
-                for row in api.request('GET', '/items/categories?fields=id,slug&limit=-1')['data']}
+    rows = api.request('GET', '/items/categories?fields=id,slug,name&limit=-1')['data']
+    by_slug = {row['slug']: row for row in rows}
+    by_name = {row['name']: row for row in rows}
+
     category_ids: dict[str, str] = {}
     for unit, (category_slug, name, name_en) in CATEGORIES.items():
-        if category_slug in existing:
-            category_ids[unit] = existing[category_slug]
+        if category_slug in by_slug:
+            category_ids[unit] = by_slug[category_slug]['id']
             continue
+
+        # `name` is unique in Directus, and an environment may already carry this category under
+        # a slug someone else chose (the faculty categories arrived that way, transliterated by
+        # an earlier seeding path). Adopt that row and align its slug, which is what the frontend
+        # queries by — creating a second row would fail on the unique name anyway.
+        clash = by_name.get(name)
+        if clash:
+            if args.dry_run:
+                print(f'would re-slug category {clash["slug"]!r} → {category_slug!r} ({name})')
+                category_ids[unit] = clash['id']
+                continue
+            api.request('PATCH', f'/items/categories/{clash["id"]}', payload={'slug': category_slug})
+            category_ids[unit] = clash['id']
+            print(f'~ category {name}: slug {clash["slug"]!r} → {category_slug!r}', file=sys.stderr)
+            continue
+
         if args.dry_run:
             print(f'would create category {category_slug} ({name})')
             continue

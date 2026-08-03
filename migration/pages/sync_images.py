@@ -140,8 +140,17 @@ def main() -> int:
             if exc.code not in (403, 404):
                 raise
 
-        upload(args.target_url, args.target_token, file_id, meta,
-               download(args.source_url, source_token, file_id))
+        try:
+            upload(args.target_url, args.target_token, file_id, meta,
+                   download(args.source_url, source_token, file_id))
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode('utf-8', 'replace')[:300]
+            print(f'  ! {file_id}: upload failed HTTP {exc.code} {detail}', file=sys.stderr)
+            if exc.code in (401, 403):
+                print('    the target token needs create access to directus_files — use the '
+                      'admin static token, not the read-only site-preview one', file=sys.stderr)
+            missing += 1
+            continue
         print(f'  + {file_id}  {meta.get("filename_download")}', file=sys.stderr)
         copied += 1
 

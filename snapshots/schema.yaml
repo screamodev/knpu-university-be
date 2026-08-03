@@ -65,7 +65,7 @@ collections:
       icon: newspaper
       item_duplication_fields: null
       note: News articles. Uses draft/published/archived status workflow.
-      preview_url: http://localhost:3000/news/{{slug}}?preview=local-preview-secret
+      preview_url: null
       singleton: false
       sort: 2
       sort_field: null
@@ -2786,6 +2786,8 @@ fields:
             value: student-council
           - text: Аспірантура і докторантура — нормативні документи
             value: postgraduate-regulations
+          - text: Фінансова діяльність
+            value: financial-activity
       field: section
       group: null
       hidden: false
