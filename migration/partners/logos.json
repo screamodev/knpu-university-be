@@ -1,0 +1,7 @@
+{
+  "_comment": "partners.slug → logo source URL. The old site carried these as banners in its «Корисні посилання» block; they are the only images the university published for these organisations.",
+  "mon": "https://hnpu.edu.ua/sites/default/files/images/Banner/320X200-MON.png",
+  "kharkiv-education-department": "https://hnpu.edu.ua/sites/default/files/images/Banner/320X200-DeptOsv.png",
+  "government-contact-centre": "https://hnpu.edu.ua/sites/default/files/images/Banner/240X200-UKC.png",
+  "skovoroda-hub": "https://hnpu.edu.ua/sites/default/files/images/icons32/21%28200%29.png"
+}

@@ -139,6 +139,7 @@ add_perm science_defenses read "$ALL" "$PUBLISHED_FILTER"
 add_perm science_conferences read "$ALL" "$PUBLISHED_FILTER"
 add_perm financial_reports read "$ALL" "$PUBLISHED_FILTER"
 add_perm newspaper_issues read "$ALL" "$PUBLISHED_FILTER"
+add_perm documents read "$ALL" "$PUBLISHED_FILTER"
 
 # Categories has no status — read everything.
 add_perm categories read "$ALL" ""

@@ -1,0 +1,2842 @@
+[
+  {
+    "section": "rector-report",
+    "title": "Звіт Ректора за 2025 рік",
+    "order": 1,
+    "documentDate": "2025-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Zvit%20rektora%20-%202025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "rector-report",
+    "title": "Звіт Ректора за 2024 рік",
+    "order": 2,
+    "documentDate": "2024-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Zvit_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "rector-report",
+    "title": "Звіт Ректора за 2023 рік",
+    "order": 3,
+    "documentDate": "2023-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Zvit_rectora_Khnpu_2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "rector-report",
+    "title": "Звіт Ректора за 2022 рік",
+    "order": 4,
+    "documentDate": "2022-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/ZVIT%20REKTORA%202022.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "rector-report",
+    "title": "Звіт Ректора за 2021 рік",
+    "order": 5,
+    "documentDate": "2021-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Zvit_rectora2021.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Статут університету",
+    "order": 1,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/STATUT%202025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Політика у сфері якості",
+    "order": 2,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Polityka%20u%20sferi%20yakostii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Колективний договір",
+    "order": 3,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/dogovir21_25.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Стратегія розвитку Харківського національного педагогічного університету імені Г.С. Сковороди на 2021 - 2025 рр",
+    "order": 4,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Strategiya.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Стратегічний план функціонування Харківського національного педагогічного університету імені Г.С. Сковороди у воєнний час та розбудови у післявоєнний період (ВС-9)",
+    "order": 5,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Stratehichnyi%20plan%20funktsionuvannia%20Kharkivskoho%20natsionalnoho%20pedahohichnoho%20universytetu%20imeni%20H.S.%20Skovorody%20u%20voiennyi%20chas%20ta%20rozbudovy%20u%20pisliavoiennyi%20period.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Кодекс безпечного освітнього середовища",
+    "order": 6,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Kodeks_bezpechnoho_osvitnoho_seredovyshcha.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Стратегія цифровізації Харківського національного педагогічного університету імені Г.С. Сковороди на 2021-2025 рр.",
+    "order": 7,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Strategiya_zufrovisazii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Концепція виховної роботи на 2021 - 2025 рр.",
+    "order": 8,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Koncepcia_vyhovnoi_robotu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Програма реалізації концепції розвитку педагогічної освіти у Харківському національному педагогічному університеті імені Г.С. Сковороди",
+    "order": 9,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Programa_realisazii_konzepz_rosvytky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "План роботи Виконавчої ради (Ради з якості) ХНПУ імені Г.С. Сковороди на 2024-2025 навчальний рік",
+    "order": 10,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Plan_VR_24_25.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "План роботи Вченої ради на 2025 рік",
+    "order": 11,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Plan_roboty_vchenoi_rady_2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "План гендерної рівності",
+    "order": 12,
+    "documentDate": null,
+    "sourceUrl": "https://drive.google.com/file/d/1wa6BW8mzd5SehMaH_UOzaLbDOcPEWsbg/view?usp=drive_link",
+    "kind": "link"
+  },
+  {
+    "section": "regulations",
+    "title": "Персональний склад наглядової ради",
+    "order": 13,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Nag_rada.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Графік особистого прийому громадян",
+    "order": 14,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Hrafik%20osobystoho%20pryiomu%20hromadian%20.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Графік внутрішніх аудитів ОП на 2023-2024 навчальний рік",
+    "order": 15,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Audit_OP.PDF",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "ПРОГРАМА ЕКОНОМІЇ СПОЖИВАННЯ ЕНЕРГОРЕСУРСІВ на 2024-2025 н. р.",
+    "order": 16,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Prohrama%20ekonomii%20spozhyvannia%20enerhoresursiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про раду стейкхолдерів",
+    "order": 17,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20radu%20steikkholderiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Стратегія третьої місії Харківського національного педагогічного університету імені Г.С. Сковороди на 2026-2030 роки",
+    "order": 18,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Stratehiia%20tretoi%20misii%20Kharkivskoho%20natsionalnoho%20pedahohichnoho%20universytetu%20imeni%20H.S.%20Skovorody%20na%202026-2030%20roky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Стратегія гендерної рівності Харківського національного педагогічного університету імені Г.С. Сковороди на 2026-2030 роки",
+    "order": 19,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Stratehiia%20hendernoi%20rivnosti%20Kharkivskoho%20natsionalnoho%20pedahohichnoho%20universytetu%20imeni%20H.S.%20Skovorody%20na%202026-2030%20roky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Стратегія відкритої науки Харківського національного педагогічного університету імені Г.С. Сковороди на 2026-2030 роки",
+    "order": 20,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Stratehiia%20vidkrytoi%20nauky%20KhNPU%20imeni%20H.S.%20Skovorody%20na%202026-2030%20roky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про співпрацю Харківського національного педагогічного університету імені Г.С. Сковороди з органами державної влади, органами місцевого самоврядування та територіальними громадами міста Харкова та Харківської області",
+    "order": 21,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20spivpratsiu%20Kharkivskoho%20natsionalnoho%20pedahohichnoho%20universytetu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про типові редакційні політики фахових наукових видань університету",
+    "order": 22,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20typovi%20redaktsiini%20polityky%20fakhovykh%20naukovykh%20vydan%20universytetu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про структуру та структурні підрозділи університету",
+    "order": 23,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20strukturu%20ta%20strukturni%20pidrozdily%20universytetu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про центр інтеграції та розвитку освітніх практик",
+    "order": 24,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20tsentr%20intehratsii%20ta%20rozvytku%20osvitnikh%20praktyk.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про навчально-методичний центр розвитку альтернативної й додаткової комунікації в освіті",
+    "order": 25,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20navchalno-metodychnyi%20tsentr%20rozvytku%20alternatyvnoi%20y%20dodatkovoi%20komunikatsii%20v%20osviti%20(1).pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Політика щодо викривачів у Харківському національному педагогічному університеті імені Г.С. Сковороди",
+    "order": 26,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polityka%20shchodo%20vykryvachiv%20u%20KhNPU%20imeni%20H.S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Кодекс академічної доброчесності",
+    "order": 27,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Kodeks%20akademichnoi%20dobrochesnosti.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Етичний кодекс ХНПУ імені Г.С.Сковороди",
+    "order": 28,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/ETYChNYI_KODEKS.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про комісію з етики та управління конфліктами",
+    "order": 29,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20komisiiu%20z%20etyky%20ta%20upravlinnia%20konfliktamy.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про комісію з питань етики та біоетики",
+    "order": 30,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_komisiyu_s_pytan_etuku.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про механізми реагування на випадки булінгу (цькування) та мобінгу",
+    "order": 31,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20mekhanizmy%20reahuvannia%20na%20vypadky%20bulinhu%20(tskuvannia)%20ta%20mobinhu%C2%A0.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про формування Soft Skills в учасників освітнього процесу ХНПУ імені Г.С. Сковороди",
+    "order": 32,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Formuvanya_soft_skills.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про рейтингове оцінювання діяльності науково-педагогічних працівників",
+    "order": 33,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20reitynhove%20otsiniuvannia%20diialnosti%20naukovo-pedahohichnykh%20pratsivnykiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про атестацію педагогічних працівників",
+    "order": 34,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20atestatsiiu%20pedahohichnykh%20pratsivnykiv%20(2).pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про систему та види заохочень Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 35,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_systemy_ta_vudy_zaohochen.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Антикорупційна програма Харківського національного педагогічного університету імені Г. С. Сковороди на 2023 - 2025 роки",
+    "order": 36,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Antykoruptsiina_prohrama.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про уповноважену особу з питань запобігання та виявлення корупції в ХНПУ імені Г.С.Сковороди",
+    "order": 37,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/pro_zapobiganya_korypzii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок проведення моніторингових досліджень у ХНПУ імені Г.С.Сковороди",
+    "order": 38,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20poriadok%20provedennia%20monitorynhovykh%20doslidzhen%20ta%20doslidzhen%20u%20sferi%20osvity%20v%20KhNPU%20imeni%20H.S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про супровід студентів з особливими освітніми потребами у ХНПУ імені Г.С. Сковороди",
+    "order": 39,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20suprovid%20studentiv%20z%20osoblyvymy%20osvitnimy%20potrebamy.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про приймальну комісію",
+    "order": 40,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20pryimalnu%20komisiiu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про раду з координації досліджень у галузі знань 01 освіта/педагогіка",
+    "order": 41,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20radu%20z%20koordynatsii%20doslidzhen%20u%20haluzi%20znan%2001%20osvita%20pedahohika.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про комісію громадського контролю за фінансовою діяльністю університету",
+    "order": 42,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20komisiiu%20hromadskoho%20kontroliu%20za%20finansovoiu%20diialnistiu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Правила призначення академічної стипендії",
+    "order": 43,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pravyla%20pryznachennia%20akademichnoi%20stypendii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок формування рейтингу успішності здобувачів освіти ХНПУ імені Г. С. Сковороди",
+    "order": 44,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poriadok%20formuvannia%20reitynhu%20uspishnosti%20zdobuvachiv%20osvity.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Методика процесу МП-01 управління документацією",
+    "order": 45,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/MP_01.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Методика процесу МП-02 управління протоколами",
+    "order": 46,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/MP_02.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Методика процесу МП-03 аналіз СУЯ з боку керівництва університету",
+    "order": 47,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/MP_03.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Методика процесу МП-04 проведення внутрішніх аудитів",
+    "order": 48,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/MP_04.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Методика процесу МП-05 моніторинг та управління процесами",
+    "order": 49,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/MP_05.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Методика процесу МП-06 управління ризиками, невідповідностями, коригувальними і запобіжними діями",
+    "order": 50,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/MP_06.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Виконавчу Раду (раду з якості)",
+    "order": 51,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_vykonavchy_rady.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про систему внутрішнього забезпечення якості освіти та освітньої діяльності ХНПУ імені Г.С. Сковороди",
+    "order": 52,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Polozhenya_%20Vnytrishnogo%20zabespech.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про стейкхолдерів освітніх програм ХНПУ імені Г.С.Сковороди",
+    "order": 53,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/polozhenya%20pro%20STEYKHOLDERIV.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про робочу групу з оцінки корупційних ризиків у ХНПУ імені Г.С. Сковороди",
+    "order": 54,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20robochu%20hrupu%20z%20otsinky%20koruptsiinykh%20ryzykiv%20u%20KhNPU%20imeni%20H.S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про отримання і використання благодійних внесків у Харківському національному педагогічному університеті імені Г.С. Сковороди",
+    "order": 55,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20otrymannia%20i%20vykorystannia%20blahodiinykh%20vneskiv%20u%20KhNPU%20imeni%20H.S.%20Skovoroda.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про отримання і використання благодійної допомоги у Харківському національному педагогічному університеті імені Г.С. Сковороди",
+    "order": 56,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20otrymannia%20i%20vykorystannia%20blahodiinoi%20dopomohy%20u%20KhNPU%20imeni%20H.S.%20Skovoroda.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Типове положення про навчально-науковий інститут Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 57,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Typove%20polozhennya.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Типове положення про науково-методичну комісію навчально-наукового інституту",
+    "order": 58,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Typove%20polozhennia%20pro%20naukovo-metodychnu%20komisiiu%20navchalno-naukovoho%20instytutu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про організацію освітнього процесу в Харківському національному педагогічному університеті імені Г.С.Сковороди",
+    "order": 59,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20orhanizatsiiu%20osvitnoho%20protsesu%20v%20KhNPU%20imeni%20H.S.%20Skovorody%202025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про освітню програму",
+    "order": 60,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20osvitniu%20prohramu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про академічні відпустки (ВС-12)",
+    "order": 61,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20akademichni%20vidpustky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про гаранта освітньої програми ХНПУ імені Г.С. Сковороди",
+    "order": 62,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_garanta_osvitn_programu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Комплексна програма професійного партнерства університету з абітурієнтами та стейкхолдерами",
+    "order": 63,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Kompleksna_prohrama_partnerstva.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про відкриті навчальні заняття (ВС 36/23)",
+    "order": 64,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/36_23%20Polozhennia%20pro%20vidkryti%20navchalni%20zaniattia.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Типове положення про кафедру ХНПУ імені Г.С. Сковороди (у новій редакції) (ВС- 27)",
+    "order": 65,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Typove%20polozhennia%20pro%20kafedru%20KhNPU%20(u%20novii%20redaktsii).pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про науково-методичну комісію факультету (у новій редакції)",
+    "order": 66,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_naykovo_metoduchny_komisiyu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Типове положення про факультет Харківського національного педагогічного університету імені Г.С. Сковороди (ВС-11)",
+    "order": 67,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Typove%20polozhennia%20pro%20fakultet%20Kharkivskoho%20natsionalnoho%20pedahohichnoho%20universytetu%20imeni%20H.S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про використання технологій дистанційного навчання в освітньому процесі Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 68,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_vykorystanya_tehnologiy_dustanziynogo_navchanya.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про використання інструментів генеративного штучного інтелекту в освітньо-науковому процесі",
+    "order": 69,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_vykorystannia_shi.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про стажування педагогічних і науково-педагогічних працівників на платформі дистанційної освіти MOODLE (ВС-16)",
+    "order": 70,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20stazhuvannia%20pedahohichnykh%20i%20naukovo-pedahohichnykh%20pratsivnykiv%20na%20platformi%20dystantsiinoi%20osvity%20MOODLE.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про створення, функціонування та сертифікацію електронного навчального курса",
+    "order": 71,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_pro_ENK.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про організацію та проведення гостьових лекцій у ХНПУ імені Г.С. Сковороди (ВС-3)",
+    "order": 72,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20orhanizatsiiu%20ta%20provedennia%20hostovykh%20lektsii%20u%20KhNPU%20imeni%20H.S.%20Skovorody%20.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "​ Положення про порядок та умови обрання навчальних дисциплін з циклу вільного вибору здобувачами ХНПУ імені Г.С. Сковороди (у новій редакції) (ВС-6)",
+    "order": 73,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20poriadok%20ta%20umovy%20obrannia%20navchalnykh%20dystsyplin%20z%20tsyklu%20vilnoho%20vyboru%20zdobuvachamy%20KhNPU%20imeni%20H.S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про студентського куратора",
+    "order": 74,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_stud_kyratora.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про порядок визнання результатів навчання здобувачів Харківського національного педагогічного університету імені Г.С. Сковороди отриманих у неформальній та/або інформальній освіті (ВС-22)",
+    "order": 75,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20poriadok%20vyznannia%20rezultativ%20navchannia%20zdobuvachiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Стратегія інтернаціоналізації ХНПУ імені Г.С. Сковороди",
+    "order": 76,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Strategia_internazionalisazii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок реалізації права на академічну мобільність учасників освітнього процесу",
+    "order": 77,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20realizatsiiu%20prava%20na%20akademichnu%20mobilnist%C2%A0.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про порядок підготовки та реалізації грантових проєктів",
+    "order": 78,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20poriadok%20pidhotovky%20ta%20realizatsii%20hrantovykh%20proiektiv%C2%A0.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про організацію та проведення атестації на здобуття освітнього ступеня «бакалавр» і «магістр»",
+    "order": 79,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20orhanizatsiiu%20ta%20provedennia%20atestatsii%20na%20zdobuttia%20osvitnoho%20stupenia%20bakalavr%20i%20mahistr.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про проведення практик здобувачів першого (бакалаврського) та другого (магістерського) рівнів вищої освіти ХНПУ імені Г.С. Сковороди",
+    "order": 80,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_provedenya_praktyk.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про переведення студентів на вакантні місця державного замовлення",
+    "order": 81,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20perevedennia%20zdobuvachiv%20vyshchoi%20osvity%20na%20vakantni%20mistsia%20derzhavnoho%20zamovlennia.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про проведення ректорських контрольних замірів знань здобувачів вищої освіти",
+    "order": 82,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_provedenya_rectorskyh_kontr_zamiriv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про куратора академічної групи ХНПУ імені Г.С.Сковороди",
+    "order": 83,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/kurator.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про порядок замовлення, виготовлення, видачі та обліку документів про вищу освіту державного зразка та додатків до них європейського зразка у ХНПУ імені Г.С. Сковороди",
+    "order": 84,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_vupyskni_dokymenty.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про сприяння працевлаштуванню студентів ХНПУ імені Г.С.Сковороди",
+    "order": 85,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/polozhenya_pro%20spryanya%20prazhevlastyvannya.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про стипендіальне забезпечення здобувачів першого (бакалаврського) та другого (магістерського) рівнів вищої освіти",
+    "order": 86,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20stypendialne%20zabezpechennia.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про студентський гуртожиток",
+    "order": 87,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20studentskyi%20hurtozhytok.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про студентську раду гуртожитків",
+    "order": 88,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/pro%20stydentsky%20rady%20gyrtozhitky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про студентське самоврядування ХНПУ імені Г.С. Сковороди",
+    "order": 89,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_stud_samovryadyvanya.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок перевірки наукових, навчальних та навчально-методичних робіт на наявність ознак академічного плагіату",
+    "order": 90,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poriadok_perevirky_robit.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про кваліфікаційну роботу здобувачів першого (бакалаврського) і другого (магістерського) рівнів вищої освіти",
+    "order": 91,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20kvalifikatsiinu%20robotu%20%20zdobuvachiv%20pershoho%20(bakalavrskoho)%20i%20druhoho%20(mahisterskoho)%20rivniv%20vyshchoi%20osvity.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про профорієнтаційну роботу (ВС-19)",
+    "order": 92,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20proforiientatsiinu%20robotu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про оцінювання, перевірку контрагентів та антикорупційний моніторинг у сфері публічних закупівель",
+    "order": 93,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Polozhennia%20pro%20otsiniuvannia%2C%20perevirku%20kontrahentiv%20ta%20antykoruptsiinyi%20monitorynh%20u%20sferi%20publichnykh%20zakupivel.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про систему ключових показників ефективності (KPI) Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 94,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20systemu%20kliuchovykh%20pokaznykiv%20efektyvnosti%20(KPI)%20KhNPU%20imeni%20H.S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Hаукову раду",
+    "order": 95,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Naykova_Rada.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про організацію науково-дослідної роботи в ХНПУ імені Г.С.Сковороди",
+    "order": 96,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro%20organizatziy%20naykovo%20doslidnoi%20roboty.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про програму фінансування науково-дослідної роботи",
+    "order": 97,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Polozhennia%20pro%20prohramu%20finansuvannia%20naukovo-doslidnoi%20roboty.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про наукові школи Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 98,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_naykovi_shkolu_20.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про діяльність студентського наукового гуртка ХНПУ імені Г.С. Сковороди",
+    "order": 99,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_diyalnist_naykovogo_gyrtka.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Вчену раду",
+    "order": 100,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_vheny_rady.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про організацію роботи спеціалізованої вченої ради з присудження наукового ступеня доктора наук (ВС-1)",
+    "order": 101,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia_pro_orhanizatsiiu_roboty_spetsializovanoi_vchenoi_rady_z_prysudzhennia_naukovoho_stupenia_doktora%20nauk.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про створення та організацію роботи разових спеціалізованих учених рад для присудження ступеня доктора філософії та скасування рішення разових спеціалізованих учених рад про присудження ступеня доктора філософії",
+    "order": 102,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_razovy_radu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про раду молодих учених Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 103,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_Rady_molodych_ychenych.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про порядок підготовки здобувачів наукового ступеня доктор наук ХНПУ імені Г.С. Сковороди",
+    "order": 104,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_poryadok_pidgotovku_doktora_filosofii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про підготовку здобувачів вищої освіти ступеня доктора філософії",
+    "order": 105,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20pidhotovku%20zdobuvachiv%20vyshchoi%20osvity%20stupenia%20doktora%20filosofii%C2%A0.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про організацію освітнього процесу здобувачів третього (освітньо-наукового) рівня вищої освіти",
+    "order": 106,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20orhanizatsiiu%20osvitnoho%20protsesu%20zdobuvachiv%20tretoho%20(osvitno-naukovoho)%20rivnia%20vyshchoi%20osvity.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про науково-викладацьку практику здобувачів третього (освітньо-наукового) рівня вищої освіти ХНПУ імені Г.С. Сковороди (у новій редакції)",
+    "order": 107,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_naykovo-vykladazky_praktuky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про наукового керівника здобувачів третього (освітньо-наукового) рівня вищої освіти і наукового консультанта здобувачів наукового ступеня доктор наук Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 108,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20naukovoho%20kerivnyka.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про студентське наукове товариство факультету",
+    "order": 109,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20studentske%20naukove%20tovarystvo%20fakultetu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про студентське наукове товариство ХНПУ імені Г.С. Сковороди",
+    "order": 110,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20studentske%20naukove%20tovarystvo%20KhNPU%20imeni%20H.%20S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про підвищення кваліфікації та стажування педагогічних і науково-педагогічних працівників",
+    "order": 111,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_pidvyshchennia_kvalifikatsii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про надання щорічної грошової винагороди педагогічним працівникам ХНПУ імені Г.С. Сковороди",
+    "order": 112,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20nadannia%20shchorichnoi%20hroshovoi%20vynahorody%20pedahohichnym%20pratsivnykam%20KhNPU%20imeni%20H%20S%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про раду старійшин ХНПУ імені Г. С. Сковороди",
+    "order": 113,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_Radu_stariishyn.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про редакційно-видавничу раду Харківського національного педагогічного університету імені Г.С.Сковороди",
+    "order": 114,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_redakziyno_vydavnycy_rady.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про навчальні, наукові та довідкові видання",
+    "order": 115,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol_pro_navchalno_nauk_vidann_11_18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про редакційну колегію наукового фахового видання",
+    "order": 116,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_redaktsiinu_kolehiiu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про електронні видання",
+    "order": 117,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol_pro_electr_vidann_11_18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про художню раду ХНПУ імені Г.С.Сковороди",
+    "order": 118,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/hudrada.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Асоціацію випускників ХНПУ імені Г.С.Сковороди",
+    "order": 119,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_asociaciy_vupysknukiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про звання \"Почесний доктор Харківського національного педагогічного університету імені Г.С. Сковороди\"",
+    "order": 120,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_zvannia_Pochesnyi_doktor.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок проведення конкурсного відбору при заміщенні вакантних посад науково-педагогічних працівників та укладання з ними трудових договорів (контрактів)",
+    "order": 121,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poriadok_provedennia_konkursnoho_vidboru.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про атестацію працівників Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 122,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_atestat_pratsivnykiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про раду деканів",
+    "order": 123,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_rady_dekaniv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про порядок призначення на посаду декана факультету, директора інституту Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 124,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_poryadok_prysnachenya_na_posady_dekana.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок проведення загальноуніверситетського відеоконкурсу читців поезії Ліни Костенко",
+    "order": 125,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poriadok%20provedennia%20zahalnouniversytetskoho%20videokonkursu%20chyttsiv%20poezii%20Liny%20Kostenko.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок проведення загальноуніверситетського конкурсу «ЛИСТ ВІЙНИ»",
+    "order": 126,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Wars_Letter_2022.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок проведення загальноуніверситетського відео конкурсу «Я читаю Г. С. Сковороду»",
+    "order": 127,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poriadok_Skovoroda.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про конкурс \"Людина Року\"",
+    "order": 128,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_zagalnoyniversytetskiy_konkurs_ludyna_roky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про проведення конкурсу есе серед здобувачів вищої освіти \"Моя академічна доброчесність\"",
+    "order": 129,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20provedennia%20vseukrainskoho%20konkursu%20ese%20sered%20uchasnykiv%20osvitnoho%20protsesu%20Moia%20akademichna%20dobrochesnist.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про загально університетський конкурс «Лист мамі»",
+    "order": 130,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Konkyrs lust mami.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про загальноуніверситетський конкурс \"Студент року\"",
+    "order": 131,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Polozhennya_student_roku.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про університетський конкурс відеороликів для творчої молоді «Моя група-моя гордість»",
+    "order": 132,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Moya grupa-moya gordist.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок проведення загальноуніверситетського студентського конкурсу есе «Професія вчителя-доля держави»",
+    "order": 133,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Profesia vchutela dolya derzavy.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про надання платних послуг",
+    "order": 134,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro%20poryadok%20nadannya%20platnyh%20poslyg.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про порядок ведення договірної роботи",
+    "order": 135,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro%20poryadok%20vedenya%20dogovirnoi%20roboty.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про облікову політику Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 136,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/polozh_oblikova_polityka_HNPU.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про організацію бухгалтерського обліку Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 137,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/polozhennya_organizatsiya_buhgalterskogo_obliku_HNPU.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Правила Внутрішнього розпорядку Університету",
+    "order": 138,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pravyla_vnutr_rozporadku.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про проведення наукових заходів",
+    "order": 139,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia_pro_provedennia_naukovykh_zakhodiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про порядок ведення претензійної та позовної роботи",
+    "order": 140,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro%20poryadok%20vedenya%20pretensiynoi%20ta%20posovnoi%20roboty.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про уповноважену особу відповідальну за організацію та проведення процедури закупівлі/спрощеної закупівлі ХНПУ імені Г.С. Сковороди",
+    "order": 141,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_ypovnovazheny_osoby_torgi.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про протидію дискримінації, сексуальним домаганням та підтримку рівності",
+    "order": 142,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20protydiiu%20dyskryminatsii%2C%20seksualnym%20domahanniam%20ta%20pidtrymku%20rivnosti%C2%A0%20(1).pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "План реагування на надзвичайні ситуації ХНПУ імені Г.С. Сковороди",
+    "order": 143,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Plan_reag_ns.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про корпоративну електронну пошту",
+    "order": 144,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol_pro_electr_pochtu_11_18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Інструкція з діловодства у Харківському національному педагогічному університеті імені Г.С. Сковороди",
+    "order": 145,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Instruktsiya_z_dilovodstva_12_15.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про іменні (меморіальні) структурні підрозділи та аудиторії (інші приміщення)",
+    "order": 146,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20imenni%20(memorialni)%20strukturni%20pidrozdily%20ta%20audytorii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Перелік іменних структурних підрозділів, аудиторій та інших приміщень",
+    "order": 147,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Imenni%20aydutorii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про апеляційну комісію",
+    "order": 148,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20apeliatsiinu%20komisiiu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про уповноважену особу з питань функціонування державної мови в ХНПУ імені Г. С. Сковороди",
+    "order": 149,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_pro_upovnovazhenu_osobu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про наукову бібліотеку Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 150,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_naykovy_biblioteky_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про репозитарій",
+    "order": 151,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_repozutariy_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок роботи кафедральної бібліотеки (бібліотеки кабінету)",
+    "order": 152,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poryadok_robotu_kafedralnoi_biblioteku.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Правила користування науковою бібліотекою",
+    "order": 153,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pravula_korustyvanya_naykov_bibliotekou.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про освітній хаб",
+    "order": 154,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/40_23%20Polozhennia%20pro%20osvitnii%20khab.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про корейський культурно- мистецький центр",
+    "order": 155,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia_pro%20koreiskyi_kulturno_mystetskyi_tsentr.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про центр ментального здоров'я",
+    "order": 156,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_ts_mentalzd.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про STEM - центр",
+    "order": 157,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_STEM_tsentr.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення центр ветеранського розвитку",
+    "order": 158,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_tsentr_veteranskoho_rozvytku.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Комплексна програма створення здоров'язбережувального освітнього простору в ХНПУ імені Г.С. Сковороди з метою зміцнення здоров'я здобувачів освіти, формування мотивації щодо ведення здорового способу життя, покращення якості життя та якості освіти",
+    "order": 159,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Kompleksna_prohrama_stvorennia_zdorov%20yazberezhuvalnoho_opr.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про еколого-біоетичний центр",
+    "order": 160,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_ekologo_bioetuchnyi_centr_.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Сковородинівську біологічну школу",
+    "order": 161,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_skovorodynivsku_bioshkolu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про навчально-методичний центр факультету історії і права",
+    "order": 162,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20navchalno-metodychnyi%20tsentr%20fakultetu%20istorii%20i%20prava.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про навчально-наукову лабораторію спеціальної та інклюзивної освіти",
+    "order": 163,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_lab_spets_inkliuzyv_osvity.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про діяльність ініціативних об'єднань університетської спільноти \"Skovoroda associations\"",
+    "order": 164,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Skovoroda_associations_0.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про навчальну лабораторію кафедри технологій дистанційного навчання та цифрової дидактики в дошкільній освіті (ВС-20)",
+    "order": 165,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20navchalnu%20laboratoriiu%20kafedry%20tekhnolohii%20dystantsiinoho%20navchannia%20ta%20tsyfrovoi%20dydaktyky%20v%20doshkilnii%20osviti_.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Музейний комплекс",
+    "order": 166,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Museunui_komplex.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про юридичну клініку",
+    "order": 167,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/38_23%20Pol_pro_yurydychnu_kliniku.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Музей історії науки \"FMF OPEN SPACE\"",
+    "order": 168,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Myzei_istorii_nayku.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про Музей етнодизайну кафедри образотворчого мистецтва",
+    "order": 169,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20muzei%20etnodyzainu%20kafedry%20obrazotvorchoho%20mystetstva%20KhNPU%20imeni%20H.S.%20Skovorody.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про курси іноземних мов",
+    "order": 170,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro kyrsu inosemnyh mov.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про навчально-спортивний табір «Гайдари» (ВС-17)",
+    "order": 171,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia_pro_navchalno_sportyvnyi%20tabir_Haidary.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про спортивний клуб ХНПУ імені Г.С. Сковороди",
+    "order": 172,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_sportyvnyi_klub.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Положення про газету Студентського наукового товариства університету \"PROНауку\"",
+    "order": 173,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20hazetu%20studentskoho%20naukovoho%20tovarystva%20universytetu%20PRONAUKU.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Порядок проведення біологічного експерименту та тестування із залученням біологічних об`єктів",
+    "order": 174,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_poryqadok_provedenya_biologichnogo_experumenty.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Звіт про діяльність ХНПУ імені Г.С. Сковороди за 2021 рік",
+    "order": 175,
+    "documentDate": "2021-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Zv_dijal_HNPU_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Звіт про виконання Колективного договору за 2019 рік",
+    "order": 176,
+    "documentDate": "2019-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/zvit_kold2019.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "regulations",
+    "title": "Звіт про виконання Колективного договору за 2018 рік",
+    "order": 177,
+    "documentDate": "2018-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/zvit_kold2018.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "facilities",
+    "title": "Матеріально-технічне забезпечення Університету (згідно з ліцензійними умовами)",
+    "order": 1,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/inform_blagoustri_1.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "facilities",
+    "title": "Матеріально-техничне забезпечення факультету іноземної філології",
+    "order": 2,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/uk/division/materialno-tehnychne-zabezpechennya-fakultetu-inozemnoyi-filologiyi",
+    "kind": "link"
+  },
+  {
+    "section": "facilities",
+    "title": "Матеріальне забезпечення факультету природничої, спеціальної і здоров’язбережувальної освіти | ХНПУ імені Г.С. Сковороди (hnpu.edu.ua)",
+    "order": 3,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/uk/division/materialne-zabezpechennya-fakultetu-pryrodnychoyi-specialnoyi-i-zdorovyazberezhuvalnoyi",
+    "kind": "link"
+  },
+  {
+    "section": "vacancies",
+    "title": "Порядок проведення конкурсного відбору при заміщенні вакантних посад науково-педагогічних працівників та укладання з ними трудових договорів (контрактів)",
+    "order": 1,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poriadok_provedennia_konkursnoho_vidboru.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 89-од вiд 25 травня 2026 року \"Про оголошення конкурсу на замiщення посад науково-педагогiчних працiвникiв\"",
+    "order": 2,
+    "documentDate": "2026-05-25",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2026/Nakaz%252089%2520OD.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 49-од вiд 02 квiтня 2026 року \"Про оголошення конкурсу на замiщення посад науково-педагогiчних працiвникiв\"",
+    "order": 3,
+    "documentDate": "2026-04-02",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2026/N_49od_02_04_2026.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 9-од від 22 січня 2026 року \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 4,
+    "documentDate": "2026-01-22",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2026/N_9_od_%2022_01_2026.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 212-од вiд 22 жовтня 2025 року \"Про оголошення конкурсу на замiщення посад науково-педагогiчних працiвникiв\"",
+    "order": 5,
+    "documentDate": "2025-10-22",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_212_od_22.10.2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 102-од вiд 13 травня 2025 року \"Про оголошення конкурсу на замiщення посад науково-педагогiчних працiвникiв\"",
+    "order": 6,
+    "documentDate": "2025-05-13",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_102_13_05_2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 82-од вiд 09 квiтня 2025 року \"Про оголошення конкурсу на замiщення посад науково-педагогiчних працiвникiв\"",
+    "order": 7,
+    "documentDate": "2025-04-09",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_82_09_04_2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 42-од від 19 лютого 2025 року \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 8,
+    "documentDate": "2025-02-19",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_42od_19.02.2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 217-од від 26 вересня 2024 року \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 9,
+    "documentDate": "2024-09-26",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/N_217_od_26_09_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ № 69-од від 5 квітня 2024 року \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 10,
+    "documentDate": "2024-04-05",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/69.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ 22-од від 01 лютого 2024 року \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 11,
+    "documentDate": "2024-02-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/22_2024-02-01.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ 171-од від 02 листопада 2023 року \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 12,
+    "documentDate": "2023-11-02",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/171_od_02_11_2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ 148-од від 20 вересня 2023 р. \"Про оголошення на заміщення посад науково-педагогічних працівників\"",
+    "order": 13,
+    "documentDate": "2023-09-20",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/148_2023-09-20.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ 58 від 10 травня 2023 р. \"Про допуск до участі у конкурсі на заміщення посад науково-педагогічних працівників\"",
+    "order": 14,
+    "documentDate": "2023-05-10",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/58_100523.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ 45-од від 04 квітня 2023 р. \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 15,
+    "documentDate": "2023-04-04",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/45od_04042023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ №159 від 25.10.2021 р. \"Про допуск до участі у конкурсі на заміщення посад науково-педагогічних працівників\"",
+    "order": 16,
+    "documentDate": "2021-10-25",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/159.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ 184-од від 22 вересня 2021 р. \"Про внесення змін до наказу №178-од від 17 вересня 2021 року \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 17,
+    "documentDate": "2021-09-22",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/nakaz_184-od_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "vacancies",
+    "title": "Наказ 178-од від 17 вересня 2021 р. \"Про оголошення конкурсу на заміщення посад науково-педагогічних працівників\"",
+    "order": 18,
+    "documentDate": "2021-09-17",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/178_od.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "attestation",
+    "title": "Положення про атестацію педагогічних працівників ВС-119/23",
+    "order": 1,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_pro_atestatsiiu_pedahohichnykh_pratsivnykiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "attestation",
+    "title": "Наказ № 190-од вiд 16 вересня 2025 року \"Про затвердження складу атестаційної комісії для проведення атестації педагогічних працівників у 2025/2026 навчальному році\"",
+    "order": 2,
+    "documentDate": "2025-09-16",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_190_OD.jpeg",
+    "kind": "file"
+  },
+  {
+    "section": "attestation",
+    "title": "Наказ 203-од від 18 вересня 2024 р. \"Про затвердження складу атестаційної комісії для проведення атестацій педагогічних працівників у 2024/2025 навчальному році\"",
+    "order": 3,
+    "documentDate": "2024-09-18",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/nakaz%20pro%20atestatsiiu%20pedprats_2024.jpeg",
+    "kind": "file"
+  },
+  {
+    "section": "attestation",
+    "title": "Наказ 146-од від 18 вересня 2023 р. \"Про затвердження складу атестаційної комісії для проведення атестацій педагогічних працівників у 2023/2024 навчальному році\"",
+    "order": 4,
+    "documentDate": "2023-09-18",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/146_od_18_09_23.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "attestation",
+    "title": "Графік засідань комісії",
+    "order": 5,
+    "documentDate": null,
+    "sourceUrl": "https://drive.google.com/file/d/1r9xoOV3o4x0PHWyGcK5iC1CDsbUlz44C/view?usp=sharing",
+    "kind": "link"
+  },
+  {
+    "section": "inclusive-support",
+    "title": "Порядок супроводу (надання допомоги) осіб з інвалідністтю та інших маломобільних груп населення",
+    "order": 1,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol_pro_osib_osospotr_09_18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "inclusive-support",
+    "title": "Наказ \"Про порядок супроводу \" (надання допомоги) осіб з інвалідністтю та інших маломобільних груп населення в ХНПУ",
+    "order": 2,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakaz_85-od.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "inclusive-support",
+    "title": "План заходів спрямованих на реалізацію Указу Президента України №401/2017",
+    "order": 3,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/plan_zahody_malomob.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України Про наукову і науково-технічну діяльність",
+    "order": 1,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/848-19",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України про освіту",
+    "order": 2,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/2145-19",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України про вищу освіту",
+    "order": 3,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/1556-18",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України Про затвердження Ліцензійних умов провадження освітньої діяльності",
+    "order": 4,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/1187-2015-%D0%BF",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України Про затвердження Порядку присудження наукових ступенів",
+    "order": 5,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/567-2013-%D0%BF",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України «Про особливості запровадження переліку галузей знань і спеціальностей, за якими здійснюється підготовка здобувачів вищої освіти, затвердженого постановою Кабінету Міністрів України від 29 квітня 2015 року № 266»",
+    "order": 6,
+    "documentDate": "2015-04-29",
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/z1460-15",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України від 12.01.2017 № 40",
+    "order": 7,
+    "documentDate": "2017-01-12",
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/z0155-17",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "« »",
+    "order": 8,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/283-2019-%D0%BF#n10",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України Про затвердження Положення про акредитацію освітніх програм, за якими здійснюється підготовка здобувачів вищої освіти від 11.07.2019 № 977​",
+    "order": 9,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/z0880-19",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Закон України «Про запобігання корупції»",
+    "order": 10,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/1700-18#Text",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Наказ від 23.04.2021 № 462 щодо діяльності спеціалізованих вчених рад",
+    "order": 11,
+    "documentDate": "2021-04-23",
+    "sourceUrl": "https://mon.gov.ua/storage/app/media/atestatsiya-kadriv-vyshchoi-kvalifikatisii/2021/04/462-vid-23-04-2021-shchodo-diyalnosti-spets-vchenikh-rad.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Інструктивний лист щодо врегулювання питань про присудження наукових ступенів",
+    "order": 12,
+    "documentDate": null,
+    "sourceUrl": "https://mon.gov.ua/storage/app/media/atestatsiya-kadriv-vyshchoi-kvalifikatisii/2021/04/vregulyuvannya-pitan-pro-prisudzhennya-naukovikh-stupeniv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Постанова Кабінету Міністрів України від 12 січня 2022 р. №44 \"Про затвердження Порядку присудження ступеня доктора філософії та скасування рішення разової спеціалізованої вченої ради закладу вищої освіти, наукової установи про присудження ступеня доктора філософії\"",
+    "order": 13,
+    "documentDate": "2022-01-12",
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/44-2022-п#Text",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Постанова КМУ №261 від 19.04.2019р. «Про затвердження Порядку підготовки здобувачів вищої освіти ступеня доктора філософії та доктора наук у вищих навчальних закладах (наукових установах)» Постанова від 23 березня 2016 р. № 261 «Про затвердження Порядку підготовки здобувачів вищої освіти ступеня доктора філософії та доктора наук у вищих навчальних закладах (наукових установах)»",
+    "order": 14,
+    "documentDate": null,
+    "sourceUrl": "https://zakon.rada.gov.ua/laws/show/261-2016-%D0%BF",
+    "kind": "link"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Статут університету",
+    "order": 15,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Statut_30.08.2017.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Кодекс академічної доброчесності ХНПУ імені Г.С.Сковороди",
+    "order": 16,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Kodeks_akademichnoi_dobrochesnosti.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Антикорупційна програма Харківського національного педагогічного університету імені Г. С. Сковороди",
+    "order": 17,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Antykoruptsiina_prohrama.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про освітню програму ХНПУ імені Г.С.Сковороди",
+    "order": 18,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_osvitniu_prohramu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про використання технологій дистанційного навчання в освітньому процесі Харківського національного педагогічного університету імені Г.С. Сковороди.",
+    "order": 19,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_vykorystanya_tehnologiy_dustanziynogo_navchanya.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про порядок визнання результатів навчання здобувачів Харківського національного педагогічного університету імені Г.С. Сковороди отриманих у неформальній освіті",
+    "order": 20,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20poriadok%20vyznannia%20rezultativ%20navchannia%20zdobuvachiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про порядок реалізації права на академічну мобільність здобувачів вищої освіти, наукових і науково-педагогічних працівників ХНПУ імені Г.С.Сковороди",
+    "order": 21,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Poriadok%20realizatsii%20prava%20na%20akademichnu%20mobilnist%20uchasnykiv%20osvitnoho%20protsesu%20(2).pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Стратегія інтернаціоналізації ХНПУ імені Г.С. Сковороди",
+    "order": 22,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Strategia_internazionalisazii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про грантову та проєктну діяльність, реалізацію програм національної та міжнародної співпраці, управління коштами грантів Харківського національного педагогічного університету імені Г.С.Сковороди",
+    "order": 23,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro%20Grantovy%20ta%20proekny%20diyalnist.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про організацію науково-дослідної роботи в ХНПУ імені Г.С.Сковороди",
+    "order": 24,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro%20organizatziy%20naykovo%20doslidnoi%20roboty.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про наукові школи Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 25,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_naykovi_shkolu_20.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про раду молодих учених Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 26,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_Rady_molodych_ychenych.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про порядок підготовки здобувачів наукового ступеня доктор наук ХНПУ імені Г.С. Сковороди",
+    "order": 27,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_poryadok_pidgotovku_doktora_filosofii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про підготовку здобувачів вищої освіти ступеня докторів філософії ХНПУ імені Г.С.Сковороди",
+    "order": 28,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro-pidgotovky_doktora_filosofii.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про наукового керівника здобувача третього (освітньо-наукового) рівня вищої освіти (здобувача наукового ступеня доктора філософії) у ХНПУ імені Г.С.Сковороди",
+    "order": 29,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20naukovoho%20kerivnyka.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про організацію освітнього процесу здобувачів третього (освітньо-наукового) рівня вищої освіти ХНПУ імені Г.С. Сковороди",
+    "order": 30,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20orhanizatsiiu%20osvitnoho%20protsesu%20zdobuvachiv%20tretoho%20(osvitno-naukovoho)%20rivnia%20vyshchoi%20osvity.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про науково-викладацьку практику здобувачів третього (освітньо-наукового) рівня вищої освіти ХНПУ імені Г.С. Сковороди (у новій редакції)",
+    "order": 31,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_naykovo-vykladazky_praktuky.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про Асоціацію випускників ХНПУ імені Г.С.Сковороди",
+    "order": 32,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_asociaciy_vupysknukiv.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про іменну стипендію імені Г.С.Сковороди",
+    "order": 33,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro%20imenny%20stupendiyu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про проведення конкурсу есе серед здобувачів вищої освіти \"Моя академічна доброчесність\"",
+    "order": 34,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Moya_akadem_dobrochesnist.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про запобігання і протидію дискримінації та сексуальним домаганням у ХНПУ імені Г.С. Сковороди",
+    "order": 35,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Polozhennia%20pro%20zapobihannia%20ta%20protydiiu%20dyskryminatsii%20i%20seksualnym%20domahanniam.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "План реагування на надзвичайні ситуації ХНПУ імені Г.С. Сковороди",
+    "order": 36,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Plan_reag_ns.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "postgraduate-regulations",
+    "title": "Положення про відділ аспірантури і докторантури Харківського національного педагогічного університету імені Г.С. Сковороди",
+    "order": 37,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_viddil_aspirantyru.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Перелік відомостей про договори про передачу права на експлуатацію",
+    "order": 1,
+    "documentDate": null,
+    "sourceUrl": "https://docs.google.com/spreadsheets/d/1MMTqCrdad2aQgXGL0dGys7ZRHItC80lPqJJnpnqcuxk/edit?usp=sharing",
+    "kind": "link"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.01.2026 р.",
+    "order": 2,
+    "documentDate": "2026-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2026/Shtatnuy%20rozklad%202026.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.01.2026 р.",
+    "order": 3,
+    "documentDate": "2026-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/Balans%202026.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис на 2026 р.",
+    "order": 4,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2026/Koshtorys%202026.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за 2025 р.",
+    "order": 5,
+    "documentDate": "2025-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2025/Zvit%20pro%20finansovyi%20rik%202025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.01.2025 р.",
+    "order": 6,
+    "documentDate": "2025-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2025/ShRoz_zved_01.01.2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.01.2025 р.",
+    "order": 7,
+    "documentDate": "2025-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2025/Balans_01.01.2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис на 2025 р.",
+    "order": 8,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2025/kosht_2025.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за 2024 р.",
+    "order": 9,
+    "documentDate": "2024-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/Zv_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Інформація про матеріальну допомогу від міжнародних організацій за 2024 р.",
+    "order": 10,
+    "documentDate": "2024-01-01",
+    "sourceUrl": "https://docs.google.com/document/d/1H44-09SSIi8IVSLNnQsS_ikw81HYPf3a/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true",
+    "kind": "link"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.10.2024 р.",
+    "order": 11,
+    "documentDate": "2024-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/Shtat_01_10_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.10.2024 р.",
+    "order": 12,
+    "documentDate": "2024-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/Balans_01_10_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за 9 місяців 2024 р.",
+    "order": 13,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/Zvit_9m_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Довідка про зміни до кошторису",
+    "order": 14,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/dovidka_zminy_koshtorys_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.04.2024 р.",
+    "order": 15,
+    "documentDate": "2024-04-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/zved_shtat_001.04.2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.07.2024 р.",
+    "order": 16,
+    "documentDate": "2024-07-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/Bal_01_07_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за I півріччя 2024 р.",
+    "order": 17,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/Zv_fin_I_%202024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.01.2024 р.",
+    "order": 18,
+    "documentDate": "2024-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/balans_01.01.2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.01.2024 р.",
+    "order": 19,
+    "documentDate": "2024-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/shtatn_zved_01.01.24.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис на 2024 р.",
+    "order": 20,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/koshtorys_2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за 2023 рік",
+    "order": 21,
+    "documentDate": "2023-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/zvit_fin_results_2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Платні послуги на 2023 -2024 н.р.",
+    "order": 22,
+    "documentDate": null,
+    "sourceUrl": "https://docs.google.com/spreadsheets/d/1PS8opyVM-w9GL_mVnCot7zDK3_eIEkfZ/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true",
+    "kind": "link"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Перелік освітніх платних послуг 2023-2024",
+    "order": 23,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2024/platni%20poslugy%202023-2024.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.10.2023 р.",
+    "order": 24,
+    "documentDate": "2023-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/balans_01.10.2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за 9 місяців 2023 р.",
+    "order": 25,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/zvit_fin_rezult_9mis_2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.10.2023 р.",
+    "order": 26,
+    "documentDate": "2023-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/Statnyi_01.10.2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.10.2023 р.",
+    "order": 27,
+    "documentDate": "2023-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/Shtatnyi_zved_01.10.2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.07.2023 р.",
+    "order": 28,
+    "documentDate": "2023-07-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/balans_01-07-2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за І півріччя 2023 р.",
+    "order": 29,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/zvit_fin_rezults_30-06-2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.03.2023 р.",
+    "order": 30,
+    "documentDate": "2023-03-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/shtatnyi_01-03-2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.03.2023 р.",
+    "order": 31,
+    "documentDate": "2023-03-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/shtatnyi_zvedenyi_01-03-2023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Уточнений кошторис на 25.05.2023 р.",
+    "order": 32,
+    "documentDate": "2023-05-25",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/koshtorys_utochn_25-05-2023_compressed.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.04.2023 р.",
+    "order": 33,
+    "documentDate": "2023-04-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/balans_01-04-2023_compressed.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за І квартал 2023 р.",
+    "order": 34,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/fin_zvit_I_kvartal_compressed.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.01.2023 р.",
+    "order": 35,
+    "documentDate": "2023-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/balans_01012023.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.01.2023 р.",
+    "order": 36,
+    "documentDate": "2023-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/shtatnoe_01012023_compressed.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис на 2023 р.",
+    "order": 37,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/koshtorys_2023_compressed.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Платні послуги на 2022 -2023 н.р.",
+    "order": 38,
+    "documentDate": null,
+    "sourceUrl": "https://docs.google.com/spreadsheets/d/17Cx3WvjTkcHalaemGseBCYWgJn7PDOcB/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true",
+    "kind": "link"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за 2022 рік",
+    "order": 39,
+    "documentDate": "2022-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2023/FinZvit_2022.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.10.2022 р.",
+    "order": 40,
+    "documentDate": "2022-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Balans_011022.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт за 9 місяців 2022 р.",
+    "order": 41,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Zvit_pro_finansovi_rezultaty_011022.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.10.2022 р.",
+    "order": 42,
+    "documentDate": "2022-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Shtatnyy_rozpys_011022.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.10.2022 р.",
+    "order": 43,
+    "documentDate": "2022-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Zvedenyy_shtatnyy_rozpys_011022.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.07.2022 р.",
+    "order": 44,
+    "documentDate": "2022-07-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Balans_07_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт за І півріччя 2022 р.",
+    "order": 45,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/ZV_I_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.06.2022 р.",
+    "order": 46,
+    "documentDate": "2022-06-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/St_01_06_2022_r.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис зведений на 01.06.2022 р.",
+    "order": 47,
+    "documentDate": "2022-06-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Shtat_06_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт за 1 квартал 2022 року",
+    "order": 48,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Zv_I_kv_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.01.2022 р.",
+    "order": 49,
+    "documentDate": "2022-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/shtat_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис 2022",
+    "order": 50,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/koshtoris_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Платні послуги на 2022 р.",
+    "order": 51,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/Pl_posl_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс та звіт за 2021 рік",
+    "order": 52,
+    "documentDate": "2021-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2022/bal_22.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів загального фонду за 2021 р.",
+    "order": 53,
+    "documentDate": "2021-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/Z_vuk_zag_f_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.12.2021 р.",
+    "order": 54,
+    "documentDate": "2021-12-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/Shtat_01_12_2021.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.09.2021 р.",
+    "order": 55,
+    "documentDate": "2021-09-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/Shtat_010921.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс та звіт за ІІ квартал 2021 р.",
+    "order": 56,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/2%20_2021.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Тендерні закупівлі за січень - квітень 2021 р.",
+    "order": 57,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/Tender_zakupivli_01_04_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт за 1 квартал 2021 року",
+    "order": 58,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/Balans_1_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис 2021",
+    "order": 59,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/koshtoris_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.01.2021 р.",
+    "order": 60,
+    "documentDate": "2021-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/Shtat_01.01.2021.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Платні послуги на 2020-2021 р.",
+    "order": 61,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2021/Pl_posl_20_21.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Пояснювальна записка за 2020 рік",
+    "order": 62,
+    "documentDate": "2020-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/pojasnuvalna.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.01.2021",
+    "order": 63,
+    "documentDate": "2021-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/Balans_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про фінансові результати за 2020 р.",
+    "order": 64,
+    "documentDate": "2020-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/Zvit_pro_finans_rezult_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження і використання коштів, отриманих як плата за послуги за 2020 р.",
+    "order": 65,
+    "documentDate": "2020-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/4_2201040_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження і використання коштів, отриманих за іншими джерелами власних надходжень за 2020 р.",
+    "order": 66,
+    "documentDate": "2020-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/4_2_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів загального фонду за 2020 р.",
+    "order": 67,
+    "documentDate": "2020-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/2_2201040_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис 2020",
+    "order": 68,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/koshtorys_hnpu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.04.2020",
+    "order": 69,
+    "documentDate": "2020-04-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/balans_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів загального фонду І квартал 2020р.",
+    "order": 70,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/2020_2_2201040_60_90.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів, отриманих як плата за послуги І квартал 2020р.",
+    "order": 71,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/2020_4_2201040_60.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.07.2020",
+    "order": 72,
+    "documentDate": "2020-07-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/Balans_07_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів загального фонду І півріччя 2020р.",
+    "order": 73,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/II_2020_2_2201040.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів, отриманих як плата за послуги І півріччя 2020р.",
+    "order": 74,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/II_2020_4_2201040.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.10.2020",
+    "order": 75,
+    "documentDate": "2020-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/balans_10_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів загального фонду ІІІ квартал 2020р.",
+    "order": 76,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/III_2020_2_2201040_60_90.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про надходження та використання коштів, отриманих як плата за послуги ІІІ квартал 2020р.",
+    "order": 77,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/III_2020_4_2201040_60.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.10.2020",
+    "order": 78,
+    "documentDate": "2020-10-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/ShR01_10_20.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.01.2020",
+    "order": 79,
+    "documentDate": "2020-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/shtatny_rozkl01_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Зміни до штатного розпису від 01.02.2020р.",
+    "order": 80,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/Zm_shtat_roz_02_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Зміни до штатного розпису на 2020 рік від 20.05.2020",
+    "order": 81,
+    "documentDate": "2020-05-20",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/zminy_do_shtatnogo_2020_1.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.09.2020",
+    "order": 82,
+    "documentDate": "2020-09-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2020/Shtat_roz_01_09_2020.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Бухгалтерський звіт 2019",
+    "order": 83,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/zvit2019.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис 2019_2201160",
+    "order": 84,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/2201160.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис 2019_2201140",
+    "order": 85,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/2201040%20(pdf.io).pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис 2019_2201190",
+    "order": 86,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/2201190%20(pdf.io).pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звітна документація 1 квартал 2019",
+    "order": 87,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/zvit11kv2019.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звітна документація 2 квартал 2019",
+    "order": 88,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/zv2kv2019.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звітна документація 3 квартал 2019",
+    "order": 89,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/zvit_buhg.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звітна документація 4 квартал 2019",
+    "order": 90,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/zvit_2019.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.01.2019",
+    "order": 91,
+    "documentDate": "2019-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/shtatny_rozpis01_19.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.09.2019",
+    "order": 92,
+    "documentDate": "2019-09-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/shtatne2019.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Кошторис 2018",
+    "order": 93,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/koshtoris2018.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.01.2018",
+    "order": 94,
+    "documentDate": "2018-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/balance18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт 1 квартал 2018",
+    "order": 95,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/zwit1kvart18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звітна документація та баланс. 2 квартал 2018",
+    "order": 96,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/zvit_18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звітна документація. 3 квартал 2018",
+    "order": 97,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/zvithnpu.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис 01.09.2018",
+    "order": 98,
+    "documentDate": "2018-09-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/shtatrozpys%2001.09.18.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт 2017",
+    "order": 99,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/doknasayt.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис 01.09.2017",
+    "order": 100,
+    "documentDate": "2017-09-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/shtat_rozp17.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Штатний розпис на 01.01.2017",
+    "order": 101,
+    "documentDate": "2017-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/shtatny_rozpis.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звіт про заборгованість за бюджетними коштами_спец_01_17",
+    "order": 102,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/forma_2201160%D1%81%D0%BF%D0%B5%D1%86..pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс-01_17",
+    "order": 103,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/Balance.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.01.2016. Звітність за 2016 р.",
+    "order": 104,
+    "documentDate": "2016-01-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2016.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.04.2017. Звітність за 1-й квартал 2017",
+    "order": 105,
+    "documentDate": "2017-04-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2017_1.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Баланс на 01.07.2017. Звітність за 2-й квартал 2017",
+    "order": 106,
+    "documentDate": "2017-07-01",
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/2017_2.pdf",
+    "kind": "file"
+  },
+  {
+    "section": "financial-activity",
+    "title": "Звітність за 3-й квартал 2017 року",
+    "order": 107,
+    "documentDate": null,
+    "sourceUrl": "https://hnpu.edu.ua/sites/default/files/files/buhgalteria/zvit3kv.pdf",
+    "kind": "file"
+  }
+]

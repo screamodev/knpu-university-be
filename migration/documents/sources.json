@@ -1,0 +1,34 @@
+{
+  "rector-report": {
+    "url": "https://hnpu.edu.ua/uk/zvit-rektora"
+  },
+  "regulations": {
+    "url": "https://hnpu.edu.ua/uk/normatyvna-dokumentaciya-universytetu"
+  },
+  "regulation-drafts": {
+    "url": "https://hnpu.edu.ua/uk/proyekty-normatyvnoyi-dokumentaciyi",
+    "note": "Empty on the old site too — the page ships with no rows, for editors to fill."
+  },
+  "facilities": {
+    "url": "https://hnpu.edu.ua/uk/materialno-tehnichne-zabezpechennya-universytetu-zgidno-z-licenziynymy-umovamy",
+    "includeInternalPages": true,
+    "note": "Two rows point at faculty pages on the old site rather than files; kept as external links until those faculties supply their own documents."
+  },
+  "vacancies": {
+    "url": "https://hnpu.edu.ua/uk/vakansiyi-hnpu-imeni-gs-skovorody"
+  },
+  "attestation": {
+    "url": "https://hnpu.edu.ua/uk/atestaciya-pedagogichnyh-pracivnykiv"
+  },
+  "inclusive-support": {
+    "url": "https://hnpu.edu.ua/uk/poryadok-suprovodu-nadannya-dopomogy-osib-z-osobovymy-osvitnimy-potrebamy"
+  },
+  "postgraduate-regulations": {
+    "url": "https://hnpu.edu.ua/uk/division/normatyvni-dokuyenty-viddilu-aspirantury-i-doktorantury",
+    "note": "Нормативні документи tab of Відділ аспірантури і докторантури — laws, orders and the department's own regulations."
+  },
+  "financial-activity": {
+    "url": "https://hnpu.edu.ua/uk/informaciya-pro-finansovu-diyalnist",
+    "note": "Балансы, кошториси, штатні розписи и звіти за 2016–2026: ~110 файлов, вся страница — плоский список ссылок."
+  }
+}

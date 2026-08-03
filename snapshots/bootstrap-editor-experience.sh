@@ -45,6 +45,10 @@ NEWS_FOLDER_NAME="Новини"
 PAPER_FOLDER_ID="7c2a5b93-4d18-4f60-8a2e-3b6d90f14c55"
 PAPER_FOLDER_NAME="Газета «Учитель»"
 
+# Документи сторінок розділу «Відвідувачу».
+DOCS_FOLDER_ID="3e5f21c7-8b04-4d92-a6f1-27c48ab5d301"
+DOCS_FOLDER_NAME="Документи"
+
 # Directus validates the address, so it must look real; this account can only read.
 PREVIEW_EMAIL="${PREVIEW_EMAIL:-site-preview@hnpu.dev42hub.uk}"
 
@@ -81,6 +85,7 @@ ensure_folder() {
 
 ensure_folder "$NEWS_FOLDER_ID" "$NEWS_FOLDER_NAME"
 ensure_folder "$PAPER_FOLDER_ID" "$PAPER_FOLDER_NAME"
+ensure_folder "$DOCS_FOLDER_ID" "$DOCS_FOLDER_NAME"
 
 # ── 2. Image presets offered in the editor's image dialog ────────────────────
 # `storage_asset_transform` stays "all": the public site passes its own width/quality

@@ -26,6 +26,9 @@ services:
 
       CORS_ENABLED: ${CORS_ENABLED:-true}
       CORS_ORIGIN: ${CORS_ORIGIN}
+      # pdf.js needs these to see that a PDF can be fetched in ranges; without them it
+      # downloads whole multi-megabyte issues just to draw a thumbnail.
+      CORS_EXPOSED_HEADERS: ${CORS_EXPOSED_HEADERS:-Content-Range,Accept-Ranges,Content-Length}
 
       WEBSOCKETS_ENABLED: ${WEBSOCKETS_ENABLED:-true}
 

@@ -65,7 +65,7 @@ collections:
       icon: newspaper
       item_duplication_fields: null
       note: News articles. Uses draft/published/archived status workflow.
-      preview_url: null
+      preview_url: http://localhost:3000/news/{{slug}}?preview=local-preview-secret
       singleton: false
       sort: 2
       sort_field: null
@@ -146,6 +146,32 @@ collections:
       versioning: false
     schema:
       name: categories
+  - collection: documents
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: documents
+      color: null
+      display_template: '{{ title }}'
+      group: null
+      hidden: false
+      icon: folder_open
+      item_duplication_fields: null
+      note: >-
+        Документи для сторінок розділу «Відвідувачу». Розділ обирається полем
+        section — сторінка на сайті показує всі документи свого розділу.
+      preview_url: null
+      singleton: false
+      sort: 21
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: documents
   - collection: education_schedule_key_dates
     meta:
       accountability: all
@@ -218,30 +244,6 @@ collections:
       versioning: false
     schema:
       name: events
-  - collection: financial_reports
-    meta:
-      accountability: all
-      archive_app_filter: true
-      archive_field: status
-      archive_value: archived
-      collapse: open
-      collection: financial_reports
-      color: null
-      display_template: '{{ reportYear }} — {{ title }}'
-      group: null
-      hidden: false
-      icon: account_balance_wallet
-      item_duplication_fields: null
-      note: Annual financial reports with figures and file attachments.
-      preview_url: null
-      singleton: false
-      sort: 19
-      sort_field: order
-      translations: null
-      unarchive_value: draft
-      versioning: false
-    schema:
-      name: financial_reports
   - collection: gallery_categories
     meta:
       accountability: all
@@ -2653,6 +2655,516 @@ fields:
       validation: null
       validation_message: null
       width: full
+  - collection: documents
+    field: id
+    type: uuid
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: documents
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: status
+    type: string
+    meta:
+      collection: documents
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: documents
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: section
+    type: string
+    meta:
+      collection: documents
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Звіт ректора
+            value: rector-report
+          - text: Нормативна документація
+            value: regulations
+          - text: Проєкти нормативної документації
+            value: regulation-drafts
+          - text: Матеріально-технічне забезпечення
+            value: facilities
+          - text: Вакансії
+            value: vacancies
+          - text: Атестація педагогічних працівників
+            value: attestation
+          - text: Публічні закупівлі — службова інформація
+            value: procurement-info
+          - text: Супровід осіб з особливими освітніми потребами
+            value: inclusive-support
+          - text: Студентський парламент
+            value: student-council
+          - text: Аспірантура і докторантура — нормативні документи
+            value: postgraduate-regulations
+      field: section
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: Сторінка сайту, на якій з’явиться документ.
+      options:
+        choices:
+          - text: Звіт ректора
+            value: rector-report
+          - text: Нормативна документація
+            value: regulations
+          - text: Проєкти нормативної документації
+            value: regulation-drafts
+          - text: Матеріально-технічне забезпечення
+            value: facilities
+          - text: Вакансії
+            value: vacancies
+          - text: Атестація педагогічних працівників
+            value: attestation
+          - text: Публічні закупівлі — службова інформація
+            value: procurement-info
+          - text: Супровід осіб з особливими освітніми потребами
+            value: inclusive-support
+          - text: Студентський парламент
+            value: student-council
+          - text: Аспірантура і докторантура — нормативні документи
+            value: postgraduate-regulations
+          - text: Фінансова діяльність
+            value: financial-activity
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: section
+      table: documents
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: title
+    type: string
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: documents
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: titleEn
+    type: string
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: titleEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: titleEn
+      table: documents
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: description
+    type: text
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: Необов’язковий короткий опис під назвою.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: documents
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: descriptionEn
+    type: text
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: descriptionEn
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: descriptionEn
+      table: documents
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: documentDate
+    type: date
+    meta:
+      collection: documents
+      conditions: null
+      display: datetime
+      display_options: null
+      field: documentDate
+      group: null
+      hidden: false
+      interface: datetime
+      note: За датою сортується список і будується фільтр за роками.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: documentDate
+      table: documents
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: file
+    type: uuid
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: >-
+        PDF або DOC. Якщо документ лежить на іншому сайті — заповніть
+        externalUrl.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: documents
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: documents
+    field: externalUrl
+    type: string
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: externalUrl
+      group: null
+      hidden: false
+      interface: input
+      note: 'Альтернатива файлу: посилання на документ на іншому сайті.'
+      options:
+        placeholder: https://…
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: externalUrl
+      table: documents
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: documents
+    field: order
+    type: integer
+    meta:
+      collection: documents
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: documents
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: education_schedule_key_dates
     field: id
     type: uuid
@@ -4188,549 +4700,6 @@ fields:
       numeric_precision: null
       numeric_scale: null
       is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: id
-    type: uuid
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: id
-      group: null
-      hidden: true
-      interface: input
-      note: null
-      options: null
-      readonly: true
-      required: false
-      searchable: true
-      sort: 1
-      special:
-        - uuid
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: id
-      table: financial_reports
-      data_type: uuid
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: true
-      is_indexed: false
-      is_primary_key: true
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: status
-    type: string
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: labels
-      display_options:
-        choices:
-          - color: '#2ECDA7'
-            text: $t:published
-            value: published
-          - color: '#D3DAE4'
-            text: $t:draft
-            value: draft
-          - color: '#A2B5CD'
-            text: $t:archived
-            value: archived
-        showAsDot: true
-      field: status
-      group: null
-      hidden: false
-      interface: select-dropdown
-      note: null
-      options:
-        choices:
-          - color: '#2ECDA7'
-            text: $t:published
-            value: published
-          - color: '#D3DAE4'
-            text: $t:draft
-            value: draft
-          - color: '#A2B5CD'
-            text: $t:archived
-            value: archived
-      readonly: false
-      required: false
-      searchable: true
-      sort: 2
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: status
-      table: financial_reports
-      data_type: character varying
-      default_value: draft
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: reportYear
-    type: integer
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: reportYear
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 3
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: reportYear
-      table: financial_reports
-      data_type: integer
-      default_value: null
-      max_length: null
-      numeric_precision: 32
-      numeric_scale: 0
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: title
-    type: string
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: title
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: true
-      searchable: true
-      sort: 4
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: title
-      table: financial_reports
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: false
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: titleEn
-    type: string
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: titleEn
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 5
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: titleEn
-      table: financial_reports
-      data_type: character varying
-      default_value: null
-      max_length: 255
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: summary
-    type: text
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: summary
-      group: null
-      hidden: false
-      interface: input-multiline
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 6
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: summary
-      table: financial_reports
-      data_type: text
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: summaryEn
-    type: text
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: summaryEn
-      group: null
-      hidden: false
-      interface: input-multiline
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 7
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: full
-    schema:
-      name: summaryEn
-      table: financial_reports
-      data_type: text
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: revenue
-    type: decimal
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: revenue
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 8
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: revenue
-      table: financial_reports
-      data_type: numeric
-      default_value: null
-      max_length: null
-      numeric_precision: 14
-      numeric_scale: 2
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: expenses
-    type: decimal
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: expenses
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 9
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: expenses
-      table: financial_reports
-      data_type: numeric
-      default_value: null
-      max_length: null
-      numeric_precision: 14
-      numeric_scale: 2
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: stateFunding
-    type: decimal
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: stateFunding
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 10
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: stateFunding
-      table: financial_reports
-      data_type: numeric
-      default_value: null
-      max_length: null
-      numeric_precision: 14
-      numeric_scale: 2
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: ownRevenue
-    type: decimal
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: ownRevenue
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 11
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: ownRevenue
-      table: financial_reports
-      data_type: numeric
-      default_value: null
-      max_length: null
-      numeric_precision: 14
-      numeric_scale: 2
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: null
-      foreign_key_column: null
-  - collection: financial_reports
-    field: reportFile
-    type: uuid
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: reportFile
-      group: null
-      hidden: false
-      interface: file
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 12
-      special:
-        - file
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: reportFile
-      table: financial_reports
-      data_type: uuid
-      default_value: null
-      max_length: null
-      numeric_precision: null
-      numeric_scale: null
-      is_nullable: true
-      is_unique: false
-      is_indexed: false
-      is_primary_key: false
-      is_generated: false
-      generation_expression: null
-      has_auto_increment: false
-      foreign_key_table: directus_files
-      foreign_key_column: id
-  - collection: financial_reports
-    field: order
-    type: integer
-    meta:
-      collection: financial_reports
-      conditions: null
-      display: null
-      display_options: null
-      field: order
-      group: null
-      hidden: false
-      interface: input
-      note: null
-      options: null
-      readonly: false
-      required: false
-      searchable: true
-      sort: 13
-      special: null
-      translations: null
-      validation: null
-      validation_message: null
-      width: half
-    schema:
-      name: order
-      table: financial_reports
-      data_type: integer
-      default_value: 0
-      max_length: null
-      numeric_precision: 32
-      numeric_scale: 0
-      is_nullable: false
       is_unique: false
       is_indexed: false
       is_primary_key: false
@@ -10751,6 +10720,27 @@ relations:
       constraint_name: articles_files_directus_files_id_foreign
       on_update: NO ACTION
       on_delete: SET NULL
+  - collection: documents
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: documents
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: documents
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: documents_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: events
     field: cover
     related_collection: directus_files
@@ -10770,27 +10760,6 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: events_cover_foreign
-      on_update: NO ACTION
-      on_delete: SET NULL
-  - collection: financial_reports
-    field: reportFile
-    related_collection: directus_files
-    meta:
-      junction_field: null
-      many_collection: financial_reports
-      many_field: reportFile
-      one_allowed_collections: null
-      one_collection: directus_files
-      one_collection_field: null
-      one_deselect_action: nullify
-      one_field: null
-      sort_field: null
-    schema:
-      table: financial_reports
-      column: reportFile
-      foreign_key_table: directus_files
-      foreign_key_column: id
-      constraint_name: financial_reports_reportfile_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: gallery_items

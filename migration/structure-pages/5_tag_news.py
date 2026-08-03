@@ -59,6 +59,14 @@ CATEGORIES = {
     'social-humanities': ('fakultet-sotsialno-humanitarnykh-nauk-i-sotsialnykh-tekhnolohiy',
                           'Факультет соціально-гуманітарних наук і соціальних технологій',
                           'Faculty of Social and Humanitarian Sciences and Social Technologies'),
+    'postgraduate': ('aspirantura-i-doktorantura',
+                     'Аспірантура і докторантура', 'Postgraduate and Doctoral Studies'),
+    # Not a unit: «Оголошення» is university-wide, and the postgraduate page shows it on a tab of
+    # its own. Kept here so the one script owns every category the migration relies on.
+    'announcements': ('ogoloshennya', 'Оголошення', 'Announcements'),
+    # Also not a unit: the student parliament page carries its own news feed.
+    'student-parliament': ('studentskyi-parlament',
+                           'Студентський парламент', 'Student Parliament'),
 }
 
 BROWSER_HEADERS = {
