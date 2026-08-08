@@ -64,9 +64,10 @@ CATEGORIES = {
     # Not a unit: «Оголошення» is university-wide, and the postgraduate page shows it on a tab of
     # its own. Kept here so the one script owns every category the migration relies on.
     'announcements': ('ogoloshennya', 'Оголошення', 'Announcements'),
-    # Also not a unit: the student parliament page carries its own news feed.
+    # Also not a unit: the student-government page carries its own news feed. The slug still says
+    # «парламент» because every link and filter is built on it; only the label was renamed.
     'student-parliament': ('studentskyi-parlament',
-                           'Студентський парламент', 'Student Parliament'),
+                           'Студентське самоврядування', 'Student government'),
 }
 
 BROWSER_HEADERS = {

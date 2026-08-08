@@ -741,6 +741,84 @@ collections:
       versioning: false
     schema:
       name: science_schools
+  - collection: student_council_info
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: student_council_info
+      color: null
+      display_template: Студентське самоврядування
+      group: null
+      hidden: false
+      icon: groups_2
+      item_duplication_fields: null
+      note: >-
+        Тексти й контакти сторінки «Студентське самоврядування». Один запис —
+        редагують самі студенти; порожні поля сторінка показує як «розділ
+        наповнюється».
+      preview_url: null
+      singleton: true
+      sort: 41
+      sort_field: null
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: student_council_info
+  - collection: student_council_members
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: student_council_members
+      color: null
+      display_template: '{{name}}'
+      group: null
+      hidden: false
+      icon: badge
+      item_duplication_fields: null
+      note: >-
+        Люди студентського самоврядування: голова, заступники, голови студрад
+        факультетів і контрольно-ревізійна комісія. Блок на сторінці обирається
+        полем «група».
+      preview_url: null
+      singleton: false
+      sort: 42
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: student_council_members
+  - collection: student_council_sectors
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: student_council_sectors
+      color: null
+      display_template: '{{name}}'
+      group: null
+      hidden: false
+      icon: hub
+      item_duplication_fields: null
+      note: 'Сектори студентського самоврядування: чим займаються і хто очолює.'
+      preview_url: null
+      singleton: false
+      sort: 43
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: student_council_sectors
   - collection: student_schedule_documents
     meta:
       accountability: all
@@ -13877,6 +13955,1251 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: student_council_info
+    field: id
+    type: uuid
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: student_council_info
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: status
+    type: string
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: student_council_info
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: about
+    type: text
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: about
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: Про студентське самоврядування — вступний текст сторінки.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: about
+      table: student_council_info
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: mission
+    type: text
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: mission
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: Місія.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: mission
+      table: student_council_info
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: objectives
+    type: text
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: objectives
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: Завдання.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: objectives
+      table: student_council_info
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: address
+    type: string
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: address
+      group: null
+      hidden: false
+      interface: input
+      note: 'Адреса: корпус, поверх, кімната.'
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: address
+      table: student_council_info
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: email
+    type: string
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: email
+      group: null
+      hidden: false
+      interface: input
+      note: Загальна пошта самоврядування.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: email
+      table: student_council_info
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: trustBoxUrl
+    type: string
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: trustBoxUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Скринька довіри — форма або пошта.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: trustBoxUrl
+      table: student_council_info
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: facebook
+    type: string
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: facebook
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: facebook
+      table: student_council_info
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: instagram
+    type: string
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: instagram
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: instagram
+      table: student_council_info
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_info
+    field: telegram
+    type: string
+    meta:
+      collection: student_council_info
+      conditions: null
+      display: null
+      display_options: null
+      field: telegram
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: telegram
+      table: student_council_info
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: id
+    type: uuid
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: student_council_members
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: status
+    type: string
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: student_council_members
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: group
+    type: string
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Голова
+            value: chair
+          - text: Заступник голови
+            value: deputy
+          - text: Голова студради факультету
+            value: faculty-chair
+          - text: Контрольно-ревізійна комісія
+            value: audit
+      field: group
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: Блок сторінки, у якому з’явиться людина.
+      options:
+        choices:
+          - text: Голова
+            value: chair
+          - text: Заступник голови
+            value: deputy
+          - text: Голова студради факультету
+            value: faculty-chair
+          - text: Контрольно-ревізійна комісія
+            value: audit
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: group
+      table: student_council_members
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: name
+    type: string
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: Прізвище, ім’я та по батькові.
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: student_council_members
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: position
+    type: string
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: position
+      group: null
+      hidden: false
+      interface: input
+      note: Посада, якщо відрізняється від назви блоку.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: position
+      table: student_council_members
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: faculty
+    type: string
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: faculty
+      group: null
+      hidden: false
+      interface: input
+      note: Факультет — для голів студрад факультетів.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: faculty
+      table: student_council_members
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: email
+    type: string
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: email
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: email
+      table: student_council_members
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: photo
+    type: uuid
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: photo
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: photo
+      table: student_council_members
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: student_council_members
+    field: profileUrl
+    type: string
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: profileUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Сторінка або соцмережа людини.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: profileUrl
+      table: student_council_members
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_members
+    field: order
+    type: integer
+    meta:
+      collection: student_council_members
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: student_council_members
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: id
+    type: uuid
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: student_council_sectors
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: status
+    type: string
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: student_council_sectors
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: name
+    type: string
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: student_council_sectors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: description
+    type: text
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: null
+      display_options: null
+      field: description
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: Кілька речень про роботу сектору.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: description
+      table: student_council_sectors
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: leadName
+    type: string
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: null
+      display_options: null
+      field: leadName
+      group: null
+      hidden: false
+      interface: input
+      note: Голова сектору.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: leadName
+      table: student_council_sectors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: leadEmail
+    type: string
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: null
+      display_options: null
+      field: leadEmail
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: leadEmail
+      table: student_council_sectors
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: externalUrl
+    type: string
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: null
+      display_options: null
+      field: externalUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Сторінка або спільнота сектору.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: externalUrl
+      table: student_council_sectors
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: student_council_sectors
+    field: order
+    type: integer
+    meta:
+      collection: student_council_sectors
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: student_council_sectors
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: student_schedule_documents
     field: id
     type: uuid
@@ -15905,6 +17228,27 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: science_schools_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: student_council_members
+    field: photo
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: student_council_members
+      many_field: photo
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: student_council_members
+      column: photo
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: student_council_members_photo_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: student_schedule_documents

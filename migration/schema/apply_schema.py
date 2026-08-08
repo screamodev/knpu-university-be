@@ -146,7 +146,7 @@ def o2m(name: str, note: str | None = None) -> dict:
 
 
 def collection(name: str, *, icon: str, note: str, template: str, fields: list[dict],
-               sort: int) -> dict:
+               sort: int, singleton: bool = False) -> dict:
     return {
         'collection': name,
         'meta': {
@@ -160,9 +160,11 @@ def collection(name: str, *, icon: str, note: str, template: str, fields: list[d
             'hidden': False,
             'icon': icon,
             'note': note,
-            'singleton': False,
+            # A singleton is one editable record — Directus opens it directly, with no list and
+            # therefore no manual ordering.
+            'singleton': singleton,
             'sort': sort,
-            'sort_field': 'order',
+            'sort_field': None if singleton else 'order',
             'versioning': False,
         },
         'schema': {'name': name},
@@ -213,6 +215,13 @@ COUNCIL_FILE_KINDS = [
 REDIRECT_KINDS = [
     {'text': 'Сторінка', 'value': 'page'},
     {'text': 'Файл', 'value': 'file'},
+]
+
+STUDENT_COUNCIL_GROUPS = [
+    {'text': 'Голова', 'value': 'chair'},
+    {'text': 'Заступник голови', 'value': 'deputy'},
+    {'text': 'Голова студради факультету', 'value': 'faculty-chair'},
+    {'text': 'Контрольно-ревізійна комісія', 'value': 'audit'},
 ]
 
 COLLECTIONS = [
@@ -391,6 +400,55 @@ COLLECTIONS = [
             order_field(),
         ],
     ),
+    collection(
+        'student_council_info', icon='groups_2', sort=41, singleton=True,
+        template='Студентське самоврядування',
+        note='Тексти й контакти сторінки «Студентське самоврядування». Один запис — редагують '
+             'самі студенти; порожні поля сторінка показує як «розділ наповнюється».',
+        fields=[
+            id_field(), status_field(),
+            field('about', 'text', interface='input-rich-text-html',
+                  note='Про студентське самоврядування — вступний текст сторінки.'),
+            field('mission', 'text', interface='input-rich-text-html', note='Місія.'),
+            field('objectives', 'text', interface='input-rich-text-html', note='Завдання.'),
+            text_field('address', 'Адреса: корпус, поверх, кімната.'),
+            text_field('email', 'Загальна пошта самоврядування.', width='half'),
+            text_field('trustBoxUrl', 'Скринька довіри — форма або пошта.', width='half', length=500),
+            text_field('facebook', width='half', length=500),
+            text_field('instagram', width='half', length=500),
+            text_field('telegram', width='half', length=500),
+        ],
+    ),
+    collection(
+        'student_council_members', icon='badge', sort=42, template='{{name}}',
+        note='Люди студентського самоврядування: голова, заступники, голови студрад факультетів '
+             'і контрольно-ревізійна комісія. Блок на сторінці обирається полем «група».',
+        fields=[
+            id_field(), status_field(),
+            select('group', STUDENT_COUNCIL_GROUPS, 'Блок сторінки, у якому з’явиться людина.',
+                   required=True),
+            text_field('name', 'Прізвище, ім’я та по батькові.', required=True),
+            text_field('position', 'Посада, якщо відрізняється від назви блоку.'),
+            text_field('faculty', 'Факультет — для голів студрад факультетів.', width='half'),
+            text_field('email', width='half'),
+            file_field('photo'),
+            text_field('profileUrl', 'Сторінка або соцмережа людини.', width='half', length=500),
+            order_field(),
+        ],
+    ),
+    collection(
+        'student_council_sectors', icon='hub', sort=43, template='{{name}}',
+        note='Сектори студентського самоврядування: чим займаються і хто очолює.',
+        fields=[
+            id_field(), status_field(),
+            text_field('name', required=True),
+            multiline('description', 'Кілька речень про роботу сектору.'),
+            text_field('leadName', 'Голова сектору.', width='half'),
+            text_field('leadEmail', width='half'),
+            text_field('externalUrl', 'Сторінка або спільнота сектору.', width='half', length=500),
+            order_field(),
+        ],
+    ),
 ]
 
 # field → collection it points at; used to create the relations Directus needs.
@@ -407,6 +465,7 @@ RELATIONS = [
     ('dissertation_council_files', 'council', 'dissertation_councils', 'files'),
     ('dissertation_council_files', 'file', 'directus_files', None),
     ('legacy_redirects', 'file', 'directus_files', None),
+    ('student_council_members', 'photo', 'directus_files', None),
 ]
 
 # Extra `documents.section` options this pass introduces.

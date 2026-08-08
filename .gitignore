@@ -23,6 +23,7 @@ database/migrations/*
 
 # Migration scratch: cached copies of legacy pages, re-fetched on demand.
 migration/*/.cache/
+__pycache__/
 
 # Logs.
 *.log
