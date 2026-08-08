@@ -50,13 +50,16 @@ services:
 
       WEBSOCKETS_ENABLED: ${WEBSOCKETS_ENABLED:-true}
 
-      # The admin app's default CSP is `child-src 'self' blob:`, which blocks the video preview
-      # inside the WYSIWYG. Allow the same embed hosts the public site's sanitizer allows.
+      # The admin app's default CSP is `child-src 'self' blob:`, which blocks:
+      # - video embeds in the WYSIWYG
+      # - Live Preview iframe of the Nuxt site (http://localhost:3000)
       CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC: >-
-        'self' blob: https://www.youtube.com https://www.youtube-nocookie.com
+        'self' blob: http://localhost:3000 http://127.0.0.1:3000
+        https://www.youtube.com https://www.youtube-nocookie.com
         https://youtube.com https://player.vimeo.com
       CONTENT_SECURITY_POLICY_DIRECTIVES__CHILD_SRC: >-
-        'self' blob: https://www.youtube.com https://www.youtube-nocookie.com
+        'self' blob: http://localhost:3000 http://127.0.0.1:3000
+        https://www.youtube.com https://www.youtube-nocookie.com
         https://youtube.com https://player.vimeo.com
 
       ACCESS_TOKEN_TTL: ${ACCESS_TOKEN_TTL:-15m}

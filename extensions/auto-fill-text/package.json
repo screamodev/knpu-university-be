@@ -1,0 +1,25 @@
+{
+  "name": "directus-extension-auto-fill-text",
+  "version": "1.0.0",
+  "description": "Multiline text interface that auto-fills from other fields (like slug), with HTML stripping",
+  "main": "index.js",
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "directus:extension": {
+    "type": "interface",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^11.0.0"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "^13.1.1",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.40"
+  }
+}

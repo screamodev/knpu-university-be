@@ -2970,7 +2970,7 @@ fields:
     meta:
       collection: articles
       conditions: null
-      display: null
+      display: text-with-tooltip
       display_options: null
       field: title
       group: null
@@ -3010,7 +3010,7 @@ fields:
     meta:
       collection: articles
       conditions: null
-      display: null
+      display: text-with-tooltip
       display_options: null
       field: titleEn
       group: null
@@ -3099,9 +3099,14 @@ fields:
       field: excerpt
       group: null
       hidden: false
-      interface: input-multiline
-      note: null
-      options: null
+      interface: auto-fill-text
+      note: Auto-generated from title (editable).
+      options:
+        autoGenerate:
+          - create
+          - update
+        maxLength: 280
+        source: '{{title}}'
       readonly: false
       required: false
       searchable: true
@@ -3139,9 +3144,14 @@ fields:
       field: excerptEn
       group: null
       hidden: false
-      interface: input-multiline
-      note: null
-      options: null
+      interface: auto-fill-text
+      note: Auto-generated from English title (editable).
+      options:
+        autoGenerate:
+          - create
+          - update
+        maxLength: 280
+        source: '{{titleEn}}'
       readonly: false
       required: false
       searchable: true
@@ -3184,6 +3194,8 @@ fields:
       options:
         folder: 9f1d4e2a-6c3b-4a51-9e77-1c0b5d2f8a10
         font: sans-serif
+        tinymceOverrides:
+          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
         toolbar:
           - undo
           - redo
@@ -3258,6 +3270,8 @@ fields:
       options:
         folder: 9f1d4e2a-6c3b-4a51-9e77-1c0b5d2f8a10
         font: sans-serif
+        tinymceOverrides:
+          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
         toolbar:
           - undo
           - redo
@@ -5605,7 +5619,9 @@ fields:
       hidden: false
       interface: input-rich-text-html
       note: 'Текст сторінки: склад ради, документи до захисту, контакти.'
-      options: null
+options:
+        tinymceOverrides:
+          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
       readonly: false
       required: false
       searchable: true
@@ -14222,7 +14238,9 @@ fields:
       hidden: false
       interface: input-rich-text-html
       note: Про студентське самоврядування — вступний текст сторінки.
-      options: null
+options:
+        tinymceOverrides:
+          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
       readonly: false
       required: false
       searchable: true
@@ -14262,7 +14280,9 @@ fields:
       hidden: false
       interface: input-rich-text-html
       note: Місія.
-      options: null
+options:
+        tinymceOverrides:
+          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
       readonly: false
       required: false
       searchable: true
@@ -14302,7 +14322,9 @@ fields:
       hidden: false
       interface: input-rich-text-html
       note: Завдання.
-      options: null
+options:
+        tinymceOverrides:
+          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
       readonly: false
       required: false
       searchable: true
