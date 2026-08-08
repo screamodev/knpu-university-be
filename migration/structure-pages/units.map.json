@@ -7,37 +7,250 @@
     "and `mathematics-informatics`, which put the природничий факультет's sections and its",
     "деканат on the фізмат page; the client asked for those to live on `special-education` only,",
     "so фізмат now maps to its own pages. `8_fix_unit_content.py` repaired the already-emitted",
-    "content."
+    "content.",
+    "Кафедри are units too: those that had a `division` node on the old site get a page of their",
+    "own, slug = the legacy alias without `division/`. Кафедри that run their own Google Site",
+    "(теорії і практики англійської мови, фізики і хімії, математики, освітології, суспільно-",
+    "економічних дисциплін, цивільно-правових, державно-правових, дошкільної освіти, технологій",
+    "дистанційного навчання, спортивно-педагогічних дисциплін, і три кафедри факультету",
+    "початкового навчання) keep the outbound link instead — client decision."
   ],
   "units": {
     "ukrainian-philology": {
-      "legacy": ["division/ukrayinskyy-movno-literaturnyy-fakultet-imeni-gf-kvitky-osnovyanenka"]
+      "legacy": [
+        "division/ukrayinskyy-movno-literaturnyy-fakultet-imeni-gf-kvitky-osnovyanenka"
+      ]
     },
     "special-education": {
-      "legacy": ["fac-prirodn"],
+      "legacy": [
+        "fac-prirodn"
+      ],
       "note": "спеціальна освіта half of the old природничий факультет — needs review"
     },
     "history-law": {
-      "legacy": ["division/fakultet-istoriyi-i-prava"]
+      "legacy": [
+        "division/fakultet-istoriyi-i-prava"
+      ]
     },
     "mathematics-informatics": {
-      "legacy": ["division/fizyko-matematychnyy-fakultet"],
+      "legacy": [
+        "division/fizyko-matematychnyy-fakultet"
+      ],
       "note": "фізмат only — `fac-prirodn` belongs to special-education (client decision)"
     },
     "arts": {
-      "legacy": ["division/fakultet-mystectv"]
+      "legacy": [
+        "division/fakultet-mystectv"
+      ]
     },
     "foreign-philology": {
-      "legacy": ["fac-inoz-fil"]
+      "legacy": [
+        "fac-inoz-fil"
+      ]
     },
     "preschool": {
-      "legacy": ["division/fakultet-doshkilnoyi-osvity"]
+      "legacy": [
+        "division/fakultet-doshkilnoyi-osvity"
+      ]
     },
     "physical-education": {
-      "legacy": ["fac-fizvosp"]
+      "legacy": [
+        "fac-fizvosp"
+      ]
     },
     "social-humanities": {
-      "legacy": ["division/fakultet-socialnyh-i-povedinkovyh-nauk"]
+      "legacy": [
+        "division/fakultet-socialnyh-i-povedinkovyh-nauk"
+      ]
+    },
+    "kafedra-ukrayinskoyi-literatury-ta-zhurnalistyky": {
+      "legacy": [
+        "division/kafedra-ukrayinskoyi-literatury-ta-zhurnalistyky-imeni-profesora-leonida-ushkalova",
+        "division/spivrobitnyky-kafedry-ukrayinskoyi-literatury-ta-zhurnalistyky-imeni-profesora-leonida"
+      ],
+      "note": "ННІ української філології; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-ukrayinskoyi-movy": {
+      "legacy": [
+        "division/kafedra-ukrayinskoyi-movy-imeni-profesora-lidiyi-andriyivny-lysychenko",
+        "division/spivrobitnyky-kafedry-ukrayinskoyi-movy-imeni-profesora-l-lysychenko"
+      ],
+      "note": "ННІ української філології; «Відгуки стейкхолдерів», «Говорять випускники» і «Корисні посилання» приходять як підсторінки бічного меню; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-ukrayinoznavstva-i-lingvodydaktyky": {
+      "legacy": [
+        "division/kafedra-ukrayinoznavstva-i-lingvodydaktyky-imeni-profesora-og-muromcevoyi",
+        "division/spivrobitnyky-kafedry-ukrayinoznavstva-i-lingvodydaktyky"
+      ],
+      "note": "ННІ української філології; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-anatomiyi-i-fiziologiyi-lyudyny": {
+      "legacy": [
+        "division/kafedra-anatomiyi-i-fiziologiyi-lyudyny-imeni-profesora-yar-synelnykova"
+      ],
+      "note": "ННІ спеціальної освіти та інклюзії"
+    },
+    "kafedra-biologiyi": {
+      "legacy": [
+        "division/kafedra-zoologiyi",
+        "division/kafedra-botaniki",
+        "division/spivrobitnyky-kafedry-zoologiyi",
+        "spivrobitnyky-kafedry-botaniky"
+      ],
+      "note": "За схемою 30.06.2026 кафедри зоології і ботаніки об’єднані в кафедру біології, тому сторінка збирає вміст обох; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-specialnoyi-pedagogiky": {
+      "legacy": [
+        "division/kafedra-specialnoyi-pedagogiky",
+        "division/spivrobitnyky-kafedry-specialnoyi-pedagogiky"
+      ],
+      "note": "ННІ спеціальної освіти та інклюзії; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-korekciynoyi-psyhopedagogiky": {
+      "legacy": [
+        "division/kafedra-zdorovya-lyudini-ta-korekciynoyi-osviti"
+      ],
+      "note": "Стара «кафедра здоров’я людини, реабілітології і спеціальної психології» — за новою схемою розділена; вміст лишаємо тут, перевірити з підрозділом"
+    },
+    "kafedra-vsesvitnoyi-istoriyi": {
+      "legacy": [
+        "division/kafedra-vsesvitnoyi-istoriyi",
+        "division/spivrobitnyky-kafedry-vsesvitnoyi-istoriyi"
+      ],
+      "note": "Факультет історії і права; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-istoriyi-ukrayiny": {
+      "legacy": [
+        "division/kafedra-istoriyi-ukrayini",
+        "division/spivrobitnyky-kafedry-istoriyi-ukrayiny"
+      ],
+      "note": "Факультет історії і права; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-teoriyi-i-metodyky-vykladannya-suspilno-pravovyh-dyscyplin": {
+      "legacy": [
+        "division/kafedra-teoriyi-i-metodyky-vykladannya-suspilno-pravovyh-dyscyplin",
+        "division/spivrobitnyky-kafedry-teoriyi-i-metodyky-vykladannya-suspilno-pravovyh-dyscyplin"
+      ],
+      "note": "Факультет історії і права; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-informatyky": {
+      "legacy": [
+        "division/kafedra-informatyky"
+      ],
+      "note": "Факультет математики, інформатики і природничої освіти"
+    },
+    "kafedra-horeografiyi": {
+      "legacy": [
+        "division/kafedra-horeografiyi",
+        "division/spivrobitnyky-kafedry-horeografiyi"
+      ],
+      "note": "Факультет мистецтв; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-muzychnogo-mystectva": {
+      "legacy": [
+        "division/kafedra-muzychnogo-mystectva",
+        "division/profesorsko-vykladackyy-sklad-kafedry-muzychnogo-mystectva"
+      ],
+      "note": "Факультет мистецтв; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-dyzaynu-i-tehnologiy": {
+      "legacy": [
+        "division/kafedra-dizaynu",
+        "division/cpivrobitnyky-kafedry-dyzaynu"
+      ],
+      "note": "Факультет мистецтв; за новою схемою — кафедра дизайну і технологій; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-obrazotvorchogo-mystectva": {
+      "legacy": [
+        "division/kafedra-obrazotvorchogo-mistectva",
+        "division/spivrobitnyky-kafedry-obrazotvorchogo-mystectva"
+      ],
+      "note": "Факультет мистецтв; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-angliyskoyi-filologiyi": {
+      "legacy": [
+        "division/kafedra-angliyskoyi-filologiyi",
+        "division/spivrobitnyky-kafedry-angliyskoyi-filologiyi"
+      ],
+      "note": "Факультет іноземної філології; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-zagalnogo-movoznavstva": {
+      "legacy": [
+        "division/kafedra-angliyskoy-fonetiki-i-grammatiki",
+        "division/spivrobitnyky-kafedry-zagalnogo-movoznavstva-i-romano-germanskoyi-filologiyi"
+      ],
+      "note": "Факультет іноземної філології; вузол зберіг стару адресу, але вже названий «кафедра загального мовознавства і романо-германської філології»; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-praktyky-angliyskogo-movlennya": {
+      "legacy": [
+        "division/kafedra-praktyky-angliyskogo-usnogo-i-pysemnogo-movlennya",
+        "cpivrobitnyky-kafedry-praktyky-angliyskogo-usnogo-i-pysemnogo-movlennya"
+      ],
+      "note": "Факультет іноземної філології; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-shidnyh-mov": {
+      "legacy": [
+        "division/kafedra-shidnih-mov",
+        "spivrobitnyky-kafedry-shidnyh-mov"
+      ],
+      "note": "Факультет іноземної філології; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-psyhologichnoyi-i-pedagogichnoyi-antropologiyi": {
+      "legacy": [
+        "division/kafedra-psihologiyi",
+        "division/spivrobitnyky-kafedry-psyhologichnoyi-ta-pedagogichnoyi-antropologiyi"
+      ],
+      "note": "Факультет дошкільної освіти; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-teoriyi-metodyky-i-praktyky-fizychnogo-vyhovannya": {
+      "legacy": [
+        "division/kafedra-teoriyi-metodyky-i-praktyky-fizychnogo-vyhovannya",
+        "division/kafedra-fizychnogo-vyhovannya",
+        "division/spivrobitnyky-kafedry-teoriyi-metodyky-i-praktyky-fizychnogo-vyhovannya",
+        "division/spivrobitnyky-kafedry-fizychnogo-vyhovannya"
+      ],
+      "note": "Факультет фізичного виховання і спорту; стара «кафедра фізичного виховання» влилася в цю; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-olimpiyskogo-i-profesiynogo-sportu": {
+      "legacy": [
+        "division/kafedra-olimpiyskogo-i-profesiynogo-sportu-sportyvnyh-igor-ta-turyzmu",
+        "division/cpivrobitnyky-kafedry-olimpiyskogo-i-profesiynogo-sportu-sportyvnyh-igor-ta-turyzmu"
+      ],
+      "note": "Факультет фізичного виховання і спорту; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-psyhologiyi-rozvytku": {
+      "legacy": [
+        "division/kafedra-psyhologiyi"
+      ],
+      "note": "Факультет соціально-гуманітарних наук; стара «кафедра психології»"
+    },
+    "kafedra-politologiyi-sociologiyi-i-kulturologiyi": {
+      "legacy": [
+        "division/kafedra-politologiyi-sociologiyi-i-kulturologiyi",
+        "division/cpivrobitnyky-kafedry-politologiyi-sociologiyi-i-kulturologiyi"
+      ],
+      "note": "Факультет соціально-гуманітарних наук; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-socialnoyi-roboty": {
+      "legacy": [
+        "division/kafedra-socialnoyi-pedagogiki",
+        "division/sklad-kafedry-socialnoyi-roboty-i-socialnoyi-pedagogiky"
+      ],
+      "note": "Факультет соціально-гуманітарних наук; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-menedzhmentu-ta-ekonomiky": {
+      "legacy": [
+        "division/kafedra-menedzhmentu-ta-ekonomiky",
+        "division/spivrobitnyky-kafedry-menedzhmentu-ta-ekonomiky"
+      ],
+      "note": "Факультет соціально-гуманітарних наук; сторінка «Співробітники» приєднана до Головної"
+    },
+    "kafedra-filosofiyi": {
+      "legacy": [
+        "division/kafedra-filosofiyi",
+        "division/spivrobitnyky-kafedry-filosofiyi"
+      ],
+      "note": "Факультет соціально-гуманітарних наук; за новою схемою — імені професора М. Д. Култаєвої; сторінка «Співробітники» приєднана до Головної"
     }
   }
 }

@@ -549,6 +549,41 @@ def ensure_document_sections(directus: Directus, dry_run: bool) -> None:
     directus.request('PATCH', '/fields/documents/section', payload={'meta': meta})
 
 
+def ensure_category_parent(directus: Directus, dry_run: bool) -> None:
+    """
+    Give `categories` a parent, so a кафедра's category can sit under its faculty's.
+
+    The site rolls the tree up: a кафедра page shows its own news and, while it has none, the
+    faculty's; a faculty page shows its own plus everything its кафедри publish.
+    """
+    have = {row['field'] for row in (directus.get('/fields/categories') or [])}
+
+    if 'parent' not in have:
+        print('+ field categories.parent')
+        if not dry_run:
+            directus.request('POST', '/fields/categories', payload=m2o(
+                'parent', 'Категорія вищого рівня — напр. факультет для кафедри.',
+                template='{{name}}'))
+
+    if 'children' not in have:
+        print('+ field categories.children')
+        if not dry_run:
+            directus.request('POST', '/fields/categories', payload=o2m(
+                'children', 'Категорії підрозділів, що входять до цієї.'))
+
+    existing = {(row['collection'], row['field']) for row in (directus.get('/relations') or [])}
+    if ('categories', 'parent') not in existing:
+        print('+ relation categories.parent -> categories')
+        if not dry_run:
+            directus.request('POST', '/relations', payload={
+                'collection': 'categories',
+                'field': 'parent',
+                'related_collection': 'categories',
+                'meta': {'one_field': 'children', 'sort_field': None, 'one_deselect_action': 'nullify'},
+                'schema': {'on_delete': 'SET NULL'},
+            })
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--directus-url', default=os.environ.get('DIRECTUS_URL') or 'http://localhost:8055')
@@ -565,6 +600,7 @@ def main() -> int:
         ensure_collections(directus, args.dry_run)
         ensure_relations(directus, args.dry_run)
         ensure_document_sections(directus, args.dry_run)
+        ensure_category_parent(directus, args.dry_run)
     except urllib.error.HTTPError as exc:
         print(f'! {exc.code}: {exc.read().decode("utf-8", "replace")[:800]}', file=sys.stderr)
         return 1

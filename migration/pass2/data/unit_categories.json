@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "kafedra-ukrayinskoyi-literatury-ta-zhurnalistyky",
+    "name": "Кафедра української літератури та журналістики імені професора Леоніда Ушкалова",
+    "nameEn": "Professor Leonid Ushkalov Department of Ukrainian Literature and Journalism",
+    "parentSlug": "navchalno-naukovyi-instytut-ukrainskoi-filolohii"
+  },
+  {
+    "slug": "kafedra-ukrayinskoyi-movy",
+    "name": "Кафедра української мови імені професора Л. А. Лисиченко",
+    "nameEn": "Professor L.A. Lysychenko Department of Ukrainian Language",
+    "parentSlug": "navchalno-naukovyi-instytut-ukrainskoi-filolohii"
+  },
+  {
+    "slug": "kafedra-ukrayinoznavstva-i-lingvodydaktyky",
+    "name": "Кафедра українознавства і лінгводидактики імені професора О.Г. Муромцевої",
+    "nameEn": "Professor O.H. Muromtseva Department of Ukrainian Studies and Linguodidactics",
+    "parentSlug": "navchalno-naukovyi-instytut-ukrainskoi-filolohii"
+  },
+  {
+    "slug": "kafedra-anatomiyi-i-fiziologiyi-lyudyny",
+    "name": "Кафедра анатомії і фізіології людини та медичної підготовки імені професора Я.Р. Синельникова",
+    "nameEn": "Professor Ya.R. Synelnykov Department of Human Anatomy, Physiology and Medical Training",
+    "parentSlug": "instytut-spetsialnoyi-osvity-ta-inklyuziyi"
+  },
+  {
+    "slug": "kafedra-biologiyi",
+    "name": "Кафедра біології",
+    "nameEn": "Department of Biology",
+    "parentSlug": "instytut-spetsialnoyi-osvity-ta-inklyuziyi"
+  },
+  {
+    "slug": "kafedra-specialnoyi-pedagogiky",
+    "name": "Кафедра спеціальної педагогіки",
+    "nameEn": "Department of Special Pedagogy",
+    "parentSlug": "instytut-spetsialnoyi-osvity-ta-inklyuziyi"
+  },
+  {
+    "slug": "kafedra-korekciynoyi-psyhopedagogiky",
+    "name": "Кафедра корекційної психопедагогіки та здоров’я людини",
+    "nameEn": "Department of Corrective Psychopedagogy and Human Health",
+    "parentSlug": "instytut-spetsialnoyi-osvity-ta-inklyuziyi"
+  },
+  {
+    "slug": "kafedra-vsesvitnoyi-istoriyi",
+    "name": "Кафедра всесвітньої історії",
+    "nameEn": "Department of World History",
+    "parentSlug": "fakultet-istoriyi-i-prava"
+  },
+  {
+    "slug": "kafedra-istoriyi-ukrayiny",
+    "name": "Кафедра історії України",
+    "nameEn": "Department of History of Ukraine",
+    "parentSlug": "fakultet-istoriyi-i-prava"
+  },
+  {
+    "slug": "kafedra-teoriyi-i-metodyky-vykladannya-suspilno-pravovyh-dyscyplin",
+    "name": "Кафедра теорії і методики викладання суспільно-правових дисциплін",
+    "nameEn": "Department of Theory and Methods of Teaching Social and Legal Disciplines",
+    "parentSlug": "fakultet-istoriyi-i-prava"
+  },
+  {
+    "slug": "kafedra-informatyky",
+    "name": "Кафедра інформатики",
+    "nameEn": "Department of Computer Science",
+    "parentSlug": "fakultet-matematyky-informatyky-i-pryrodnychoyi-osvity"
+  },
+  {
+    "slug": "kafedra-horeografiyi",
+    "name": "Кафедра хореографії",
+    "nameEn": "Department of Choreography",
+    "parentSlug": "fakultet-mystetstv"
+  },
+  {
+    "slug": "kafedra-muzychnogo-mystectva",
+    "name": "Кафедра музичного мистецтва",
+    "nameEn": "Department of Music Art",
+    "parentSlug": "fakultet-mystetstv"
+  },
+  {
+    "slug": "kafedra-dyzaynu-i-tehnologiy",
+    "name": "Кафедра дизайну і технологій",
+    "nameEn": "Department of Design and Technologies",
+    "parentSlug": "fakultet-mystetstv"
+  },
+  {
+    "slug": "kafedra-obrazotvorchogo-mystectva",
+    "name": "Кафедра образотворчого мистецтва",
+    "nameEn": "Department of Fine Arts",
+    "parentSlug": "fakultet-mystetstv"
+  },
+  {
+    "slug": "kafedra-angliyskoyi-filologiyi",
+    "name": "Кафедра англійської філології",
+    "nameEn": "Department of English Philology",
+    "parentSlug": "fakultet-inozemnoyi-filolohiyi"
+  },
+  {
+    "slug": "kafedra-zagalnogo-movoznavstva",
+    "name": "Кафедра загального мовознавства і романо-германської філології",
+    "nameEn": "Department of General Linguistics and Romance-Germanic Philology",
+    "parentSlug": "fakultet-inozemnoyi-filolohiyi"
+  },
+  {
+    "slug": "kafedra-praktyky-angliyskogo-movlennya",
+    "name": "Кафедра практики англійського усного і писемного мовлення",
+    "nameEn": "Department of Practice of English Oral and Written Communication",
+    "parentSlug": "fakultet-inozemnoyi-filolohiyi"
+  },
+  {
+    "slug": "kafedra-shidnyh-mov",
+    "name": "Кафедра східних мов",
+    "nameEn": "Department of Oriental Languages",
+    "parentSlug": "fakultet-inozemnoyi-filolohiyi"
+  },
+  {
+    "slug": "kafedra-psyhologichnoyi-i-pedagogichnoyi-antropologiyi",
+    "name": "Кафедра психологічної і педагогічної антропології",
+    "nameEn": "Department of Psychological and Pedagogical Anthropology",
+    "parentSlug": "fakultet-doshkilnoyi-osvity"
+  },
+  {
+    "slug": "kafedra-teoriyi-metodyky-i-praktyky-fizychnogo-vyhovannya",
+    "name": "Кафедра теорії, методики і практики фізичного виховання",
+    "nameEn": "Department of Theory, Methods and Practice of Physical Education",
+    "parentSlug": "fakultet-fizychnoho-vykhovannya-i-sportu"
+  },
+  {
+    "slug": "kafedra-olimpiyskogo-i-profesiynogo-sportu",
+    "name": "Кафедра олімпійського і професійного спорту, спортивних ігор та туризму",
+    "nameEn": "Department of Olympic and Professional Sports, Sports Games and Tourism",
+    "parentSlug": "fakultet-fizychnoho-vykhovannya-i-sportu"
+  },
+  {
+    "slug": "kafedra-psyhologiyi-rozvytku",
+    "name": "Кафедра психології розвитку",
+    "nameEn": "Department of Developmental Psychology",
+    "parentSlug": "fakultet-sotsialno-humanitarnykh-nauk-i-sotsialnykh-tekhnolohiy"
+  },
+  {
+    "slug": "kafedra-politologiyi-sociologiyi-i-kulturologiyi",
+    "name": "Кафедра політології, соціології і культурології",
+    "nameEn": "Department of Political Science, Sociology and Cultural Studies",
+    "parentSlug": "fakultet-sotsialno-humanitarnykh-nauk-i-sotsialnykh-tekhnolohiy"
+  },
+  {
+    "slug": "kafedra-socialnoyi-roboty",
+    "name": "Кафедра соціальної роботи і соціальної педагогіки",
+    "nameEn": "Department of Social Work and Social Pedagogy",
+    "parentSlug": "fakultet-sotsialno-humanitarnykh-nauk-i-sotsialnykh-tekhnolohiy"
+  },
+  {
+    "slug": "kafedra-menedzhmentu-ta-ekonomiky",
+    "name": "Кафедра менеджменту та економіки",
+    "nameEn": "Department of Management and Economics",
+    "parentSlug": "fakultet-sotsialno-humanitarnykh-nauk-i-sotsialnykh-tekhnolohiy"
+  },
+  {
+    "slug": "kafedra-filosofiyi",
+    "name": "Кафедра філософії імені професора М. Д. Култаєвої",
+    "nameEn": "Professor M.D. Kultaieva Department of Philosophy",
+    "parentSlug": "fakultet-sotsialno-humanitarnykh-nauk-i-sotsialnykh-tekhnolohiy"
+  }
+]

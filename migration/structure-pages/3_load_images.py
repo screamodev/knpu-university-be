@@ -28,6 +28,7 @@ import mimetypes
 import os
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 import uuid
 from pathlib import Path
@@ -102,8 +103,19 @@ def multipart(filename: str, content: bytes, content_type: str, fields: dict[str
     return b''.join(parts), f'multipart/form-data; boundary={boundary}'
 
 
+def encoded(url: str) -> str:
+    """Some кафедра pages link images by their raw file name («Chernikova I.V.JPG»)."""
+    parts = urllib.parse.urlsplit(url)
+    return urllib.parse.urlunsplit((
+        parts.scheme, parts.netloc,
+        urllib.parse.quote(parts.path, safe='/%'),
+        urllib.parse.quote(parts.query, safe='=&%'),
+        parts.fragment,
+    ))
+
+
 def download(url: str, timeout: int = 60) -> tuple[bytes, str]:
-    request = urllib.request.Request(url, headers=BROWSER_HEADERS)
+    request = urllib.request.Request(encoded(url), headers=BROWSER_HEADERS)
     with urllib.request.urlopen(request, timeout=timeout) as response:
         content_type = (response.headers.get('Content-Type') or '').split(';')[0].strip()
         return response.read(), content_type

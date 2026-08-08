@@ -26,6 +26,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 from pathlib import Path
 
@@ -36,15 +37,62 @@ CONTENT = HERE.parents[2] / 'knpu-university-fe' / 'app' / 'content' / 'pages'
 # «Документи», created by snapshots/bootstrap-editor-experience.sh.
 DEFAULT_FOLDER = '3e5f21c7-8b04-4d92-a6f1-27c48ab5d301'
 
+# `src` as well as `href`: the quality centre's pages use images from its own host as buttons.
 LEGACY_FILE_HREF_RE = re.compile(
-    r'href="(?P<url>https?://[^"]*hnpu\.edu\.ua[^"]*\.'
-    r'(?:pdf|docx?|xlsx?|pptx?|rtf|odt|zip|jpe?g|png))"', re.I)
+    r'(?:href|src)="(?P<url>https?://[^"]*hnpu\.edu\.ua[^"]*\.'
+    r'(?:pdf|docx?|xlsx?|pptx?|rtf|odt|zip|jpe?g|png|gif))"', re.I)
 
 
 def links_of(payload: dict) -> list[str]:
     """Legacy file URLs linked from a static page's sections, in document order, deduplicated."""
     html = ' '.join(section.get('html') or '' for section in payload.get('sections', []))
     return list(dict.fromkeys(LEGACY_FILE_HREF_RE.findall(html)))
+
+
+def unlink_pages(payload: dict, host: str) -> int:
+    """
+    Unwrap links to *pages* of a host we are replacing, keeping their text. File links stay —
+    those are handled by the mirroring above. Returns how many links were unwrapped.
+    """
+    pattern = re.compile(
+        rf'<a\s[^>]*href="(?P<href>[^"]*{re.escape(host)}[^"]*)"[^>]*>(?P<text>.*?)</a>', re.S)
+    count = 0
+
+    def unwrap(match: re.Match[str]) -> str:
+        nonlocal count
+        if LEGACY_FILE_HREF_RE.search(f'href="{match.group("href")}"') or \
+                re.search(r'\.(pdf|docx?|xlsx?|pptx?|rtf|odt|zip|jpe?g|png)(\?|$)',
+                          match.group('href').split('#')[0], re.I):
+            return match.group(0)
+        count += 1
+        return match.group('text')
+
+    for section in payload.get('sections', []):
+        section['html'] = pattern.sub(unwrap, section.get('html') or '')
+    return count
+
+
+def upload_with_retry(directus: Directus, content: bytes, filename: str, content_type: str,
+                      folder: str | None, attempts: int = 6) -> str:
+    """
+    Upload, surviving a Directus restart.
+
+    A run of a few thousand files reliably makes the local Directus container restart (PM2 brings
+    it back within seconds); without this the whole run died on «Connection refused» and had to be
+    resumed by hand. HTTP errors are not retried — those are the server rejecting the file.
+    """
+    for attempt in range(1, attempts + 1):
+        try:
+            return upload(directus, content, filename, content_type, filename[:255], folder)
+        except urllib.error.HTTPError:
+            raise
+        except OSError as exc:
+            if attempt == attempts:
+                raise
+            pause = min(30, 3 * attempt)
+            print(f'    … {exc}; retrying in {pause}s ({attempt}/{attempts - 1})', file=sys.stderr)
+            time.sleep(pause)
+    raise OSError('unreachable')
 
 
 def load_map(path: Path) -> dict[str, str]:
@@ -66,6 +114,9 @@ def main() -> int:
     parser.add_argument('--token', default=(os.environ.get('DIRECTUS_TOKEN') or '').strip() or None)
     parser.add_argument('--email', default=os.environ.get('DIRECTUS_EMAIL') or 'admin@example.com')
     parser.add_argument('--password', default=os.environ.get('DIRECTUS_PASSWORD') or 'admin')
+    parser.add_argument('--unlink-host', metavar='HOST',
+                        help='unwrap links to pages (not files) on this host, keeping their text — '
+                             'those pages are replaced by this site')
     parser.add_argument('--unlink-missing', action='store_true',
                         help='for files the old site no longer serves (404), unwrap the link and '
                              'keep its text — a dead link to a dead host helps nobody')
@@ -95,9 +146,20 @@ def main() -> int:
     uploaded = load_map(map_path)
     mirrored = failed = 0
 
+    unlinked_pages = 0
+
     for path in files:
         payload = json.loads(path.read_text(encoding='utf-8'))
         urls = links_of(payload)
+
+        if args.unlink_host:
+            count = unlink_pages(payload, args.unlink_host)
+            if count:
+                unlinked_pages += count
+                path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n',
+                                encoding='utf-8')
+                print(f'  unwrapped {count} page link(s) in {path.name}', file=sys.stderr)
+
         if not urls:
             continue
         print(f'\n== {path.name}: {len(urls)} files', file=sys.stderr)
@@ -117,11 +179,15 @@ def main() -> int:
                 content_bytes, content_type = downloaded
                 filename = filename_for(url)
                 try:
-                    file_id = upload(directus, content_bytes, filename, content_type,
-                                     filename[:255], args.folder)
+                    file_id = upload_with_retry(directus, content_bytes, filename, content_type,
+                                                args.folder)
                 except urllib.error.HTTPError as exc:
                     print(f'    ! upload {exc.code}: {exc.read().decode("utf-8", "replace")[:200]}',
                           file=sys.stderr)
+                    failed += 1
+                    continue
+                except OSError as exc:
+                    print(f'    ! upload gave up: {exc}', file=sys.stderr)
                     failed += 1
                     continue
                 uploaded[url] = file_id
@@ -135,16 +201,21 @@ def main() -> int:
             for section in payload.get('sections', []):
                 html = section.get('html') or ''
                 for url, file_id in replacements.items():
-                    html = html.replace(f'href="{url}"', f'href="/assets/{file_id}"')
+                    html = (html.replace(f'href="{url}"', f'href="/assets/{file_id}"')
+                                .replace(f'src="{url}"', f'src="/assets/{file_id}"'))
                 if args.unlink_missing:
                     for url in missing:
                         html = re.sub(
                             rf'<a\s[^>]*href="{re.escape(url)}"[^>]*>(.*?)</a>', r'\1', html, flags=re.S)
+                        # A picture the old host no longer serves would render as a broken image.
+                        html = re.sub(rf'<img\b[^>]*src="{re.escape(url)}"[^>]*/?>', '', html)
                 section['html'] = html
             path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
             note = f', unwrapped {len(missing)} dead' if args.unlink_missing and missing else ''
             print(f'  rewrote {len(replacements)} links in {path.name}{note}', file=sys.stderr)
 
+    if args.unlink_host:
+        print(f'unwrapped {unlinked_pages} link(s) to {args.unlink_host} pages', file=sys.stderr)
     print(f'\nmirrored={mirrored} failed={failed}', file=sys.stderr)
     return 0
 

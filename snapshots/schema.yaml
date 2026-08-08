@@ -3407,9 +3407,13 @@ fields:
       field: cover
       group: null
       hidden: false
-      interface: file-image
-      note: null
-      options: null
+      interface: cover-hero-focal
+      note: >-
+        Перетягніть рамку на фото — область героя на сайті. Зберігається на
+        файлі одразу.
+      options:
+        aspectRatio: 2.5
+        previewHeight: 180
       readonly: false
       required: false
       searchable: true
@@ -3605,6 +3609,86 @@ fields:
       validation: null
       validation_message: null
       width: half
+  - collection: articles
+    field: cover_focal_x
+    type: integer
+    meta:
+      collection: articles
+      conditions: null
+      display: null
+      display_options: null
+      field: cover_focal_x
+      group: null
+      hidden: true
+      interface: input
+      note: Hero cover focal point (set by Cover + hero frame interface)
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 92
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: cover_focal_x
+      table: articles
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: articles
+    field: cover_focal_y
+    type: integer
+    meta:
+      collection: articles
+      conditions: null
+      display: null
+      display_options: null
+      field: cover_focal_y
+      group: null
+      hidden: true
+      interface: input
+      note: Hero cover focal point (set by Cover + hero frame interface)
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 93
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: cover_focal_y
+      table: articles
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: articles_categories
     field: id
     type: integer
@@ -4118,6 +4202,74 @@ fields:
       sort: 10
       special:
         - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: categories
+    field: parent
+    type: uuid
+    meta:
+      collection: categories
+      conditions: null
+      display: null
+      display_options: null
+      field: parent
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: Категорія вищого рівня — напр. факультет для кафедри.
+      options:
+        template: '{{name}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 92
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: parent
+      table: categories
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: categories
+      foreign_key_column: id
+  - collection: categories
+    field: children
+    type: alias
+    meta:
+      collection: categories
+      conditions: null
+      display: null
+      display_options: null
+      field: children
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: Категорії підрозділів, що входять до цієї.
+      options:
+        enableCreate: true
+        enableSelect: false
+      readonly: false
+      required: false
+      searchable: true
+      sort: 93
+      special:
+        - o2m
       translations: null
       validation: null
       validation_message: null
@@ -16871,6 +17023,27 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: articles_files_directus_files_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: categories
+    field: parent
+    related_collection: categories
+    meta:
+      junction_field: null
+      many_collection: categories
+      many_field: parent
+      one_allowed_collections: null
+      one_collection: categories
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: children
+      sort_field: null
+    schema:
+      table: categories
+      column: parent
+      foreign_key_table: categories
+      foreign_key_column: id
+      constraint_name: categories_parent_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: contingent_reports

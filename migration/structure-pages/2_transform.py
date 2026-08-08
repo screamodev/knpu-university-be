@@ -44,6 +44,12 @@ TAB_IDS = ['home', 'admission', 'structure', 'history', 'education', 'science', 
 BUCKET_RULES: list[tuple[str, str]] = [
     ('головна', 'home'),
     ('про факультет', 'home'),
+    # Кафедри keep their staff on a page of their own; it belongs on the кафедра's Головна,
+    # under the description, the way the client's mock-up shows it.
+    ('співробітники', 'home'),
+    ('півробітники', 'home'),
+    ('викладацький склад', 'home'),
+    ('склад кафедри', 'home'),
     ('вступник', 'admission'),
     ('абітурієнт', 'admission'),
     ('спеціальност', 'admission'),
