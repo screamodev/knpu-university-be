@@ -3,8 +3,11 @@
     "Current unit (slug in knpu-university-fe/app/utils/structure.ts) → page(s) on the old site.",
     "Aliases are drupal_url_alias values without a leading slash or language prefix.",
     "The 30.06.2026 chart split «Факультет природничої, спеціальної і здоров'язбережувальної",
-    "освіти» across two units, so `fac-prirodn` appears twice — confirm this split before",
-    "treating the emitted content as final."
+    "освіти» across two units. `fac-prirodn` used to be listed under both `special-education`",
+    "and `mathematics-informatics`, which put the природничий факультет's sections and its",
+    "деканат on the фізмат page; the client asked for those to live on `special-education` only,",
+    "so фізмат now maps to its own pages. `8_fix_unit_content.py` repaired the already-emitted",
+    "content."
   ],
   "units": {
     "ukrainian-philology": {
@@ -18,8 +21,8 @@
       "legacy": ["division/fakultet-istoriyi-i-prava"]
     },
     "mathematics-informatics": {
-      "legacy": ["division/fizyko-matematychnyy-fakultet", "fac-prirodn"],
-      "note": "fizmat + природнича освіта half of the old природничий факультет — needs review"
+      "legacy": ["division/fizyko-matematychnyy-fakultet"],
+      "note": "фізмат only — `fac-prirodn` belongs to special-education (client decision)"
     },
     "arts": {
       "legacy": ["division/fakultet-mystectv"]

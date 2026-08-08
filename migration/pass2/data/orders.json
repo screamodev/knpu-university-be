@@ -1,0 +1,1220 @@
+{
+  "source": "https://hnpu.edu.ua/uk/nakazy-z-osnovnoyi-diyalnosti-universytetu",
+  "batches": [
+    {
+      "collection": "university_orders",
+      "identity": [
+        "title",
+        "orderDate"
+      ],
+      "rows": [
+        {
+          "orderNumber": "89-од",
+          "orderDate": "2026-05-25",
+          "year": 2026,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2026/Nakaz%252089%2520OD.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "49-од",
+          "orderDate": "2026-04-02",
+          "year": 2026,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2026/N_49od_02_04_2026.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "25-од",
+          "orderDate": "2026-02-27",
+          "year": 2026,
+          "title": "Про зарахування на навчання слухачів підготовчого відділення \"Відкритий шлях до вищої освіти\"",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2026/Nakaz_25_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "9-од",
+          "orderDate": "2026-01-22",
+          "year": 2026,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2026/N_9_od_%2022_01_2026.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "223-од",
+          "orderDate": "2025-11-03",
+          "year": 2025,
+          "title": "Про створення робочої групи",
+          "order": 5,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_223_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "212-од",
+          "orderDate": "2025-10-22",
+          "year": 2025,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 6,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_212_od_22.10.2025.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "190-од",
+          "orderDate": "2025-09-16",
+          "year": 2025,
+          "title": "Про затвердження складу атестаційної комісії для проведення атестації педагогічних працівників у 2025/2026 навчальному році",
+          "order": 7,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_190_OD.jpeg",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "162-од",
+          "orderDate": "2025-08-08",
+          "year": 2025,
+          "title": "Про поселення здобувачів вищої освіти в гуртожиток",
+          "order": 8,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/Nakaz%20%E2%84%96162-od%20Pro%20poselennia%20zdobuvachiv%20vyshchoi%20osvity%20v%20hurtozhytok.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "102-од",
+          "orderDate": "2025-05-13",
+          "year": 2025,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 9,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_102_13_05_2025.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "82-од",
+          "orderDate": "2025-04-09",
+          "year": 2025,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 10,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_82_09_04_2025.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "42-од",
+          "orderDate": "2025-02-19",
+          "year": 2025,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 11,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_42od_19.02.2025.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "14-од",
+          "orderDate": "2025-01-20",
+          "year": 2025,
+          "title": "Про призначення проєктної групи",
+          "order": 12,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N-od_20.01.2025_AMUSE.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "2-од",
+          "orderDate": "2025-01-03",
+          "year": 2025,
+          "title": "Про організаційно-розпорядчу докементацію університету. Про структурні зміни університету",
+          "order": 13,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2025/N_2_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "251-од",
+          "orderDate": "2024-11-08",
+          "year": 2024,
+          "title": "Про обмеження використання месенджера Telegram",
+          "order": 14,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/N_251_8_11_2024.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "217-од",
+          "orderDate": "2024-09-26",
+          "year": 2024,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 15,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/N_217_od_26_09_2024.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "69-од",
+          "orderDate": "2024-04-05",
+          "year": 2024,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 16,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/69.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "67-од",
+          "orderDate": "2024-04-02",
+          "year": 2024,
+          "title": "Про встановлення вартості платних освітніх послуг, що надаються для здобувачів освіти за різними рівнямі вищої освіти на 2024-2025 н.р.",
+          "order": 17,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/Var_nav_2024_2025.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "42-од",
+          "orderDate": "2024-03-01",
+          "year": 2024,
+          "title": "Про призначення відповідальних осіб за пожежну безпеку об'єктів університету",
+          "order": 18,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/nakaz_42_01_berezny_2024.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "26-од",
+          "orderDate": "2024-02-09",
+          "year": 2024,
+          "title": "Про встановлення офіційної назви Університету та юридичної адреси Університету українською та англійською мовами",
+          "order": 19,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/nakaz_26.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "22-од",
+          "orderDate": "2024-02-01",
+          "year": 2024,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 20,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/22_2024-02-01.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "204-од",
+          "orderDate": "2023-12-13",
+          "year": 2023,
+          "title": "Про введення в дію рішення Вченої ради щодо припинення/обмеження використання джерел інформації держави-агресора в наукових публікаціях у ХНПУ імені Г.С. Сковороди",
+          "order": 21,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/204_od_13_12_2023.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "171-од",
+          "orderDate": "2023-11-02",
+          "year": 2023,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 22,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/171_od_02_11_2023.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "160-од",
+          "orderDate": "2023-10-05",
+          "year": 2023,
+          "title": "Про посилення заходів пожежної безпеки в підрозділах університету",
+          "order": 23,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/160_od_05_10_23.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "159-од",
+          "orderDate": "2023-10-04",
+          "year": 2023,
+          "title": "Про посилення попередження курінню в приміщеннях та на території Університету",
+          "order": 24,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/159_od_04_10_23.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "148-од",
+          "orderDate": "2023-09-20",
+          "year": 2023,
+          "title": "Про оголошення на заміщення посад науково-педагогічних працівників",
+          "order": 25,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/148_2023-09-20.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "146-од",
+          "orderDate": "2023-09-18",
+          "year": 2023,
+          "title": "Про затвердження складу атестаційної комісії для проведення атестацій педагогічних працівників у 2023/2024 навчальному році",
+          "order": 26,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/146_od_18_09_23.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "69-од",
+          "orderDate": "2023-04-26",
+          "year": 2023,
+          "title": "Про встановлення вартості платних освітніх послуг, що надаються для здобуття освіти за різними рівнями вищої освіти на 2023-2024 навчальний рік",
+          "order": 27,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/69-od-6-04-2023_compressed.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "58",
+          "orderDate": "2023-05-10",
+          "year": 2023,
+          "title": "Про допуск до участі у конкурсі на заміщення посад науково-педагогічних працівників",
+          "order": 28,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/58_100523.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "45-од",
+          "orderDate": "2023-04-04",
+          "year": 2023,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 29,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/45od_04042023.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "38-од",
+          "orderDate": "2023-03-15",
+          "year": 2023,
+          "title": "Про оцінювання корупційних ризиків в ХНПУ імені Г.С. Сковороди",
+          "order": 30,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/38_od_150323.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "9-од",
+          "orderDate": "2023-01-26",
+          "year": 2023,
+          "title": "Про встановлення плати за проживання в гуртожитках для студентів, абітурієнтів, співробітників, слухачів підготовчого відділення",
+          "order": 31,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/9_od_260123.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "8-од",
+          "orderDate": "2023-01-26",
+          "year": 2023,
+          "title": "Про зміни до наказу від 30.06.2022 No 69-од \"Про початок 2022-2023 навчального року та про зміну графіку освітнього процесу в університеті",
+          "order": 32,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2023/8_od_26_01_2023.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "133-од",
+          "orderDate": "2022-11-14",
+          "year": 2022,
+          "title": "Про оплату за гуртожиток під час дії воєнного стану",
+          "order": 33,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/133.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "98-од",
+          "orderDate": "2022-08-26",
+          "year": 2022,
+          "title": "Про внесення змін і доповнень до наказу \"Про встановлення вартості платних освітніх послуг, що надаються для здобуття освіти за різними рівнями вищої освіти на 2022-2023 н.р.\" від 01.07.2022 № 70-од",
+          "order": 34,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/98_od_2022_08_26.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "97-од",
+          "orderDate": "2022-08-25",
+          "year": 2022,
+          "title": "Про застосування державної мови в університеті",
+          "order": 35,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/97_od_%2025_08_2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "76-од",
+          "orderDate": "2022-07-08",
+          "year": 2022,
+          "title": "Про створення разових спеціалізованих вчених рад",
+          "order": 36,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N_76_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-07-21",
+          "year": 2022,
+          "title": "Про кадрові питання",
+          "order": 37,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/86_22.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-06-28",
+          "year": 2022,
+          "title": "Про призупинення дії трудових договорів",
+          "order": 38,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/76_28_06_22.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "70-од",
+          "orderDate": "2022-07-01",
+          "year": 2022,
+          "title": "Про встановлення вартості платних освітніх послуг, що надаються для здобуття освіти за різними рівнями вищої освіти на 2022-2023 н.р.",
+          "order": 39,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N_70_od_010722.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-06-30",
+          "year": 2022,
+          "title": "Наказ No 69–од від 30 червня 2022 року Про початок 2022-2023 навчального року та про зміну графіку освітнього процесу в університеті",
+          "order": 40,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N69_od_30.06.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-06-27",
+          "year": 2022,
+          "title": "Про запобігання і протидію проявам корупції(хабарництва) під час вступної кампанії 2022 року",
+          "order": 41,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/64_2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-05-27",
+          "year": 2022,
+          "title": "Про введення в дію Правил прийому на 2022 рік",
+          "order": 42,
+          "_file": "https://hnpu.edu.ua/sites/default/files/58_27.05.22_Vved_v_diju_Pravyl_pryjomy_2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-05-09",
+          "year": 2022,
+          "title": "Наказ No 57-од від 09 травня 2022 року Про кадрове забезпечення освітнього процесу та попереднє планування навчального навантаження науково-педагогічних працівників університету на 2022/2023 н. р.",
+          "order": 43,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N57_od_09.05.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "54-од",
+          "orderDate": "2022-04-25",
+          "year": 2022,
+          "title": "Про створення разової спеціалізованої вченої ради",
+          "order": 44,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N_54_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "53-од",
+          "orderDate": "2022-04-25",
+          "year": 2022,
+          "title": "Про видачу дипломів докторів філософії",
+          "order": 45,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N_53_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-04-25",
+          "year": 2022,
+          "title": "Про організацію освітнього процесу та про планування навчальної роботи науково-педагогічних працівників університету на 2022/2023 навчальний рік",
+          "order": 46,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N52_od_25.04.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-04-22",
+          "year": 2022,
+          "title": "Про затвердження норм часу для планування та обліку навчальної та іншої роботи науково-педагогічних працівників на 2022/2023 навчальний рік",
+          "order": 47,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N51_od_22.04.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2022-04-22",
+          "year": 2022,
+          "title": "Про організацію практичної підготовки здобувачів вищої освіти та встановлення норм часу при плануванні та обліку навчальної роботи з керівництва практикою в 2022/2023 навчальному році",
+          "order": 48,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N50_od_22.04.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "49-од",
+          "orderDate": "2022-04-21",
+          "year": 2022,
+          "title": "Про встановлення канікул для здобувачів вищої освіти університету у 2022/2023 н. р.",
+          "order": 49,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N49_od_21.04.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "48-од",
+          "orderDate": null,
+          "year": 2022,
+          "title": "Про затвердження обсягів роботи відповідно до посад науково-педагогічних працівників у 2022/2023 навчальному році",
+          "order": 50,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N48_od_21.04.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "46-од",
+          "orderDate": "2022-03-30",
+          "year": 2022,
+          "title": "Про зміну термінів обрання дисциплін вільного вибору",
+          "order": 51,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/46_30_03_22.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "45-од",
+          "orderDate": "2022-03-30",
+          "year": 2022,
+          "title": "Про продовження освітнього процесув ІІ семестрі 2021-2022 н.р. в умовах военного стану",
+          "order": 52,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/45_2022-03-30.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "33",
+          "orderDate": "2022-03-26",
+          "year": 2022,
+          "title": "Про організацію роботи та оплату праці в період дії режиму воєнного стану",
+          "order": 53,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/N_33_26_03_2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "44-од",
+          "orderDate": "2022-03-10",
+          "year": 2022,
+          "title": "Про подовження канікул та деякі питання організації роботи університету в умовах воєнного стану",
+          "order": 54,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/44_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "43-од",
+          "orderDate": "2022-03-10",
+          "year": 2022,
+          "title": "Про передачу транспортного засобу",
+          "order": 55,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/43od_10_03_2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "42-од",
+          "orderDate": "2022-03-04",
+          "year": 2022,
+          "title": "Про встановлення додаткових канікул для здобувачів вищої освіти в умовах воєнного стану",
+          "order": 56,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/42_%2004.03.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "34-од",
+          "orderDate": "2022-03-04",
+          "year": 2022,
+          "title": "Про встановлення додаткових канікул для здобувачів вищої освіти",
+          "order": 57,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/34_03_22.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "41",
+          "orderDate": "2022-02-25",
+          "year": 2022,
+          "title": "Про створення штабу цивільного захисту університету, встановлення додаткових канікул в умовах воєнного стану",
+          "order": 58,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/41od_25.02.2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "1",
+          "orderDate": "2022-02-25",
+          "year": 2022,
+          "title": "Про встановлення додаткових канікул для здобувачів вищої освіти університету",
+          "order": 59,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/photo1645795654.jpeg",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "35-од",
+          "orderDate": "2022-02-14",
+          "year": 2022,
+          "title": "Про видачу дипломів докторів філософії",
+          "order": 60,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/35-od_2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "19-од",
+          "orderDate": "2022-01-26",
+          "year": 2022,
+          "title": "Про встановлення карантину та запровадження обмежувальних протиепідемічних заходів",
+          "order": 61,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2022/Nakaz_19_od_26_01_2022.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "245-од",
+          "orderDate": "2021-12-16",
+          "year": 2021,
+          "title": "Про видачу дипломів докторів філософії",
+          "order": 62,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/245-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "219",
+          "orderDate": "2021-11-24",
+          "year": 2021,
+          "title": "Наказ №219 від 24.11.2021 р. \"Про запобігання і протидію проявам корупції (хабарництва) в університеті",
+          "order": 63,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/nakaz_219-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "159",
+          "orderDate": "2021-10-25",
+          "year": 2021,
+          "title": "Про допуск до участі у конкурсі на заміщення посад науково-педагогічних працівників",
+          "order": 64,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/159.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "197-од",
+          "orderDate": "2021-10-08",
+          "year": 2021,
+          "title": "Про продовження карантинних обмежувальних протиепідемичних заходів",
+          "order": 65,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/Nakaz_197%20_08_10_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "191-од",
+          "orderDate": "2021-10-01",
+          "year": 2021,
+          "title": "Про видачу дипломів докторів філософії",
+          "order": 66,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/191-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "189-од",
+          "orderDate": "2021-09-29",
+          "year": 2021,
+          "title": "Щодо ключових показників ефективності діяльності проректорів та керівників структурних підрозділів",
+          "order": 67,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/Nakar_189_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "185-од",
+          "orderDate": "2021-09-22",
+          "year": 2021,
+          "title": "Щодо організації освітнього процесу та діяльності університету в умовах карантину",
+          "order": 68,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/nakaz_185-od.jpeg",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "175-од",
+          "orderDate": "2021-09-13",
+          "year": 2021,
+          "title": "Щодо організації освітнього процесу та діяльності університету в умовах карантину",
+          "order": 69,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/nakaz_75-od_21.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "159-од",
+          "orderDate": "2021-08-31",
+          "year": 2021,
+          "title": "Про видачу дипломів доктора філософії",
+          "order": 70,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/159-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "155-од",
+          "orderDate": "2021-08-27",
+          "year": 2021,
+          "title": "Про організований початок освітнього процесу в університеті у 2021-2022 н.р.",
+          "order": 71,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/N155_21.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "149-од",
+          "orderDate": "2021-08-19",
+          "year": 2021,
+          "title": "Про надання пільг на навчання за контрактом",
+          "order": 72,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/149_190821.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "140-од",
+          "orderDate": "2021-07-27",
+          "year": 2021,
+          "title": "Про терміни планування і звітності",
+          "order": 73,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/Nakaz_nomer_140_OD.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "117-од",
+          "orderDate": "2021-06-02",
+          "year": 2021,
+          "title": "Про здійснення громадського контролю за фінансовою діяльністю університету",
+          "order": 74,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/117-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "108-од",
+          "orderDate": "2021-05-21",
+          "year": 2021,
+          "title": "Щодо організації і проведення разового захисту дисертацій на здобуття наукового ступеня доктора філософії здобувачами з інших закладів вищої освіти України здобувачам наукових ступенів",
+          "order": 75,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/108-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "106-од",
+          "orderDate": "2021-05-19",
+          "year": 2021,
+          "title": "Про видачу дипломів докторів філософії",
+          "order": 76,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/106-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "105-од",
+          "orderDate": "2021-05-18",
+          "year": 2021,
+          "title": "Щодо оптимізації складу навчально-допоміжного персоналу",
+          "order": 77,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/105-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "102-од",
+          "orderDate": "2021-05-18",
+          "year": 2021,
+          "title": "Про надання платних освітніх послуг під час проведення захистів дисертацій здобувачам наукових ступенів",
+          "order": 78,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/nakaz_102-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "97-од",
+          "orderDate": "2021-05-06",
+          "year": 2021,
+          "title": "Про організацію освітнього процесу",
+          "order": 79,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/97-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "82-од",
+          "orderDate": "2021-04-12",
+          "year": 2021,
+          "title": "Про встановлення карантину та запровадження обмежувальних протиепідемічних заходів",
+          "order": 80,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/n_82_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "81-од",
+          "orderDate": "2021-04-09",
+          "year": 2021,
+          "title": "Наказ № 81-од від 09.04.2021 про організацію освітнього процесу 2021-2022 н.р.",
+          "order": 81,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/N_d/Nak_81_od_vid_09_04_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "78-од",
+          "orderDate": "2021-04-08",
+          "year": 2021,
+          "title": "Наказ № 78-од від 08.04.2021 про організацію практичної підготовки",
+          "order": 82,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/N_d/Nak_78_od_vid_08_04_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "77-од",
+          "orderDate": "2021-04-17",
+          "year": 2021,
+          "title": "Наказ № 77-од від 17.04.2021 про встановлення канікул у 2021-2022 н.р.",
+          "order": 83,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/N_d/Nak_77-od_vid_17_04_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "76-од",
+          "orderDate": "2021-04-07",
+          "year": 2021,
+          "title": "Наказ № 76-од від 07.04.2021 про затвердження обсягів роботи НПП у 2021-2022 н.р.",
+          "order": 84,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/N_d/Nak_76-od_vid_07_04_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "63-од",
+          "orderDate": "2021-03-23",
+          "year": 2021,
+          "title": "Про продовження карантину та дистанційного навчання",
+          "order": 85,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/63-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "61-од",
+          "orderDate": "2021-03-15",
+          "year": 2021,
+          "title": "Про часткові зміни у складі вченої ради університету",
+          "order": 86,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/61-od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "60-од",
+          "orderDate": null,
+          "year": null,
+          "title": "Про затвердження Переліку відомостей, що містять службову інформацію та організацію роботи по захисту персональних даних в університеті",
+          "order": 87,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/nakaz_60-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "55-од",
+          "orderDate": "2021-03-09",
+          "year": 2021,
+          "title": "Про встановлення карантину та запровадження обмежувальних протиепідемічних заходів",
+          "order": 88,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/55od_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "53-од",
+          "orderDate": "2021-03-03",
+          "year": 2021,
+          "title": "Про встановлення вартості платних освітніх послуг, що надаються для здобуття освіти за різними рівнями вищої освіти на 2021-2022 навчальний рік",
+          "order": 89,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/N_53_21.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "47-од",
+          "orderDate": "2021-02-25",
+          "year": 2021,
+          "title": "Про видачу дипломів докторів філософії",
+          "order": 90,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/nakaz_pro_vydachu_dyplomiv_doctoriv_filosofiy.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "24-од",
+          "orderDate": "2021-02-01",
+          "year": 2021,
+          "title": "Про оголошення конкурсу на заміщення посад науково-педагогічних працівників",
+          "order": 91,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/N_24_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "17-од",
+          "orderDate": "2021-01-22",
+          "year": 2021,
+          "title": "Щодо організаціі освітнього процесу",
+          "order": 92,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/N_17_2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "13-од",
+          "orderDate": "2021-01-18",
+          "year": 2021,
+          "title": "Про затвердження складу галузевої комісії ІІ туру Всеукраїнського конкурсу студентських робіт зі спеціальності Біологія",
+          "order": 93,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/N%20_13-OD%2018.01.2021.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "4-од",
+          "orderDate": "2021-01-05",
+          "year": 2021,
+          "title": "Про встановлення карантину та запровадження обмежувальних протиепідемічних заходів",
+          "order": 94,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2021/N_4_21.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "177-од",
+          "orderDate": "2020-12-23",
+          "year": 2020,
+          "title": "Про кадрові питання",
+          "order": 95,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/N_177.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "174-од",
+          "orderDate": "2020-12-30",
+          "year": 2020,
+          "title": "Про проведення Всеукраїнського конкурсу студентських наукових робіт",
+          "order": 96,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/Nakaz_174.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "164-од",
+          "orderDate": "2020-12-21",
+          "year": 2020,
+          "title": "Про видачу диплома доктора філософії",
+          "order": 97,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/N_164_121_12_20%20001.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "152-од",
+          "orderDate": "2020-11-13",
+          "year": 2020,
+          "title": "Щодо організаціі освітнього процесу",
+          "order": 98,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nakaz_152-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "151-од",
+          "orderDate": "2020-11-10",
+          "year": 2020,
+          "title": "Про внесення змін до наказу від 13.10.2020 р. № 132-од \"Щодо організації освітнього процесу та діяльності університету в умовах карантину",
+          "order": 99,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nakaz151od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "132-од",
+          "orderDate": "2020-10-13",
+          "year": 2020,
+          "title": "Щодо організації освітнього процесу та діяльності Університету в умовах карантину",
+          "order": 100,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nakaz_132-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "119-од",
+          "orderDate": "2020-09-15",
+          "year": 2020,
+          "title": "Про функціонування наукових видань університету",
+          "order": 101,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/119od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "109-од",
+          "orderDate": "2020-08-27",
+          "year": 2020,
+          "title": "Про організацію протиепідемічних заходів у звязку з поширенням коронавірусу",
+          "order": 102,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/109od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "106-од",
+          "orderDate": "2020-08-25",
+          "year": 2020,
+          "title": "Про початок 2020\\2021 навчального року",
+          "order": 103,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nakaz106od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "73-од",
+          "orderDate": "2020-05-25",
+          "year": 2020,
+          "title": "Про поновлення роботи університету",
+          "order": 104,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/Nakax_73_od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "64-од",
+          "orderDate": "2020-04-17",
+          "year": 2020,
+          "title": "Наказ № 64-од від 17.04.2020 Про організацію освітнього процесу в новому навчальному році та про планування навчальної роботи науково-педагогічних працівників університету на 2020/2021 н. р.",
+          "order": 105,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/N_64od_17_04_2020.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "63-од",
+          "orderDate": "2020-04-17",
+          "year": 2020,
+          "title": "Наказ № 63-од від 17.04.2020 Про затвердження норм часу для планування та обліку навчальної та іншої роботи науково-педагогічних та педагогічних працівників на 2020/2021 н. р.",
+          "order": 106,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/N_63od_17_04_2020.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2020-04-28",
+          "year": 2020,
+          "title": "Про проведення підсумкового контролю знань здобувачів вищої освіти в дистанційній формі",
+          "order": 107,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/Rozp_11_2020.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "18",
+          "orderDate": "2020-03-31",
+          "year": 2020,
+          "title": "Про зміну зміну форми проведення практик здобувачів вищої освіти заочної форми навчання університеті в умовах карантину в Україні",
+          "order": 108,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Novosti/18z310320.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "58-од",
+          "orderDate": "2020-03-30",
+          "year": 2020,
+          "title": "План заходів для організації освітнього процесу в звязку з продовженням карантину",
+          "order": 109,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/58-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "57-ОД",
+          "orderDate": "2020-03-25",
+          "year": 2020,
+          "title": "Про продовження карантину",
+          "order": 110,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/57-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "50-ОД",
+          "orderDate": "2020-03-13",
+          "year": 2020,
+          "title": "Про додаткові заходи по забезпеченню навчального процесу в умовах карантину",
+          "order": 111,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/Nakaz_HNPU_50_od_DO_Karantyn.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "48-ОД",
+          "orderDate": "2020-03-12",
+          "year": 2020,
+          "title": "Про виконання постанови Кабінету Міністрів Укаїни \"Про запобігання поширенню на території України коронавірусу COVID-19",
+          "order": 112,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/48-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2020-02-25",
+          "year": 2020,
+          "title": "Наказ No 38-од від 25.02.2020 р. Про організацію практичної підготовки здобувачів вищої освіти та встановлення норм часу при плануванні та обліку навчальної роботи з керівництва практикою в 2020/2021 навчальному році.",
+          "order": 113,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/N_38od_25_02_2020.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2020-02-24",
+          "year": 2020,
+          "title": "Наказ No 37-од від 24.02.2020 р. Про встановлення канікул для здобувачів вищої освіти університету у 2020-2021 н.р.",
+          "order": 114,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/N_37od_24_02_2020.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": null,
+          "orderDate": "2020-02-24",
+          "year": 2020,
+          "title": "Наказ No 36-од від 24.02.2020 р. Про затвердження обсягів роботи відповідно до посад науково-педагогічних працівників у 2020/2021 навчальному році",
+          "order": 115,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/N_36od_24_02_2020.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "30-ОД",
+          "orderDate": "2020-02-14",
+          "year": 2020,
+          "title": "Про затвердження складу комісії з етики та управління конфліктами",
+          "order": 116,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/30-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "20-ОД",
+          "orderDate": "2020-02-06",
+          "year": 2020,
+          "title": "Про роботу Психологічної служби",
+          "order": 117,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/20-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "18-ОД",
+          "orderDate": "2020-02-04",
+          "year": 2020,
+          "title": "Про створення Асоціації випускників ХНПУ імені Г.С. Сковороди",
+          "order": 118,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/18-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "38",
+          "orderDate": "2020-02-01",
+          "year": 2020,
+          "title": "Про зміну форми проведення практик здобувачів вищої освіти в університеті в умовах карантину в Україні",
+          "order": 119,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Novosti/38c0120.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "16",
+          "orderDate": "2020-01-30",
+          "year": 2020,
+          "title": "Про кадрові питання",
+          "order": 120,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_16_2020.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "11-ОД",
+          "orderDate": "2020-01-17",
+          "year": 2020,
+          "title": "Про створення Комісії із запобігання і протидії дискримінації та сексуальним домаганням",
+          "order": 121,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/11-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "10-ОД",
+          "orderDate": "2020-01-16",
+          "year": 2020,
+          "title": "Про затвердження складу робочої групи з підготовки Етичного кодексу ХНПУ імені Г.С. Сковороди",
+          "order": 122,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/10-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "3-ОД",
+          "orderDate": "2020-01-08",
+          "year": 2020,
+          "title": "Про результати акредитації освітніх програм",
+          "order": 123,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nakaz_03-od.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "161",
+          "orderDate": "2019-10-28",
+          "year": 2019,
+          "title": "Про кадрові питання",
+          "order": 124,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_161_2019.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "127",
+          "orderDate": "2019-09-02",
+          "year": 2019,
+          "title": "Про кадрові питання",
+          "order": 125,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_127_2019.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "86",
+          "orderDate": "2019-06-10",
+          "year": 2019,
+          "title": "Про кадрові питання",
+          "order": 126,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_86_2019.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "69",
+          "orderDate": "2019-05-08",
+          "year": 2019,
+          "title": "Про кадрові питання",
+          "order": 127,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_69_2019.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "43",
+          "orderDate": "2019-03-12",
+          "year": 2019,
+          "title": "Про затвердження норм часу для планування та обліку навчальної та іншої роботи науково-педагогічних та педагогічних працівників на 2019/2020 н.р.",
+          "order": 128,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/Nakaz_HNPU_43_od_12032019.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "38",
+          "orderDate": "2019-03-07",
+          "year": 2019,
+          "title": "Про кадрові питання",
+          "order": 129,
+          "_file": "https://hnpu.edu.ua/uk/system/files/sites/default/files/files/Normat_dokum/nakazy/Nakaz_03_20.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "189",
+          "orderDate": "2018-12-19",
+          "year": 2018,
+          "title": "Наказ №189 від 19.12.2018",
+          "order": 130,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_189_2018.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "121",
+          "orderDate": "2018-09-04",
+          "year": 2018,
+          "title": "Про кадрові питання",
+          "order": 131,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_121_2018.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "117",
+          "orderDate": "2018-08-30",
+          "year": 2018,
+          "title": "Про кадрові питання",
+          "order": 132,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/nak_117_2018.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "147-од",
+          "orderDate": "2017-10-02",
+          "year": 2017,
+          "title": "Про впорядкування діловодства з організації освітнього процесу на кафедрах, факультетах та інститутах",
+          "order": 133,
+          "_file": "https://smc.hnpu.edu.ua/files/Nakazy_2015_2016/Nakaz_HNPU_147_od_02102015.pdf",
+          "_fileField": "documentFile"
+        },
+        {
+          "orderNumber": "149-од",
+          "orderDate": "2015-10-06",
+          "year": 2015,
+          "title": "Про порядок відшкодування коштів державного бюджету і витрачених на оплату послуг з підготовки фахівців",
+          "order": 134,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakaz%20149-od.pdf",
+          "_fileField": "documentFile"
+        }
+      ]
+    }
+  ]
+}

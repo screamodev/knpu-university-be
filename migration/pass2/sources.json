@@ -1,0 +1,114 @@
+{
+  "licenses": {
+    "url": "https://hnpu.edu.ua/uk/diplomi-ta-sertifikati-hnpu",
+    "note": "Файли на цій сторінці — картинки без підписів у <a>; підписи стоять у сусідніх абзацах, тому рядки задані вручну в порядку появи в розмітці.",
+    "manual": [
+      {
+        "title": "Ліцензія ХНПУ імені Г.С. Сковороди",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Licenziya_000388.jpg"
+      },
+      {
+        "title": "Ліцензія на надання освітніх послуг",
+        "url": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/21_22/Licenzia_KhNPU.im.Skovorody.pdf"
+      },
+      {
+        "title": "Сертифікат на систему управління якістю (аркуш 1)",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/sertificate1.jpeg"
+      },
+      {
+        "title": "Сертифікат на систему управління якістю (аркуш 2)",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/sertificate2.jpeg"
+      }
+    ]
+  },
+  "awards": {
+    "url": "https://hnpu.edu.ua/uk/diplomi-ta-sertifikati-hnpu",
+    "note": "Нагороди виставки «Сучасна освіта в Україні — 2011» (МОН України та виставкова компанія CARSHE). Підписи взяті з абзаців над зображеннями, у тому ж порядку.",
+    "manual": [
+      {
+        "title": "Диплом за високі творчі досягнення в удосконаленні змісту навчально-виховного процесу національної системи освіти",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom1_ed.jpg"
+      },
+      {
+        "title": "Почесне звання «Лідер сучасної освіти» за багаторічну інноваційну педагогічну діяльність з модернізації освіти в Україні",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom2_ed.jpg"
+      },
+      {
+        "title": "Золота медаль у номінації «Впровадження нових форм організації навчально-виховного процесу у ВНЗ»",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom3_ed.jpg"
+      },
+      {
+        "title": "Стаття про ХНПУ в офіційному каталозі виставки (аркуш 1)",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom5_ed.jpg"
+      },
+      {
+        "title": "Стаття про ХНПУ в офіційному каталозі виставки (аркуш 2)",
+        "url": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom4_ed.jpg"
+      }
+    ]
+  },
+  "contacts": {
+    "url": "https://hnpu.edu.ua/uk/contacts",
+    "note": "Довідники, на які посилається сторінка контактів. Самі контакти живуть у locale-файлах — їх редагують разом із перекладами.",
+    "manual": [
+      {
+        "title": "Телефонний довідник університету",
+        "url": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Tel_dovid_06_2021.pdf"
+      },
+      {
+        "title": "Офіційна назва Університету (наказ)",
+        "url": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/nakaz_26.pdf"
+      },
+      {
+        "title": "Про університет — буклет",
+        "url": "https://hnpu.edu.ua/sites/default/files/files/biblioteka/Buklet_22.pdf"
+      },
+      {
+        "title": "Енциклопедичний довідник SK Viki",
+        "url": "https://hnpu.edu.ua/sites/default/files/files/Nauka/SK_Viki.pdf"
+      }
+    ]
+  },
+  "science-schools": {
+    "url": "https://sites.google.com/hnpu.edu.ua/scienceschools",
+    "note": "Сайт наукових шкіл посилається на університетське положення; самі школи лежать у колекції science_schools (data/science_schools.json).",
+    "manual": [
+      {
+        "title": "Положення про наукові школи Харківського національного педагогічного університету імені Г.С. Сковороди",
+        "url": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_naykovi_shkolu_20.pdf"
+      }
+    ]
+  },
+  "scientific-secretary": {
+    "url": "https://hnpu.edu.ua/uk/division/sluzhba-vchenogo-sekretarya",
+    "keepLinks": true,
+    "note": "Положення та план роботи — файли; «Склад Вченої ради» живе в Google Docs і лишається покликанням."
+  },
+  "academic-office": {
+    "url": "https://hnpu.edu.ua/uk/division/navchalnyy-viddil",
+    "note": "Графіки освітнього процесу відводяться в окремий розділ education-schedule — вони показуються на сторінці «Графік освітнього процесу».",
+    "route": [
+      { "match": "[Гг]рафік|[Кк]алендар", "section": "education-schedule" }
+    ]
+  },
+  "digital-center": {
+    "url": "https://hnpu.edu.ua/uk/division/centr-cyfrovizaciyi-osvity",
+    "keepLinks": true,
+    "note": "Більшість матеріалів центру — інструкції та форми в Google Docs/Drive, тому покликання зберігаються як externalUrl."
+  },
+  "admissions-committee": {
+    "url": "https://hnpu.edu.ua/uk/division/pryymalna-komisiya",
+    "keepLinks": true,
+    "note": "Строки, обсяги держзамовлення та архіви кампаній лишаються покликаннями: на старому сайті це окремі сторінки, які щороку переписуються."
+  },
+  "quality-centre": {
+    "url": "http://smc.hnpu.edu.ua/normatyvna-baza",
+    "keepLinks": true,
+    "note": "Нормативна база центру забезпечення якості освіти."
+  },
+  "quality-centre-programmes": {
+    "url": "http://smc.hnpu.edu.ua/osvitni-prohramy",
+    "keepLinks": true,
+    "note": "Матеріали гарантам освітніх програм: положення, рекомендації НАЗЯВО, плани взаємодії зі стейкхолдерами."
+  }
+}

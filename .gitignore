@@ -21,6 +21,9 @@ extensions/*/package-lock.json
 database/migrations/*
 !database/migrations/.gitkeep
 
+# Migration scratch: cached copies of legacy pages, re-fetched on demand.
+migration/*/.cache/
+
 # Logs.
 *.log
 logs/

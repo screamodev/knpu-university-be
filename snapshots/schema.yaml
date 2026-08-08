@@ -2,6 +2,80 @@ version: 1
 directus: 11.17.4
 vendor: postgres
 collections:
+  - collection: accreditation_certificates
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: accreditation_certificates
+      color: null
+      display_template: '{{title}}'
+      group: null
+      hidden: false
+      icon: verified
+      item_duplication_fields: null
+      note: Сертифікати про акредитацію освітніх програм і спеціальностей.
+      preview_url: null
+      singleton: false
+      sort: 32
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: accreditation_certificates
+  - collection: accreditation_dossier_files
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: accreditation_dossier_files
+      color: null
+      display_template: '{{title}}'
+      group: null
+      hidden: false
+      icon: description
+      item_duplication_fields: null
+      note: Окремий документ акредитаційної справи.
+      preview_url: null
+      singleton: false
+      sort: 34
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: accreditation_dossier_files
+  - collection: accreditation_dossiers
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: accreditation_dossiers
+      color: null
+      display_template: '{{programmeTitle}}'
+      group: null
+      hidden: false
+      icon: fact_check
+      item_duplication_fields: null
+      note: >-
+        Акредитаційні справи освітніх програм (матеріали НАЗЯВО) — сторінка
+        «Центр забезпечення якості освіти».
+      preview_url: null
+      singleton: false
+      sort: 33
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: accreditation_dossiers
   - collection: admission_exam_programs
     meta:
       accountability: all
@@ -65,7 +139,7 @@ collections:
       icon: newspaper
       item_duplication_fields: null
       note: News articles. Uses draft/published/archived status workflow.
-      preview_url: null
+      preview_url: http://localhost:3000/news/{{slug}}?preview=local-preview-secret
       singleton: false
       sort: 2
       sort_field: null
@@ -146,6 +220,84 @@ collections:
       versioning: false
     schema:
       name: categories
+  - collection: contingent_reports
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: contingent_reports
+      color: null
+      display_template: '{{title}}'
+      group: null
+      hidden: false
+      icon: groups
+      item_duplication_fields: null
+      note: >-
+        Контингент здобувачів освіти — щомісячні звіти для сторінки «Контингент
+        студентів».
+      preview_url: null
+      singleton: false
+      sort: 35
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: contingent_reports
+  - collection: dissertation_council_files
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: dissertation_council_files
+      color: null
+      display_template: '{{title}}'
+      group: null
+      hidden: false
+      icon: description
+      item_duplication_fields: null
+      note: Документ до захисту разової спеціалізованої вченої ради.
+      preview_url: null
+      singleton: false
+      sort: 39
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: dissertation_council_files
+  - collection: dissertation_councils
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: dissertation_councils
+      color: null
+      display_template: '{{councilCode}} · {{candidateName}}'
+      group: null
+      hidden: false
+      icon: workspace_premium
+      item_duplication_fields: null
+      note: >-
+        Разові спеціалізовані вчені ради — захисти дисертацій доктора філософії.
+        Перенесені зі сторінки /uk/razovi-specializovani-vcheni-rady старого
+        сайту; посилання на них зареєстровані в державній базі, тому
+        `legacySlug` міняти не можна.
+      preview_url: null
+      singleton: false
+      sort: 38
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: dissertation_councils
   - collection: documents
     meta:
       accountability: all
@@ -292,6 +444,33 @@ collections:
       versioning: false
     schema:
       name: gallery_items
+  - collection: legacy_redirects
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: legacy_redirects
+      color: null
+      display_template: '{{legacyPath}}'
+      group: null
+      hidden: false
+      icon: alt_route
+      item_duplication_fields: null
+      note: >-
+        Адреси старого сайту hnpu.edu.ua, які мають далі працювати після
+        переїзду домену. Nuxt віддає на них 301 — або на `targetPath`, або на
+        /assets/<файл>.
+      preview_url: null
+      singleton: false
+      sort: 40
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: legacy_redirects
   - collection: memorial_entries
     meta:
       accountability: all
@@ -316,6 +495,56 @@ collections:
       versioning: false
     schema:
       name: memorial_entries
+  - collection: monitoring_survey_results
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: monitoring_survey_results
+      color: null
+      display_template: '{{year}}'
+      group: null
+      hidden: false
+      icon: insert_chart
+      item_duplication_fields: null
+      note: Результати анкети моніторингу за конкретний рік.
+      preview_url: null
+      singleton: false
+      sort: 31
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: monitoring_survey_results
+  - collection: monitoring_surveys
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: monitoring_surveys
+      color: null
+      display_template: '{{number}} · {{title}}'
+      group: null
+      hidden: false
+      icon: poll
+      item_duplication_fields: null
+      note: >-
+        Анкети моніторингових досліджень для сторінки «Моніторинг». Результати
+        за роками — у пов’язаній колекції.
+      preview_url: null
+      singleton: false
+      sort: 30
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: monitoring_surveys
   - collection: newspaper_issues
     meta:
       accountability: all
@@ -462,6 +691,56 @@ collections:
       versioning: false
     schema:
       name: science_defenses
+  - collection: science_directions
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: science_directions
+      color: null
+      display_template: '{{department}} · {{topic}}'
+      group: null
+      hidden: false
+      icon: science
+      item_duplication_fields: null
+      note: Основні напрями наукової і мистецької діяльності кафедр.
+      preview_url: null
+      singleton: false
+      sort: 37
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: science_directions
+  - collection: science_schools
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: science_schools
+      color: null
+      display_template: '{{name}}'
+      group: null
+      hidden: false
+      icon: school
+      item_duplication_fields: null
+      note: >-
+        Наукові школи університету — сторінка «Напрями наукової та мистецької
+        діяльності».
+      preview_url: null
+      singleton: false
+      sort: 36
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: science_schools
   - collection: student_schedule_documents
     meta:
       accountability: all
@@ -535,6 +814,1116 @@ collections:
     schema:
       name: vacancies
 fields:
+  - collection: accreditation_certificates
+    field: id
+    type: uuid
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: accreditation_certificates
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: status
+    type: string
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: accreditation_certificates
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: level
+    type: string
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Перший (бакалаврський)
+            value: bachelor
+          - text: Другий (магістерський)
+            value: master
+          - text: Третій (освітньо-науковий)
+            value: phd
+      field: level
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: Рівень вищої освіти.
+      options:
+        choices:
+          - text: Перший (бакалаврський)
+            value: bachelor
+          - text: Другий (магістерський)
+            value: master
+          - text: Третій (освітньо-науковий)
+            value: phd
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: level
+      table: accreditation_certificates
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: branch
+    type: string
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: branch
+      group: null
+      hidden: false
+      interface: input
+      note: Галузь знань, напр. «01 Освіта/Педагогіка».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: branch
+      table: accreditation_certificates
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: specialtyCode
+    type: string
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: specialtyCode
+      group: null
+      hidden: false
+      interface: input
+      note: Код спеціальності, напр. «014».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: specialtyCode
+      table: accreditation_certificates
+      data_type: character varying
+      default_value: null
+      max_length: 32
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: title
+    type: string
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: accreditation_certificates
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: titleEn
+    type: string
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: titleEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: titleEn
+      table: accreditation_certificates
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: file
+    type: uuid
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: accreditation_certificates
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: accreditation_certificates
+    field: externalUrl
+    type: string
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: externalUrl
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: externalUrl
+      table: accreditation_certificates
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_certificates
+    field: order
+    type: integer
+    meta:
+      collection: accreditation_certificates
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: accreditation_certificates
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossier_files
+    field: id
+    type: uuid
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: accreditation_dossier_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossier_files
+    field: status
+    type: string
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: accreditation_dossier_files
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossier_files
+    field: dossier
+    type: uuid
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: null
+      display_options: null
+      field: dossier
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{programmeTitle}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: dossier
+      table: accreditation_dossier_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: accreditation_dossiers
+      foreign_key_column: id
+  - collection: accreditation_dossier_files
+    field: kind
+    type: string
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Відомості про самооцінювання
+            value: self-assessment
+          - text: Програма виїзду експертної групи
+            value: visit-program
+          - text: Звіт експертної групи
+            value: expert-report
+          - text: Експертний висновок галузевої експертної ради
+            value: ger-conclusion
+          - text: Рішення Національного агентства
+            value: naqa-decision
+          - text: Інший документ
+            value: other
+      field: kind
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Відомості про самооцінювання
+            value: self-assessment
+          - text: Програма виїзду експертної групи
+            value: visit-program
+          - text: Звіт експертної групи
+            value: expert-report
+          - text: Експертний висновок галузевої експертної ради
+            value: ger-conclusion
+          - text: Рішення Національного агентства
+            value: naqa-decision
+          - text: Інший документ
+            value: other
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: kind
+      table: accreditation_dossier_files
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossier_files
+    field: title
+    type: string
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: accreditation_dossier_files
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossier_files
+    field: file
+    type: uuid
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: accreditation_dossier_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: accreditation_dossier_files
+    field: externalUrl
+    type: string
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: null
+      display_options: null
+      field: externalUrl
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: externalUrl
+      table: accreditation_dossier_files
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossier_files
+    field: order
+    type: integer
+    meta:
+      collection: accreditation_dossier_files
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: accreditation_dossier_files
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossiers
+    field: id
+    type: uuid
+    meta:
+      collection: accreditation_dossiers
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: accreditation_dossiers
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossiers
+    field: status
+    type: string
+    meta:
+      collection: accreditation_dossiers
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: accreditation_dossiers
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossiers
+    field: academicYear
+    type: string
+    meta:
+      collection: accreditation_dossiers
+      conditions: null
+      display: null
+      display_options: null
+      field: academicYear
+      group: null
+      hidden: false
+      interface: input
+      note: Навчальний рік, напр. «2019-2020».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: academicYear
+      table: accreditation_dossiers
+      data_type: character varying
+      default_value: null
+      max_length: 32
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossiers
+    field: level
+    type: string
+    meta:
+      collection: accreditation_dossiers
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Перший (бакалаврський)
+            value: bachelor
+          - text: Другий (магістерський)
+            value: master
+          - text: Третій (освітньо-науковий)
+            value: phd
+      field: level
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Перший (бакалаврський)
+            value: bachelor
+          - text: Другий (магістерський)
+            value: master
+          - text: Третій (освітньо-науковий)
+            value: phd
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: level
+      table: accreditation_dossiers
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossiers
+    field: programmeTitle
+    type: string
+    meta:
+      collection: accreditation_dossiers
+      conditions: null
+      display: null
+      display_options: null
+      field: programmeTitle
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: programmeTitle
+      table: accreditation_dossiers
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossiers
+    field: order
+    type: integer
+    meta:
+      collection: accreditation_dossiers
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: accreditation_dossiers
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: accreditation_dossiers
+    field: files
+    type: alias
+    meta:
+      collection: accreditation_dossiers
+      conditions: null
+      display: null
+      display_options: null
+      field: files
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: Документи акредитаційної справи.
+      options:
+        enableCreate: true
+        enableSelect: false
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
   - collection: admission_exam_programs
     field: id
     type: uuid
@@ -2655,6 +4044,1510 @@ fields:
       validation: null
       validation_message: null
       width: full
+  - collection: contingent_reports
+    field: id
+    type: uuid
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: contingent_reports
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contingent_reports
+    field: status
+    type: string
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: contingent_reports
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contingent_reports
+    field: academicYear
+    type: string
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: null
+      display_options: null
+      field: academicYear
+      group: null
+      hidden: false
+      interface: input
+      note: Навчальний рік, напр. «2025-2026».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: academicYear
+      table: contingent_reports
+      data_type: character varying
+      default_value: null
+      max_length: 32
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contingent_reports
+    field: formOfStudy
+    type: string
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Денна форма
+            value: full-time
+          - text: Заочна форма
+            value: part-time
+      field: formOfStudy
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Денна форма
+            value: full-time
+          - text: Заочна форма
+            value: part-time
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: formOfStudy
+      table: contingent_reports
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contingent_reports
+    field: reportDate
+    type: date
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: datetime
+      display_options: null
+      field: reportDate
+      group: null
+      hidden: false
+      interface: datetime
+      note: Станом на цю дату.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: reportDate
+      table: contingent_reports
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contingent_reports
+    field: title
+    type: string
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: contingent_reports
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: contingent_reports
+    field: file
+    type: uuid
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: contingent_reports
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: contingent_reports
+    field: order
+    type: integer
+    meta:
+      collection: contingent_reports
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: contingent_reports
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_council_files
+    field: id
+    type: uuid
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: dissertation_council_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_council_files
+    field: status
+    type: string
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: dissertation_council_files
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_council_files
+    field: council
+    type: uuid
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: null
+      display_options: null
+      field: council
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{councilCode}} · {{candidateName}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: council
+      table: dissertation_council_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: dissertation_councils
+      foreign_key_column: id
+  - collection: dissertation_council_files
+    field: kind
+    type: string
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Дисертація
+            value: dissertation
+          - text: Висновок про наукову новизну
+            value: conclusion
+          - text: Висновок наукового керівника
+            value: supervisor
+          - text: Відгук офіційного опонента
+            value: opponent
+          - text: Рецензія
+            value: review
+          - text: Рішення про присудження ступеня
+            value: decision
+          - text: Аудіо-/відеозапис захисту
+            value: video
+          - text: Інший документ
+            value: other
+      field: kind
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Дисертація
+            value: dissertation
+          - text: Висновок про наукову новизну
+            value: conclusion
+          - text: Висновок наукового керівника
+            value: supervisor
+          - text: Відгук офіційного опонента
+            value: opponent
+          - text: Рецензія
+            value: review
+          - text: Рішення про присудження ступеня
+            value: decision
+          - text: Аудіо-/відеозапис захисту
+            value: video
+          - text: Інший документ
+            value: other
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: kind
+      table: dissertation_council_files
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_council_files
+    field: title
+    type: text
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: Підпис посилання на старому сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: dissertation_council_files
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_council_files
+    field: file
+    type: uuid
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: dissertation_council_files
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: dissertation_council_files
+    field: externalUrl
+    type: string
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: null
+      display_options: null
+      field: externalUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Якщо документ лежить у Google Drive (КЕП).
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: externalUrl
+      table: dissertation_council_files
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_council_files
+    field: legacyPath
+    type: string
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: null
+      display_options: null
+      field: legacyPath
+      group: null
+      hidden: false
+      interface: input
+      note: >-
+        Шлях файлу на старому сайті, напр.
+        «/sites/default/files/files/Rada/Razova_rada/11_25/Dyser.pdf».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: legacyPath
+      table: dissertation_council_files
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_council_files
+    field: order
+    type: integer
+    meta:
+      collection: dissertation_council_files
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: dissertation_council_files
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: id
+    type: uuid
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: dissertation_councils
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: status
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: dissertation_councils
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: legacySlug
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: legacySlug
+      group: null
+      hidden: false
+      interface: input
+      note: >-
+        Адреса сторінки на старому сайті без /uk/. Вона ж — адреса на новому
+        сайті. Не змінювати.
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: legacySlug
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: councilCode
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: councilCode
+      group: null
+      hidden: false
+      interface: input
+      note: Шифр ради, напр. «ДФ 011.143.25».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: councilCode
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: candidateName
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: candidateName
+      group: null
+      hidden: false
+      interface: input
+      note: Здобувач.
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: candidateName
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: candidateNameEn
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: candidateNameEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: candidateNameEn
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: dissertationTitle
+    type: text
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: dissertationTitle
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: Тема дисертації.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: dissertationTitle
+      table: dissertation_councils
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: dissertationTitleEn
+    type: text
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: dissertationTitleEn
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: dissertationTitleEn
+      table: dissertation_councils
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: specialty
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: specialty
+      group: null
+      hidden: false
+      interface: input
+      note: Спеціальність, напр. «011 Освітні, педагогічні науки».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: specialty
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: branch
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: branch
+      group: null
+      hidden: false
+      interface: input
+      note: Галузь знань, напр. «01 Освіта/Педагогіка».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: branch
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: defenseDate
+    type: date
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: datetime
+      display_options: null
+      field: defenseDate
+      group: null
+      hidden: false
+      interface: datetime
+      note: Дата захисту.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: defenseDate
+      table: dissertation_councils
+      data_type: date
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: defenseTime
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: defenseTime
+      group: null
+      hidden: false
+      interface: input
+      note: Час захисту, напр. «08:30».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: defenseTime
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 16
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: year
+    type: integer
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: year
+      group: null
+      hidden: false
+      interface: input
+      note: Рік, під яким рада стоїть у переліку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 13
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: year
+      table: dissertation_councils
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: contentHtml
+    type: text
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: contentHtml
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: 'Текст сторінки: склад ради, документи до захисту, контакти.'
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 14
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: contentHtml
+      table: dissertation_councils
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: streamUrl
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: streamUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Покликання на трансляцію захисту.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: streamUrl
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: legacyUrl
+    type: string
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: legacyUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Повна адреса сторінки на старому сайті (походження).
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 16
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: legacyUrl
+      table: dissertation_councils
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: order
+    type: integer
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 17
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: dissertation_councils
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: dissertation_councils
+    field: files
+    type: alias
+    meta:
+      collection: dissertation_councils
+      conditions: null
+      display: null
+      display_options: null
+      field: files
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: Документи до захисту.
+      options:
+        enableCreate: true
+        enableSelect: false
+      readonly: false
+      required: false
+      searchable: true
+      sort: 18
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
   - collection: documents
     field: id
     type: uuid
@@ -2788,6 +5681,32 @@ fields:
             value: postgraduate-regulations
           - text: Фінансова діяльність
             value: financial-activity
+          - text: Ліцензія університету
+            value: licenses
+          - text: Нагороди та відзнаки
+            value: awards
+          - text: Навчальний відділ
+            value: academic-office
+          - text: Графік освітнього процесу
+            value: education-schedule
+          - text: Служба вченого секретаря
+            value: scientific-secretary
+          - text: Спеціалізовані вчені ради
+            value: specialized-councils
+          - text: Центр забезпечення якості освіти
+            value: quality-centre
+          - text: Центр якості освіти — освітні програми
+            value: quality-centre-programmes
+          - text: Центр цифровізації освіти
+            value: digital-center
+          - text: Приймальна комісія
+            value: admissions-committee
+          - text: Моніторинг — нормативні документи
+            value: monitoring
+          - text: Наукові школи — нормативні документи
+            value: science-schools
+          - text: Контакти — довідники
+            value: contacts
       field: section
       group: null
       hidden: false
@@ -2817,6 +5736,32 @@ fields:
             value: postgraduate-regulations
           - text: Фінансова діяльність
             value: financial-activity
+          - text: Ліцензія університету
+            value: licenses
+          - text: Нагороди та відзнаки
+            value: awards
+          - text: Навчальний відділ
+            value: academic-office
+          - text: Графік освітнього процесу
+            value: education-schedule
+          - text: Служба вченого секретаря
+            value: scientific-secretary
+          - text: Спеціалізовані вчені ради
+            value: specialized-councils
+          - text: Центр забезпечення якості освіти
+            value: quality-centre
+          - text: Центр якості освіти — освітні програми
+            value: quality-centre-programmes
+          - text: Центр цифровізації освіти
+            value: digital-center
+          - text: Приймальна комісія
+            value: admissions-committee
+          - text: Моніторинг — нормативні документи
+            value: monitoring
+          - text: Наукові школи — нормативні документи
+            value: science-schools
+          - text: Контакти — довідники
+            value: contacts
       readonly: false
       required: true
       searchable: true
@@ -5386,6 +8331,361 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: legacy_redirects
+    field: id
+    type: uuid
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: legacy_redirects
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: legacy_redirects
+    field: status
+    type: string
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: legacy_redirects
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: legacy_redirects
+    field: legacyPath
+    type: string
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: null
+      display_options: null
+      field: legacyPath
+      group: null
+      hidden: false
+      interface: input
+      note: >-
+        Шлях на старому сайті, напр. «/uk/…» або «/sites/default/files/…». Без
+        домену й без параметрів.
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: legacyPath
+      table: legacy_redirects
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: legacy_redirects
+    field: kind
+    type: string
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Сторінка
+            value: page
+          - text: Файл
+            value: file
+      field: kind
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - text: Сторінка
+            value: page
+          - text: Файл
+            value: file
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: kind
+      table: legacy_redirects
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: legacy_redirects
+    field: targetPath
+    type: string
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: null
+      display_options: null
+      field: targetPath
+      group: null
+      hidden: false
+      interface: input
+      note: Куди вести — шлях на новому сайті. Для файлів лишити порожнім.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: targetPath
+      table: legacy_redirects
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: legacy_redirects
+    field: file
+    type: uuid
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: Перенесений файл — 301 веде на /assets/<id>.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: legacy_redirects
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: legacy_redirects
+    field: note
+    type: string
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: null
+      display_options: null
+      field: note
+      group: null
+      hidden: false
+      interface: input
+      note: Звідки взявся запис.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: note
+      table: legacy_redirects
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: legacy_redirects
+    field: order
+    type: integer
+    meta:
+      collection: legacy_redirects
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: legacy_redirects
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: memorial_entries
     field: id
     type: uuid
@@ -5729,6 +9029,786 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: monitoring_survey_results
+    field: id
+    type: uuid
+    meta:
+      collection: monitoring_survey_results
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: monitoring_survey_results
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_survey_results
+    field: status
+    type: string
+    meta:
+      collection: monitoring_survey_results
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: monitoring_survey_results
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_survey_results
+    field: survey
+    type: uuid
+    meta:
+      collection: monitoring_survey_results
+      conditions: null
+      display: null
+      display_options: null
+      field: survey
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: Анкета, до якої належить результат.
+      options:
+        template: '{{number}} · {{title}}'
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: survey
+      table: monitoring_survey_results
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: monitoring_surveys
+      foreign_key_column: id
+  - collection: monitoring_survey_results
+    field: year
+    type: string
+    meta:
+      collection: monitoring_survey_results
+      conditions: null
+      display: null
+      display_options: null
+      field: year
+      group: null
+      hidden: false
+      interface: input
+      note: 'Рік або навчальний рік: «2024», «2026/2027».'
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: year
+      table: monitoring_survey_results
+      data_type: character varying
+      default_value: null
+      max_length: 32
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_survey_results
+    field: file
+    type: uuid
+    meta:
+      collection: monitoring_survey_results
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: monitoring_survey_results
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: monitoring_survey_results
+    field: externalUrl
+    type: string
+    meta:
+      collection: monitoring_survey_results
+      conditions: null
+      display: null
+      display_options: null
+      field: externalUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Якщо файл лежить у Google Drive.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: externalUrl
+      table: monitoring_survey_results
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_survey_results
+    field: order
+    type: integer
+    meta:
+      collection: monitoring_survey_results
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: monitoring_survey_results
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: id
+    type: uuid
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: monitoring_surveys
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: status
+    type: string
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: monitoring_surveys
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: number
+    type: string
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: number
+      group: null
+      hidden: false
+      interface: input
+      note: Номер анкети на кшталт «2» або «11/1».
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: number
+      table: monitoring_surveys
+      data_type: character varying
+      default_value: null
+      max_length: 32
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: area
+    type: string
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: Освітня діяльність
+            value: educational-activity
+          - text: Реалізація освітніх програм
+            value: programme-implementation
+          - text: Реалізація освітньо-наукових програм
+            value: phd-programmes
+          - text: Освітнє середовище
+            value: educational-environment
+          - text: Наукова діяльність
+            value: research
+          - text: Інше
+            value: other
+      field: area
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: Напрям діяльності — заголовок групи на сторінці.
+      options:
+        choices:
+          - text: Освітня діяльність
+            value: educational-activity
+          - text: Реалізація освітніх програм
+            value: programme-implementation
+          - text: Реалізація освітньо-наукових програм
+            value: phd-programmes
+          - text: Освітнє середовище
+            value: educational-environment
+          - text: Наукова діяльність
+            value: research
+          - text: Інше
+            value: other
+      readonly: false
+      required: true
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: area
+      table: monitoring_surveys
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: title
+    type: string
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: monitoring_surveys
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: titleEn
+    type: string
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: titleEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: titleEn
+      table: monitoring_surveys
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: researchGroup
+    type: text
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: researchGroup
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: Дослідницька група.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: researchGroup
+      table: monitoring_surveys
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: programmeFile
+    type: uuid
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: programmeFile
+      group: null
+      hidden: false
+      interface: file
+      note: PDF програми дослідження.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: programmeFile
+      table: monitoring_surveys
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: monitoring_surveys
+    field: formUrl
+    type: string
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: formUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Покликання на Google-форму анкети.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: formUrl
+      table: monitoring_surveys
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: order
+    type: integer
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: monitoring_surveys
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: monitoring_surveys
+    field: results
+    type: alias
+    meta:
+      collection: monitoring_surveys
+      conditions: null
+      display: null
+      display_options: null
+      field: results
+      group: null
+      hidden: false
+      interface: list-o2m
+      note: Результати за роками.
+      options:
+        enableCreate: true
+        enableSelect: false
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special:
+        - o2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
   - collection: newspaper_issues
     field: id
     type: uuid
@@ -9112,6 +13192,691 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: science_directions
+    field: id
+    type: uuid
+    meta:
+      collection: science_directions
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: science_directions
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_directions
+    field: status
+    type: string
+    meta:
+      collection: science_directions
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: science_directions
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_directions
+    field: department
+    type: string
+    meta:
+      collection: science_directions
+      conditions: null
+      display: null
+      display_options: null
+      field: department
+      group: null
+      hidden: false
+      interface: input
+      note: Кафедра.
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: department
+      table: science_directions
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_directions
+    field: departmentEn
+    type: string
+    meta:
+      collection: science_directions
+      conditions: null
+      display: null
+      display_options: null
+      field: departmentEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: departmentEn
+      table: science_directions
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_directions
+    field: topic
+    type: text
+    meta:
+      collection: science_directions
+      conditions: null
+      display: null
+      display_options: null
+      field: topic
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: Тема напряму.
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: topic
+      table: science_directions
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_directions
+    field: supervisor
+    type: string
+    meta:
+      collection: science_directions
+      conditions: null
+      display: null
+      display_options: null
+      field: supervisor
+      group: null
+      hidden: false
+      interface: input
+      note: Науковий керівник напряму.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: supervisor
+      table: science_directions
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_directions
+    field: order
+    type: integer
+    meta:
+      collection: science_directions
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: science_directions
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: id
+    type: uuid
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: science_schools
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: status
+    type: string
+    meta:
+      collection: science_schools
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: science_schools
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: name
+    type: string
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: science_schools
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: nameEn
+    type: string
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: nameEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: nameEn
+      table: science_schools
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: leader
+    type: string
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: leader
+      group: null
+      hidden: false
+      interface: input
+      note: Керівник школи.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: leader
+      table: science_schools
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: founder
+    type: string
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: founder
+      group: null
+      hidden: false
+      interface: input
+      note: Фундатор школи.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: founder
+      table: science_schools
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: file
+    type: uuid
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: file
+      group: null
+      hidden: false
+      interface: file
+      note: Довідка або положення.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 7
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: file
+      table: science_schools
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: science_schools
+    field: externalUrl
+    type: string
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: externalUrl
+      group: null
+      hidden: false
+      interface: input
+      note: Сайт школи або керівника.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: externalUrl
+      table: science_schools
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: science_schools
+    field: order
+    type: integer
+    meta:
+      collection: science_schools
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: science_schools
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: student_schedule_documents
     field: id
     type: uuid
@@ -10596,6 +15361,69 @@ fields:
       foreign_key_column: null
 systemFields: []
 relations:
+  - collection: accreditation_certificates
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: accreditation_certificates
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: accreditation_certificates
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: accreditation_certificates_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: accreditation_dossier_files
+    field: dossier
+    related_collection: accreditation_dossiers
+    meta:
+      junction_field: null
+      many_collection: accreditation_dossier_files
+      many_field: dossier
+      one_allowed_collections: null
+      one_collection: accreditation_dossiers
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: files
+      sort_field: null
+    schema:
+      table: accreditation_dossier_files
+      column: dossier
+      foreign_key_table: accreditation_dossiers
+      foreign_key_column: id
+      constraint_name: accreditation_dossier_files_dossier_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: accreditation_dossier_files
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: accreditation_dossier_files
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: accreditation_dossier_files
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: accreditation_dossier_files_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: admission_exam_programs
     field: programmeFile
     related_collection: directus_files
@@ -10722,6 +15550,69 @@ relations:
       constraint_name: articles_files_directus_files_id_foreign
       on_update: NO ACTION
       on_delete: SET NULL
+  - collection: contingent_reports
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: contingent_reports
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: contingent_reports
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: contingent_reports_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: dissertation_council_files
+    field: council
+    related_collection: dissertation_councils
+    meta:
+      junction_field: null
+      many_collection: dissertation_council_files
+      many_field: council
+      one_allowed_collections: null
+      one_collection: dissertation_councils
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: files
+      sort_field: null
+    schema:
+      table: dissertation_council_files
+      column: council
+      foreign_key_table: dissertation_councils
+      foreign_key_column: id
+      constraint_name: dissertation_council_files_council_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: dissertation_council_files
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: dissertation_council_files
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: dissertation_council_files
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: dissertation_council_files_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: documents
     field: file
     related_collection: directus_files
@@ -10806,6 +15697,27 @@ relations:
       constraint_name: gallery_items_category_foreign
       on_update: NO ACTION
       on_delete: SET NULL
+  - collection: legacy_redirects
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: legacy_redirects
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: legacy_redirects
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: legacy_redirects_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: memorial_entries
     field: photo
     related_collection: directus_files
@@ -10825,6 +15737,69 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: memorial_entries_photo_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: monitoring_survey_results
+    field: survey
+    related_collection: monitoring_surveys
+    meta:
+      junction_field: null
+      many_collection: monitoring_survey_results
+      many_field: survey
+      one_allowed_collections: null
+      one_collection: monitoring_surveys
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: results
+      sort_field: null
+    schema:
+      table: monitoring_survey_results
+      column: survey
+      foreign_key_table: monitoring_surveys
+      foreign_key_column: id
+      constraint_name: monitoring_survey_results_survey_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: monitoring_survey_results
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: monitoring_survey_results
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: monitoring_survey_results
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: monitoring_survey_results_file_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: monitoring_surveys
+    field: programmeFile
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: monitoring_surveys
+      many_field: programmeFile
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: monitoring_surveys
+      column: programmeFile
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: monitoring_surveys_programmefile_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: newspaper_issues
@@ -10909,6 +15884,27 @@ relations:
       foreign_key_table: directus_files
       foreign_key_column: id
       constraint_name: programmes_cover_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: science_schools
+    field: file
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: science_schools
+      many_field: file
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: science_schools
+      column: file
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: science_schools_file_foreign
       on_update: NO ACTION
       on_delete: SET NULL
   - collection: student_schedule_documents

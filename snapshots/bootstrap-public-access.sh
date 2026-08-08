@@ -140,6 +140,18 @@ add_perm science_conferences read "$ALL" "$PUBLISHED_FILTER"
 add_perm financial_reports read "$ALL" "$PUBLISHED_FILTER"
 add_perm newspaper_issues read "$ALL" "$PUBLISHED_FILTER"
 add_perm documents read "$ALL" "$PUBLISHED_FILTER"
+add_perm monitoring_surveys read "$ALL" "$PUBLISHED_FILTER"
+add_perm monitoring_survey_results read "$ALL" "$PUBLISHED_FILTER"
+add_perm accreditation_certificates read "$ALL" "$PUBLISHED_FILTER"
+add_perm accreditation_dossiers read "$ALL" "$PUBLISHED_FILTER"
+add_perm accreditation_dossier_files read "$ALL" "$PUBLISHED_FILTER"
+add_perm contingent_reports read "$ALL" "$PUBLISHED_FILTER"
+add_perm science_schools read "$ALL" "$PUBLISHED_FILTER"
+add_perm science_directions read "$ALL" "$PUBLISHED_FILTER"
+add_perm dissertation_councils read "$ALL" "$PUBLISHED_FILTER"
+add_perm dissertation_council_files read "$ALL" "$PUBLISHED_FILTER"
+# Read by the Nuxt server middleware (unauthenticated) to 301 old hnpu.edu.ua URLs.
+add_perm legacy_redirects read "$ALL" "$PUBLISHED_FILTER"
 
 # Categories has no status — read everything.
 add_perm categories read "$ALL" ""

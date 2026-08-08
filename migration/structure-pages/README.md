@@ -9,6 +9,7 @@ faculty's sidebar menu on the old site.
 | 2 | `2_transform.py` | those + `tabs.map.json` | `content.draft.json`, `images.list.json`, `tabs.map.draft.json` |
 | 3 | `3_load_images.py` | `images.list.json` | files in Directus + `images.map.json` |
 | 4 | `4_emit.py` | `content.draft.json` + `images.map.json` | `knpu-university-fe/app/content/structure/**` |
+| 8 | `8_fix_unit_content.py` | emitted content | repairs one unit: drops sections shared with another unit, moves a «Деканат» block between tabs |
 
 Only stages 3 and 4 write outside this folder. Everything is re-runnable; stage 3 is idempotent
 through its cache, stage 4 rewrites the same files with stable key order.
@@ -35,10 +36,12 @@ Legacy news pages ("Новини факультету", "Хроніка поді
 
 ## Editorial files (committed, hand-edited)
 
-- **`units.map.json`** — current unit slug → legacy alias(es). Note that the 30.06.2026 chart
-  split the old «Факультет природничої, спеціальної і здоров'язбережувальної освіти» across
-  `special-education` and `mathematics-informatics`, so `fac-prirodn` is listed twice and both
-  units currently receive the same pages. **This split needs a human decision.**
+- **`units.map.json`** — current unit slug → legacy alias(es). The 30.06.2026 chart split the old
+  «Факультет природничої, спеціальної і здоров'язбережувальної освіти» across `special-education`
+  and `mathematics-informatics`; `fac-prirodn` was listed under both, so фізмат received the
+  природничий факультет's sections and деканат. **Resolved:** those pages belong to
+  `special-education` only (client decision), and `8_fix_unit_content.py` cleaned the content that
+  had already been emitted.
 - **`tabs.map.json`** — which legacy page goes on which tab. Stage 2 always writes a
   keyword-bucketed `tabs.map.draft.json`; copy it to `tabs.map.json` and edit. The committed
   file wins, so hand fixes survive re-runs.

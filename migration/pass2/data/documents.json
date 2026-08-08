@@ -1,0 +1,445 @@
+{
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": [
+        "section",
+        "title"
+      ],
+      "rows": [
+        {
+          "section": "licenses",
+          "title": "Ліцензія ХНПУ імені Г.С. Сковороди",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Licenziya_000388.jpg"
+        },
+        {
+          "section": "licenses",
+          "title": "Ліцензія на надання освітніх послуг",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/21_22/Licenzia_KhNPU.im.Skovorody.pdf"
+        },
+        {
+          "section": "licenses",
+          "title": "Сертифікат на систему управління якістю (аркуш 1)",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/sertificate1.jpeg"
+        },
+        {
+          "section": "licenses",
+          "title": "Сертифікат на систему управління якістю (аркуш 2)",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/sertificate2.jpeg"
+        },
+        {
+          "section": "awards",
+          "title": "Диплом за високі творчі досягнення в удосконаленні змісту навчально-виховного процесу національної системи освіти",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom1_ed.jpg"
+        },
+        {
+          "section": "awards",
+          "title": "Почесне звання «Лідер сучасної освіти» за багаторічну інноваційну педагогічну діяльність з модернізації освіти в Україні",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom2_ed.jpg"
+        },
+        {
+          "section": "awards",
+          "title": "Золота медаль у номінації «Впровадження нових форм організації навчально-виховного процесу у ВНЗ»",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom3_ed.jpg"
+        },
+        {
+          "section": "awards",
+          "title": "Стаття про ХНПУ в офіційному каталозі виставки (аркуш 1)",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom5_ed.jpg"
+        },
+        {
+          "section": "awards",
+          "title": "Стаття про ХНПУ в офіційному каталозі виставки (аркуш 2)",
+          "order": 5,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/diplom4_ed.jpg"
+        },
+        {
+          "section": "contacts",
+          "title": "Телефонний довідник університету",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Tel_dovid_06_2021.pdf"
+        },
+        {
+          "section": "contacts",
+          "title": "Офіційна назва Університету (наказ)",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/nakaz_26.pdf"
+        },
+        {
+          "section": "contacts",
+          "title": "Про університет — буклет",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/biblioteka/Buklet_22.pdf"
+        },
+        {
+          "section": "contacts",
+          "title": "Енциклопедичний довідник SK Viki",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Nauka/SK_Viki.pdf"
+        },
+        {
+          "section": "science-schools",
+          "title": "Положення про наукові школи Харківського національного педагогічного університету імені Г.С. Сковороди",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pro_naykovi_shkolu_20.pdf"
+        },
+        {
+          "section": "scientific-secretary",
+          "title": "План роботи Вченої ради",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Plan_roboty_vchenoi_rady_2025.pdf"
+        },
+        {
+          "section": "scientific-secretary",
+          "title": "Положення про службу вченого секретаря",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Polozhenia_pro_sluzhby_vchenogo_sekretaria_2015.pdf"
+        },
+        {
+          "section": "scientific-secretary",
+          "title": "Положення про вчену раду",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Polozhenia_pro_vchenu_radu_2015.pdf"
+        },
+        {
+          "section": "scientific-secretary",
+          "title": "Склад Вченої ради",
+          "order": 4,
+          "externalUrl": "https://docs.google.com/document/d/1Hs3LfB_Z4kMdOTaDOnCj0acTPzOBU84Z/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу бакалаври",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/24_25/Gr_os_pr_B_24_25.pdf"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу магістри",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/24_25/Gr_os_pr_M_24_25.pdf"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітньо-наукового процесу доктори філософії",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/24_25/Gr_os_pr_DPf_24_25.pdf"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Робочий графік освітнього процесу 2023-2024 навч.року",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/23_24/Rob_gr_osv_2023-24.pdf"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Календар 2022-2023 навчального року",
+          "order": 5,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/22_23/Kal_2022-2023.pdf"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу 2022-2023 бакалаври",
+          "order": 6,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/22_23/RGOP_22_23_bak.jpg"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу 2022-2023 магістри",
+          "order": 7,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/22_23/RGOP_22_23_mag.jpg"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітньо-наукового процесу 2022-2023 доктори філософії",
+          "order": 8,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vidd_navch/22_23/RGOP_22_23_phd.jpg"
+        },
+        {
+          "section": "academic-office",
+          "title": "Положення Про Організацію Освітнього Процесу",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Piojenn/Pro_organisaziyu_osvitnogoz_procesy.pdf"
+        },
+        {
+          "section": "digital-center",
+          "title": "Наказ № 251-од від 08 листопада 2024 року «Про обмеження використання месенджера Telegram»",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/nakazy/2024/N_251_8_11_2024.pdf"
+        },
+        {
+          "section": "digital-center",
+          "title": "Платформи для вдосконалення навичок і саморозвитку(МОН України)",
+          "order": 2,
+          "externalUrl": "https://mon.gov.ua/ua/news/platformi-dlya-vdoskonalennya-navichok-i-samorozvitku"
+        },
+        {
+          "section": "digital-center",
+          "title": "Роз'яснення щодо реєстрації на платформі Coursera",
+          "order": 3,
+          "externalUrl": "https://docs.google.com/presentation/d/1oMHpQaytx2C9SkrynXPb5UipdeOBrE4R/edit#slide=id.p5"
+        },
+        {
+          "section": "digital-center",
+          "title": "https://mooc4ua.online/",
+          "order": 4,
+          "externalUrl": "https://mooc4ua.online/"
+        },
+        {
+          "section": "digital-center",
+          "title": "registr_form_Coursera",
+          "order": 5,
+          "externalUrl": "https://docs.google.com/spreadsheets/d/1AI4fTMINElM_8gW4dEAXWIVVOZWnP2N2/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true"
+        },
+        {
+          "section": "digital-center",
+          "title": "openHPI",
+          "order": 6,
+          "externalUrl": "https://open.hpi.de/"
+        },
+        {
+          "section": "digital-center",
+          "title": "https://open.hpi.de/channels/ukraine",
+          "order": 7,
+          "externalUrl": "https://open.hpi.de/channels/ukraine"
+        },
+        {
+          "section": "digital-center",
+          "title": "https://bit.ly/3QXpigq",
+          "order": 8,
+          "externalUrl": "https://bit.ly/3QXpigq"
+        },
+        {
+          "section": "digital-center",
+          "title": "https://bit.ly/3pMoGhZ",
+          "order": 9,
+          "externalUrl": "https://bit.ly/3pMoGhZ"
+        },
+        {
+          "section": "digital-center",
+          "title": "//maryna.kolisnyk@hpi.de",
+          "order": 10,
+          "externalUrl": "https://maryna.kolisnyk@hpi.de"
+        },
+        {
+          "section": "digital-center",
+          "title": "Заповнену таблицю",
+          "order": 11,
+          "externalUrl": "https://docs.google.com/spreadsheets/d/1PiuLkyoNkpeBdDt83mjAMxHEiGxdr3RM/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true"
+        },
+        {
+          "section": "digital-center",
+          "title": "https://explore.zoom.us/docs/en-us/education.html",
+          "order": 12,
+          "externalUrl": "https://explore.zoom.us/docs/en-us/education.html"
+        },
+        {
+          "section": "digital-center",
+          "title": "Загальні правила реєстрації на платформі MOODLE",
+          "order": 13,
+          "externalUrl": "https://docs.google.com/document/d/1VtfWrdKi6eiwSCtvNKN7B-4E7Iu6YBFB/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true"
+        },
+        {
+          "section": "digital-center",
+          "title": "Інструкція з організації адміністрування контингенту та ЕНК на платформі МооdІе",
+          "order": 14,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Inst_IO/Inst_Moodle_21.pdf"
+        },
+        {
+          "section": "digital-center",
+          "title": "Положення про стажування педагогічних і науково-педагогічних працівників на платформі дистанційної освіти MOODLE",
+          "order": 15,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Polozhennia%20pro%20stazhuvannia%20pedahohichnykh%20i%20naukovo-pedahohichnykh%20pratsivnykiv%20na%20platformi%20dystantsiinoi%20osvity%20MOODLE.pdf"
+        },
+        {
+          "section": "digital-center",
+          "title": "Онлайн-анкета \"Реєстрація на стажування на платформі Moodle\"",
+          "order": 16,
+          "externalUrl": "https://docs.google.com/forms/d/1Vvif8JjUbpXOHkDlIK5OZ9yXGxHmgoRu1hhd_B0BhwA/edit"
+        },
+        {
+          "section": "digital-center",
+          "title": "Онлайн-анкета для запису на підсумкове оцінювання (викладачу, стажування на платформі Moodle)",
+          "order": 17,
+          "externalUrl": "https://forms.gle/xRcusmHH22XcDiHr7"
+        },
+        {
+          "section": "digital-center",
+          "title": "Інструкція для викладачів щодо роботи з СДО Moodle",
+          "order": 18,
+          "externalUrl": "https://drive.google.com/file/d/10bQT0fZCDJ4JVNRCSyw4AHU3bOv8THn3/view?usp=sharing"
+        },
+        {
+          "section": "digital-center",
+          "title": "Інструкція для здобувачів вищої освіти щодо роботи з СДО Moodle",
+          "order": 19,
+          "externalUrl": "https://docs.google.com/presentation/d/1y3X1asUIP3DB8ofFMHjwZtXGgRL6iLpx/edit?usp=drive_link&ouid=118303942036297381480&rtpof=true&sd=true"
+        },
+        {
+          "section": "digital-center",
+          "title": "Положення про створення, функціонування та сертифікацію електронного навчального курса",
+          "order": 20,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_pro_ENK.pdf"
+        },
+        {
+          "section": "digital-center",
+          "title": "Онлайн-анкета для сертифікації ЕНК",
+          "order": 21,
+          "externalUrl": "https://forms.gle/5L8fjmwi1NLtg7ADA"
+        },
+        {
+          "section": "digital-center",
+          "title": "Рекомендації щодо надання інформації для розміщення на сайті",
+          "order": 22,
+          "externalUrl": "https://docs.google.com/document/d/1sER83-6rtyu6kGOk0NvgEUaRu6TgMLV4/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true"
+        },
+        {
+          "section": "digital-center",
+          "title": "Алгоритм оновлення інформації",
+          "order": 23,
+          "externalUrl": "https://drive.google.com/file/d/1guoQRMp-BNTDfV02QgfoBsMHqdL-_bb9/view?usp=sharing"
+        },
+        {
+          "section": "digital-center",
+          "title": "didorenko.anna@hnpu.edu.ua",
+          "order": 24,
+          "externalUrl": "https://vk.com/write?email=beregnasv@gmail.com"
+        },
+        {
+          "section": "digital-center",
+          "title": "Замовлення технічного супроводу",
+          "order": 25,
+          "externalUrl": "https://forms.gle/NhDoBYKC2w8vkvqZ9"
+        },
+        {
+          "section": "digital-center",
+          "title": "Проведення голосування за допомогою Гугл-форм",
+          "order": 26,
+          "externalUrl": "https://drive.google.com/file/d/1lIzOQ3c6GRoZJTCLVmgCzUKKGeG4X95m/view?usp=sharing"
+        },
+        {
+          "section": "admissions-committee",
+          "title": "для здобуття ступеня бакалавра",
+          "order": 1,
+          "externalUrl": "https://drive.google.com/file/d/1J1Wnl7CHxi3TNX12vLF5bTeX1jlPdKzj/view?usp=drive_link"
+        },
+        {
+          "section": "admissions-committee",
+          "title": "для здобуття ступеня магістра",
+          "order": 2,
+          "externalUrl": "https://drive.google.com/file/d/1ZEZzS-QSUFa2OAsVYe1G7Lnzq4ir5I5p/view?usp=drive_link"
+        },
+        {
+          "section": "admissions-committee",
+          "title": "для здобуття наукового ступеня доктора філософії",
+          "order": 3,
+          "externalUrl": "https://drive.google.com/file/d/1tgIqBBAvCCc8ULhTfkGusOwDLIR9CTbi/view?usp=drive_link"
+        },
+        {
+          "section": "admissions-committee",
+          "title": "Положення про Центр інклюзивної освіти",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Priimalna/2025%20pk/Polozhennya/PolozhInkluzOsv_2024.pdf"
+        },
+        {
+          "section": "admissions-committee",
+          "title": "Порядок акредитації представників засобів масової інформації при приймальній комісії ХНПУ імені Г.С.Сковороди",
+          "order": 5,
+          "externalUrl": "https://drive.google.com/file/d/1X7PFIXfUXZZEi5sHxSL-baGPhNSegdyT/view?usp=sharing"
+        },
+        {
+          "section": "admissions-committee",
+          "title": "Положення про студентський гуртожиток",
+          "order": 6,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/polozhennya%20pro%20gurtozhitok.pdf"
+        },
+        {
+          "section": "quality-centre",
+          "title": "Методичні рекомендації щодо силабусу навчальних дисциплін",
+          "order": 1,
+          "_file": "http://smc.hnpu.edu.ua/files/Metoducni_rekomehdacii_sulabys/Metoducni_rekomehdacii_sulabys.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "Методичні рекомендації щодо силабусу навчальних дисциплін",
+          "order": 1,
+          "_file": "http://smc.hnpu.edu.ua/files/Metoducni_rekomehdacii_sulabys/Metoducni_rekomehdacii_sulabys.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "Положення про організацію освітнього процесу в Харківському національному педагогічному університеті імені Г.С. Сковороди",
+          "order": 2,
+          "_file": "http://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pro_orh_osvit_protsesu%20_2024.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "Положення про освітню програму",
+          "order": 3,
+          "_file": "http://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_osvitniu_prohramu.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "Опис освітньої програми в контексті нових стандартів вищої освіти (МОН України)",
+          "order": 4,
+          "_file": "http://smc.hnpu.edu.ua/files/opis_osvitnoyi_programi_yuriy_rashkevich.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "Положення про акредитацію освітніх програм, за якими здійснюється підготовка здобувачів вищої освіти",
+          "order": 5,
+          "_file": "http://smc.hnpu.edu.ua/files/Polozhennia_pro_akredytatsiiu_osvitnikh_prohram.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "Рекомендації щодо застосування Критеріїв оцінювання якості освітньої програми",
+          "order": 6,
+          "_file": "https://naqa.gov.ua/wp-content/uploads/2020/12/%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D1%96%D1%97-%D1%89%D0%BE%D0%B4%D0%BE-%D0%B7%D0%B0%D1%81%D1%82%D0%BE%D1%81%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BA%D1%80%D0%B8%D1%82%D0%B5%D1%80%D1%96%D1%97%D0%B2-%D0%BE%D1%86%D1%96%D0%BD%D1%8E%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D1%8F%D0%BA%D0%BE%D1%81%D1%82%D1%96-%D0%9E%D0%9F.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "Посібник з акредитації PhD програм",
+          "order": 7,
+          "_file": "https://naqa.gov.ua/wp-content/uploads/2020/10/AQU_Standard_2018-ukr_lang.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "План взаємодії зі стейкхолдерами освітніх програм на 2021-2022 н.р",
+          "order": 8,
+          "_file": "http://smc.hnpu.edu.ua/files\\Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram\\Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram_na_2021_2022_n_r.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "План взаємодії зі стейкхолдерами освітніх програм на 2022-2023 н.р",
+          "order": 9,
+          "_file": "http://smc.hnpu.edu.ua/files/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram_na_2022_2023_n_r_.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "План взаємодії зі стейкхолдерами освітніх програм на 2023-2024 н.р",
+          "order": 10,
+          "_file": "http://smc.hnpu.edu.ua/files/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram_na_2023_2024_n_r_.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "План взаємодії зі стейкхолдерами освітніх програм на 2024-2025 н.р",
+          "order": 11,
+          "_file": "http://smc.hnpu.edu.ua/files/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram_na_2024_2025_n_r_.pdf"
+        },
+        {
+          "section": "quality-centre-programmes",
+          "title": "План взаємодії зі стейкхолдерами освітніх програм на 2025-2026 н.р",
+          "order": 12,
+          "_file": "http://smc.hnpu.edu.ua/files/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram/Plan_vzaiemodii_zi_steikkholderamy_osvitnikh_prohram_na_2025_2026.pdf"
+        }
+      ]
+    }
+  ]
+}

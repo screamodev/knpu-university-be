@@ -1,0 +1,710 @@
+{
+  "source": "https://hnpu.edu.ua/uk/sertyfikaty-pro-akredytaciyu",
+  "batches": [
+    {
+      "collection": "accreditation_certificates",
+      "identity": [
+        "level",
+        "title"
+      ],
+      "rows": [
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "012",
+          "title": "Сертифікат про акредитацію спеціальності 012 Дошкільна освіта",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/012_Doshrilna_osvita.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "013",
+          "title": "Сертифікат про акредитацію спеціальності 013 Початкова освіта",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/013_Pochatkova_osvita.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Біологія та валеологія в закладах освіти» за спеціальністю 014 Середня освіта",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Biolohiia_ta_valeolohiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми \"Біологія та здоров’я людини, практична психологія в закладах освіти\" за спеціальністю 014 Середня освіта",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/Biologia_ta_zdorovya%20lydunu_praktuchna%20psuhologiya.pdf"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми \"Біологія та здоров’я людини в закладах освіти\" за спеціальністю 014 Середня освіта",
+          "order": 5,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/Biologia_ta_zdorovya%20lydunu_v_zakladah%20jsvinu.pdf"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Географія в закладах освіти» за спеціальністю 014 Середня освіта (Географія)",
+          "order": 6,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Heohrafiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Інформатика)",
+          "order": 7,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Informatyka.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Історія)",
+          "order": 8,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Istoriia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Математика)",
+          "order": 9,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Matematyka.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Мова та зарубіжна література (англійська))",
+          "order": 10,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Anhliiska.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Мова та зарубіжна література (німецька))",
+          "order": 11,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Nimetska.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Мова та зарубіжна література (французька))",
+          "order": 12,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Frantsuzka.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Музичне мистецтво в закладах освіти» за спеціальністю 014 Середня освіта. Мистецтво. Музичне мистецтво",
+          "order": 13,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Muzychne_myst_v_zak_osvi.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Середня освіта (Музичне мистецтво)» за спеціальністю 014 Середня освіта. Мистецтво. Музичне мистецтво",
+          "order": 14,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Serednia_osvita_muzychne.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Образотворче мистецтво)",
+          "order": 15,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Obrazotvorche_mystetstvo.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Українська мова і література)",
+          "order": 16,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Ukrainska_mova_i_literatura.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Фізика та астрономія)",
+          "order": 17,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Fizyka_ta_astronomiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Фізична культура)",
+          "order": 18,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/014_Fizychna_kultura.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про освітньо-професійної програми \"Хімія та біологія в закладах освіти\" за спеціальністю 014 Середня освіта",
+          "order": 19,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/Himiya%20ta%20biologiya%20v%20zakladah%20osvitu.pdf"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "016",
+          "title": "Сертифікат про акредитацію освітньої програми «Олігофренопедагогіка» за спеціальністю 016 Спеціальна освіта. Корекційна педагогіка",
+          "order": 20,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/016_Olihofrenopedahohika.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "016",
+          "title": "Сертифікат про акредитацію освітньої програми «Логопедія» за спеціальністю 016 Спеціальна освіта. Логопедія",
+          "order": 21,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/016_Lohopediia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "017",
+          "title": "Сертифікат про акредитацію спеціальності 017 Фізична культура і спорт",
+          "order": 22,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/017_Fizychna.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "02 Культура і мистецтво",
+          "specialtyCode": "022",
+          "title": "Сертифікат про акредитацію спеціальності 022 Дизайн",
+          "order": 23,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/022_Dyzain.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "02 Культура і мистецтво",
+          "specialtyCode": "023",
+          "title": "Сертифікат про акредитацію освітньої програми «Прикладна і промислова графіка» за спеціальністю 023 Образотворче мистецтво, декоративне мистецтво, реставрація»",
+          "order": 24,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/023_Prykladna.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "02 Культура і мистецтво",
+          "specialtyCode": "023",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми \"Прикладна та книжкова графіка\" за спеціальністю 023 Образотворче мистецтво, декоративне мистецтво, реставрація",
+          "order": 25,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/Prukladna%20ta%20knuzhkova%20grafika.pdf"
+        },
+        {
+          "level": "bachelor",
+          "branch": "02 Культура і мистецтво",
+          "specialtyCode": "024",
+          "title": "Сертифікат про акредитацію спеціальності 024 Хореографія",
+          "order": 26,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/024_Khoreohrafiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "035",
+          "title": "Сертифікат про акредитацію спеціальності 035 Філологія",
+          "order": 27,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/035_Filolohiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "051",
+          "title": "Сертифікат про акредитацію спеціальності 051 Економіка",
+          "order": 28,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/051_Ekonomika.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "052",
+          "title": "Сертифікат про акредитацію освітньої програми «Політологія» за спеціальністю 052 Політологія",
+          "order": 29,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/052_Politolohiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "052",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми «Політологія» за спеціальністю 052 Політологія",
+          "order": 30,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/Politologiya.pdf"
+        },
+        {
+          "level": "bachelor",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "053",
+          "title": "Сертифікат про акредитацію спеціальності 053 Психологія",
+          "order": 31,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/053_Psykholohiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "054",
+          "title": "Сертифікат про акредитацію спеціальності 054 Соціологія",
+          "order": 32,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/054_Sotsiolohiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "08 Право",
+          "specialtyCode": "081",
+          "title": "Сертифікат про акредитацію освітньої програми «Право» за спеціальністю 081 Право",
+          "order": 33,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/081_Pravo.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "09 Біологія",
+          "specialtyCode": "091",
+          "title": "Сертифікат про акредитацію спеціальності 091 Біологія",
+          "order": 34,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/091_Biolohiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "09 Біологія",
+          "specialtyCode": "091",
+          "title": "Сертифікат про акредитацію спеціальності 091 Біологія та біохімія",
+          "order": 35,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/091_Biolohiia_ta_biokhimiia.jpg"
+        },
+        {
+          "level": "bachelor",
+          "branch": "23 Соціальна робота",
+          "specialtyCode": "231",
+          "title": "Сертифікат про акредитацію освітньої програми «Соціальна педагогіка» за спеціальністю 231 Соціальна робота",
+          "order": 36,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Bacalavr/231_Sotsialna_robota.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "011",
+          "title": "Сертифікат про акредитацію освітньої програми «Освітологія» за спеціальністю 011 Освітні, педагогічні науки",
+          "order": 37,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/011_Osvitolohiia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "012",
+          "title": "Сертифікат про акредитацію освітньої програми «Дошкільна освіта» за спеціальністю 012 Дошкільна освіта",
+          "order": 38,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/012_Doshkilna_osvita.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "013",
+          "title": "Сертифікат про акредитацію освітньої програми «Початкова освіта» спеціальності 013 Початкова освіта",
+          "order": 39,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/013_Pochatkova_osvita.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Англійська мова і література в закладах освіти» спеціальності 014 Середня освіта (Англійська мова та зарубіжна література)",
+          "order": 40,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Anhliiska.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Біологія в закладах освіти» спеціальності 014 Середня освіта (Біологія та здоров’я людини)",
+          "order": 41,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Biolohiia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Інформатика)",
+          "order": 42,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Informatyka.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Історія в закладах освіти» спеціальності 014 Середня освіта (Історія)",
+          "order": 43,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Istoriia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Математика в закладах освіти» спеціальності 014 Середня освіта (Математика)",
+          "order": 44,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Matematyka.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Музичне мистецтво в закладах освіти» спеціальності 014 Середня освіта (Мистецтво. Музичне мистецтво)",
+          "order": 45,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Muzychne_mystetstvo.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньо-професйної програми «Образотворче мистецтво в закладах освіти» спеціальності 014 Середня освіта",
+          "order": 46,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/Obrazotvorche%20mustectvo%20v%20zakladah%20osvitu.pdf"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Природничі науки» спеціальності 014 Середня освіта (Природничі науки)",
+          "order": 47,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Pryrodnychi_nauky.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію спеціальності 014 Середня освіта (Українська мова і література)",
+          "order": 48,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Ukrainska_mova.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Українська мова і література, англійська мова в закладах освіти» спеціальності 014 Середня освіта (Українська мова і література)",
+          "order": 49,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Ukrainska_anhliiska.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Українська мова і література, англійська мова в закладах освіти» спеціальності 014 Середня освіта",
+          "order": 50,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/Ukrainska%20mova%20i%20literatura_angliyska%20mova%20v%20zakladah%20osvitu.pdf"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Українська мова і література, зарубіжна література в закладах освіти» спеціальності 014 Середня освіта (Українська мова і література)",
+          "order": 51,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Ukrainska_zarubizhna.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми «Українська мова і література, зарубіжна література в закладах освіти» спеціальності 014 Середня освіта",
+          "order": 52,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/Ukrainska%20mova%20i%20literatura_zarubizhna%20literatura%20v%20zakladah%20osvitu.pdf"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Фізика в закладах освіти» за спеціальністю 014 Середня освіта (Фізика)",
+          "order": 53,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Fizyka.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Фізична культура в закладах освіти» спеціальності 014 Середня освіта (Фізична культура)",
+          "order": 54,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Fizychna_kultura.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Фізична культура. Захист України» спеціальності 014 Середня освіта (Фізична культура)",
+          "order": 55,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Zakhyst_Ukrainy.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "014",
+          "title": "Сертифікат про акредитацію освітньої програми «Хімія в закладах освіти» за спеціальністю 014 Середня освіта (Хімія)",
+          "order": 56,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/014_Khimiia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "016",
+          "title": "Сертифікат про акредитацію освітньої програми «Олігофренопедагогіка» спеціальності 016 Середня освіта (Корекційна психопедагогіка)",
+          "order": 57,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/016_Olihofrenopedahohika.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "016",
+          "title": "Сертифікат про акредитацію освітньої програми «Логопедія» спеціальності 016 Спеціальна освіта (Логопедія)",
+          "order": 58,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/016_Lohopediia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "016",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми «Тифлопедагогіка. Сурдопедагогіка» за спеціальності 016 Спеціальна освіта",
+          "order": 59,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/Tuflopedagogika_Surdopedagogika.pdf"
+        },
+        {
+          "level": "master",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "017",
+          "title": "Сертифікат про акредитацію освітньої програми «Тренерська діяльність в обраному виді спорту» спеціальності 017 Фізична культура і спорт",
+          "order": 60,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/017_Trenerska.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "02 Культура і мистецтво",
+          "specialtyCode": "022",
+          "title": "Сертифікат про акредитацію освітньої програми «Дизайн» спеціальності 022 Дизайн",
+          "order": 61,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/022_Dyzain.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "02 Культура і мистецтво",
+          "specialtyCode": "024",
+          "title": "Сертифікат про акредитацію спеціальності 024 Хореографія",
+          "order": 62,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/024_Khoreohrafiia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "035",
+          "title": "Сертифікат про акредитацію освітньої програми «Англійська мова і література та переклад» спеціальності 035 Філологія (германські мови та літератури (переклад включно), перша – англійська)",
+          "order": 63,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/035_Anhliiska.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "035",
+          "title": "Сертифікат про акредитацію освітньої програми «Китайська мова і література» спеціальності 035 Філологія (східні мови та літератури (переклад включно), перша – китайська)",
+          "order": 64,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/035_Kytaiska.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "035",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми «Китайська мова і література» спеціальності 035 Філологія",
+          "order": 65,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/Kutayska%20mova%20ta%20literatura.pdf"
+        },
+        {
+          "level": "master",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "035",
+          "title": "Сертифікат про акредитацію освітньої програми «Українська мова і література» спеціальності 035 Філологія (українська мова та література)",
+          "order": 66,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/035_Ukrainska.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "051",
+          "title": "Сертифікат про акредитацію спеціальності 051 Економіка",
+          "order": 67,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/051_Ekonomika.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "052",
+          "title": "Сертифікат про акредитацію освітньої програми «Політологія» за спеціальністю 052 Політологія",
+          "order": 68,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/052_Politolohiia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "053",
+          "title": "Сертифікат про акредитацію освітньої програми «Психологія» за спеціальністю 053 Психологія",
+          "order": 69,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/053_Psykholohiia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "05 Соціальні та поведінкові науки",
+          "specialtyCode": "053",
+          "title": "Сертифікат про акредитацію освітньо-професійної програми «Реабілітаційна психологія» за спеціальністю 053 Психологія",
+          "order": 70,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/Reabilitaciyna%20psuhologiya.pdf"
+        },
+        {
+          "level": "master",
+          "branch": "07 Управління та адміністрування",
+          "specialtyCode": "073",
+          "title": "Сертифікат про акредитацію спеціальності 073 Менеджмент",
+          "order": 71,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/073_Menedzhment.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "08 Право",
+          "specialtyCode": "081",
+          "title": "Сертифікат про акредитацію освітньої програми «Право» спеціальності 081 Право",
+          "order": 72,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/081_Pravo.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "09 Біологія",
+          "specialtyCode": "091",
+          "title": "Сертифікат про акредитацію освітньої програми «Біологія» за спеціальністю 091 Біологія та біохімія",
+          "order": 73,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/091_Biolohiia.jpg"
+        },
+        {
+          "level": "master",
+          "branch": "23 Соціальна робота",
+          "specialtyCode": "231",
+          "title": "Сертифікат про акредитацію освітньої програми «Соціальна педагогіка» спеціальності 231 Соціальна робота",
+          "order": 74,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/Magistr/231_Sotsialna_pedahohika.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "011",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Освітні, педагогічні науки» за спеціальністю 011 Освітні, педагогічні науки",
+          "order": 75,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/011_Osvitni_pedahahohichni.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "015",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Професійна освіта» за спеціальністю 015 Професійна освіта",
+          "order": 76,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/015_Profesiina_osvita.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "017",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Фізична культура і спорт» за спеціальністю 017 Фізична культура і спорт",
+          "order": 77,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/017_Fizychna_kultura.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "01 Освіта/Педагогіка",
+          "specialtyCode": "017",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Фізична культура і спорт» за спеціальністю 017 Фізична культура і спорт",
+          "order": 78,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/Fizuchna%20kyltura%20i%20sport.pdf"
+        },
+        {
+          "level": "phd",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "032",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Історія та археологія» за спеціальністю 032 Історія та археологія",
+          "order": 79,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/032_Istoriia.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "032",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Історія та археологія» за спеціальністю 032 Історія та археологія",
+          "order": 80,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/Istoriya_ta_arheologiya.pdf"
+        },
+        {
+          "level": "phd",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "033",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Філософія» за спеціальністю 033 Філософія",
+          "order": 81,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/033_Filosofiia.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "033",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Філософія» за спеціальністю 033 Філософія",
+          "order": 82,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/Filosofiya.pdf"
+        },
+        {
+          "level": "phd",
+          "branch": "03 Гуманітарні науки",
+          "specialtyCode": "035",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Філологія» за спеціальністю 035 Філологія",
+          "order": 83,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/035_Filolohiia.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "05 Соціальні і поведінкові науки",
+          "specialtyCode": "052",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Політологія» за спеціальністю 052 Політологія",
+          "order": 84,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/052_Politolohiia.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "05 Соціальні і поведінкові науки",
+          "specialtyCode": "053",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Психологія» за спеціальністю 053 Психологія",
+          "order": 85,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/053_Psykholohiia.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "08 Право",
+          "specialtyCode": "081",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Право» за спеціальністю 081 Право",
+          "order": 86,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/081_Pravo.jpg"
+        },
+        {
+          "level": "phd",
+          "branch": "09 Біологія",
+          "specialtyCode": "091",
+          "title": "Сертифікат про акредитацію освітньо-наукової програми «Біологія» за спеціальністю 091 Біологія",
+          "order": 87,
+          "_file": "https://hnpu.edu.ua/sites/default/files/images/Sertifikat/III/091_Biolohiia.jpg"
+        }
+      ]
+    }
+  ]
+}
