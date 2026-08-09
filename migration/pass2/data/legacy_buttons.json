@@ -1,0 +1,22 @@
+{
+  "_comment": [
+    "Зелені банери-кнопки старого сайту (alt=\"Knopka …\") у перенесеному контенті.",
+    "Кнопка з відповідником на новому сайті стає текстовим покликанням <a class=\"legacy-btn\">;",
+    "решта банерів — це просто картинки-заголовки, які дублюють заголовок наступного розділу,",
+    "тож вони видаляються (див. tidy_legacy_html.py)."
+  ],
+  "buttons": {
+    "Knopka nakazy HNPU sayt smc 2017 1": {
+      "label": "Накази з основної діяльності університету",
+      "href": "/university/orders"
+    },
+    "Knopka polozhennya HNPU sayt smc 2017": {
+      "label": "Нормативна документація університету",
+      "href": "/university/regulations"
+    },
+    "Knopka grafik navch protsesu": {
+      "label": "Графік освітнього процесу",
+      "href": "/education/schedule"
+    }
+  }
+}

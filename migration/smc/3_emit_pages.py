@@ -7,7 +7,9 @@ in the order the site listed them. The frontend renders them through `SharedStat
 same way the other migrated prose works.
 
 Files are still linked to `smc.hnpu.edu.ua` here; `../pass2/mirror_page_files.py` re-hosts them
-afterwards and rewrites the links to `/assets/<uuid>`.
+afterwards and rewrites the links to `/assets/<uuid>`. Joomla's `{spoiler …}` markers and banner
+images also survive this stage on purpose — `../pass2/tidy_legacy_html.py` cleans them up last,
+and must be re-run after every re-emit.
 
     python3 3_emit_pages.py --dry-run
     python3 3_emit_pages.py

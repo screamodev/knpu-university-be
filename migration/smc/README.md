@@ -22,10 +22,14 @@ python3 3_emit_pages.py
 cd ../pass2 && python3 mirror_page_files.py \
   --content ../../../knpu-university-fe/app/content/pages \
   --unlink-host smc.hnpu.edu.ua --unlink-missing
+python3 tidy_legacy_html.py --write --only 'quality-centre-*'
 ```
 
 Notes:
 
+- Stage 3 keeps the Joomla `{spoiler title=… opened=0}` markers as they are; `tidy_legacy_html.py`
+  turns them into file lists (and cleans banner images and dead links), so a re-emit must always be
+  followed by it, otherwise the markers show up as text on the site.
 - The dump has two table prefixes; the live data is `nijst_*` (`jwm8v_*` is an empty leftover).
 - «Новини» was one 200 KB page of `{spoiler}` blocks — 138 entries, 117 of which state their date.
   The rest (greetings) are loaded without one.
