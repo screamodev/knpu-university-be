@@ -210,13 +210,20 @@ def filename_for(url: str) -> str:
 
 
 def upload(directus: Directus, content: bytes, filename: str, content_type: str,
-           title: str, folder: str | None) -> str:
+           title: str, folder: str | None, file_id: str | None = None) -> str:
+    """
+    Re-host one file. `file_id` asks Directus for that exact uuid — the maps
+    (`files.map.json`, `images.map.json`) are committed, so a file keeps the same id in every
+    environment and `/assets/<uuid>` inside the migrated content works on production too.
+    """
     if not content_type or content_type == 'application/octet-stream':
         content_type = mimetypes.guess_type(filename)[0] or 'application/pdf'
     boundary = f'----knpu{uuid_mod.uuid4().hex}'
     parts = []
     if folder:
         parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="folder"\r\n\r\n{folder}\r\n'.encode())
+    if file_id:
+        parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="id"\r\n\r\n{file_id}\r\n'.encode())
     parts += [
         f'--{boundary}\r\nContent-Disposition: form-data; name="title"\r\n\r\n{title}\r\n'.encode(),
         f'--{boundary}\r\nContent-Disposition: form-data; name="file"; filename="{filename}"\r\n'
@@ -227,3 +234,17 @@ def upload(directus: Directus, content: bytes, filename: str, content_type: str,
     data = directus.request('POST', '/files', raw=b''.join(parts),
                             content_type=f'multipart/form-data; boundary={boundary}')
     return data['id']
+
+
+def present_file_ids(directus: Directus, ids) -> set[str]:
+    """
+    Which of these file ids the target already holds. A fresh environment holds none of them,
+    so everything the committed map lists has to be uploaded again — with its own id.
+    """
+    present: set[str] = set()
+    unique = [file_id for file_id in dict.fromkeys(ids) if file_id]
+    for start in range(0, len(unique), 100):
+        chunk = unique[start:start + 100]
+        rows = directus.get('/files?fields=id&limit=-1&filter[id][_in]=' + ','.join(chunk)) or []
+        present.update(row['id'] for row in rows)
+    return present

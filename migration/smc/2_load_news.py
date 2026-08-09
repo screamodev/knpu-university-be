@@ -29,7 +29,8 @@ import urllib.parse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parents[1] / 'pass2'))
-from common import Directus, download, filename_for, login, upload  # noqa: E402
+from common import (Directus, download, filename_for, login,  # noqa: E402
+                    present_file_ids, upload)
 
 HERE = Path(__file__).parent
 CATEGORY_SLUG = 'tsentr-zabezpechennya-yakosti'
@@ -91,6 +92,9 @@ def main() -> int:
 
     map_path = Path(args.map)
     uploaded: dict[str, str] = json.loads(map_path.read_text(encoding='utf-8')) if map_path.exists() else {}
+    # The map is committed so a photo keeps its uuid in every environment; ids the target does
+    # not hold yet are uploaded again under the same uuid.
+    present = present_file_ids(directus, uploaded.values())
     created = updated = failed = 0
 
     for index, entry in enumerate(entries, 1):
@@ -102,6 +106,9 @@ def main() -> int:
         cover: str | None = None
         for source in entry['images']:
             file_id = uploaded.get(source)
+            known_id = None
+            if file_id and file_id not in present:
+                known_id, file_id = file_id, None
             if not file_id:
                 downloaded = download(source)
                 if not downloaded:
@@ -109,12 +116,13 @@ def main() -> int:
                 content, content_type = downloaded
                 try:
                     file_id = upload(directus, content, filename_for(source), content_type,
-                                     entry['title'][:255], None)
+                                     entry['title'][:255], None, file_id=known_id)
                 except urllib.error.HTTPError as exc:
                     print(f'    ! upload {exc.code}: {exc.read().decode("utf-8", "replace")[:160]}',
                           file=sys.stderr)
                     continue
                 uploaded[source] = file_id
+                present.add(file_id)
                 map_path.write_text(json.dumps(uploaded, ensure_ascii=False, indent=2) + '\n',
                                     encoding='utf-8')
             html = html.replace(source, f'/assets/{file_id}')

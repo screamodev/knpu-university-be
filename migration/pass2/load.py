@@ -57,7 +57,7 @@ import urllib.error
 import urllib.parse
 from pathlib import Path
 
-from common import Directus, download, filename_for, login, upload
+from common import Directus, download, filename_for, login, present_file_ids, upload
 
 HERE = Path(__file__).parent
 
@@ -109,6 +109,7 @@ def main() -> int:
 
     map_path = Path(args.map)
     uploaded = load_map(map_path)
+    present = present_file_ids(directus, uploaded.values())
     refs: dict[str, str] = {}
     created = skipped = failed = 0
 
@@ -142,6 +143,12 @@ def main() -> int:
             source = row.get('_file')
             if source:
                 file_id = uploaded.get(source)
+                # The map is committed, so on a fresh environment it names ids that do not exist
+                # there yet — re-upload those, asking for the very same uuid.
+                if file_id and file_id not in present:
+                    known_id, file_id = file_id, None
+                else:
+                    known_id = None
                 if not file_id:
                     downloaded = download(source)
                     if not downloaded:
@@ -150,13 +157,15 @@ def main() -> int:
                     content, content_type = downloaded
                     try:
                         file_id = upload(directus, content, filename_for(source), content_type,
-                                         (payload.get('title') or filename_for(source))[:255], folder)
+                                         (payload.get('title') or filename_for(source))[:255], folder,
+                                         file_id=known_id)
                     except urllib.error.HTTPError as exc:
                         print(f'    ! upload {exc.code}: {exc.read().decode("utf-8", "replace")[:200]}',
                               file=sys.stderr)
                         failed += 1
                         continue
                     uploaded[source] = file_id
+                    present.add(file_id)
                     save_map(map_path, uploaded)
                 payload[row.get('_fileField', 'file')] = file_id
 

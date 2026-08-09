@@ -30,7 +30,7 @@ import time
 import urllib.error
 from pathlib import Path
 
-from common import Directus, download, filename_for, login, upload
+from common import Directus, download, filename_for, login, present_file_ids, upload
 
 HERE = Path(__file__).parent
 CONTENT = HERE.parents[2] / 'knpu-university-fe' / 'app' / 'content' / 'pages'
@@ -73,7 +73,7 @@ def unlink_pages(payload: dict, host: str) -> int:
 
 
 def upload_with_retry(directus: Directus, content: bytes, filename: str, content_type: str,
-                      folder: str | None, attempts: int = 6) -> str:
+                      folder: str | None, attempts: int = 6, file_id: str | None = None) -> str:
     """
     Upload, surviving a Directus restart.
 
@@ -83,7 +83,8 @@ def upload_with_retry(directus: Directus, content: bytes, filename: str, content
     """
     for attempt in range(1, attempts + 1):
         try:
-            return upload(directus, content, filename, content_type, filename[:255], folder)
+            return upload(directus, content, filename, content_type, filename[:255], folder,
+                          file_id=file_id)
         except urllib.error.HTTPError:
             raise
         except OSError as exc:
@@ -144,6 +145,9 @@ def main() -> int:
     directus = Directus(args.directus_url, token)
     map_path = Path(args.map)
     uploaded = load_map(map_path)
+    # `files.map.json` is committed so a file keeps its uuid everywhere; on a fresh environment
+    # those ids do not exist yet, so re-upload them under the same uuid.
+    present = present_file_ids(directus, uploaded.values())
     mirrored = failed = 0
 
     unlinked_pages = 0
@@ -168,6 +172,9 @@ def main() -> int:
         missing: list[str] = []
         for index, url in enumerate(urls, 1):
             file_id = uploaded.get(url)
+            known_id = None
+            if file_id and file_id not in present:
+                known_id, file_id = file_id, None
             if not file_id:
                 if args.limit and mirrored >= args.limit:
                     break
@@ -180,7 +187,7 @@ def main() -> int:
                 filename = filename_for(url)
                 try:
                     file_id = upload_with_retry(directus, content_bytes, filename, content_type,
-                                                args.folder)
+                                                args.folder, file_id=known_id)
                 except urllib.error.HTTPError as exc:
                     print(f'    ! upload {exc.code}: {exc.read().decode("utf-8", "replace")[:200]}',
                           file=sys.stderr)
@@ -191,6 +198,7 @@ def main() -> int:
                     failed += 1
                     continue
                 uploaded[url] = file_id
+                present.add(file_id)
                 save_map(map_path, uploaded)
                 mirrored += 1
                 if mirrored % 10 == 0:
