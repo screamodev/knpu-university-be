@@ -33,7 +33,10 @@ from pathlib import Path
 from common import Directus, download, filename_for, login, present_file_ids, upload
 
 HERE = Path(__file__).parent
-CONTENT = HERE.parents[2] / 'knpu-university-fe' / 'app' / 'content' / 'pages'
+# Лише типове значення для `--content`: у контейнері репозиторій часто змонтований неглибоко,
+# і `parents[2]` там просто немає — тоді шлях доведеться передати вручну.
+CONTENT = ((HERE.parents[2] if len(HERE.parents) > 2 else HERE)
+           / 'knpu-university-fe' / 'app' / 'content' / 'pages')
 # «Документи», created by snapshots/bootstrap-editor-experience.sh.
 DEFAULT_FOLDER = '3e5f21c7-8b04-4d92-a6f1-27c48ab5d301'
 
