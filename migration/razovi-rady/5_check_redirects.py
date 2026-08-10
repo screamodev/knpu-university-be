@@ -26,6 +26,12 @@ import urllib.request
 from shared import Directus, login
 
 
+# Production sits behind Cloudflare, which answers 403 to `Python-urllib/3.x` — every target
+# looked broken while `curl` fetched the very same file happily.
+BROWSER_UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+              '(KHTML, like Gecko) Chrome/120.0 Safari/537.36')
+
+
 def head(url: str, timeout: int = 30) -> tuple[int, str]:
     """→ (status, Location). Redirects are the answer here, so never follow them."""
     class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -33,7 +39,7 @@ def head(url: str, timeout: int = 30) -> tuple[int, str]:
             return None
 
     opener = urllib.request.build_opener(NoRedirect)
-    request = urllib.request.Request(url, method='HEAD')
+    request = urllib.request.Request(url, method='HEAD', headers={'User-Agent': BROWSER_UA})
     try:
         with opener.open(request, timeout=timeout) as response:
             return response.status, response.headers.get('Location', '')
