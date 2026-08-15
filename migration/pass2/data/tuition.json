@@ -1,0 +1,36 @@
+{
+  "source": "https://hnpu.edu.ua/uk/2026-vartist-rekvizyty-oplaty",
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": ["section", "title"],
+      "rows": [
+        {
+          "section": "tuition",
+          "title": "Наказ № 82-од від 18.05.2026 «Про встановлення вартості платних освітніх послуг, що надаються для здобуття освіти за різними рівнями вищої освіти на 2026-2027 навчальний рік»",
+          "documentDate": "2026-05-18",
+          "order": 1,
+          "_file": "https://hnpu-admin.dev42hub.uk/assets/afcb6a9e-1358-4428-9a53-02a569cd9dd1"
+        },
+        {
+          "section": "tuition",
+          "title": "Вартість платних освітніх послуг у 2026-2027 н.р.: ступінь бакалавр",
+          "order": 2,
+          "externalUrl": "https://drive.google.com/file/d/1mXuUY9t589GQssgmaRub16tlIByZCzDy/view"
+        },
+        {
+          "section": "tuition",
+          "title": "Вартість платних освітніх послуг у 2026-2027 н.р.: ступінь магістр",
+          "order": 3,
+          "externalUrl": "https://drive.google.com/file/d/1GhhlfEAJQZPYKPwKDCQrsfNyTJSoOshj/view"
+        },
+        {
+          "section": "tuition",
+          "title": "Вартість платних освітніх послуг у 2026-2027 н.р.: аспірантура",
+          "order": 4,
+          "externalUrl": "https://drive.google.com/file/d/1tRzG5r5Nm5Bg8L1GJtJIc2tBVpne8h50/view"
+        }
+      ]
+    }
+  ]
+}

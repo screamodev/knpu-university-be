@@ -33,18 +33,30 @@ REGION_END_RE = re.compile(r'<div class="region region-footer|<footer|</form>\s*
 TOKEN_RE = re.compile(
     r'<span class="fieldset-legend">(?P<legend>.*?)</span>'
     r'|<a\s[^>]*href="(?P<href>[^"]+)"[^>]*>(?P<label>.*?)</a>'
+    # Any other tag is skipped explicitly, so that its markup cannot leak into `text` below.
+    r'|(?P<tag><[^>]*>)'
     r'|(?P<text>[^<]{3,})',
     re.S)
 
+# Every напрям the page opens a top-level <legend> for. Longer needles first: «ОСВІТНЬО-НАУКОВИХ»
+# must win over «ОСВІТНІХ ПРОГРАМ», and the rating results over plain «НАУКОВ».
 AREAS = (
+    ('РЕЙТИНГОВОГО ОЦІНЮВАННЯ', 'staff-rating'),
     ('ОСВІТНЯ ДІЯЛЬНІСТЬ', 'educational-activity'),
-    ('РЕАЛІЗАЦІЯ ОСВІТНІХ ПРОГРАМ', 'programme-implementation'),
     ('ОСВІТНЬО-НАУКОВИХ ПРОГРАМ', 'phd-programmes'),
+    ('РЕАЛІЗАЦІЯ ОСВІТНІХ ПРОГРАМ', 'programme-implementation'),
     ('ОСВІТНЄ СЕРЕДОВИЩЕ', 'educational-environment'),
+    ('МІЖНАРОДНЕ СПІВРОБІТНИЦТВО', 'international'),
+    ('МОЛОДІЖНА ПОЛІТИКА', 'youth-policy'),
+    ('МЕНЕДЖМЕНТ І КАДРОВЕ', 'management'),
+    ('СТЕЙКХОЛДЕР', 'stakeholders'),
+    ('ЕКСПРЕС-ОПИТУВАННЯ', 'express'),
     ('НАУКОВ', 'research'),
 )
 
 SURVEY_RE = re.compile(r'АНКЕТА\s*№\s*([\d]+(?:\s*/\s*\d+)?)', re.I)
+# «АНКЕТА № 9» with nothing after it: the name lives in the next link or text fragment.
+BARE_HEADING_RE = re.compile(r'АНКЕТА\s*№\s*[\d]+(?:\s*/\s*\d+)?\s*', re.I)
 VARIANT_RE = re.compile(r'анкет[аи]\s*№\s*([\d]+\s*/\s*\d+)', re.I)
 YEAR_RE = re.compile(r'^(20\d{2})(?:\s*[/-]\s*(20\d{2}))?\s*(?:р\.?|рік)?[.;]?$')
 GROUP_RE = re.compile(r'дослідницька група\s*:?\s*(.*)', re.I)
@@ -53,12 +65,25 @@ GROUP_RE = re.compile(r'дослідницька група\s*:?\s*(.*)', re.I)
 INTRO_DOCUMENTS_LIMIT = 6
 
 
-def area_of(legend: str) -> str:
+def is_aside(label: str) -> bool:
+    """«Програма», «Результати», a year — the rows that belong to a survey, not its name."""
+    text = label.strip().lower()
+    return (not text
+            or text.startswith(('програма', 'результат'))
+            or YEAR_RE.match(label.strip()) is not None)
+
+
+def area_of(legend: str) -> str | None:
+    """
+    The напрям a <legend> opens, or None for the nested ones («Анкета за ОНП», «Анкета по
+    факультетам», «Анкета по кафедрам»): those sit inside a напрям and keep the one in force,
+    which is why their surveys used to land in «Інше».
+    """
     upper = legend.upper()
     for needle, value in AREAS:
         if needle in upper:
             return value
-    return 'other'
+    return None
 
 
 def region(page: str) -> str:
@@ -73,6 +98,38 @@ def normalise_number(raw: str) -> str:
     return re.sub(r'\s+', '', raw)
 
 
+def merge_duplicates(surveys: list[dict], results: list[dict]) -> tuple[list[dict], list[dict]]:
+    """
+    A few анкети appear under two напрями (37 under both «Освітня діяльність» and «Реалізація
+    освітніх програм»). Keep the first occurrence, fill in whatever it is missing from the later
+    ones, and repoint their results at it.
+    """
+    canonical: dict[str, dict] = {}
+    alias: dict[str, str] = {}
+    kept: list[dict] = []
+
+    for survey in surveys:
+        survey.pop('_needsTitle', None)
+        first = canonical.get(survey['number'])
+        if first is None:
+            canonical[survey['number']] = survey
+            kept.append(survey)
+            continue
+        alias[survey['_ref']] = first['_ref']
+        for key in ('researchGroup', 'formUrl', '_file', '_fileField'):
+            if not first.get(key) and survey.get(key):
+                first[key] = survey[key]
+        # The longer heading is the one that kept the survey's full name.
+        if len(survey['title']) > len(first['title']):
+            first['title'] = survey['title']
+
+    for index, survey in enumerate(kept, start=1):
+        survey['order'] = index
+    for result in results:
+        result['_parent'] = alias.get(result['_parent'], result['_parent'])
+    return kept, results
+
+
 def main() -> int:
     body = region(fetch(PAGE))
 
@@ -80,29 +137,73 @@ def main() -> int:
     results: list[dict] = []
     intro: list[dict] = []
     area: str | None = None
+    started = False
     current: dict | None = None
 
+    def open_survey(number: str, title: str, url: str | None) -> dict:
+        bare = BARE_HEADING_RE.fullmatch(re.sub(r'\s+', ' ', title).strip()) is not None
+        entry: dict = {
+            '_ref': f's{len(surveys) + 1}',
+            '_needsTitle': bare,
+            'number': normalise_number(number),
+            'area': area,
+            'title': re.sub(r'\s+', ' ', title).strip(),
+            'researchGroup': None,
+            'formUrl': url if url and not is_file_url(url) else None,
+            'order': len(surveys) + 1,
+        }
+        if url and is_file_url(url):
+            entry['_file'] = url
+            entry['_fileField'] = 'programmeFile'
+        surveys.append(entry)
+        return entry
+
     for match in TOKEN_RE.finditer(body):
+        if match.group('tag') is not None:
+            continue
+
         if match.group('legend') is not None:
-            area = area_of(text_of(match.group('legend')))
+            opened = area_of(text_of(match.group('legend')))
+            started = True
+            if opened:
+                area = opened
             current = None
             continue
 
         if match.group('text') is not None:
+            text = text_of(match.group('text'))
+
+            # Some headings are plain text rather than a link (анкети 22 and 39): the number sits
+            # in a <strong>, and the quoted name follows as text or as the link to the form.
+            number = SURVEY_RE.match(text.strip())
+            if started and number:
+                current = open_survey(number.group(1), text, None)
+                continue
+
             if not current:
                 continue
-            group = GROUP_RE.search(text_of(match.group('text')))
+
+            # Continuation of a heading that was cut off before its name. The same fragment
+            # often carries the research group after it, so split on that marker first.
+            if current.get('_needsTitle'):
+                name = GROUP_RE.split(text)[0].strip(' (\u00a0')
+                if name and not is_aside(name):
+                    current['title'] = re.sub(r'\s+', ' ', f'{current["title"]} {name}').strip()
+                    current['_needsTitle'] = False
+
+            group = GROUP_RE.search(text)
             if group and not current.get('researchGroup'):
                 current['researchGroup'] = group.group(1).strip(' )').strip() or None
             continue
 
         label = text_of(match.group('label'))
-        url = absolute(match.group('href'), PAGE)
+        # A few addresses carry a non-breaking space glued to the end, which breaks the link.
+        url = absolute(match.group('href').replace('%C2%A0', '').replace('\u00a0', '').strip(), PAGE)
         if not label:
             continue
 
         # 1. before the first legend — the page's normative documents
-        if area is None:
+        if not started:
             if is_file_url(url) and len(intro) < INTRO_DOCUMENTS_LIMIT:
                 intro.append({
                     'section': 'monitoring',
@@ -121,24 +222,20 @@ def main() -> int:
 
         number = SURVEY_RE.search(label) or VARIANT_RE.search(label)
         if number and ('анкет' in label.lower()):
-            title = re.sub(r'\s+', ' ', label).strip()
-            current = {
-                '_ref': f's{len(surveys) + 1}',
-                'number': normalise_number(number.group(1)),
-                'area': area,
-                'title': title,
-                'researchGroup': None,
-                'formUrl': url if not is_file_url(url) else None,
-                'order': len(surveys) + 1,
-            }
-            if is_file_url(url):
-                current['_file'] = url
-                current['_fileField'] = 'programmeFile'
-            surveys.append(current)
+            current = open_survey(number.group(1), label, url)
             continue
 
         if not current:
             continue
+
+        # A heading opened from plain text (анкети 9, 20, 39) is completed by the link that carries
+        # its name — that link is also the form the survey is filled in.
+        if current.get('_needsTitle') and not is_aside(label):
+            current['title'] = re.sub(r'\s+', ' ', f'{current["title"]} {label}').strip()
+            current['_needsTitle'] = False
+            if not current.get('formUrl') and not is_file_url(url):
+                current['formUrl'] = url
+                continue
 
         # 3. the survey's programme PDF
         if label.lower().startswith('програма'):
@@ -161,6 +258,8 @@ def main() -> int:
             else:
                 entry['externalUrl'] = url
             results.append(entry)
+
+    surveys, results = merge_duplicates(surveys, results)
 
     print(f'  intro documents: {len(intro)}', file=sys.stderr)
     print(f'  surveys: {len(surveys)} ({len([s for s in surveys if s.get("_file")])} with a programme PDF)',

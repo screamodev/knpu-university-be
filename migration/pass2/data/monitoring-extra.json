@@ -1,0 +1,17 @@
+{
+  "source": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Polityka%20u%20sferi%20yakostii.pdf",
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": ["section", "title"],
+      "rows": [
+        {
+          "section": "monitoring",
+          "title": "Політика у сфері якості",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Polityka%20u%20sferi%20yakostii.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -49,6 +49,26 @@ PAPER_FOLDER_NAME="Газета «Учитель»"
 DOCS_FOLDER_ID="3e5f21c7-8b04-4d92-a6f1-27c48ab5d301"
 DOCS_FOLDER_NAME="Документи"
 
+# The client asked for a tree instead of one flat library. Second level mirrors the site's
+# sections, so an editor looking for a file follows the same path they follow on the site.
+# `migration/files-tree/organize_files.py` moves what is already uploaded into these folders.
+DOCS_ORDERS_ID="f725708c-d643-4788-8f7c-cee3e227d89c"
+DOCS_UNIVERSITY_ID="76c96419-c26f-4b55-b408-bcd97e3f4048"
+DOCS_EDUCATION_ID="aecfd48b-f628-466f-a333-72129edc2646"
+DOCS_SCIENCE_ID="631b3f95-f859-44ca-a0bb-c6471a42e758"
+DOCS_ADMISSIONS_ID="ebf0ea72-8334-4ed5-a077-2e750e3d5f70"
+DOCS_STUDENT_ID="364fdc41-3819-4c58-b96e-54ad96040bf9"
+
+# Files that only a legacy redirect points at: they keep old hnpu.edu.ua links alive but are not
+# part of any page an editor maintains, so they stay out of the Документи tree.
+ARCHIVE_FOLDER_ID="edb12c69-89b8-424a-8cdc-7bf1ebebef33"
+
+# Imagery that belongs to pages rather than to news.
+MEDIA_FOLDER_ID="0b5192f4-98a7-4431-9cdb-0db67df26c38"
+MEDIA_STRUCTURE_ID="03cbd78e-3aa5-4f2e-8273-f3fecc9a87df"
+MEDIA_PARTNERS_ID="10976a4c-12ce-45de-a53d-064b5c017346"
+MEDIA_GALLERY_ID="6d88cb3a-2123-45c9-a06b-d49d0015b33e"
+
 # Directus validates the address, so it must look real; this account can only read.
 PREVIEW_EMAIL="${PREVIEW_EMAIL:-site-preview@hnpu.dev42hub.uk}"
 
@@ -70,7 +90,12 @@ api() {
 
 # ── 1. Upload folder for news imagery ────────────────────────────────────────
 ensure_folder() {
-  # $1 = id, $2 = name
+  # $1 = id, $2 = name, $3 = parent id (optional)
+  if [ "$#" -ge 3 ] && [ -n "$3" ]; then
+    PAYLOAD="{\"id\":\"$1\",\"name\":\"$2\",\"parent\":\"$3\"}"
+  else
+    PAYLOAD="{\"id\":\"$1\",\"name\":\"$2\"}"
+  fi
   EXISTING_FOLDER=$(api GET "/folders/$1?fields=id")
   case "$EXISTING_FOLDER" in
     *"\"id\":\"$1\""*)
@@ -78,7 +103,7 @@ ensure_folder() {
       ;;
     *)
       log "Creating folder $2..."
-      api POST "/folders" "{\"id\":\"$1\",\"name\":\"$2\"}" >/dev/null
+      api POST "/folders" "$PAYLOAD" >/dev/null
       ;;
   esac
 }
@@ -86,6 +111,20 @@ ensure_folder() {
 ensure_folder "$NEWS_FOLDER_ID" "$NEWS_FOLDER_NAME"
 ensure_folder "$PAPER_FOLDER_ID" "$PAPER_FOLDER_NAME"
 ensure_folder "$DOCS_FOLDER_ID" "$DOCS_FOLDER_NAME"
+
+ensure_folder "$DOCS_ORDERS_ID" "Накази з основної діяльності" "$DOCS_FOLDER_ID"
+ensure_folder "$DOCS_UNIVERSITY_ID" "Університет" "$DOCS_FOLDER_ID"
+ensure_folder "$DOCS_EDUCATION_ID" "Навчання" "$DOCS_FOLDER_ID"
+ensure_folder "$DOCS_SCIENCE_ID" "Наука" "$DOCS_FOLDER_ID"
+ensure_folder "$DOCS_ADMISSIONS_ID" "Вступ" "$DOCS_FOLDER_ID"
+ensure_folder "$DOCS_STUDENT_ID" "Студентство" "$DOCS_FOLDER_ID"
+
+ensure_folder "$ARCHIVE_FOLDER_ID" "Архів старого сайту"
+
+ensure_folder "$MEDIA_FOLDER_ID" "Медіа сторінок"
+ensure_folder "$MEDIA_STRUCTURE_ID" "Структура підрозділів" "$MEDIA_FOLDER_ID"
+ensure_folder "$MEDIA_PARTNERS_ID" "Партнери" "$MEDIA_FOLDER_ID"
+ensure_folder "$MEDIA_GALLERY_ID" "Галерея" "$MEDIA_FOLDER_ID"
 
 # ── 2. Image presets offered in the editor's image dialog ────────────────────
 # `storage_asset_transform` stays "all": the public site passes its own width/quality

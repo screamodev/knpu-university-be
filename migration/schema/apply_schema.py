@@ -178,12 +178,21 @@ LEVEL_CHOICES = [
     {'text': 'Третій (освітньо-науковий)', 'value': 'phd'},
 ]
 
+# Напрями — як їх називає сама сторінка /uk/monitoryng старого сайту: спершу вона мала лише
+# п’ять, решта анкет падала в «Інше», аж поки клієнт не попросив повернути повний розподіл.
 MONITORING_AREAS = [
     {'text': 'Освітня діяльність', 'value': 'educational-activity'},
     {'text': 'Реалізація освітніх програм', 'value': 'programme-implementation'},
     {'text': 'Реалізація освітньо-наукових програм', 'value': 'phd-programmes'},
     {'text': 'Освітнє середовище', 'value': 'educational-environment'},
-    {'text': 'Наукова діяльність', 'value': 'research'},
+    {'text': 'Наукова й інноваційна діяльність', 'value': 'research'},
+    {'text': 'Міжнародне співробітництво', 'value': 'international'},
+    {'text': 'Молодіжна політика', 'value': 'youth-policy'},
+    {'text': 'Менеджмент і кадрове забезпечення', 'value': 'management'},
+    {'text': 'Взаємодія внутрішніх і зовнішніх стейкхолдерів', 'value': 'stakeholders'},
+    {'text': 'Експрес-опитування', 'value': 'express'},
+    {'text': 'Результати рейтингового оцінювання науково-педагогічних працівників',
+     'value': 'staff-rating'},
     {'text': 'Інше', 'value': 'other'},
 ]
 
@@ -215,6 +224,14 @@ COUNCIL_FILE_KINDS = [
 REDIRECT_KINDS = [
     {'text': 'Сторінка', 'value': 'page'},
     {'text': 'Файл', 'value': 'file'},
+]
+
+AGREEMENT_CATEGORIES = [
+    {'text': 'З Інститутами НАПН та НАН України', 'value': 'napn'},
+    {'text': 'Із закладами вищої освіти України', 'value': 'universities'},
+    {'text': 'Із закладами середньої, дошкільної освіти та відділами освіти', 'value': 'schools'},
+    {'text': 'З організаціями й установами України', 'value': 'organizations'},
+    {'text': 'Міжнародні договори, угоди, меморандуми', 'value': 'international'},
 ]
 
 STUDENT_COUNCIL_GROUPS = [
@@ -449,6 +466,31 @@ COLLECTIONS = [
             order_field(),
         ],
     ),
+    collection(
+        'cooperation_agreements', icon='handshake', sort=44, template='{{number}} · {{partner}}',
+        note='Договори, угоди та меморандуми про співпрацю. П’ять розділів — по одній сторінці на '
+             'кожен, як накази з основної діяльності.',
+        fields=[
+            id_field(), status_field(),
+            select('category', AGREEMENT_CATEGORIES, 'Розділ — визначає, на якій сторінці рядок '
+                                                    'з’явиться.', required=True),
+            text_field('number', 'Номер у переліку розділу.', width='half', length=16),
+            # Дати в реєстрі нерегулярні — «2017 р.», «25.12.2012 р.», тож рядок; рік окремим
+            # полем, бо саме за ним фільтрує сторінка.
+            text_field('agreementDate', 'Дата укладання так, як у реєстрі.', width='half', length=64),
+            field('year', 'integer', interface='input', width='half',
+                  note='Рік укладання — за ним працює фільтр на сторінці.'),
+            text_field('partner', 'Друга сторона договору.', required=True, length=500),
+            text_field('partnerEn', length=500),
+            multiline('subject', 'Вид документа й предмет співпраці.'),
+            multiline('subjectEn'),
+            text_field('country', 'Країна — для міжнародних угод.', width='half'),
+            text_field('countryEn', width='half'),
+            text_field('term', 'Термін дії.', width='half'),
+            text_field('termEn', width='half'),
+            order_field(),
+        ],
+    ),
 ]
 
 # field → collection it points at; used to create the relations Directus needs.
@@ -483,6 +525,17 @@ NEW_DOCUMENT_SECTIONS = [
     {'text': 'Моніторинг — нормативні документи', 'value': 'monitoring'},
     {'text': 'Наукові школи — нормативні документи', 'value': 'science-schools'},
     {'text': 'Контакти — довідники', 'value': 'contacts'},
+    {'text': 'Наукова рада', 'value': 'science-council'},
+    {'text': 'Наукові заходи', 'value': 'science-events'},
+    {'text': 'Вчена рада — ухвали', 'value': 'academic-council-decisions'},
+    {'text': 'На допомогу здобувачу', 'value': 'candidate-support'},
+    {'text': 'На допомогу здобувачу вченого звання', 'value': 'academic-title-support'},
+    {'text': 'Вартість навчання', 'value': 'tuition'},
+    {'text': 'Вступ — перелік освітніх програм і ліцензовані обсяги',
+     'value': 'admissions-programmes'},
+    {'text': 'Вступ — рейтингові списки вступників', 'value': 'admissions-rating-lists'},
+    {'text': 'Вступ — рекомендації до зарахування', 'value': 'admissions-recommendations'},
+    {'text': 'Вступ — накази про зарахування', 'value': 'admissions-enrolment-orders'},
 ]
 
 

@@ -39,7 +39,7 @@
           "_ref": "s1",
           "number": "2",
           "area": "educational-activity",
-          "title": "АНКЕТА №2 \"Ідеальний викладач очима студентів\"",
+          "title": "АНКЕТА № 2 Ставлення до Нової української школи (НУШ)",
           "researchGroup": "здобувачі вищої освіти ХНПУ імені Г.С. Сковороди, відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/1Znv567QV-aK-vezFXBcb2vQY53pdSc4aXlT1dxHeFeE/viewform?edit_requested=true",
           "order": 1,
@@ -91,22 +91,13 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s6",
-          "number": "37",
-          "area": "programme-implementation",
-          "title": "АНКЕТА № 37 \"Оцінювання освітніх потреб за спеціальністю А5 Професійна освіта галузі знань А освіта\"",
-          "researchGroup": "завідувач відділу аспірантури і докторантури Ірина РАЗУМЕНКО, завідувач кафедрою технологій дистанційного навчання та цифрової дидактики в дошкільній освіті, гарант ОНП Професійна освіта для здобувачів третього (освітньо-наукового) рівня вищої освіти Світлана ДОЦЕНКО, Доктор педагогічних наук, професор кафедри освітології та інноваційної педагогіки Тетяна СОБЧЕНКО",
-          "formUrl": "https://forms.gle/ugZpb5Ayma81k4M7A",
-          "order": 6
-        },
-        {
           "_ref": "s7",
           "number": "11",
           "area": "phd-programmes",
           "title": "АНКЕТА № 11 Практика очима аспірантів",
           "researchGroup": "відділ аспірантури і докторантури",
           "formUrl": "https://docs.google.com/forms/d/1sNSqr-OV9htgH-rZKGc2MES9fjEKor6FKhtqjAqW4mQ/edit",
-          "order": 7,
+          "order": 6,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_11_ankete.pdf",
           "_fileField": "programmeFile"
         },
@@ -117,7 +108,7 @@
           "title": "«011 - Освітні, педагогічні науки» (анкета № 11/1)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe1ILRrp7YUTon5YBG6iW3duq7T0jCucxoB2194HmaB7hVfbw/viewform?usp=sharing",
-          "order": 8
+          "order": 7
         },
         {
           "_ref": "s9",
@@ -126,7 +117,7 @@
           "title": "«015 – Професійна освіта (за спеціалізаціями)» (анкета № 11/2)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc9xDnV_MEAJNU2n2vRsPg3NN6aG3Tss_64eoIopeUx6gRhGw/viewform?usp=sharing",
-          "order": 9
+          "order": 8
         },
         {
           "_ref": "s10",
@@ -135,7 +126,7 @@
           "title": "«017– Фізична культура і спорт» (анкета № 11/3)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf385t4GbeDv6kRzC5zhtY7dg97G0Z4xA-AWlkMjWFCH-hq_w/viewform?usp=sharing",
-          "order": 10
+          "order": 9
         },
         {
           "_ref": "s11",
@@ -144,7 +135,7 @@
           "title": "«032 – Історія та археологія» (анкета № 11/4)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeH9wrApiGDfwL15AvJnZj-fnsAUtgNESunNyh336oM6HjERQ/viewform?usp=sharing",
-          "order": 11
+          "order": 10
         },
         {
           "_ref": "s12",
@@ -153,7 +144,7 @@
           "title": "«033 – Філософія» (анкета № 11/5)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdB41ZR1GprG7SRnGjdGu0wNbTmxehelHuXGTCrp1bRsnBHdw/viewform?usp=sharing",
-          "order": 12
+          "order": 11
         },
         {
           "_ref": "s13",
@@ -162,7 +153,7 @@
           "title": "«035 – Філологія» (анкета № 11/6)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSffUHXtk6DhxU1bIYpdkzfD4iw77pcieP9xSQ0r1FpNUm33RQ/viewform?usp=sharing",
-          "order": 13
+          "order": 12
         },
         {
           "_ref": "s14",
@@ -171,7 +162,7 @@
           "title": "«052 – Політологія» (анкета № 11/7)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdZF2y50Xjk5Wq_NAxlW4SuQGpC8j1Ax0yJJ6EylFFQuwAkcQ/viewform?usp=sharing",
-          "order": 14
+          "order": 13
         },
         {
           "_ref": "s15",
@@ -180,7 +171,7 @@
           "title": "«053 – Психологія» (анкета № 11/8)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfSEWcu14w_E3oqNZpJe5yhxggkeDOrl0B2TLaZKIkodIWQFw/viewform?usp=sharing",
-          "order": 15
+          "order": 14
         },
         {
           "_ref": "s16",
@@ -189,21 +180,30 @@
           "title": "«081 – Право» (анкета № 11/9)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeJ45eM1_35n69VqIKuY62TJFp3WDtzcEzIAtrvCmqxxOtCrg/viewform?usp=sharing",
-          "order": 16
+          "order": 15
         },
         {
           "_ref": "s17",
           "number": "11/10",
           "area": "phd-programmes",
           "title": "«091 – Біологія» (анкета № 11/10)",
-          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeJKqYeUoN_5lYkZ4T1LKeIFsLf40FIgSYVV1y_O9ZDbT_mOQ/viewform?usp=sharing",
-          "order": 17
+          "order": 16
         },
         {
           "_ref": "s18",
+          "number": "22",
+          "area": "phd-programmes",
+          "title": "АНКЕТА №22 «Визначення рівня задоволеності здобувачів третього (освітньо-наукового) рівня вищої освіти якістю освітньо-наукової програми і освітньо-науковим середовищем, в якому відбувається її реалізація",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": null,
+          "order": 17
+        },
+        {
+          "_ref": "s19",
           "number": "22/1",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«011 - Освітні, педагогічні науки» (анкета № 22/1)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdN8pYULal6yFdv1OU60SuR3FgTM77G2gS8nvuMaFu0jzCwCg/viewform",
@@ -212,9 +212,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s19",
+          "_ref": "s20",
           "number": "22/2",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«015 – Професійна освіта (за спеціалізаціями)» (анкета № 22/2)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfZbuH9Ga3oiAJn-Qmw0qa9_tH7wL-xxfJNaJckNhqtRfrnag/viewform",
@@ -223,9 +223,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s20",
+          "_ref": "s21",
           "number": "22/3",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«017– Фізична культура і спорт» (анкета № 22/3)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe_XNejVwpSnhLyOKBvkvBZzyJ7vV81VSQV322yiTmebQpKcQ/viewform",
@@ -234,9 +234,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s21",
+          "_ref": "s22",
           "number": "22/4",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«032 – Історія та археологія» (анкета № 22/4)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeAYmoygv02auPGsntql-B5OjB1_pwgmtxGSiB9i9g4DBJM-g/viewform",
@@ -245,9 +245,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s22",
+          "_ref": "s23",
           "number": "22/5",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«033 – Філософія» (анкета № 22/5)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdfn0kBoJT3gF9Xt5fia5s7K7j3JSZD8nYO-51ekJj9WWvUlw/viewform",
@@ -256,9 +256,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s23",
+          "_ref": "s24",
           "number": "22/6",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«035 – Філологія» (анкета № 22/6)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdz9Ksj4P0ttypP2pe84iur69j3mN5LCTCskxRsUMZMTEQwvQ/viewform",
@@ -267,9 +267,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s24",
+          "_ref": "s25",
           "number": "22/7",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«052 – Політологія» (анкета № 22/7)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSczam7TxD5sbg3UwD2XnP6bvzJDFkFhGJJ22ib905kZrgeosA/viewform",
@@ -278,9 +278,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s25",
+          "_ref": "s26",
           "number": "22/8",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«053 – Психологія» (анкета № 22/8)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScUZff4xHbD2NBxfdrWc7bKbN-1abS60PS7ZVOF30KUoDkHKw/viewform",
@@ -289,9 +289,9 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s26",
+          "_ref": "s27",
           "number": "22/9",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«081 – Право» (анкета № 22/9)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfcrjmyV6s8SBI_rbPQ6ZL6WXXmDjiPu5NBcAWxWrFzKGv-tw/viewform",
@@ -300,211 +300,298 @@
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s27",
+          "_ref": "s28",
           "number": "22/10",
-          "area": "other",
+          "area": "phd-programmes",
           "title": "«091 – Біологія» (анкета № 22/10)",
-          "researchGroup": "завідувач відділу аспірантури і докторантури Ірина РАЗУМЕНКО, завідувач кафедрою технологій дистанційного навчання та цифрової дидактики в дошкільній освіті, гарант ОНП Професійна освіта для здобувачів третього (освітньо-наукового) рівня вищої освіти Світлана ДОЦЕНКО, Доктор педагогічних наук, професор кафедри освітології та інноваційної педагогіки Тетяна СОБЧЕНКО",
+          "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdjJZKqH9Gu7DbgESoifu1RSwdscy10Hi6G9YPbEDPhtvOMAg/viewform",
           "order": 27,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_22_10_ankete.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s28",
-          "number": "4",
-          "area": "other",
-          "title": "АНКЕТА № 4 Опитування здобувачів вищої освіти щодо проявів булінгу у закладах вищої освіти",
-          "researchGroup": "факультет історії і права",
-          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfdQQoZGmFvuDeUuquAa5mU2OmmW-vHLpzXg96P7BukaXmQ5A/viewform?usp=sharing",
+          "_ref": "s29",
+          "number": "39",
+          "area": "phd-programmes",
+          "title": "АНКЕТА №39 \"Визначення освітніх потреб здобувачів третього (освітньо-наукового) рівня вищої освіти\"",
+          "researchGroup": "завідувач відділу аспірантури і докторантури Ірина РАЗУМЕНКО, завідувач кафедрою технологій дистанційного навчання та цифрової дидактики в дошкільній освіті, гарант ОНП Професійна освіта для здобувачів третього (освітньо-наукового) рівня вищої освіти Світлана ДОЦЕНКО, Доктор педагогічних наук, професор кафедри освітології та інноваційної педагогіки Тетяна СОБЧЕНКО",
+          "formUrl": "https://forms.gle/5w2V7ukCkqq4yZmA7",
           "order": 28
         },
         {
-          "_ref": "s29",
-          "number": "7",
-          "area": "other",
-          "title": "АНКЕТА №7 \"Оцінка діяльності кафедри\"",
-          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
-          "formUrl": "https://hnpu.edu.ua/uk/anketa-no7-ocinka-diyalnosti-kafedry",
+          "_ref": "s30",
+          "number": "1",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 1 \"Оцінка ступеню задоволеності системою управління якістю діяльності ХНПУ імені Г.С. Сковороди\"",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету):",
+          "formUrl": null,
           "order": 29
         },
         {
-          "_ref": "s30",
-          "number": "25",
-          "area": "other",
-          "title": "АНКЕТА № 25 Щодо наявності корупційних ризиків в діяльності ХНПУ імені Г.С. Сковороди",
-          "researchGroup": null,
-          "formUrl": "https://docs.google.com/forms/d/1krP6d3Hctm5xiw0aYxqhJc8T2Jr4Q_M4qoIMEEpryhY/edit",
+          "_ref": "s31",
+          "number": "4",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 4 Опитування здобувачів вищої освіти щодо проявів булінгу у закладах вищої освіти",
+          "researchGroup": "факультет історії і права",
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfdQQoZGmFvuDeUuquAa5mU2OmmW-vHLpzXg96P7BukaXmQ5A/viewform?usp=sharing",
           "order": 30
         },
         {
-          "_ref": "s31",
-          "number": "26",
-          "area": "other",
-          "title": "АНКЕТА № 26 \"Щодо попередження випадків насильства та сексуальних домагань\"",
-          "researchGroup": "комісія із запобігання і протидії дискримінації та сексуальним домаганням та відділ менеджменту і моніторингу діяльності університету",
-          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe7RrCFN_PUa0XtT7hT_Db0l3yq72B3bbXLAaUL86X9qkDi_A/viewform?usp=sharing",
+          "_ref": "s32",
+          "number": "7",
+          "area": "educational-environment",
+          "title": "АНКЕТА №7 \"Оцінка діяльності кафедри\"",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://hnpu.edu.ua/uk/anketa-no7-ocinka-diyalnosti-kafedry",
           "order": 31
         },
         {
-          "_ref": "s32",
-          "number": "30",
-          "area": "other",
-          "title": "АНКЕТА № 30 ОЦІНКА ОСВІТНЬОГО СЕРЕДОВИЩА ХАРКІВСЬКОГО НАЦІОНАЛЬНОГО ПЕДАГОГІЧНОГО УНІВЕРСИТЕТУ ІМЕНІ Г. C. СКОВОРОДИ",
-          "researchGroup": null,
-          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScXY6zpbMpsBqhiTwoijOPqIwYi6nXiadJNrnQJb5CxD9GY1w/viewform?usp=sharing",
-          "order": 32
-        },
-        {
           "_ref": "s33",
-          "number": "32",
-          "area": "other",
-          "title": "АНКЕТА № 32 \"Функціонування державної мови в освітньому просторі університету\"",
-          "researchGroup": "уповноважена особа з питань функціонування державної мови та відділ менеджменту і моніторингу діяльності університету",
-          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf9Xn_ij7Tcdhu3VAPt8MaU1l2_Q1EwH-JTEpAHn9xjrE_R_w/viewform?usp=sharing",
-          "order": 33
+          "number": "20",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 20 Ставлення молоді до здорового способу життя",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd0M-buTURyrucSAzdK4s9ckYGzbKxxtA46dp2Lj2K0HLJ5QQ/viewform?gxids=7628",
+          "order": 32,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_20_ankete.pdf",
+          "_fileField": "programmeFile"
         },
         {
           "_ref": "s34",
+          "number": "24",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 24",
+          "researchGroup": null,
+          "formUrl": null,
+          "order": 33
+        },
+        {
+          "_ref": "s35",
+          "number": "25",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 25 Щодо наявності корупційних ризиків в діяльності ХНПУ імені Г.С. Сковороди",
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/1krP6d3Hctm5xiw0aYxqhJc8T2Jr4Q_M4qoIMEEpryhY/edit",
+          "order": 34
+        },
+        {
+          "_ref": "s36",
+          "number": "26",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 26 \"Щодо попередження випадків насильства та сексуальних домагань\"",
+          "researchGroup": "комісія із запобігання і протидії дискримінації та сексуальним домаганням та відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe7RrCFN_PUa0XtT7hT_Db0l3yq72B3bbXLAaUL86X9qkDi_A/viewform?usp=sharing",
+          "order": 35
+        },
+        {
+          "_ref": "s37",
+          "number": "30",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 30 ОЦІНКА ОСВІТНЬОГО СЕРЕДОВИЩА ХАРКІВСЬКОГО НАЦІОНАЛЬНОГО ПЕДАГОГІЧНОГО УНІВЕРСИТЕТУ ІМЕНІ Г. C. СКОВОРОДИ",
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScXY6zpbMpsBqhiTwoijOPqIwYi6nXiadJNrnQJb5CxD9GY1w/viewform?usp=sharing",
+          "order": 36
+        },
+        {
+          "_ref": "s38",
+          "number": "32",
+          "area": "educational-environment",
+          "title": "АНКЕТА № 32 \"Функціонування державної мови в освітньому просторі університету\"",
+          "researchGroup": "уповноважена особа з питань функціонування державної мови та відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf9Xn_ij7Tcdhu3VAPt8MaU1l2_Q1EwH-JTEpAHn9xjrE_R_w/viewform?usp=sharing",
+          "order": 37
+        },
+        {
+          "_ref": "s39",
           "number": "35",
-          "area": "other",
+          "area": "educational-environment",
           "title": "АНКЕТА № 35 \"Анкета на виявлення рівня професійної готовності майбутніх учителів початкової школи до організації безпекоорієнтованого освітнього середовища\"",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/1gWavKDmt5_pxLmGTgc2gE_wsMhnejkdal6kaiSPXU-k/edit",
-          "order": 34,
+          "order": 38,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa%2035.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s35",
+          "_ref": "s40",
           "number": "36",
-          "area": "other",
+          "area": "educational-environment",
           "title": "АНКЕТА № 36 \"Оцінювання освітних потреб майбутніх магістрів (А5)\"",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSetnuE5TfrqWCBkuyNsGSnJoMsm1xuD8yEtsoPJu5D2ns692Q/viewform",
-          "order": 35
+          "order": 39
         },
         {
-          "_ref": "s36",
+          "_ref": "s41",
           "number": "14",
           "area": "research",
           "title": "АНКЕТА №14 (Дотримання принципів академічної доброчесності в університеті здобувачами вищої освіти)",
           "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/11EfhO7oZG0rsotwpbb2c-KeROrr_ACQity0Db2c7gVo/edit?usp=drive_web",
-          "order": 36,
+          "order": 40,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_ankete_14.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s37",
+          "_ref": "s42",
           "number": "18/1",
-          "area": "other",
+          "area": "international",
           "title": "АНКЕТА № 18/1 - інтернаціоналізація (для адміністрації університету (ректорат, керівники структурних підрозділів))",
           "researchGroup": "центр міжнародного співробітництва і міжнародної освіти",
           "formUrl": "https://docs.google.com/forms/d/1P9YtTwdeVwcnboE8kXQqxUSl6k5E-xrnbXzTYpsei4M/viewform?gxids=7628&edit_requested=true",
-          "order": 37,
+          "order": 41,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_ankete_18_1.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s38",
+          "_ref": "s43",
           "number": "18/2",
-          "area": "other",
+          "area": "international",
           "title": "АНКЕТА № 18/2 - інтернаціоналізація (для науково-педагогічних працівників університету)",
           "researchGroup": "центр міжнародного співробітництва і міжнародної освіти",
           "formUrl": "https://docs.google.com/forms/d/1vGXN6GqK2lsJRgpiq0tYIcYD_z8Xfn9S1VMJxDdviA0/viewform?gxids=7628&edit_requested=true",
-          "order": 38,
+          "order": 42,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_ankete_18_2.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s39",
+          "_ref": "s44",
           "number": "18/3",
-          "area": "other",
+          "area": "international",
           "title": "АНКЕТА № 18/3 - інтернаціоналізація (для здобувачів вищої освіти",
           "researchGroup": "центр міжнародного співробітництва і міжнародної освіти",
           "formUrl": "https://docs.google.com/forms/d/1bRuPHLFnlk56DDLP8S5MqjgbHaGKCz4SJsMwBqNvHXc/viewform?gxids=7628&edit_requested=true",
-          "order": 39,
+          "order": 43,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_ankete_18_3.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s40",
+          "_ref": "s45",
           "number": "16",
-          "area": "other",
+          "area": "youth-policy",
           "title": "АНКЕТА № 16 Реалізація молодіжної політики в університеті (для здобувачів вищої освіти)",
           "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/1EZP4v9RCEcpFGyIIEkb4Sx-gf6hYuOrmvG_AMNmFuCY/viewform?gxids=7628&edit_requested=true",
-          "order": 40,
+          "order": 44,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_ankete_16.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s41",
+          "_ref": "s46",
           "number": "6",
-          "area": "other",
+          "area": "management",
           "title": "АНКЕТА № 6 «Організаційна культура університету під час воєнного стану» (для працівників ХНПУ імені Г.С.Сковороди)",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc4fpILI9TmrbkoJ_Vl7by3dJJEirJy5mOWej4q1SkDI1YGXg/viewform?usp=sharing",
-          "order": 41
+          "order": 45
         },
         {
-          "_ref": "s42",
+          "_ref": "s47",
           "number": "17",
-          "area": "other",
+          "area": "management",
           "title": "АНКЕТА № 17 Якість та ефективність діяльності керівництва університету.",
           "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/1ciRVtA-D8cUFY2xEomERDHJnmqqFyTRoAWmjsLXQquM/viewform?edit_requested=true",
-          "order": 42,
+          "order": 46,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_17_ankete.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s43",
+          "_ref": "s48",
           "number": "19",
-          "area": "other",
+          "area": "management",
           "title": "АНКЕТА № 19 Доцільність академічного інбридингу (прийняття на роботу випускників університету)",
           "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/1_FZh2yL_qZCK1eijgMkh6cbRVuvXTaGqjdcf5ZIVMLI/viewform?gxids=7628&edit_requested=true",
-          "order": 43,
+          "order": 47,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_ankete_19.pdf",
           "_fileField": "programmeFile"
         },
         {
-          "_ref": "s44",
+          "_ref": "s49",
+          "number": "9",
+          "area": "stakeholders",
+          "title": "АНКЕТА № 9 Ментальне здоров’я учасників освітнього процесу",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://docs.google.com/forms/d/11y1SKbmTC6NqlCuyPtf6Ymde9FWg7RqD7ruajQlrbhw/edit",
+          "order": 48
+        },
+        {
+          "_ref": "s50",
+          "number": "10",
+          "area": "stakeholders",
+          "title": "АНКЕТА № 10 Імідж університету очима сковородинівської спільноти",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://docs.google.com/forms/d/1GCZvw5RWFZhIOBLAO8qMaaP0TxvrkXa6QQmOLEI92GE/edit",
+          "order": 49
+        },
+        {
+          "_ref": "s51",
+          "number": "15",
+          "area": "stakeholders",
+          "title": "АНКЕТА № 15 Вивчення думки керівників закладів освіти (інших організацій, установ, підприємств, компаній тощо) та керівників їх структурних підрозділів щодо якості вищої освіти випускників ХНПУ імені Г.С. Сковороди",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://docs.google.com/forms/d/1v75akLKbhJUeyUPe1mBYZzpNPPUDalWEOaEcuklfYjg/edit",
+          "order": 50,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_ankete_15.pdf",
+          "_fileField": "programmeFile"
+        },
+        {
+          "_ref": "s52",
+          "number": "21",
+          "area": "stakeholders",
+          "title": "АНКЕТА № 21 Кар'єрне зростання (анкета для випускників ХНПУ імені Г.С.Сковороди)",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdKY_gK8ZhFWphycUvEPyiLCaDXgD_7GhP2TmXwBMqDjCGklg/viewform?gxids=7628",
+          "order": 51,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_21_ankete.pdf",
+          "_fileField": "programmeFile"
+        },
+        {
+          "_ref": "s53",
+          "number": "23",
+          "area": "stakeholders",
+          "title": "АНКЕТА № 23 Анкета для роботодавців щодо вдосконалення освітніх програм",
+          "researchGroup": "відділ менеджменту і моніторингу діяльності університету, центр забезпечення якості освіти",
+          "formUrl": "https://docs.google.com/document/d/13mD2cpmwcXXguwVjgQhBG8hjTAPILrwI/edit?usp=sharing&ouid=103431811793782016199&rtpof=true&sd=true",
+          "order": 52
+        },
+        {
+          "_ref": "s56",
           "number": "29",
-          "area": "other",
+          "area": "stakeholders",
           "title": "АНКЕТА № 29 Оцінка освітніх втрат під час війни",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd_hctynYEjoifcP75kA9p13uLc2FZ0OunsEr32wj_nJsXCDA/viewform?usp=sharing",
-          "order": 44
+          "order": 53
         },
         {
-          "_ref": "s45",
+          "_ref": "s57",
           "number": "31",
-          "area": "other",
+          "area": "stakeholders",
           "title": "АНКЕТА № 31 Роль педагогічних університетів у сфері освіти, науки та розвитку суспільства",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfQhRuorEfvTmWzMsSrC8R_Y1wIup2SFrXyTwF-LFVlulCPhg/viewform",
-          "order": 45
+          "order": 54
         },
         {
-          "_ref": "s46",
+          "_ref": "s58",
           "number": "34",
-          "area": "other",
+          "area": "stakeholders",
           "title": "АНКЕТА № 34 \"Вивчення досвіду профорієнтаційної роботи для здобувачів вищої освіти в ХНПУ імені Г.С. Сковороди",
           "researchGroup": "декан фізико-математичного факультету, відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScBL7hQWljzuNu67BBOguRFTw8NspxYdXWwAsuwUeo3zp4VfA/viewform?usp=sharing",
-          "order": 46
+          "order": 55
         },
         {
-          "_ref": "s47",
+          "_ref": "s59",
           "number": "38",
-          "area": "other",
+          "area": "stakeholders",
           "title": "АНКЕТА № 38 \"Співпраця роботодавців із Харківським національним педагогічним університетом імені Г.С. Сковороди",
           "researchGroup": "завідувач відділу аспірантури і докторантури Ірина РАЗУМЕНКО, завідувач кафедрою технологій дистанційного навчання та цифрової дидактики в дошкільній освіті, гарант ОНП Професійна освіта для здобувачів третього (освітньо-наукового) рівня вищої освіти Світлана ДОЦЕНКО, Доктор педагогічних наук, професор кафедри освітології та інноваційної педагогіки Тетяна СОБЧЕНКО",
           "formUrl": "https://forms.gle/hGQimj9RKiAL1J4R6",
-          "order": 47
+          "order": 56
         }
       ]
     },
@@ -659,471 +746,609 @@
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_11_ankete21.pdf"
         },
         {
-          "_parent": "s18",
+          "_parent": "s19",
           "year": "2021",
           "order": 24,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_22_1.pdf"
         },
         {
-          "_parent": "s18",
+          "_parent": "s19",
           "year": "2022",
           "order": 25,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_1.pdf"
         },
         {
-          "_parent": "s18",
+          "_parent": "s19",
           "year": "2023",
           "order": 26,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_1_2023.pdf"
         },
         {
-          "_parent": "s18",
+          "_parent": "s19",
           "year": "2024",
           "order": 27,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-1.pdf"
         },
         {
-          "_parent": "s19",
+          "_parent": "s20",
           "year": "2021",
           "order": 28,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_22_2.pdf"
         },
         {
-          "_parent": "s19",
+          "_parent": "s20",
           "year": "2022",
           "order": 29,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_2.pdf"
         },
         {
-          "_parent": "s19",
+          "_parent": "s20",
           "year": "2023",
           "order": 30,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_2_2023.pdf"
         },
         {
-          "_parent": "s19",
+          "_parent": "s20",
           "year": "2024",
           "order": 31,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-2.pdf"
         },
         {
-          "_parent": "s20",
+          "_parent": "s21",
           "year": "2021",
           "order": 32,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_anketu_22_3.pdf"
         },
         {
-          "_parent": "s20",
+          "_parent": "s21",
           "year": "2022",
           "order": 33,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_3.pdf"
         },
         {
-          "_parent": "s20",
+          "_parent": "s21",
           "year": "2023",
           "order": 34,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_3_2023.pdf"
         },
         {
-          "_parent": "s20",
+          "_parent": "s21",
           "year": "2024",
           "order": 35,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-3.pdf"
         },
         {
-          "_parent": "s21",
+          "_parent": "s22",
           "year": "2021",
           "order": 36,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_22_4.pdf"
         },
         {
-          "_parent": "s21",
+          "_parent": "s22",
           "year": "2022",
           "order": 37,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_4.pdf"
         },
         {
-          "_parent": "s21",
+          "_parent": "s22",
           "year": "2023",
           "order": 38,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_4_2023.pdf"
         },
         {
-          "_parent": "s21",
+          "_parent": "s22",
           "year": "2024",
           "order": 39,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%2022-4.pdf"
         },
         {
-          "_parent": "s22",
+          "_parent": "s23",
           "year": "2021",
           "order": 40,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_anketu_22_5.pdf"
         },
         {
-          "_parent": "s22",
+          "_parent": "s23",
           "year": "2022",
           "order": 41,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_5.pdf"
         },
         {
-          "_parent": "s22",
+          "_parent": "s23",
           "year": "2023",
           "order": 42,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_5_2023.pdf"
         },
         {
-          "_parent": "s22",
+          "_parent": "s23",
           "year": "2024",
           "order": 43,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-5.pdf"
         },
         {
-          "_parent": "s23",
+          "_parent": "s24",
           "year": "2021",
           "order": 44,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_22_6_ankete.pdf"
         },
         {
-          "_parent": "s23",
+          "_parent": "s24",
           "year": "2022",
           "order": 45,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_6.pdf"
         },
         {
-          "_parent": "s23",
+          "_parent": "s24",
           "year": "2023",
           "order": 46,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_6_2023.pdf"
         },
         {
-          "_parent": "s23",
+          "_parent": "s24",
           "year": "2024",
           "order": 47,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-6.pdf"
         },
         {
-          "_parent": "s24",
+          "_parent": "s25",
           "year": "2021",
           "order": 48,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_22_7.pdf"
         },
         {
-          "_parent": "s24",
+          "_parent": "s25",
           "year": "2022",
           "order": 49,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_7.pdf"
         },
         {
-          "_parent": "s24",
+          "_parent": "s25",
           "year": "2023",
           "order": 50,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_7_2023.pdf"
         },
         {
-          "_parent": "s24",
+          "_parent": "s25",
           "year": "2024",
           "order": 51,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-7.pdf"
         },
         {
-          "_parent": "s25",
+          "_parent": "s26",
           "year": "2021",
           "order": 52,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_22_8.pdf"
         },
         {
-          "_parent": "s25",
+          "_parent": "s26",
           "year": "2022",
           "order": 53,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_8.pdf"
         },
         {
-          "_parent": "s25",
+          "_parent": "s26",
           "year": "2023",
           "order": 54,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_8_2023.pdf"
         },
         {
-          "_parent": "s25",
+          "_parent": "s26",
           "year": "2024",
           "order": 55,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-8.pdf"
         },
         {
-          "_parent": "s26",
+          "_parent": "s27",
           "year": "2021",
           "order": 56,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_anketu_22_9.pdf"
         },
         {
-          "_parent": "s26",
+          "_parent": "s27",
           "year": "2022",
           "order": 57,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_9.pdf"
         },
         {
-          "_parent": "s26",
+          "_parent": "s27",
           "year": "2023",
           "order": 58,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_9_2023.pdf"
         },
         {
-          "_parent": "s26",
+          "_parent": "s27",
           "year": "2024",
           "order": 59,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%20%2022-9.pdf"
         },
         {
-          "_parent": "s27",
+          "_parent": "s28",
           "year": "2021",
           "order": 60,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_22_10.pdf"
         },
         {
-          "_parent": "s27",
+          "_parent": "s28",
           "year": "2022",
           "order": 61,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22Rez_22_10.pdf"
         },
         {
-          "_parent": "s27",
+          "_parent": "s28",
           "year": "2023",
           "order": 62,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/22_10_2023.pdf"
         },
         {
-          "_parent": "s27",
+          "_parent": "s28",
           "year": "2024",
           "order": 63,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20anketuvannia%2022-10.pdf"
         },
         {
-          "_parent": "s28",
+          "_parent": "s31",
           "year": "2023",
           "order": 64,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Anketa%204.pdf"
         },
         {
-          "_parent": "s30",
-          "year": "2022/2023",
+          "_parent": "s33",
+          "year": "2021",
           "order": 65,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty_k_20_ankete.pdf"
+        },
+        {
+          "_parent": "s33",
+          "year": "2022",
+          "order": 66,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_20_ankete_22.pdf"
+        },
+        {
+          "_parent": "s33",
+          "year": "2023",
+          "order": 67,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/23_Rezultaty_20_ank.pdf"
+        },
+        {
+          "_parent": "s33",
+          "year": "2024",
+          "order": 68,
+          "externalUrl": "https://drive.google.com/file/d/1WygTv9Y5CHqp_amAfDNvZX4MDf97Ciob/view?usp=sharing"
+        },
+        {
+          "_parent": "s35",
+          "year": "2022/2023",
+          "order": 69,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/25_2022_2023.pdf"
         },
         {
-          "_parent": "s30",
+          "_parent": "s35",
           "year": "2023/2024",
-          "order": 66,
+          "order": 70,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2025.pdf"
         },
         {
-          "_parent": "s30",
+          "_parent": "s35",
           "year": "2024/2025",
-          "order": 67,
+          "order": 71,
           "externalUrl": "https://drive.google.com/file/d/1RXAqBUiFHqmn-XcrUmrYj_ty6zcLtdaf/view?usp=drive_link"
         },
         {
-          "_parent": "s31",
+          "_parent": "s36",
           "year": "2022/2023",
-          "order": 68,
+          "order": 72,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/26_2022_23.pdf"
         },
         {
-          "_parent": "s31",
+          "_parent": "s36",
           "year": "2023/2024",
-          "order": 69,
+          "order": 73,
           "externalUrl": "https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=22beade2fb&attid=0.1&permmsgid=msg-f:1818868451704689436&th=193deb385505d31c&view=att&disp=inline&realattid=f_m4v8u9mx0&zw&saddbat=ANGjdJ-SwBNLU71mBq27mR8x6fO9l5ajawqMlbHlAwbW2NzOKCcrG28FUTHdUGuaAmBFg9RM3UZ7JXNCao1p_peZmiJBS4YQvFBTuYBwKl9cfH3XGkTL6pVQnN77FrYUBbvBtM0gNUDt6fKFIF0gkLoq5oP6rwiWxyB2NxcKk5TVd3-rIWMtfVQDggpBXLwv-HUOhFLls40_tqkixd4vkGq5hCdjvvG49YBSRZn8javhmHAWTIqKY3lLrOE3Yi0v_pG6_EhOp1HVF5ZxennK-zPJpdc5P72W2WUdEzbSaLu4CQptRo1hRdg3cF5QYogTqgxa3CJv4Q13zKLyYJHOyQei3CgkLi0-lfkAXNehDaY250l-Bq9MDbI7dZiMG457gNcJVWO1-iOSCuFRo3gXhajj_-r97VfsIXPLoLttcJJQsbyRsjrGk6qImeZ5ubwKKS-aW4GbBobQl7GkRZcihdRp8IgsYSWW6NCNkNawcE1qz9AyXvr9UsTzmKsa6WnP7yfWqfXy2RC_YbZ0DoIt2P751A8rn3t09rxbQV9zI8y03Lcr3XUZ6hSXq6nJYp-bIaorZBnK-jjsdFxXq9bwVtCCV-ksRN14852tJ76QUP_VrtFRujr_lUpHtJboFljbeD2S8EikX69lKxbMYyq3n8GsKGp87jL7YGhm80ggvrDZoZGwqZDRociIi_imMvL7WCtRJaNmUjg9EicOmzB9h86fcRRAflLCXZEJ_CFzTtx_FwYugeOjiBRd5AWov96NhhAW1ZXEYzW4d-H61pJkURcgiTJ3Cyq1v8CZSJjCdYB9nfnlFjW4wwCwiGYzaDFJy7zpvVSCVClADUE8TP9agvHT1D5DKL5Dg5A-Ysa-GCv0rSRgIhPAGLFMK310NrzpZdgpUkOVqBPA4e8w5xPmfw_x3t-9aZLFpd1ShWgWCCyPgIWOvqMn8glJmPiSJLg0VWEB_aZtPXh6lRr33Al0Ksem_Tx2KDMef8eHjoKH_qVvlh-zsa1jrWgUGB-Ng9sLVA8SSz4WZorfcLWhXXw0"
         },
         {
-          "_parent": "s31",
+          "_parent": "s36",
           "year": "2025/2026",
-          "order": 70,
+          "order": 74,
           "externalUrl": "https://drive.google.com/file/d/10YsL3RZLRKkhqcfsFXK1uOv4NOzumyi5/view?usp=drive_link"
         },
         {
-          "_parent": "s32",
+          "_parent": "s37",
           "year": "2023",
-          "order": 71,
+          "order": 75,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/2023_rez_30.pdf"
         },
         {
-          "_parent": "s32",
+          "_parent": "s37",
           "year": "2025",
-          "order": 72,
+          "order": 76,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%20nomer%2030%20otsinka%20osvitnoho%20seredovyshcha%20(1).pdf"
         },
         {
-          "_parent": "s33",
+          "_parent": "s38",
           "year": "2023",
-          "order": 73,
+          "order": 77,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Funktsionuvannia%20derzhavnoi%20movy%20v%20universyteti.pdf"
         },
         {
-          "_parent": "s33",
+          "_parent": "s38",
           "year": "2024",
-          "order": 74,
+          "order": 78,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2032.pdf"
         },
         {
-          "_parent": "s33",
+          "_parent": "s38",
           "year": "2025",
-          "order": 75,
+          "order": 79,
           "externalUrl": "https://drive.google.com/file/d/1jFW8HT7OTmHO_4C9Hm1_O6yEGr39ph_5/view?usp=drive_link"
         },
         {
-          "_parent": "s34",
+          "_parent": "s39",
           "year": "2024",
-          "order": 76,
+          "order": 80,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rez_35_2024.pdf"
         },
         {
-          "_parent": "s36",
+          "_parent": "s41",
           "year": "2021",
-          "order": 77,
+          "order": 81,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_14_ankete21.pdf"
         },
         {
-          "_parent": "s36",
+          "_parent": "s41",
           "year": "2022",
-          "order": 78,
+          "order": 82,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Resultaty-k-ankete-14_22.pdf"
         },
         {
-          "_parent": "s36",
+          "_parent": "s41",
           "year": "2023",
-          "order": 79,
+          "order": 83,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty14%2023.pdf"
         },
         {
-          "_parent": "s36",
+          "_parent": "s41",
           "year": "2024",
-          "order": 80,
+          "order": 84,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2014.pdf"
         },
         {
-          "_parent": "s37",
+          "_parent": "s42",
           "year": null,
-          "order": 81,
+          "order": 85,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_18_1.pdf"
         },
         {
-          "_parent": "s38",
+          "_parent": "s43",
           "year": null,
-          "order": 82,
+          "order": 86,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_18_2.pdf"
         },
         {
-          "_parent": "s39",
+          "_parent": "s44",
           "year": null,
-          "order": 83,
+          "order": 87,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_18_3.pdf"
         },
         {
-          "_parent": "s40",
+          "_parent": "s45",
           "year": "2021",
-          "order": 84,
+          "order": 88,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_16_ankety.pdf"
         },
         {
-          "_parent": "s40",
+          "_parent": "s45",
           "year": "2022",
-          "order": 85,
+          "order": 89,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rez_realizacia_molod_politituky_anketa_16.pdf"
         },
         {
-          "_parent": "s40",
+          "_parent": "s45",
           "year": "2023",
-          "order": 86,
+          "order": 90,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/16_2023.pdf"
         },
         {
-          "_parent": "s40",
+          "_parent": "s45",
           "year": "2024",
-          "order": 87,
+          "order": 91,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2016.pdf"
         },
         {
-          "_parent": "s41",
+          "_parent": "s46",
           "year": "2025/2026",
-          "order": 88,
+          "order": 92,
           "externalUrl": "https://drive.google.com/file/d/1AoIWZzRrZEYYjocZY3FENkTRKY2qBCUN/view?usp=drive_link"
         },
         {
-          "_parent": "s42",
+          "_parent": "s47",
           "year": "2021",
-          "order": 89,
+          "order": 93,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_anketu_17.pdf"
         },
         {
-          "_parent": "s42",
+          "_parent": "s47",
           "year": "2022",
-          "order": 90,
+          "order": 94,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_anketu_17%20(2022).pdf"
         },
         {
-          "_parent": "s42",
+          "_parent": "s47",
           "year": "2023",
-          "order": 91,
+          "order": 95,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/17_2023.pdf"
         },
         {
-          "_parent": "s42",
+          "_parent": "s47",
           "year": "2024",
-          "order": 92,
+          "order": 96,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2017.pdf"
         },
         {
-          "_parent": "s43",
+          "_parent": "s48",
           "year": "2021",
-          "order": 93,
+          "order": 97,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_19_ankete.pdf"
         },
         {
-          "_parent": "s43",
+          "_parent": "s48",
           "year": "2022",
-          "order": 94,
+          "order": 98,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_19_ankete_22.pdf"
         },
         {
-          "_parent": "s43",
+          "_parent": "s48",
           "year": "2023",
-          "order": 95,
+          "order": 99,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/19_2023.pdf"
         },
         {
-          "_parent": "s43",
+          "_parent": "s48",
           "year": "2024",
-          "order": 96,
+          "order": 100,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2019.pdf"
         },
         {
-          "_parent": "s44",
+          "_parent": "s49",
+          "year": "2024",
+          "order": 101,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%209.pdf"
+        },
+        {
+          "_parent": "s49",
+          "year": "2025",
+          "order": 102,
+          "externalUrl": "https://drive.google.com/file/d/1FVlTjqbyQ4SypQ5DCAXqFr95dfUjGTYn/view?usp=sharing"
+        },
+        {
+          "_parent": "s50",
+          "year": "2024",
+          "order": 103,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/rez_10_2024.pdf"
+        },
+        {
+          "_parent": "s50",
+          "year": "2025",
+          "order": 104,
+          "externalUrl": "https://drive.google.com/file/d/1HrqE6ndBc3Ap9AWUDpwDLRtwh5lvxNCS/view?usp=drive_link"
+        },
+        {
+          "_parent": "s51",
+          "year": "2021",
+          "order": 105,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rez_anketu_15.pdf"
+        },
+        {
+          "_parent": "s51",
+          "year": "2022",
+          "order": 106,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_k_15_ankete_22.pdf"
+        },
+        {
+          "_parent": "s51",
           "year": "2023",
-          "order": 97,
+          "order": 107,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/2023_Rezultaty%20_nketuv_15.pdf"
+        },
+        {
+          "_parent": "s51",
+          "year": "2024",
+          "order": 108,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2015.pdf"
+        },
+        {
+          "_parent": "s52",
+          "year": "2021",
+          "order": 109,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_21_anketu.pdf"
+        },
+        {
+          "_parent": "s52",
+          "year": "2022",
+          "order": 110,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultatu_anketu_21_22.pdf"
+        },
+        {
+          "_parent": "s52",
+          "year": "2023",
+          "order": 111,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/21_2023.pdf"
+        },
+        {
+          "_parent": "s52",
+          "year": "2024",
+          "order": 112,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2021.pdf"
+        },
+        {
+          "_parent": "s52",
+          "year": "2025",
+          "order": 113,
+          "externalUrl": "https://drive.google.com/file/d/1hu54QwpGRc65EuofKnrcgXQ_HuyiUC3X/view?usp=drive_link"
+        },
+        {
+          "_parent": "s1",
+          "year": "2023",
+          "order": 114,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/27_2023.pdf"
+        },
+        {
+          "_parent": "s1",
+          "year": "2024",
+          "order": 115,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Rez_27_2024.pdf"
+        },
+        {
+          "_parent": "s1",
+          "year": "2025",
+          "order": 116,
+          "externalUrl": "https://drive.google.com/file/d/17D69nMQK57l7jMqUa4OPH4z6km3J1Hqx/view?usp=drive_link"
+        },
+        {
+          "_parent": "s1",
+          "year": "2023",
+          "order": 117,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/28_2023.pdf"
+        },
+        {
+          "_parent": "s1",
+          "year": "2024",
+          "order": 118,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Rez_28_2024.pdf"
+        },
+        {
+          "_parent": "s1",
+          "year": "2025",
+          "order": 119,
+          "externalUrl": "https://drive.google.com/file/d/1HrqE6ndBc3Ap9AWUDpwDLRtwh5lvxNCS/view?usp=drive_link"
+        },
+        {
+          "_parent": "s56",
+          "year": "2023",
+          "order": 120,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/29_2023.pdf"
         },
         {
-          "_parent": "s44",
+          "_parent": "s56",
           "year": "2024",
-          "order": 98,
+          "order": 121,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rezultaty%20ankety%2029.pdf"
         },
         {
-          "_parent": "s45",
+          "_parent": "s57",
           "year": "2023",
-          "order": 99,
+          "order": 122,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/31_2023.pdf"
         },
         {
-          "_parent": "s45",
+          "_parent": "s57",
           "year": "2024",
-          "order": 100,
+          "order": 123,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Rez_31_2024.pdf"
         },
         {
-          "_parent": "s45",
+          "_parent": "s57",
           "year": "2025",
-          "order": 101,
+          "order": 124,
           "externalUrl": "https://drive.google.com/file/d/1yhZL94e3RGQF3HmW0kyZo8YEYCZx_dLZ/view?usp=drive_link"
         }
       ]

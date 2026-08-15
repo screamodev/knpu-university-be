@@ -1,0 +1,65 @@
+{
+  "source": "https://hnpu.edu.ua/uk/division/na-dopomogu-zdobuvachevi-naukovogo-stupenya",
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": ["section", "title"],
+      "rows": [
+        {
+          "section": "candidate-support",
+          "title": "Алгоритм утворення разової ради для захисту дисертації на здобуття ступеня доктора філософії",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Alhorytm_stvorennia_razovoi%20rady_dlia_zakhystu.pdf"
+        },
+        {
+          "section": "candidate-support",
+          "title": "Положення про створення та організацію роботи разових спеціалізованих учених рад для присудження ступеня доктора філософії",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Normat_dokum/Pol/Pol_pro_raz_v_%20r_dokt_%20filosofii.pdf"
+        },
+        {
+          "section": "candidate-support",
+          "title": "Зразки оформлення документів",
+          "order": 3,
+          "externalUrl": "https://docs.google.com/document/d/18KkK-RfRpkFVgsgU0y8vHegP-KLb6w9q/edit?usp=sharing"
+        },
+        {
+          "section": "candidate-support",
+          "title": "Перелік документів, що подаються до атестаційної справи",
+          "order": 4,
+          "externalUrl": "https://docs.google.com/document/d/1GdUvAxInEjUYaKVweObDxJzfSqevENOtX3MTx170RZA/edit?tab=t.0"
+        },
+        {
+          "section": "academic-title-support",
+          "title": "Наказ МОН України № 13 від 14.01.2016 «Про затвердження Порядку присвоєння вчених звань науковим і науково-педагогічним працівникам»",
+          "order": 1,
+          "externalUrl": "https://zakon.rada.gov.ua/laws/show/z0183-16#Text"
+        },
+        {
+          "section": "academic-title-support",
+          "title": "Умови отримання вченого звання",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/dlya_otrymannya_vchenogo_zvannya_neobkhidno.pdf"
+        },
+        {
+          "section": "academic-title-support",
+          "title": "Перелік документів",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/2022/Perelik_dok.pdf"
+        },
+        {
+          "section": "academic-title-support",
+          "title": "Зразки оформлення документів",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/2022/zrazky_oformlennya_dokumentiv%20(1).pdf"
+        },
+        {
+          "section": "academic-title-support",
+          "title": "Бюлетень. Зразок",
+          "order": 5,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/byuleteni_zrazok.pdf"
+        }
+      ]
+    }
+  ]
+}

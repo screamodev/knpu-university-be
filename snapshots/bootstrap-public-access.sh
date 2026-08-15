@@ -151,6 +151,7 @@ add_perm science_directions read "$ALL" "$PUBLISHED_FILTER"
 add_perm student_council_info read "$ALL" "$PUBLISHED_FILTER"
 add_perm student_council_members read "$ALL" "$PUBLISHED_FILTER"
 add_perm student_council_sectors read "$ALL" "$PUBLISHED_FILTER"
+add_perm cooperation_agreements read "$ALL" "$PUBLISHED_FILTER"
 add_perm dissertation_councils read "$ALL" "$PUBLISHED_FILTER"
 add_perm dissertation_council_files read "$ALL" "$PUBLISHED_FILTER"
 # Read by the Nuxt server middleware (unauthenticated) to 301 old hnpu.edu.ua URLs.

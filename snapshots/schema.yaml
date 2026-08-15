@@ -246,6 +246,32 @@ collections:
       versioning: false
     schema:
       name: contingent_reports
+  - collection: cooperation_agreements
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: status
+      archive_value: archived
+      collapse: open
+      collection: cooperation_agreements
+      color: null
+      display_template: '{{number}} · {{partner}}'
+      group: null
+      hidden: false
+      icon: handshake
+      item_duplication_fields: null
+      note: >-
+        Договори, угоди та меморандуми про співпрацю. П’ять розділів — по одній
+        сторінці на кожен, як накази з основної діяльності.
+      preview_url: null
+      singleton: false
+      sort: 44
+      sort_field: order
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: cooperation_agreements
   - collection: dissertation_council_files
     meta:
       accountability: all
@@ -3195,7 +3221,8 @@ fields:
         folder: 9f1d4e2a-6c3b-4a51-9e77-1c0b5d2f8a10
         font: sans-serif
         tinymceOverrides:
-          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
+          content_css: >-
+            data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D
         toolbar:
           - undo
           - redo
@@ -3271,7 +3298,8 @@ fields:
         folder: 9f1d4e2a-6c3b-4a51-9e77-1c0b5d2f8a10
         font: sans-serif
         tinymceOverrides:
-          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
+          content_css: >-
+            data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D
         toolbar:
           - undo
           - redo
@@ -4641,6 +4669,650 @@ fields:
       has_auto_increment: false
       foreign_key_table: null
       foreign_key_column: null
+  - collection: cooperation_agreements
+    field: id
+    type: uuid
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      searchable: true
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: cooperation_agreements
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_indexed: false
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: status
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+        showAsDot: true
+      field: status
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: null
+      options:
+        choices:
+          - color: '#2ECDA7'
+            text: $t:published
+            value: published
+          - color: '#D3DAE4'
+            text: $t:draft
+            value: draft
+          - color: '#A2B5CD'
+            text: $t:archived
+            value: archived
+      readonly: false
+      required: false
+      searchable: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: status
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: draft
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: category
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: labels
+      display_options:
+        choices:
+          - text: З Інститутами НАПН та НАН України
+            value: napn
+          - text: Із закладами вищої освіти України
+            value: universities
+          - text: Із закладами середньої, дошкільної освіти та відділами освіти
+            value: schools
+          - text: З організаціями й установами України
+            value: organizations
+          - text: Міжнародні договори, угоди, меморандуми
+            value: international
+      field: category
+      group: null
+      hidden: false
+      interface: select-dropdown
+      note: Розділ — визначає, на якій сторінці рядок з’явиться.
+      options:
+        choices:
+          - text: З Інститутами НАПН та НАН України
+            value: napn
+          - text: Із закладами вищої освіти України
+            value: universities
+          - text: Із закладами середньої, дошкільної освіти та відділами освіти
+            value: schools
+          - text: З організаціями й установами України
+            value: organizations
+          - text: Міжнародні договори, угоди, меморандуми
+            value: international
+      readonly: false
+      required: true
+      searchable: true
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: category
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: number
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: number
+      group: null
+      hidden: false
+      interface: input
+      note: Номер у переліку розділу.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: number
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 16
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: agreementDate
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: agreementDate
+      group: null
+      hidden: false
+      interface: input
+      note: Дата укладання так, як у реєстрі.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: agreementDate
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 64
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: year
+    type: integer
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: year
+      group: null
+      hidden: false
+      interface: input
+      note: Рік укладання — за ним працює фільтр на сторінці.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: year
+      table: cooperation_agreements
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: partner
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: partner
+      group: null
+      hidden: false
+      interface: input
+      note: Друга сторона договору.
+      options: null
+      readonly: false
+      required: true
+      searchable: true
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: partner
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: partnerEn
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: partnerEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: partnerEn
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 500
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: subject
+    type: text
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: subject
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: Вид документа й предмет співпраці.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: subject
+      table: cooperation_agreements
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: subjectEn
+    type: text
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: subjectEn
+      group: null
+      hidden: false
+      interface: input-multiline
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: subjectEn
+      table: cooperation_agreements
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: country
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: country
+      group: null
+      hidden: false
+      interface: input
+      note: Країна — для міжнародних угод.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: country
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: countryEn
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: countryEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: countryEn
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: term
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: term
+      group: null
+      hidden: false
+      interface: input
+      note: Термін дії.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 13
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: term
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: termEn
+    type: string
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: termEn
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 14
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: termEn
+      table: cooperation_agreements
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: cooperation_agreements
+    field: order
+    type: integer
+    meta:
+      collection: cooperation_agreements
+      conditions: null
+      display: null
+      display_options: null
+      field: order
+      group: null
+      hidden: false
+      interface: input
+      note: Порядок у списку на сайті.
+      options: null
+      readonly: false
+      required: false
+      searchable: true
+      sort: 15
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: half
+    schema:
+      name: order
+      table: cooperation_agreements
+      data_type: integer
+      default_value: 0
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_indexed: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: dissertation_council_files
     field: id
     type: uuid
@@ -5619,9 +6291,10 @@ fields:
       hidden: false
       interface: input-rich-text-html
       note: 'Текст сторінки: склад ради, документи до захисту, контакти.'
-options:
+      options:
         tinymceOverrides:
-          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
+          content_css: >-
+            data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D
       readonly: false
       required: false
       searchable: true
@@ -5953,6 +6626,20 @@ options:
             value: science-schools
           - text: Контакти — довідники
             value: contacts
+          - text: Вартість навчання
+            value: tuition
+          - text: Вступ — перелік освітніх програм і ліцензовані обсяги
+            value: admissions-programmes
+          - text: Вступ — рейтингові списки вступників
+            value: admissions-rating-lists
+          - text: Вступ — рекомендації до зарахування
+            value: admissions-recommendations
+          - text: Вступ — накази про зарахування
+            value: admissions-enrolment-orders
+          - text: Наукова рада
+            value: science-council
+          - text: Наукові заходи
+            value: science-events
       field: section
       group: null
       hidden: false
@@ -6008,6 +6695,20 @@ options:
             value: science-schools
           - text: Контакти — довідники
             value: contacts
+          - text: Вартість навчання
+            value: tuition
+          - text: Вступ — перелік освітніх програм і ліцензовані обсяги
+            value: admissions-programmes
+          - text: Вступ — рейтингові списки вступників
+            value: admissions-rating-lists
+          - text: Вступ — рекомендації до зарахування
+            value: admissions-recommendations
+          - text: Вступ — накази про зарахування
+            value: admissions-enrolment-orders
+          - text: Наукова рада
+            value: science-council
+          - text: Наукові заходи
+            value: science-events
       readonly: false
       required: true
       searchable: true
@@ -7258,7 +7959,7 @@ options:
     meta:
       collection: events
       conditions: null
-      display: null
+      display: text-with-tooltip
       display_options: null
       field: title
       group: null
@@ -9758,8 +10459,22 @@ options:
             value: phd-programmes
           - text: Освітнє середовище
             value: educational-environment
-          - text: Наукова діяльність
+          - text: Наукова й інноваційна діяльність
             value: research
+          - text: Міжнародне співробітництво
+            value: international
+          - text: Молодіжна політика
+            value: youth-policy
+          - text: Менеджмент і кадрове забезпечення
+            value: management
+          - text: Взаємодія внутрішніх і зовнішніх стейкхолдерів
+            value: stakeholders
+          - text: Експрес-опитування
+            value: express
+          - text: >-
+              Результати рейтингового оцінювання науково-педагогічних
+              працівників
+            value: staff-rating
           - text: Інше
             value: other
       readonly: false
@@ -11140,7 +11855,7 @@ options:
     meta:
       collection: programmes
       conditions: null
-      display: null
+      display: text-with-tooltip
       display_options: null
       field: title
       group: null
@@ -14238,9 +14953,10 @@ options:
       hidden: false
       interface: input-rich-text-html
       note: Про студентське самоврядування — вступний текст сторінки.
-options:
+      options:
         tinymceOverrides:
-          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
+          content_css: >-
+            data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D
       readonly: false
       required: false
       searchable: true
@@ -14280,9 +14996,10 @@ options:
       hidden: false
       interface: input-rich-text-html
       note: Місія.
-options:
+      options:
         tinymceOverrides:
-          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
+          content_css: >-
+            data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D
       readonly: false
       required: false
       searchable: true
@@ -14322,9 +15039,10 @@ options:
       hidden: false
       interface: input-rich-text-html
       note: Завдання.
-options:
+      options:
         tinymceOverrides:
-          content_css: 'data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
+          content_css: >-
+            data:text/css;charset=utf-8,a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3Btext-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D
       readonly: false
       required: false
       searchable: true

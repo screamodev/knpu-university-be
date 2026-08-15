@@ -1,0 +1,609 @@
+{
+  "source": "https://hnpu.edu.ua/uk/uhvaly-vchenoyi-rady",
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": [
+        "section",
+        "title"
+      ],
+      "rows": [
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 19.02.2026",
+          "documentDate": "2026-02-19",
+          "order": 1,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2026/uchvaly_vrady_19_02_2026_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 18.12.2025",
+          "documentDate": "2025-12-18",
+          "order": 2,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2025/uchvaly_vrady_18_12_2025_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.04.2025",
+          "documentDate": "2025-04-30",
+          "order": 3,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Rada/Uhvaly/uchvaly_vrady_30_04_2025%20(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 26.03.2025",
+          "documentDate": "2025-03-26",
+          "order": 4,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2025/uchvaly_vrady_26_03_2025_a_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 18.02.2025",
+          "documentDate": "2025-02-18",
+          "order": 5,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Rada/Uhvaly/uchvaly_vrady_18_02_2025_1.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 23.01.2025",
+          "documentDate": "2025-01-23",
+          "order": 6,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2025/uchvaly_vrady_23_01_2025_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 03.01.2025",
+          "documentDate": "2025-01-03",
+          "order": 7,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2025/uchvaly_vrady_03_01_2025_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 05.12.2024",
+          "documentDate": "2024-12-05",
+          "order": 8,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_05_12_2024_a.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 05.11.2024",
+          "documentDate": "2024-11-05",
+          "order": 9,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_05_11_2024_(a).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 09.10.2024",
+          "documentDate": "2024-10-09",
+          "order": 10,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_09_10_2024_(a).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 10.09.2024",
+          "documentDate": "2024-09-10",
+          "order": 11,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_10_09_2024_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 02.08.2024",
+          "documentDate": "2024-08-02",
+          "order": 12,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_02_08_2024_(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 29.06.2024",
+          "documentDate": "2024-06-29",
+          "order": 13,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Rada/Uhvaly/uchvaly_vrady_29_06_2024_1.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.05.2024",
+          "documentDate": "2024-05-30",
+          "order": 14,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_30_05_2024(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 25.04.2024",
+          "documentDate": "2024-04-25",
+          "order": 15,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_25_04_2024%20(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 25.03.2024",
+          "documentDate": "2024-03-25",
+          "order": 16,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_25_03_2024_(a).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 20.02.2024",
+          "documentDate": "2024-02-20",
+          "order": 17,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_20_02_2024_II.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.01.2024",
+          "documentDate": "2024-01-30",
+          "order": 18,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_30_01_2024_a%20.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 11.01.2024",
+          "documentDate": "2024-01-11",
+          "order": 19,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2024/uchvaly_vrady_11_01_2024_a.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 26.12.2023",
+          "documentDate": "2023-12-26",
+          "order": 20,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_26_12_2023_a.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 05.12.2023",
+          "documentDate": "2023-12-05",
+          "order": 21,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_05_12_2023_b.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 03.11.2023",
+          "documentDate": "2023-11-03",
+          "order": 22,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_03_11_2023_(b).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 20.09.2023",
+          "documentDate": "2023-09-20",
+          "order": 23,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vrady_20_09_2023_(c).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 01.09.2023",
+          "documentDate": "2023-09-01",
+          "order": 24,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_01_09_2023_(c)%20(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.06.2023",
+          "documentDate": "2023-06-30",
+          "order": 25,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_30_06_2023_(a).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 06.06.2023",
+          "documentDate": "2023-06-06",
+          "order": 26,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_06_06_2023_(a).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 18.04.2023",
+          "documentDate": "2023-04-18",
+          "order": 27,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_18_04_2023_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 27.03.2023",
+          "documentDate": "2023-03-27",
+          "order": 28,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_27_03_2023_1.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 28.02.2023",
+          "documentDate": "2023-02-28",
+          "order": 29,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_28_02_2023_(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.01.2023",
+          "documentDate": "2023-01-30",
+          "order": 30,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2023/uchvaly_vrady_30_01_2023_(b).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 12.12.2022",
+          "documentDate": "2022-12-12",
+          "order": 31,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_12_12_2022_(a)_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 14.11.2022",
+          "documentDate": "2022-11-14",
+          "order": 32,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_14_11_2022__(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 11.10.2022",
+          "documentDate": "2022-10-11",
+          "order": 33,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_11_10_2022_(a).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 02.09.2022",
+          "documentDate": "2022-09-02",
+          "order": 34,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_02_09_2022_(b).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 11.08.2022",
+          "documentDate": "2022-08-11",
+          "order": 35,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_11_08_2022_(a).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 24.06.2022",
+          "documentDate": "2022-06-24",
+          "order": 36,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_24_06_2022_(a)_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 23.05.2022",
+          "documentDate": "2022-05-23",
+          "order": 37,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_23_05_2022.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 20.04.2022",
+          "documentDate": "2022-04-20",
+          "order": 38,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_20_04_2022.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 14.02.2022",
+          "documentDate": "2022-02-14",
+          "order": 39,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_14_02_2022_a.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 02.02.2022",
+          "documentDate": "2022-02-02",
+          "order": 40,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/2022/uchvaly_vrady_02_02_2022_a.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 14.12.2021",
+          "documentDate": "2021-12-14",
+          "order": 41,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vrady_14_12_2021_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 01.12.2021",
+          "documentDate": "2021-12-01",
+          "order": 42,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uvr_01_12_2021_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 26.10.2021",
+          "documentDate": "2021-10-26",
+          "order": 43,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uvr_26_10_2021.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.09.2021",
+          "documentDate": "2021-09-30",
+          "order": 44,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uvr_30_09_2021%20(2).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 10.09.2021",
+          "documentDate": "2021-09-10",
+          "order": 45,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uvr_10_09_21.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.08.2021",
+          "documentDate": "2021-08-30",
+          "order": 46,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uvr_30_08_2021.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 29.06.2021",
+          "documentDate": "2021-06-29",
+          "order": 47,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uvr_29_06_2021.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 02.06.2021",
+          "documentDate": "2021-06-02",
+          "order": 48,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_02_06_2021.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 17.05.2021",
+          "documentDate": "2021-05-17",
+          "order": 49,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vrady_17_05_2021_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 22.02.2021",
+          "documentDate": "2021-02-22",
+          "order": 50,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_22_02_2021_(1).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 08.02.2021",
+          "documentDate": "2021-02-08",
+          "order": 51,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_08_02_2021.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 28.12.2020",
+          "documentDate": "2020-12-28",
+          "order": 52,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_28_12_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 21.12.2020",
+          "documentDate": "2020-12-21",
+          "order": 53,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_2112_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 12.10.2020",
+          "documentDate": "2020-10-12",
+          "order": 54,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vcenoi_rady_%2012_10_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 03.09.2020",
+          "documentDate": "2020-09-03",
+          "order": 55,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_03_09_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.06.2020",
+          "documentDate": "2020-06-30",
+          "order": 56,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uvr_30_06_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 12.06.2020",
+          "documentDate": "2020-06-12",
+          "order": 57,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_%2012_06_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 27.04.2020",
+          "documentDate": "2020-04-27",
+          "order": 58,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_%2027_04_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 27.02.2020",
+          "documentDate": "2020-02-27",
+          "order": 59,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_%2027_02_2020.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.12.2019",
+          "documentDate": "2019-12-30",
+          "order": 60,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_30_12_2019.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 20.12.2019",
+          "documentDate": "2019-12-20",
+          "order": 61,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_20_12_2019_%D0%B0.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 28.10.2019",
+          "documentDate": "2019-10-28",
+          "order": 62,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_28_10_2019_.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 29.08.2019",
+          "documentDate": "2019-08-29",
+          "order": 63,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vcenoi_rady_%2029_08_2019.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 27.06.2019",
+          "documentDate": "2019-06-27",
+          "order": 64,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_27_06_2019.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від Ухвали Вченої ради від 3.06.2019 року",
+          "documentDate": null,
+          "order": 65,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vcenoi_rady_3_06_2019.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від Ухвали Вченої ради від 8.04.2019 року",
+          "documentDate": null,
+          "order": 66,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vrady_8.04.2019.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 28.02.2019",
+          "documentDate": "2019-02-28",
+          "order": 67,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_%2028_02_2019_%D0%B0.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 24.01.2019",
+          "documentDate": "2019-01-24",
+          "order": 68,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_24_01_2019.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 18.12.2018",
+          "documentDate": "2018-12-18",
+          "order": 69,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_18_12_2018.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 25.10.2018",
+          "documentDate": "2018-10-25",
+          "order": 70,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vrady_25.10.2018.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.08.2018",
+          "documentDate": "2018-08-30",
+          "order": 71,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady%2030_08_2018.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 26.06.2018",
+          "documentDate": "2018-06-26",
+          "order": 72,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_26_06_2018.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 29.05.2018",
+          "documentDate": "2018-05-29",
+          "order": 73,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_29_05_2018.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 24.04.2018",
+          "documentDate": "2018-04-24",
+          "order": 74,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_24_04_2018%20(2).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 27.02.2018",
+          "documentDate": "2018-02-27",
+          "order": 75,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_%2027_02_2018.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 30.01.2018",
+          "documentDate": "2018-01-30",
+          "order": 76,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_30_01_2018.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 22.12.2017",
+          "documentDate": "2017-12-22",
+          "order": 77,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_22_12_2017__.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 21.11.2017",
+          "documentDate": "2017-11-21",
+          "order": 78,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady__21_11_2017.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 31.10.2017",
+          "documentDate": "2017-10-31",
+          "order": 79,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady__31_10_2017.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 29.08.2017",
+          "documentDate": "2017-08-29",
+          "order": 80,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady__29_08_2017.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 20.06.2017",
+          "documentDate": "2017-06-20",
+          "order": 81,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vhenoi_rady_20_06_2017.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 23.05.2017",
+          "documentDate": "2017-05-23",
+          "order": 82,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_23_05_2017.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 25.04.2017",
+          "documentDate": "2017-04-25",
+          "order": 83,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_25_04_2017.pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 10.03.2017",
+          "documentDate": "2017-03-10",
+          "order": 84,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/Uchvaly_vchenoi_rady_%2010_03_2017(2).pdf"
+        },
+        {
+          "section": "academic-council-decisions",
+          "title": "Ухвали вченої ради від 10.02.2017",
+          "documentDate": "2017-02-10",
+          "order": 85,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/Vchena_rada/Uhvala/uchvaly_vchenoi_rady_10_02_2017.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "source": "http://smc.hnpu.edu.ua/",
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": ["section", "title"],
+      "rows": [
+        {
+          "section": "quality-centre",
+          "title": "Положення про центр забезпечення якості освіти",
+          "order": 1,
+          "_file": "http://smc.hnpu.edu.ua/files/Polozhennya/Centr.pdf"
+        }
+      ]
+    }
+  ]
+}
