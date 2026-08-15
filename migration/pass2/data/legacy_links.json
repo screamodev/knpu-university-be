@@ -45,6 +45,25 @@
     "smc/akredytatsiya": "/education/quality?tab=accreditation",
     "smc/dokumenty": "/education/quality?tab=documents",
     "smc/node/41": "/education/quality?tab=programmes",
-    "smc/node/43": "/education/quality?tab=programmes"
+    "smc/node/43": "/education/quality?tab=programmes",
+    "division/abituriyentu-aspirantury-i-doktorantury": "/admissions/graduate",
+    "smc/osvitni-prohramy": "/education/quality?tab=programmes",
+    "vartist-navchannya-u-2-0-2-0-roci-rekvizyty-dlya-oplaty": "/admissions/tuition",
+    "vartist-navchannya-u-2-0-2-2-roci-rekvizyty-dlya-oplaty": "/admissions/tuition",
+    "podacha-elektronnoyi-zayavy-elektronnyy-kabinet": "/admissions/edebo",
+    "ugody-partnerski-organizaciyi": "/university/agreements",
+    "antykorupciyni-zahody": "/university/structure",
+    "division/navchalno-metodychna-laboratoriya-vyvchennya-korupciynyh-ryzykiv-v-osviti-i-zahystu": "/university/structure",
+    "fac-histor": "/university/structure/history-law",
+    "fac-inoz-fil": "/university/structure/foreign-philology",
+    "fac-prirodn": "/university/structure/special-education",
+    "fac-fizvosp": "/university/structure/physical-education",
+    "division/ukrayinskyy-movno-literaturnyy-fakultet": "/university/structure/ukrainian-philology",
+    "division/fakultet-doshkilnoyi-osvity": "/university/structure/preschool",
+    "division/fakultet-mystectv": "/university/structure/arts",
+    "division/fizyko-matematychnyy-fakultet": "/university/structure/mathematics-informatics",
+    "division/fakultet-psyhologiyi-i-sociologiyi": "/university/structure/social-humanities",
+    "division/fakultet-pochatkovogo-navchannya": "/university/structure/preschool",
+    "division/yurydychnyy-fakultet": "/university/structure/history-law"
   }
 }

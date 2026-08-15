@@ -160,6 +160,28 @@ def drop_empty_anchors(markup: str) -> tuple[str, int]:
     return markup, unwrapped + dropped
 
 
+# ── вбудовані документи ──────────────────────────────────────────────────────────────────────
+
+# Опубліковані Google-презентації та документи: на старому сайті вони стояли в <iframe>, але при
+# перенесенні лишилися голим покликанням, і сторінка показувала довгий URL замість слайдів.
+EMBED_LINK_RE = re.compile(
+    r'<a\s[^>]*href="(?P<href>https://(?:docs|drive)\.google\.com/[^"]*?(?:pubembed|/preview)[^"]*)"[^>]*>'
+    r'(?P<label>.*?)</a>', re.S)
+
+
+def restore_embeds(markup: str) -> tuple[str, int]:
+    def replace(match: re.Match[str]) -> str:
+        href = html_mod.unescape(match.group('href'))
+        label = strip_tags(match.group('label'))
+        # Покликання з осмисленою назвою лишаємо покликанням — вбудовуємо лише «голі» адреси.
+        if label and not label.startswith('http'):
+            return match.group(0)
+        return (f'<iframe src="{html_mod.escape(href, quote=True)}" '
+                f'frameborder="0" allowfullscreen></iframe>')
+
+    return EMBED_LINK_RE.subn(replace, markup)
+
+
 # ── спойлери → списки файлів ─────────────────────────────────────────────────────────────────
 
 def spoiler_item(match: re.Match[str]) -> str:
@@ -336,6 +358,9 @@ def tidy_html(markup: str, buttons, link_map, stats: Counter, unmatched: Counter
 
     markup, spoilers = convert_spoilers(markup)
     stats['спойлери'] += spoilers
+
+    markup, embeds = restore_embeds(markup)
+    stats['вбудовані документи'] += embeds
 
     markup, kept, dropped = convert_banners(markup, buttons)
     stats['банери → кнопки'] += kept

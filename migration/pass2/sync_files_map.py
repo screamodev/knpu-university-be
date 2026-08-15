@@ -40,6 +40,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--map', default=str(HERE / 'files.map.json'))
+    parser.add_argument('--by-id', action='store_true',
+                        help='карта записана навпаки, uuid → джерело (одне джерело під кількома '
+                             'uuid, як у ../admissions/data/images.map.json)')
     parser.add_argument('--folder', default=DEFAULT_FOLDER)
     parser.add_argument('--limit', type=int, help='зупинитися після стількох завантажень')
     parser.add_argument('--directus-url', default=os.environ.get('DIRECTUS_URL') or 'http://localhost:8055')
@@ -50,13 +53,17 @@ def main() -> int:
     args = parser.parse_args()
 
     mapping: dict[str, str] = json.loads(Path(args.map).read_text(encoding='utf-8'))
+    if args.by_id:
+        pairs = [(source, file_id) for file_id, source in mapping.items()]
+    else:
+        pairs = list(mapping.items())
 
     token = args.token or login(args.directus_url, args.email, args.password)
     directus = Directus(args.directus_url, token)
 
-    present = present_file_ids(directus, mapping.values())
-    todo = [(url, file_id) for url, file_id in mapping.items() if file_id not in present]
-    print(f'{len(mapping)} у карті · {len(present)} уже на цілі · {len(todo)} довантажити',
+    present = present_file_ids(directus, [file_id for _, file_id in pairs])
+    todo = [(url, file_id) for url, file_id in pairs if file_id not in present]
+    print(f'{len(pairs)} у карті · {len(present)} уже на цілі · {len(todo)} довантажити',
           file=sys.stderr)
     if args.dry_run or not todo:
         for url, file_id in todo[:20]:
