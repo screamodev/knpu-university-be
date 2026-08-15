@@ -602,6 +602,33 @@ def ensure_document_sections(directus: Directus, dry_run: bool) -> None:
     directus.request('PATCH', '/fields/documents/section', payload={'meta': meta})
 
 
+def ensure_monitoring_areas(directus: Directus, dry_run: bool) -> None:
+    """
+    Add напрями that appeared after the collection was created.
+
+    `MONITORING_AREAS` only takes effect when `monitoring_surveys` is created; on an environment
+    where it already exists the new напрями have to be appended to the field's choices, the same
+    way `ensure_document_sections` does it for documents.
+    """
+    current = directus.get('/fields/monitoring_surveys/area')
+    if not current:
+        return
+    choices = list((current['meta'].get('options') or {}).get('choices') or [])
+    known = {choice['value'] for choice in choices}
+    added = [choice for choice in MONITORING_AREAS if choice['value'] not in known]
+    if not added:
+        return
+    choices.extend(added)
+    print('+ monitoring_surveys.area: ' + ', '.join(choice['value'] for choice in added))
+    if dry_run:
+        return
+    meta = {
+        'options': {**(current['meta'].get('options') or {}), 'choices': choices},
+        'display_options': {**(current['meta'].get('display_options') or {}), 'choices': choices},
+    }
+    directus.request('PATCH', '/fields/monitoring_surveys/area', payload={'meta': meta})
+
+
 def ensure_category_parent(directus: Directus, dry_run: bool) -> None:
     """
     Give `categories` a parent, so a кафедра's category can sit under its faculty's.
@@ -653,6 +680,7 @@ def main() -> int:
         ensure_collections(directus, args.dry_run)
         ensure_relations(directus, args.dry_run)
         ensure_document_sections(directus, args.dry_run)
+        ensure_monitoring_areas(directus, args.dry_run)
         ensure_category_parent(directus, args.dry_run)
     except urllib.error.HTTPError as exc:
         print(f'! {exc.code}: {exc.read().decode("utf-8", "replace")[:800]}', file=sys.stderr)
