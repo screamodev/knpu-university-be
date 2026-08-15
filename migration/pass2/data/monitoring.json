@@ -39,7 +39,7 @@
           "_ref": "s1",
           "number": "2",
           "area": "educational-activity",
-          "title": "АНКЕТА № 2 Ставлення до Нової української школи (НУШ)",
+          "title": "АНКЕТА №2 \"Ідеальний викладач очима студентів\"",
           "researchGroup": "здобувачі вищої освіти ХНПУ імені Г.С. Сковороди, відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/1Znv567QV-aK-vezFXBcb2vQY53pdSc4aXlT1dxHeFeE/viewform?edit_requested=true",
           "order": 1,
@@ -74,7 +74,7 @@
           "area": "educational-activity",
           "title": "АНКЕТА № 37 \"Оцінювання освітніх потреб за спеціальністю А 5 Професійна освіта галузі знань А освіта\"",
           "researchGroup": "завідувач відділу аспірантури і докторантури Ірина РАЗУМЕНКО, завідувач кафедрою технологій дистанційного навчання та цифрової дидактики в дошкільній освіті, гарант ОНП Професійна освіта для здобувачів третього (освітньо-наукового) рівня вищої освіти Світлана ДОЦЕНКО, Доктор педагогічних наук, професор кафедри освітології та інноваційної педагогіки Тетяна СОБЧЕНКО",
-          "formUrl": "https://forms.gle/ugZpb5Ayma81k4M7A%C2%A0",
+          "formUrl": "https://forms.gle/ugZpb5Ayma81k4M7A",
           "order": 4,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa%20015%2037.pdf",
           "_fileField": "programmeFile"
@@ -195,7 +195,7 @@
           "_ref": "s18",
           "number": "22",
           "area": "phd-programmes",
-          "title": "АНКЕТА №22 «Визначення рівня задоволеності здобувачів третього (освітньо-наукового) рівня вищої освіти якістю освітньо-наукової програми і освітньо-науковим середовищем, в якому відбувається її реалізація",
+          "title": "АНКЕТА №22 «Визначення рівня задоволеності здобувачів третього",
           "researchGroup": "відділ менеджменту і моніторингу діяльності університету",
           "formUrl": null,
           "order": 17
@@ -558,13 +558,33 @@
           "order": 52
         },
         {
+          "_ref": "s54",
+          "number": "27",
+          "area": "stakeholders",
+          "title": "АНКЕТА № 27 Бар’єри впровадження STEM-освіти",
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc3a1CUouVGpthkubJPQ73eAgQZDPNd-FUG2AKjNCCBl86-8g/viewform?usp=sharing",
+          "order": 53,
+          "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/Programa_k_21_ankete.pdf",
+          "_fileField": "programmeFile"
+        },
+        {
+          "_ref": "s55",
+          "number": "28",
+          "area": "stakeholders",
+          "title": "АНКЕТА № 28 Ставлення до Нової української школи (НУШ)",
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfT2zrdilaocLEe-vG1ye5JhpdlT9uY88pjxORYl8A6yq2UnA/viewform?usp=sharing",
+          "order": 54
+        },
+        {
           "_ref": "s56",
           "number": "29",
           "area": "stakeholders",
           "title": "АНКЕТА № 29 Оцінка освітніх втрат під час війни",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd_hctynYEjoifcP75kA9p13uLc2FZ0OunsEr32wj_nJsXCDA/viewform?usp=sharing",
-          "order": 53
+          "order": 55
         },
         {
           "_ref": "s57",
@@ -573,7 +593,7 @@
           "title": "АНКЕТА № 31 Роль педагогічних університетів у сфері освіти, науки та розвитку суспільства",
           "researchGroup": null,
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfQhRuorEfvTmWzMsSrC8R_Y1wIup2SFrXyTwF-LFVlulCPhg/viewform",
-          "order": 54
+          "order": 56
         },
         {
           "_ref": "s58",
@@ -582,7 +602,7 @@
           "title": "АНКЕТА № 34 \"Вивчення досвіду профорієнтаційної роботи для здобувачів вищої освіти в ХНПУ імені Г.С. Сковороди",
           "researchGroup": "декан фізико-математичного факультету, відділ менеджменту і моніторингу діяльності університету",
           "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScBL7hQWljzuNu67BBOguRFTw8NspxYdXWwAsuwUeo3zp4VfA/viewform?usp=sharing",
-          "order": 55
+          "order": 57
         },
         {
           "_ref": "s59",
@@ -591,7 +611,7 @@
           "title": "АНКЕТА № 38 \"Співпраця роботодавців із Харківським національним педагогічним університетом імені Г.С. Сковороди",
           "researchGroup": "завідувач відділу аспірантури і докторантури Ірина РАЗУМЕНКО, завідувач кафедрою технологій дистанційного навчання та цифрової дидактики в дошкільній освіті, гарант ОНП Професійна освіта для здобувачів третього (освітньо-наукового) рівня вищої освіти Світлана ДОЦЕНКО, Доктор педагогічних наук, професор кафедри освітології та інноваційної педагогіки Тетяна СОБЧЕНКО",
           "formUrl": "https://forms.gle/hGQimj9RKiAL1J4R6",
-          "order": 56
+          "order": 58
         }
       ]
     },
@@ -1286,37 +1306,37 @@
           "externalUrl": "https://drive.google.com/file/d/1hu54QwpGRc65EuofKnrcgXQ_HuyiUC3X/view?usp=drive_link"
         },
         {
-          "_parent": "s1",
+          "_parent": "s54",
           "year": "2023",
           "order": 114,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/27_2023.pdf"
         },
         {
-          "_parent": "s1",
+          "_parent": "s54",
           "year": "2024",
           "order": 115,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Rez_27_2024.pdf"
         },
         {
-          "_parent": "s1",
+          "_parent": "s54",
           "year": "2025",
           "order": 116,
           "externalUrl": "https://drive.google.com/file/d/17D69nMQK57l7jMqUa4OPH4z6km3J1Hqx/view?usp=drive_link"
         },
         {
-          "_parent": "s1",
+          "_parent": "s55",
           "year": "2023",
           "order": 117,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Anketa/28_2023.pdf"
         },
         {
-          "_parent": "s1",
+          "_parent": "s55",
           "year": "2024",
           "order": 118,
           "_file": "https://hnpu.edu.ua/sites/default/files/files/monitoring/Rez_28_2024.pdf"
         },
         {
-          "_parent": "s1",
+          "_parent": "s55",
           "year": "2025",
           "order": 119,
           "externalUrl": "https://drive.google.com/file/d/1HrqE6ndBc3Ap9AWUDpwDLRtwh5lvxNCS/view?usp=drive_link"

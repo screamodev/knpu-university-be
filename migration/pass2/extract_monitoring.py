@@ -30,8 +30,10 @@ PAGE = 'https://hnpu.edu.ua/uk/monitoryng'
 REGION_START_RE = re.compile(r'<div class="field field-name-body')
 REGION_END_RE = re.compile(r'<div class="region region-footer|<footer|</form>\s*</div>\s*</div>\s*$')
 
+LEGEND_SOURCE_RE = re.compile(r'<span class="fieldset-legend">(.*?)</span>', re.S)
+
 TOKEN_RE = re.compile(
-    r'<span class="fieldset-legend">(?P<legend>.*?)</span>'
+    r'<legendtext>(?P<legend>.*?)</legendtext>'
     r'|<a\s[^>]*href="(?P<href>[^"]+)"[^>]*>(?P<label>.*?)</a>'
     # Any other tag is skipped explicitly, so that its markup cannot leak into `text` below.
     r'|(?P<tag><[^>]*>)'
@@ -86,6 +88,13 @@ def area_of(legend: str) -> str | None:
     return None
 
 
+# Inline formatting only; the old editor wrapped every other character in <span>, which split
+# «АНКЕТА № 27» into the text nodes «АНКЕТА № 2» and «7» — the number was then read as 2 and the
+# survey merged into a different one. Structural tags (a, p, div, br, fieldset) stay: the parser
+# needs them.
+COSMETIC_TAGS_RE = re.compile(r'</?(?:span|strong|em|b|i|u|font|small|sub|sup)\b[^>]*>', re.I)
+
+
 def region(page: str) -> str:
     start = REGION_START_RE.search(page)
     if not start:
@@ -131,7 +140,8 @@ def merge_duplicates(surveys: list[dict], results: list[dict]) -> tuple[list[dic
 
 
 def main() -> int:
-    body = region(fetch(PAGE))
+    body = LEGEND_SOURCE_RE.sub(r'<legendtext>\1</legendtext>', region(fetch(PAGE)))
+    body = COSMETIC_TAGS_RE.sub('', body)
 
     surveys: list[dict] = []
     results: list[dict] = []
@@ -177,7 +187,15 @@ def main() -> int:
             # in a <strong>, and the quoted name follows as text or as the link to the form.
             number = SURVEY_RE.match(text.strip())
             if started and number:
-                current = open_survey(number.group(1), text, None)
+                # With the cosmetic tags gone the whole heading — number, name and «(дослідницька
+                # група: …)» — usually arrives as one text node, so split it here.
+                head, _, tail = text.partition('(')
+                current = open_survey(number.group(1), head, None)
+                group = GROUP_RE.search(text)
+                if group:
+                    current['researchGroup'] = group.group(1).strip(' )').strip() or None
+                elif tail:
+                    current['researchGroup'] = None
                 continue
 
             if not current:
@@ -187,6 +205,8 @@ def main() -> int:
             # often carries the research group after it, so split on that marker first.
             if current.get('_needsTitle'):
                 name = GROUP_RE.split(text)[0].strip(' (\u00a0')
+                # «(дослідницька група: )» with nothing inside leaves an empty bracket behind.
+                name = re.sub(r'\(\s*\)\s*$', '', name).strip(' (\u00a0')
                 if name and not is_aside(name):
                     current['title'] = re.sub(r'\s+', ' ', f'{current["title"]} {name}').strip()
                     current['_needsTitle'] = False
