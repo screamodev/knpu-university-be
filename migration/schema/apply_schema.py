@@ -488,6 +488,10 @@ COLLECTIONS = [
             text_field('countryEn', width='half'),
             text_field('term', 'Термін дії.', width='half'),
             text_field('termEn', width='half'),
+            # У реєстрі назва договору була покликанням на його файл. Свої копії лежать під
+            # /assets/<uuid>, решта — на Google Drive підрозділів, тому це рядок, а не файл.
+            text_field('url', 'Покликання на файл договору: /assets/<id> або зовнішня адреса.',
+                       length=500),
             order_field(),
         ],
     ),

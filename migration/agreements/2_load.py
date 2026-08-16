@@ -4,6 +4,8 @@
 
 Ідемпотентно за трійкою (category, number, partner): повторний запуск не створює дублікатів,
 тож його можна ганяти скільки завгодно і доливати нові рядки після повторного `1_extract.py`.
+Наявним рядкам скрипт оновлює покликання на файл договору (`url`) — воно з'явилося пізніше за
+сам реєстр, і без цього 455 договорів лишилися б без покликання.
 
     DIRECTUS_URL=http://localhost:8055 DIRECTUS_TOKEN=... python3 2_load.py --dry-run
     DIRECTUS_URL=http://localhost:8055 DIRECTUS_TOKEN=... python3 2_load.py
@@ -31,6 +33,9 @@ DATA = HERE / 'data'
 
 COLLECTION = 'cooperation_agreements'
 IDENTITY = ('category', 'number', 'partner')
+# `sourceUrl` — службове поле екстрактора (звідки взяли файл); у Directus їде вже готовий `url`.
+FIELDS = ('category', 'number', 'agreementDate', 'year', 'partner', 'partnerEn', 'subject',
+          'subjectEn', 'country', 'countryEn', 'term', 'termEn', 'url', 'order', 'status')
 
 BROWSER_HEADERS = {
     'User-Agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
@@ -72,6 +77,10 @@ def key_of(row: dict) -> tuple:
     return tuple((row.get(field) or '').strip() for field in IDENTITY)
 
 
+def payload_of(row: dict) -> dict:
+    return {field: row[field] for field in FIELDS if field in row}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--directus-url', default=os.environ.get('DIRECTUS_URL', 'http://localhost:8055'))
@@ -92,19 +101,33 @@ def main() -> int:
     if args.limit:
         rows = rows[:args.limit]
 
-    query = urllib.parse.urlencode({'fields': ','.join(('id',) + IDENTITY), 'limit': -1})
-    existing = {key_of(row) for row in (client.get(f'/items/{COLLECTION}?{query}') or [])}
+    query = urllib.parse.urlencode({'fields': ','.join(('id', 'url') + IDENTITY), 'limit': -1})
+    existing = {key_of(row): row for row in (client.get(f'/items/{COLLECTION}?{query}') or [])}
 
     new = [row for row in rows if key_of(row) not in existing]
-    print(f'{len(rows)} рядків у файлі, {len(existing)} вже в базі, {len(new)} до створення')
-    if args.dry_run or not new:
+    stale = [(existing[key_of(row)]['id'], row['url']) for row in rows
+             if key_of(row) in existing and (row.get('url') or '') != (existing[key_of(row)].get('url') or '')]
+    print(f'{len(rows)} рядків у файлі, {len(existing)} вже в базі, {len(new)} до створення, '
+          f'{len(stale)} з оновленим покликанням')
+    if args.dry_run or not (new or stale):
         return 0
+
+    updated = 0
+    for item_id, url in stale:
+        try:
+            client.request('PATCH', f'/items/{COLLECTION}/{item_id}', {'url': url})
+            updated += 1
+        except urllib.error.HTTPError as error:
+            print(f'  ! оновлення {item_id}: {error.code} {error.read()[:200]!r}', file=sys.stderr)
+        time.sleep(0.02)
+    if updated:
+        print(f'оновлено покликань: {updated}')
 
     created = 0
     failed = 0
     for row in new:
         try:
-            client.request('POST', f'/items/{COLLECTION}', row)
+            client.request('POST', f'/items/{COLLECTION}', payload_of(row))
             created += 1
         except urllib.error.HTTPError as error:
             failed += 1

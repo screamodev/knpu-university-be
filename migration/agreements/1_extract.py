@@ -7,6 +7,10 @@
 (у міжнародних ще й країна). Документи відкриті, тож беремо їх експортом у .docx і читаємо
 `word/document.xml` — стандартною бібліотекою, без залежностей.
 
+Назва кожного договору в реєстрі — гіперпокликання на його файл (переважно PDF на старому сайті,
+подекуди Google Drive). Адресу кладемо в `sourceUrl`; `3_mirror.py` переносить такі файли до нас і
+підмінює адресу на `/assets/<uuid>`, щоб покликання пережило вимкнення старого сайту.
+
 Результат — `data/agreements.json`, який вантажить `2_load.py`.
 
     python3 1_extract.py            # звантажити й розібрати
@@ -29,6 +33,8 @@ CACHE = HERE / '.cache'
 DATA = HERE / 'data'
 
 W = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+R = '{http://schemas.openxmlformats.org/officeDocument/2006/relationships}'
+PKG_REL = '{http://schemas.openxmlformats.org/package/2006/relationships}'
 
 BROWSER_HEADERS = {
     'User-Agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
@@ -47,8 +53,8 @@ SOURCES = [
 
 HEADER_WORDS = ('№', 'дата укладання', 'сторони', 'термін дії', 'країна')
 
-# Підпис гіперпокликання на сайт закладу — саме покликання в реєстрі не зберігається, тож у
-# тексті предмета цей рядок нічого не означає.
+# Підпис гіперпокликання на файл договору. Сам підпис у тексті предмета зайвий — адресу
+# зберігаємо окремим полем, а назва договору стає покликанням на неї.
 DROP_LINES = {'інформація про заклад'}
 
 
@@ -78,6 +84,23 @@ def cell_lines(cell) -> list[str]:
     return lines
 
 
+def external_targets(path: Path) -> dict[str, str]:
+    """`rId…` → адреса, для гіперпокликань документа."""
+    root = ET.fromstring(zipfile.ZipFile(path).read('word/_rels/document.xml.rels'))
+    return {rel.get('Id'): rel.get('Target')
+            for rel in root.iter(PKG_REL + 'Relationship')
+            if rel.get('TargetMode') == 'External' and rel.get('Target')}
+
+
+def cell_link(cell, targets: dict[str, str]) -> str:
+    """Перше гіперпокликання клітинки — у реєстрі це файл самого договору."""
+    for link in cell.iter(W + 'hyperlink'):
+        target = targets.get(link.get(R + 'id'))
+        if target:
+            return target
+    return ''
+
+
 def is_header(cells: list[list[str]]) -> bool:
     joined = ' '.join(' '.join(cell) for cell in cells).lower()
     return sum(word in joined for word in HEADER_WORDS) >= 2
@@ -90,13 +113,15 @@ def year_of(value: str) -> int | None:
 
 def rows_of(path: Path, category: str) -> list[dict]:
     root = ET.fromstring(zipfile.ZipFile(path).read('word/document.xml'))
+    targets = external_targets(path)
     international = category == 'international'
     result: list[dict] = []
     order = 0
 
     for table in root.iter(W + 'tbl'):
         for row in table.findall(W + 'tr'):
-            cells = [cell_lines(cell) for cell in row.findall(W + 'tc')]
+            columns = row.findall(W + 'tc')
+            cells = [cell_lines(cell) for cell in columns]
             if len(cells) < 4 or is_header(cells):
                 continue
 
@@ -111,6 +136,9 @@ def rows_of(path: Path, category: str) -> list[dict]:
             subject = '\n'.join(line for line in party[1:]
                                 if line.lower().strip(' .') not in DROP_LINES).strip()
 
+            # Покликання може стояти й на номері, і на назві сторони — беремо перше, що є.
+            source_url = cell_link(columns[2], targets) or cell_link(columns[0], targets)
+
             country = ' '.join(cells[3]).strip() if international else ''
             term = ' '.join(cells[4 if international else 3]).strip() if len(cells) > (4 if international else 3) else ''
 
@@ -124,6 +152,7 @@ def rows_of(path: Path, category: str) -> list[dict]:
                 'subject': subject,
                 'country': country[:255],
                 'term': term[:255],
+                'sourceUrl': source_url,
                 'order': order,
                 'status': 'published',
             })

@@ -1,0 +1,2567 @@
+[
+  {
+    "slug": "doshkilna-osvita-bachelor",
+    "title": "Дошкільна освіта",
+    "level": "bachelor",
+    "specialty": "A2 Дошкільна освіта",
+    "email": "kaf-music-art@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/e4b0db6f-1731-41c9-bbc5-5b8e5fe864eb",
+        "specialty": "A2 Дошкільна освіта"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/857f970a-6092-474d-8e22-d871e466904c",
+        "specialty": "A2 Дошкільна освіта"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/3e7b4b28-2152-4c56-addc-aba8cdda9af3",
+        "specialty": "012 Дошкільна освіта"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/c772b324-d3d8-46fc-9031-8aac6d2fbdf5",
+        "specialty": "012 Дошкільна освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "doshkilna-osvita-lohopediia-bachelor",
+    "title": "Дошкільна освіта.Логопедія",
+    "level": "bachelor",
+    "specialty": "012 Дошкільна освіта",
+    "email": "faculty-pre-school@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/7272a0bc-def7-4604-bd01-7df87b8a4bb8",
+        "specialty": "012 Дошкільна освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pochatkova-osvita-bachelor",
+    "title": "Початкова освіта",
+    "level": "bachelor",
+    "specialty": "А3 Початкова освіта",
+    "email": "iryna.nebytova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/181c2209-ad14-4743-b93a-50da3eaee73e",
+        "specialty": "А3 Початкова освіта"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/1dae565f-cd8f-4276-9e1e-9d226a0095cc",
+        "specialty": "А3 Початкова освіта"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/79536ecd-830d-40f7-ba2b-b20ac9f9be6a",
+        "specialty": "013 Початкова освіта"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/0a10962c-441d-4be4-a107-df90e448c173",
+        "specialty": "013 Початкова освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pochatkova-osvita-z-metodykamy-spetsialnoi-osvity-bachelor",
+    "title": "Початкова освіта з методиками спеціальної освіти",
+    "level": "bachelor",
+    "specialty": "013 Початкова освіта",
+    "email": "pochatkovy.fakultet@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/29946969-3728-4926-9f60-a50335ebcdc0",
+        "specialty": "013 Початкова освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pochatkova-osvita-anhliiska-mova-v-pochatkovii-shkoli-bachelor",
+    "title": "Початкова освіта. Англійська мова в початковій школі",
+    "level": "bachelor",
+    "specialty": "013 Початкова освіта",
+    "email": "pochatkovy.fakultet@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/1133e8ac-8b42-4e75-9359-fde39d5c002c",
+        "specialty": "013 Початкова освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-ta-zdorovia-liudyny-praktychna-psykholohiia-bachelor",
+    "title": "Біологія та здоров'я людини, практична психологія",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Біологія та здоров'я людини)",
+    "email": "faculty-natyral@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/26565e4c-d915-4774-80fa-9c10858ed679",
+        "specialty": "014 Середня освіта (Біологія та здоров'я людини)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-ta-valeolohiia-v-zakladakh-osvity-bachelor",
+    "title": "Біологія та валеологія в закладах освіти",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Біологія та здоров'я людини)",
+    "email": "faculty-natyral@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/4a5ca0d9-b630-4014-99f4-6bfb604a3494",
+        "specialty": "014 Середня освіта (Біологія та здоров'я людини)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "heohrafiia-v-zakladakh-osvity-bachelor",
+    "title": "Географія в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 07 Середня освіта (Географія)",
+    "email": "jmuromtseva@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/ca66e405-6963-474a-ad94-ec8d263b8f31",
+        "specialty": "А4 07 Середня освіта (Географія)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/203b589b-9b54-487f-a48c-4e9a92fe0c78",
+        "specialty": "А4 07 Середня освіта (Географія)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/bafe914d-4edb-40e5-aac6-26beac2f3b1b",
+        "specialty": "014 Середня освіта (Географія)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/26e39ab5-5135-470f-8b61-45bd7e80253e",
+        "specialty": "014 Середня освіта (Географія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "informatyka-v-zakladakh-osvity-bachelor",
+    "title": "Інформатика в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 09 Середня освіта (Інформатика)",
+    "email": "nataliia.ponomarova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/0894a166-0a53-4cbc-8f65-ea541e10cccb",
+        "specialty": "А4 09 Середня освіта (Інформатика)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/f0b0970a-9ceb-4ab4-9c37-97d26cef9aec",
+        "specialty": "А4 09 Середня освіта (Інформатика)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/026d7e62-472e-4f94-9b37-b15f0f388d30",
+        "specialty": "014 Середня освіта (Інформатика)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/83ced7e2-e0ca-4056-9661-a35a25939d9a",
+        "specialty": "014 Середня освіта (Інформатика)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "istoriia-v-zakladakh-osvity-bachelor",
+    "title": "Історія в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 03 Середня освіта (Історія та громадянська освіта))",
+    "email": "nikolajenkoolga@gmail.com",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/37a2f5df-c48b-4b05-afa4-80710d13ea91",
+        "specialty": "А4 03 Середня освіта (Історія та громадянська освіта))"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/68c9e967-696a-4d4f-9408-a399d18bb7c7",
+        "specialty": "014 Середня освіта (Історія та громадянська освіта))"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/00135ea7-af84-4587-9d80-177d63b2d075",
+        "specialty": "014 Середня освіта (Історія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "istoriia-pravoznavstvo-ta-suspilstvoznavchi-dystsypliny-bachelor",
+    "title": "Історія, правознавство та суспільствознавчі дисципліни",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Історія)",
+    "email": "faculty_history_law@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/a4231a01-7a00-4643-b4e5-b248c96f481d",
+        "specialty": "014 Середня освіта (Історія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "matematyka-v-zakladakh-osvity-bachelor",
+    "title": "Математика в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 04 Середня освіта (Математика)",
+    "email": "oazhernovnykova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/cf833e0d-34e6-4728-b231-40cf0597bbf5",
+        "specialty": "А4 04 Середня освіта (Математика)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/c86a2b98-8d41-4859-8d8d-129e401026f8",
+        "specialty": "А4 04 Середня освіта (Математика)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/f653be0d-8e2a-4535-ac6c-db61ea9c6b23",
+        "specialty": "014 Середня освіта (Математика)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/a63a9088-24de-4009-bd0b-814b46793ddc",
+        "specialty": "014 Середня освіта (Математика)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "anhliiska-mova-i-literatura-v-zakladakh-osvity-bachelor",
+    "title": "Англійська мова і література в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 021 Середня освіта (Англійська мова та зарубіжна література)",
+    "email": "chuhno.oa@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/0bad9b05-560d-4898-86e5-a378436be7d1",
+        "specialty": "А4 021 Середня освіта (Англійська мова та зарубіжна література)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/e9f2ef9c-b867-4258-81ef-cd5ce4e1d462",
+        "specialty": "А4 021 Середня освіта (Англійська мова та зарубіжна література)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/1c108abe-3631-448f-b396-25e3dc71dea7",
+        "specialty": "014 Середня освіта (Англійська мова та зарубіжна література)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/a11a3d02-4f88-4388-8fe7-b2d506136e78",
+        "specialty": "014 Середня освіта (Мова та зарубіжна література (англійська))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "nimetska-mova-i-literatura-v-zakladakh-osvity-bachelor",
+    "title": "Німецька мова і література в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 022 Середня освіта (Німецька мова та зарубіжна література)",
+    "email": "faculty-foreign-philology@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/d1ce29a0-c07e-41ef-92e1-8a8911d00ec1",
+        "specialty": "А4 022 Середня освіта (Німецька мова та зарубіжна література)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/62b2640b-1a79-4cb0-9814-46cda822746f",
+        "specialty": "А4 022 Середня освіта (Німецька мова та зарубіжна література)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/34c43234-efe4-4f59-9268-486b5e3f93fc",
+        "specialty": "014 Середня освіта (Німецька мова та зарубіжна література)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/3afa0c04-477b-4acc-b503-4fbeecd539e9",
+        "specialty": "014 Середня освіта (Мова та зарубіжна література (німецька))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "frantsuzka-mova-i-literatura-v-zakladakh-osvity-bachelor",
+    "title": "Французька мова і література в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 023 Середня освіта (Французька мова та зарубіжна література)",
+    "email": "faculty-foreign-philology@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/db7d6463-2def-416d-a60c-00a281e84813",
+        "specialty": "А4 023 Середня освіта (Французька мова та зарубіжна література)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/b1ef7bed-d05f-4f71-bcca-6ea054c7032f",
+        "specialty": "А4 023 Середня освіта (Французька мова та зарубіжна література)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/1f2563a2-ffb1-4734-b7d3-5c0985f7bd3d",
+        "specialty": "014 Середня освіта (Французька мова та зарубіжна література)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/a80ecdcd-22e3-4199-8bcc-0642bb3506ba",
+        "specialty": "014 Середня освіта (Мова та зарубіжна література (французька))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "serednia-osvita-muzychne-mystetstvo-bachelor",
+    "title": "Середня освіта (Музичне мистецтво)",
+    "level": "bachelor",
+    "specialty": "А4 13 Середня освіта (Мистецтво. Музичне мистецтво))",
+    "email": "l.bezemchuk@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/873556fd-1541-424d-9a32-3ca17fe085f4",
+        "specialty": "А4 13 Середня освіта (Мистецтво. Музичне мистецтво))"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/f1589e40-8b33-4382-9325-4171b6e20bbd",
+        "specialty": "014 Середня освіта (Мистецтво. Музичне мистецтво))"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/89369984-acf6-4507-933b-b3c7ffe9dbda",
+        "specialty": "014 Середня освіта (Музичнне мистецтво)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "estradnyi-i-narodnyi-spiv-v-zakladakh-osvity-bachelor",
+    "title": "Естрадний і народний спів в закладах освіти",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Музичнне мистецтво)",
+    "email": "kaf-choreography@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/c8887653-d401-4c82-a9c0-45e8e16d93f6",
+        "specialty": "014 Середня освіта (Музичнне мистецтво)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "muzychne-mystetstvo-v-zakladakh-osvity-bachelor",
+    "title": "Музичне мистецтво в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 13 Середня освіта (Мистецтво. Музичне мистецтво))",
+    "email": "yuryeva.ka@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/3477fa53-578c-403f-8087-25e6ec7658b8",
+        "specialty": "А4 13 Середня освіта (Мистецтво. Музичне мистецтво))"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/85d93a73-4010-498f-a213-331c4822d3bc",
+        "specialty": "А4 13 Середня освіта (Мистецтво. Музичне мистецтво))"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/738ed9e2-6ed4-4565-919c-f51002d11d24",
+        "specialty": "014 Середня освіта (Мистецтво. Музичне мистецтво))"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/79fa911c-3a39-4c4b-9596-46d051ad6952",
+        "specialty": "014 Середня освіта (Музичнне мистецтво)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "obrazotvorche-mystetstvo-bachelor",
+    "title": "Образотворче мистецтво",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Образотворче мистетцво)",
+    "email": "faculty-arts@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/a6f3b1c8-b968-4ee4-8423-015ca091e253",
+        "specialty": "014 Середня освіта (Образотворче мистетцво)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pryrodnychi-nauky-bachelor",
+    "title": "Природничі науки",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Природничі науки)",
+    "email": "faculty-natyral@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/ee65a93a-5b77-4ef6-8c15-f063b4b3e00b",
+        "specialty": "014 Середня освіта (Природничі науки)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-v-zakladakh-osvity-bachelor",
+    "title": "Українська мова і література в закладах освіти",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Українська мова і література)",
+    "email": "faculty-ukrainian@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/670f6c34-6c51-4ddb-8d6f-01a355710cfb",
+        "specialty": "014 Середня освіта (Українська мова і література)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-anhliiska-mova-v-zakladakh-osvity-bachelor",
+    "title": "Українська мова і література, англійська мова в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 01 Середня освіта (Українська мова і література)",
+    "email": "pavlovainna2005@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/60419b27-7ec2-4fca-8618-82e233ad4ce1",
+        "specialty": "А4 01 Середня освіта (Українська мова і література)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/27d38f47-b5ed-4374-ac8a-b700960ddfb7",
+        "specialty": "А4 01 Середня освіта (Українська мова і література)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/9868fdcd-fd47-4bb5-a6c8-5b9e59470c45",
+        "specialty": "014 Середня освіта (Українська мова і література)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/66bbd116-0bec-4c73-81fd-3ac6a5fb5b0c",
+        "specialty": "014 Середня освіта (Українська мова і література)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-polska-mova-v-zakaladakh-osvity-bachelor",
+    "title": "Українська мова і література польська мова в закаладах освіти",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Українська мова і література)",
+    "email": "faculty-ukrainian@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/4ba505c6-2938-4b15-a9c4-2b0a72bfbfcc",
+        "specialty": "014 Середня освіта (Українська мова і література)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-zarubizhna-literatura-v-zakladakh-osvity-bachelor",
+    "title": "Українська мова і література, зарубіжна література в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 01 Середня освіта (Українська мова і література)",
+    "email": "pavlovainna2005@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/cd0274b0-2938-49a2-bcd3-6b4bccf73e83",
+        "specialty": "А4 01 Середня освіта (Українська мова і література)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/06c11fda-f9a9-461d-8aaa-f4f3e3c22385",
+        "specialty": "014 Середня освіта (Українська мова і література)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/081ab2b5-0d9f-4f03-bd4c-8f8bb4939e72",
+        "specialty": "014 Середня освіта (Українська мова і література)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fizyka-v-zakladakh-osvity-bachelor",
+    "title": "Фізика в закладах освіти",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Фізика та астрономія)",
+    "email": "kaf-physics@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/5cac92f3-5a3c-4ee3-8f9f-61e082447a49",
+        "specialty": "014 Середня освіта (Фізика та астрономія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fizychna-kultura-v-zakladakh-osvity-bachelor",
+    "title": "Фізична культура в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 11 Середня освіта (Фізична культура)",
+    "email": "helena.nesen@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/9d7b8ef5-1acf-439f-9707-94428714c615",
+        "specialty": "А4 11 Середня освіта (Фізична культура)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/ffb5e7bf-c73d-422b-8189-3b2b51e518d1",
+        "specialty": "А4 11 Середня освіта (Фізична культура)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/f53373b9-22c5-45cb-9628-369ec431fe67",
+        "specialty": "014 Середня освіта (Фізична культура)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/4e42be8b-5ff9-411b-b58e-e82704664498",
+        "specialty": "014 Середня освіта (Фізична культура)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "khimiia-ta-biolohiia-v-zakladakh-osvity-bachelor",
+    "title": "Хімія та біологія в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 06 Середня освіта (Хімія)",
+    "email": "s.j.makeev@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/ae4ec213-083e-44bb-8529-1a23840a1045",
+        "specialty": "А4 06 Середня освіта (Хімія)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/2cab3db4-cbd5-4760-b182-de7cef9528a0",
+        "specialty": "014 Середня освіта (Хімія)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/2fa0c449-4825-44fa-be4d-f431e3534a15",
+        "specialty": "014 Середня освіта (Хімія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "olihofrenopedahohika-bachelor",
+    "title": "Олігофренопедагогіка",
+    "level": "bachelor",
+    "specialty": "А6 02 Спеціальна освіта (Корекційна психопедагогіка)",
+    "email": "liudmyladrozhyk@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/caeb7ab4-b1a8-4d30-a561-491a37c03c84",
+        "specialty": "А6 02 Спеціальна освіта (Корекційна психопедагогіка)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/56959dcd-997c-47ef-a016-e2b8c2de85fd",
+        "specialty": "016 Спеціальна освіта (Корекційна психопедагогіка)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/67d30941-59b8-4d0b-b42f-566c2b996dec",
+        "specialty": "016 Спеціальна освіта (Олігофренопедагогіка)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "spetsialna-osvita-olihofrenopedahohika-bachelor",
+    "title": "Спеціальна освіта (Олігофренопедагогіка)",
+    "level": "bachelor",
+    "specialty": "016 Спеціальна освіта (Олігофренопедагогіка)",
+    "email": "zd_reab_spps@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/597ca7df-fbe8-43d0-bea6-da361a0ee97e",
+        "specialty": "016 Спеціальна освіта (Олігофренопедагогіка)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/fa632c93-f993-471a-b43d-d771c72ea601",
+        "specialty": "016 Спеціальна освіта (Олігофренопедагогіка)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "lohopediia-bachelor",
+    "title": "Логопедія",
+    "level": "bachelor",
+    "specialty": "А6 01 Спеціальна освіта (Логопедія)",
+    "email": "viktoria.kovalenko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/d240a416-2b75-4d57-b7f9-5484fdf9d91f",
+        "specialty": "А6 01 Спеціальна освіта (Логопедія)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/b1729f09-ba41-4e48-9bb1-3d6a1c40e7f4",
+        "specialty": "А6 01 Спеціальна освіта (Логопедія)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/94c5d4e6-5de7-42f0-927f-d0ea50ec0901",
+        "specialty": "016 Спеціальна освіта (Логопедія)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/01595690-3259-4d3e-bf3a-a09e3f1eacf7",
+        "specialty": "016 Спеціальна освіта (Логопедія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "spetsialna-osvita-lohopediia-bachelor",
+    "title": "Спеціальна освіта (Логопедія)",
+    "level": "bachelor",
+    "specialty": "016 Спеціальна освіта (Логопедія)",
+    "email": "sp_ped@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/baa5a3b1-13c8-4c0d-893e-02c7fed22f1d",
+        "specialty": "016 Спеціальна освіта (Логопедія)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/b7fc2719-2559-49e9-88fd-b5a7ce3dc4cb",
+        "specialty": "016 Спеціальна освіта (Логопедія)"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/8fbd3ad4-ef91-49e0-a9fb-1790f1466a8c",
+        "specialty": "016 Спеціальна освіта (Логопедія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fitnes-ta-rekreatsiia-bachelor",
+    "title": "Фітнес та рекреація",
+    "level": "bachelor",
+    "specialty": "А7 Фізична культура і спорт",
+    "email": "iryna.sobko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/bc3b3439-c83e-4805-bce1-12fa63bce1cf",
+        "specialty": "А7 Фізична культура і спорт"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/19a6e084-8e50-47bc-8a13-efd52a5413c0",
+        "specialty": "А7 Фізична культура і спорт"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/e3f7e572-930f-4d47-84e2-9f4e2cae4f50",
+        "specialty": "017 Фізична культура і спорт"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/279136c7-5897-4bce-bd5f-14cd8cfc2a30",
+        "specialty": "017 Фізична культура і спорт"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "trenerska-diialnist-v-obranomu-vydi-sportu-bachelor",
+    "title": "Тренерська діяльність в обраному виді спорту",
+    "level": "bachelor",
+    "specialty": "А7 Фізична культура і спорт",
+    "email": "iryna.sobko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/6fd63329-bd3a-4fbd-9e78-06ccac0699ae",
+        "specialty": "А7 Фізична культура і спорт"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/44ad4c99-64e0-474c-813e-9dfa1e437d21",
+        "specialty": "А7 Фізична культура і спорт"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/3b9b6bac-663e-42e5-bdc7-ef609e77d265",
+        "specialty": "017 Фізична культура і спорт"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/7c4e9bef-b3e5-42e0-b0b1-98b259ccc94b",
+        "specialty": "017 Фізична культура і спорт"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "dyzain-odiahu-bachelor",
+    "title": "Дизайн одягу",
+    "level": "bachelor",
+    "specialty": "022 Дизайн",
+    "email": "chebotovayana@gmail.com",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/958e830b-2b10-48b0-91fa-660d1eefd93f",
+        "specialty": "022 Дизайн"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/79afce4e-7e5c-457b-8f3d-2a7c838cacc0",
+        "specialty": "022 Дизайн"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "dyzain-seredovyshcha-bachelor",
+    "title": "Дизайн середовища",
+    "level": "bachelor",
+    "specialty": "022 Дизайн",
+    "email": "kaf-choreography@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/25a85506-b4e3-4424-b53a-fbd24dde609c",
+        "specialty": "022 Дизайн"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "hrafichnyi-dyzain-bachelor",
+    "title": "Графічний дизайн",
+    "level": "bachelor",
+    "specialty": "В2 Дизайн",
+    "email": "faculty-arts@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/203a6f76-7611-4054-ad07-8622a245edb5",
+        "specialty": "В2 Дизайн"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/d505a03f-c64d-4ae6-ba77-a967d1a949a7",
+        "specialty": "022 Дизайн"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/402db354-e490-4fc6-991e-faa3bc6df8fb",
+        "specialty": "022 Дизайн"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "prykladna-ta-promyslova-hrafika-bachelor",
+    "title": "Прикладна та промислова графіка",
+    "level": "bachelor",
+    "specialty": "023 Образотворче мистецтво, декоративне мистецтво, реставрація",
+    "email": "kaf-choreography@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/89488dd0-586a-4222-bf22-98d197d2b111",
+        "specialty": "023 Образотворче мистецтво, декоративне мистецтво, реставрація"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "khoreohrafiia-bachelor",
+    "title": "Хореографія",
+    "level": "bachelor",
+    "specialty": "В6 Хореграфія",
+    "email": "faculty-arts@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/cba57772-3c16-4f52-925e-9210ca29f61a",
+        "specialty": "В6 Хореграфія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/04999e06-dd85-4fab-8204-2f54e4b3a2c8",
+        "specialty": "024 Хореграфія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/2ee3fc6a-aadc-439c-8afc-67757dc34f74",
+        "specialty": "024 Хореографія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-redahuvannia-bachelor",
+    "title": "Українська мова і література, редагування",
+    "level": "bachelor",
+    "specialty": "В11 Філологія (Українська мова і література)",
+    "email": "melnykiv@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/70552a92-abee-4ea1-8a4d-25e42da74410",
+        "specialty": "В11 Філологія (Українська мова і література)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/c2ddc859-e2d8-4043-8472-832fde38e4c3",
+        "specialty": "035 Філологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/f94020a3-cb61-4ddc-8945-afdd4dbbdf5f",
+        "specialty": "035 Філологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "anhliiska-mova-i-literatura-ta-pereklad-bachelor",
+    "title": "Англійська мова і література та переклад",
+    "level": "bachelor",
+    "specialty": "В11 041 Філологія (германські мови та літератури (переклад включно), перша-англійська)",
+    "email": "kornileva.lm@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/eeb7c2d8-1f85-4fdf-a4e5-6efe19a73690",
+        "specialty": "В11 041 Філологія (германські мови та літератури (переклад включно), перша-англійська)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/8d3beddb-8237-4385-8410-433955575ed5",
+        "specialty": "035 Філологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/e3892ae3-e4d1-4200-aa69-4e7c50fbeaae",
+        "specialty": "035 Філологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "kytaiska-mova-i-literatura-bachelor",
+    "title": "Китайська мова і література",
+    "level": "bachelor",
+    "specialty": "В11 065 Філологія (східні мови та літератури (переклад включно), перша-китайська)",
+    "email": "jukova.ke@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/7b051358-8e9e-41b5-89a2-87fcae53b19f",
+        "specialty": "В11 065 Філологія (східні мови та літератури (переклад включно), перша-китайська)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/d3dc1552-c233-4653-be2e-d36a2ab5fffb",
+        "specialty": "В11 065 Філологія (східні мови та літератури (переклад включно), перша-китайська)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/e3d9d61c-5565-4180-a82e-dcd678b6e3af",
+        "specialty": "035 Філологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/070e215c-f784-4c33-934c-4db5db2137ce",
+        "specialty": "035 Філологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-bachelor",
+    "title": "Українська мова і література",
+    "level": "bachelor",
+    "specialty": "035 Філологія",
+    "email": "faculty-foreign-philology@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/ad78faa7-97a4-4d4b-af00-121c2caf96eb",
+        "specialty": "035 Філологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ekonomika-ta-upravlinnia-bachelor",
+    "title": "Економіка та управління",
+    "level": "bachelor",
+    "specialty": "051 Економіка",
+    "email": "v.v.solyar@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/14648609-7b26-47d6-9d88-fa00ec54471c",
+        "specialty": "051 Економіка"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/302875f5-5432-4b68-b2e6-274d992566a2",
+        "specialty": "051 Економіка"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "politolohiia-bachelor",
+    "title": "Політологія",
+    "level": "bachelor",
+    "specialty": "С2 Політологія",
+    "email": "o.bezruk@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/fa037b6c-ffea-491c-bc44-a411de8fecd4",
+        "specialty": "С2 Політологія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/9c83915c-88d7-4ab0-b263-7a51be9a2bc7",
+        "specialty": "052 Політологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/b7a1e8e4-4c1d-45cf-94d0-94f1301fc6b7",
+        "specialty": "052 Політологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "psykholohiia-bachelor",
+    "title": "Психологія",
+    "level": "bachelor",
+    "specialty": "С4 Психологія",
+    "email": "faculty-psychology-sociology@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/3a2a0255-55a9-4dae-8da9-6769a2cbd610",
+        "specialty": "С4 Психологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/0dc03416-558c-493b-8f90-356456c7ef42",
+        "specialty": "С4 Психологія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/abd433b9-2706-4a24-8003-495b950233d9",
+        "specialty": "053 Психологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/672e718e-6f62-4947-96fe-b4808a05be21",
+        "specialty": "053 Психологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pravo-bachelor",
+    "title": "Право",
+    "level": "bachelor",
+    "specialty": "D8 Право",
+    "email": "t.golovan@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/108fa044-62c1-4b9c-8e1a-964d380d2aae",
+        "specialty": "D8 Право"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/aa816d6c-9d2a-4213-ab7a-d6e03ade8867",
+        "specialty": "081 Право"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/e4c8f58c-b4fe-42b7-aa56-208376512554",
+        "specialty": "081 Право"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-bachelor",
+    "title": "Біологія",
+    "level": "bachelor",
+    "specialty": "091 Біологія та біохімія",
+    "email": "komisova.t.e@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/be499bdc-3ece-42fa-a710-2ae601225296",
+        "specialty": "091 Біологія та біохімія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/9ee7d813-ab0d-47af-b86f-a7680b716ff5",
+        "specialty": "091 Біологія та біохімія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "sotsialna-pedahohika-bachelor",
+    "title": "Соціальна педагогіка",
+    "level": "bachelor",
+    "specialty": "I10 Соціальна робота",
+    "email": "iryna.shepliakova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/88c2c9f6-7de7-46e6-9818-f9e9ab8fd48d",
+        "specialty": "I10 Соціальна робота"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/e5d59b21-9c8e-4c1b-8bdd-9e984122c35e",
+        "specialty": "I10 Соціальна робота"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/9ab87eb3-7122-4f62-81eb-5f44e767a66c",
+        "specialty": "231 Соціальна робота"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/41a216ad-0b9e-4a7c-89d9-b5073f8462b2",
+        "specialty": "231 Соціальна робота"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "sotsialna-robota-bachelor",
+    "title": "Соціальна робота",
+    "level": "bachelor",
+    "specialty": "231 Соціальна робота",
+    "email": "iryna.shepliakova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/14f66ccc-c816-47ed-813c-a39090cc8226",
+        "specialty": "231 Соціальна робота"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/1e13bb11-6873-48f1-87e8-5c129ead41c9",
+        "specialty": "231 Соціальна робота"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/85312964-ae62-44b3-a265-fe84162dca9d",
+        "specialty": "231 Соціальна робота"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/c60adc24-658d-4cf8-82fe-bec7cf227327",
+        "specialty": "231 Соціальна робота"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/8d67dfce-2f37-4a22-9be9-85d7a3d30331",
+        "specialty": "231 Соціальна робота"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/d1bd0be2-7c39-4f71-8116-81f636949123",
+        "specialty": "231 Соціальна робота"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "doshkilna-sovita-lohopediia-bachelor",
+    "title": "Дошкільна совіта. Логопедія",
+    "level": "bachelor",
+    "specialty": "A2 Дошкільна освіта",
+    "email": "kaf-music-art@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/f6df6499-990e-47a7-883d-51fdd87e8265",
+        "specialty": "A2 Дошкільна освіта"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/0390f3c2-5e28-4b75-baba-5f5b62fa14b9",
+        "specialty": "012 Дошкільна освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-ta-zdorovia-liudyny-v-zakladakh-osvity-bachelor",
+    "title": "Біологія та здоров’я людини в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 Середня освіта (Біологія та здоров'я людини)",
+    "email": "iryna.lykova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/a07bc494-ab84-483c-9842-bfaa1c3758ee",
+        "specialty": "А4 Середня освіта (Біологія та здоров'я людини)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/4fc3b039-a1b1-4708-bdbf-3b7289b7e7fc",
+        "specialty": "А4 Середня освіта (Біологія та здоров'я людини)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/5d2c45a4-b729-42e4-bf7e-5f1f8a9a5892",
+        "specialty": "014 Середня освіта (Біологія та здоров'я людини)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-ta-zdorovia-liudyny-praktychna-psykholohiia-v-zakladakh-osvity-bachelor",
+    "title": "Біологія та здоров’я людини, практична психологія в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 Середня освіта (Біологія та здоров'я людини)",
+    "email": "iryna.lykova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/87c09302-1e52-4185-af5d-50a666a6e869",
+        "specialty": "А4 Середня освіта (Біологія та здоров'я людини)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/8acc252d-0d8a-4c19-af4d-01476b227d50",
+        "specialty": "014 Середня освіта (Біологія та здоров'я людини)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "istoriia-hromadianska-osvita-ta-pravoznavstvo-v-zakladakh-osvity-bachelor",
+    "title": "Історія, громадянська освіта та правознавство в закладах освіти",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Історія та громадянська освіта))",
+    "email": "nikolajenkoolga@gmail.com",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/d72d385c-8174-4d23-b1cf-7b2703036381",
+        "specialty": "014 Середня освіта (Історія та громадянська освіта))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "obrazotvorche-mystetstvo-v-zakladakh-osvity-bachelor",
+    "title": "Образотворче мистецтво в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 12 Середня освіта (Мистецтво. Образотворче мистецтво))",
+    "email": "a.v.altykhova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/39873444-df63-44ee-bb07-708ef62297a6",
+        "specialty": "А4 12 Середня освіта (Мистецтво. Образотворче мистецтво))"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/e1da3b66-6e47-4898-9c87-624a871d2e8d",
+        "specialty": "А4 12 Середня освіта (Мистецтво. Образотворче мистецтво))"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/54555554-9d76-4b97-a66b-764ec18f704d",
+        "specialty": "014 Середня освіта (Мистецтво. Образотворче мистецтво))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "serednia-osvita-pryrodnychi-nauky-bachelor",
+    "title": "Середня освіта (Природничі науки",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Природничі науки)",
+    "email": "mamotenko.a.v@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/9b88bdb5-66be-47fc-98f3-659694ef4d27",
+        "specialty": "014 Середня освіта (Природничі науки)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-polska-mova-v-zakladakh-osvity-bachelor",
+    "title": "Українська мова і література, польська мова в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 01 Середня освіта (Українська мова і література)",
+    "email": "pavlovainna2005@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/4d724c1f-e830-49db-b0cc-275a8092235f",
+        "specialty": "А4 01 Середня освіта (Українська мова і література)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/312dabab-b9b2-4437-bced-2242b6937cb9",
+        "specialty": "А4 01 Середня освіта (Українська мова і література)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/a3729385-c235-4cfb-92ba-136863af9deb",
+        "specialty": "014 Середня освіта (Українська мова і література)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "serednia-osvita-tekhnolohii-bachelor",
+    "title": "Середня освіта (Технології)",
+    "level": "bachelor",
+    "specialty": "А4 10 Середня освіта (Середня освіта (Технології))",
+    "email": "faculty-arts@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/63c124ae-dc7a-44e9-80dc-830c0e1736de",
+        "specialty": "А4 10 Середня освіта (Середня освіта (Технології))"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/d0fba48c-0a6e-427e-a7c3-26a4bb4ec8ac",
+        "specialty": "014 Середня освіта (Середня освіта (Технології))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "serednia-osvita-fizychna-kultura-bachelor",
+    "title": "Середня освіта (Фізична культура)",
+    "level": "bachelor",
+    "specialty": "014 Середня освіта (Фізична культура)",
+    "email": "marchenko_sv@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/51f3047d-eb4e-4b66-8d93-823ae16ff636",
+        "specialty": "014 Середня освіта (Фізична культура)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/9fa865aa-4a66-4808-ab53-e04edf51faa2",
+        "specialty": "014 Середня освіта (Фізична культура)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/c0f175ec-0c1b-43f4-81a4-61cf8a91d082",
+        "specialty": "014 Середня освіта (Фізична культура)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fizyka-ta-astronomiia-v-zakladakh-osvity-bachelor",
+    "title": "Фізика та астрономія в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 08 Середня освіта (Фізика та астрономія)",
+    "email": "masych@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/2420977c-1fa3-449a-beb2-adf84da6d7e7",
+        "specialty": "А4 08 Середня освіта (Фізика та астрономія)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/bbc046c4-857a-4b91-a1d6-a0c0a276fdc5",
+        "specialty": "А4 08 Середня освіта (Фізика та астрономія)"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/9f1b725b-1777-453f-aa61-e013e13c029e",
+        "specialty": "014 Середня освіта (Фізика та астрономія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "prykladna-ta-knyzhkova-hrafika-bachelor",
+    "title": "Прикладна та книжкова графіка",
+    "level": "bachelor",
+    "specialty": "В4 Образотворче мистецтво, декоративне мистецтво, реставрація",
+    "email": "kaf-choreography@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/d6460d86-91a5-4439-8000-a227b0fb6d7f",
+        "specialty": "В4 Образотворче мистецтво, декоративне мистецтво, реставрація"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/8d682f9a-ee4c-4eb0-98fa-54c907b3fb44",
+        "specialty": "В4 Образотворче мистецтво, декоративне мистецтво, реставрація"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/e296aae6-9cba-4e60-8d91-f49777c2c659",
+        "specialty": "023 Образотворче мистецтво, декоративне мистецтво, реставрація"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "obrazotvorche-mystetstvo-dekoratyvne-mystetstvo-restavratsiia-bachelor",
+    "title": "Образотворче мистецтво, декоративне мистецтво, реставрація",
+    "level": "bachelor",
+    "specialty": "023 Образотворче мистецтво, декоративне мистецтво, реставрація",
+    "email": "kaf-choreography@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2024,
+        "file": "/assets/781db1a1-76c1-4315-9a49-def88faa79a2",
+        "specialty": "023 Образотворче мистецтво, декоративне мистецтво, реставрація"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/9d9d01db-064c-4cb3-8374-164d2ba29432",
+        "specialty": "023 Образотворче мистецтво, декоративне мистецтво, реставрація"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "istoriia-ta-suspilstvoznavstvo-v-zakladakh-osvity-bachelor",
+    "title": "Історія та суспільствознавство в закладах освіти",
+    "level": "bachelor",
+    "specialty": "А4 03 Середня освіта (Історія та громадянська освіта))",
+    "email": "nikolajenkoolga@gmail.com",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/e9abf34d-bef4-489d-a3c1-84a739c460fb",
+        "specialty": "А4 03 Середня освіта (Історія та громадянська освіта))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "serednia-osvita-pryrodnychi-nauky-bachelor-2",
+    "title": "Середня освіта (Природничі науки)",
+    "level": "bachelor",
+    "specialty": "А4 15 Середня освіта (Природничі науки)",
+    "email": "mamotenko.a.v@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/82d0bfeb-4f3a-4fbe-8ee6-8bbf172c1e0c",
+        "specialty": "А4 15 Середня освіта (Природничі науки)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pryrodnychi-nauky-stem-tekhnolohii-ta-innovatsiina-osvita-bachelor",
+    "title": "Природничі науки: STEM-технології та інноваційна освіта",
+    "level": "bachelor",
+    "specialty": "А4 15 Середня освіта (Природничі науки)",
+    "email": "mamotenko.a.v@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/06c86bf0-a49d-4135-9b67-875153411316",
+        "specialty": "А4 15 Середня освіта (Природничі науки)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "khimiia-stem-navchannia-bachelor",
+    "title": "Хімія STEM-навчання",
+    "level": "bachelor",
+    "specialty": "А4 06 Середня освіта (Хімія)",
+    "email": "s.j.makeev@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/0fd59d2d-eb67-4508-b135-045e81a5edfa",
+        "specialty": "А4 06 Середня освіта (Хімія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "korektsiina-psykhopedahohika-bachelor",
+    "title": "Корекційна психопедагогіка",
+    "level": "bachelor",
+    "specialty": "А6 02 Спеціальна освіта (Корекційна психопедагогіка)",
+    "email": "liudmyladrozhyk@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/914db22e-8273-4a66-8274-ee7342d2fef2",
+        "specialty": "А6 02 Спеціальна освіта (Корекційна психопедагогіка)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "reabilitatsiina-psykholohiia-bachelor",
+    "title": "Реабілітаційна психологія",
+    "level": "bachelor",
+    "specialty": "С4 Психологія",
+    "email": "faculty-psychology-sociology@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/016c8a08-6af0-4090-ad84-6a731d064bab",
+        "specialty": "С4 Психологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-ta-vidnovlennia-dovkillia-bachelor",
+    "title": "Біологія та відновлення довкілля",
+    "level": "bachelor",
+    "specialty": "E1 Біологія та біохімія, Е2 Екологія",
+    "email": "olena.iarys@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/25f0d6cd-2895-4da2-8a44-a8ee8ba680cd",
+        "specialty": "E1 Біологія та біохімія, Е2 Екологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "osvitolohiia-master",
+    "title": "Освітологія",
+    "level": "master",
+    "specialty": "A1 Освітні науки",
+    "email": "lyudmyla.zelenska@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/92dcc33c-567e-498e-8c78-10e4e9a3d6c0",
+        "specialty": "A1 Освітні науки"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/55e5cd3e-20a2-44d1-9de8-e698603d4977",
+        "specialty": "A1 Освітні науки"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pozashkilna-osvita-master",
+    "title": "Позашкільна освіта",
+    "level": "master",
+    "specialty": "A1 Освітні науки",
+    "email": "lyudmyla.zelenska@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/1ea6902a-5763-4d6d-9116-2cd147333fea",
+        "specialty": "A1 Освітні науки"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "doshkilna-osvita-master",
+    "title": "Дошкільна освіта",
+    "level": "master",
+    "specialty": "А2 Дошкільна освіта",
+    "email": "tetianatanko@gmail.com",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/60849056-9575-41bf-ac96-c60120720f91",
+        "specialty": "А2 Дошкільна освіта"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/25190c90-4d69-4bbd-ab56-d12e00c0de3d",
+        "specialty": "А2 Дошкільна освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pochatkova-osvita-master",
+    "title": "Початкова освіта",
+    "level": "master",
+    "specialty": "А3 Початкова освіта",
+    "email": "yesman@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/c0f75314-eeee-4068-9bbe-092bed926dda",
+        "specialty": "А3 Початкова освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "informatyka-v-zakladakh-osvity-master",
+    "title": "Інформатика в закладах освіти",
+    "level": "master",
+    "specialty": "А4 09 Середня освіта (Інформатика)",
+    "email": "nadiia.olefirenko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/8b99628f-32ca-4c72-8647-95a35d12b6ff",
+        "specialty": "А4 09 Середня освіта (Інформатика)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/a0a1da2a-6d07-4b29-a2f5-94376cdb10ac",
+        "specialty": "А4 09 Середня освіта (Інформатика)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "istoriia-v-zakladakh-osvity-master",
+    "title": "Історія в закладах освіти",
+    "level": "master",
+    "specialty": "А4 03 Середня освіта (Середня освіта (Історія та громадянська освіта))",
+    "email": "yampolska.larysa@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/6ed4be13-0c91-4191-bb43-fef635923b25",
+        "specialty": "А4 03 Середня освіта (Середня освіта (Історія та громадянська освіта))"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/3641d99a-e915-4e90-95f8-94f57ad1abbf",
+        "specialty": "А4 03 Середня освіта (Середня освіта (Історія та громадянська освіта))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-v-zakladakh-osvity-master",
+    "title": "Біологія в закладах освіти",
+    "level": "master",
+    "specialty": "А4 05 Середня освіта (Біологія та здоров`я людини)",
+    "email": "ionov.i.a@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/cc6ea047-7532-41c1-bc6c-578fe2834fbc",
+        "specialty": "А4 05 Середня освіта (Біологія та здоров`я людини)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/a6607d55-1e73-4e7e-af7e-6a4de4a39c2d",
+        "specialty": "А4 05 Середня освіта (Біологія та здоров`я людини)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "matematyka-v-zakladakh-osvity-master",
+    "title": "Математика в закладах освіти",
+    "level": "master",
+    "specialty": "А4 04 Середня освіта (Математика)",
+    "email": "e.p.nelin@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/1bed1c5c-1d02-49ff-b728-415acd40f9f5",
+        "specialty": "А4 04 Середня освіта (Математика)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "anhliiska-mova-i-literatura-v-zakladakh-osvity-master",
+    "title": "Англійська мова і література в закладах освіти",
+    "level": "master",
+    "specialty": "А4 021 Середня освіта (Англійська мова та зарубіжна література)",
+    "email": "tuchina.nv@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/10b4b333-1188-4df8-8bec-06d1ea5dca3d",
+        "specialty": "А4 021 Середня освіта (Англійська мова та зарубіжна література)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/97fa45b9-58e8-400c-b9d5-a8c76e853455",
+        "specialty": "А4 021 Середня освіта (Англійська мова та зарубіжна література)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "obrazotvorche-mystetstvo-v-zakladakh-osvity-master",
+    "title": "Образотворче мистецтво в закладах освіти",
+    "level": "master",
+    "specialty": "A4 12 Середня освіта (Мистецтво. Образотворче мистецтво))",
+    "email": "a.sokolova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/fda92db4-6351-4780-960d-8ed0a8ad660e",
+        "specialty": "A4 12 Середня освіта (Мистецтво. Образотворче мистецтво))"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/0583eebb-f4b7-4edc-b172-d901173894f5",
+        "specialty": "A4 12 Середня освіта (Мистецтво. Образотворче мистецтво))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pryrodnychi-nauky-master",
+    "title": "Природничі науки",
+    "level": "master",
+    "specialty": "A4 15 Середня освіта (Природничі науки)",
+    "email": "iturdus@ukr.net",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/220a9f84-e1d8-4309-8b3d-b4a71857187e",
+        "specialty": "A4 15 Середня освіта (Природничі науки)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/bfc1ccf0-e7a5-405b-80df-b07d4b05ed3a",
+        "specialty": "A4 Середня освіта (Природничі науки)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-zarubizhna-literatura-v-zakladakh-osvity-master",
+    "title": "Українська мова і література, зарубіжна література в закладах освіти",
+    "level": "master",
+    "specialty": "А4 01 Середня освіта (Українська мова і література, зарубіжна література)",
+    "email": "veretiuk@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/d4234660-5fa6-40d5-bc13-e46c229a04df",
+        "specialty": "А4 01 Середня освіта (Українська мова і література, зарубіжна література)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-anhliiska-mova-v-zakladakh-osvity-master",
+    "title": "Українська мова і література, англійська мова в закладах освіти",
+    "level": "master",
+    "specialty": "А4 Середня освіта (Українська мова і література, англійська мова)",
+    "email": "ostaniya1967@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/57d91a24-5bbe-4205-992c-829430eb66fb",
+        "specialty": "А4 Середня освіта (Українська мова і література, англійська мова)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fizyka-v-zakladakh-osvity-master",
+    "title": "Фізика в закладах освіти",
+    "level": "master",
+    "specialty": "А4 08 Середня освіта (Фізика та астрономія)",
+    "email": "k.borysenko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/41ec2e83-d729-4679-8385-6a6c5207b637",
+        "specialty": "А4 08 Середня освіта (Фізика та астрономія)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/609192c6-3d8d-4cf4-82f2-bfef5bc8366c",
+        "specialty": "А4 08 Середня освіта (Фізика та астрономія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fizychna-kultura-v-zakladakh-osvity-master",
+    "title": "Фізична культура в закладах освіти",
+    "level": "master",
+    "specialty": "А4 11 Середня освіта (Фізична культура)",
+    "email": "zhanna.tzymbaliuk@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/c6c87a68-f4cd-4ef1-a9f6-3fa3cfb439b0",
+        "specialty": "А4 11 Середня освіта (Фізична культура)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/a1b8bc64-88eb-4df9-898c-a689134803f6",
+        "specialty": "А4 11 Середня освіта (Фізична культура)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fizychna-kultura-zakhyst-ukrainy-master",
+    "title": "Фізична культура. Захист України",
+    "level": "master",
+    "specialty": "А4 11 Середня освіта (Фізична культура)",
+    "email": "zhanna.tzymbaliuk@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/e3514671-4f6a-4ed8-8ee8-4fde511d43ca",
+        "specialty": "А4 11 Середня освіта (Фізична культура)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/048ec9bf-4fad-41a1-8878-e6991866c86e",
+        "specialty": "А4 11 Середня освіта (Фізична культура)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "khimiia-v-zakladakh-osvity-master",
+    "title": "Хімія в закладах освіти",
+    "level": "master",
+    "specialty": "А4 06 Середня освіта (Хімія)",
+    "email": "o.v.sidorenko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/561421df-9803-4969-86a4-9bc0299ce8af",
+        "specialty": "А4 06 Середня освіта (Хімія)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/c7ac6c06-508b-4b81-b1bc-17e783aa988c",
+        "specialty": "А4 06 Середня освіта (Хімія)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "tsyfrovi-tekhnolohii-v-profesiinii-osviti-master",
+    "title": "Цифрові технології в професійній освіті",
+    "level": "master",
+    "specialty": "А5 39 Професійна освіта (Цифрові технології)",
+    "email": "svetlana.dotsenko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/9f8867bc-7049-4474-83d1-3b6b90ce640f",
+        "specialty": "А5 39 Професійна освіта (Цифрові технології)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/7e51f473-d30e-4481-8661-db8c15eb0484",
+        "specialty": "А5 39 Професійна освіта (Цифрові технології)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "olihofrenopedahohika-master",
+    "title": "Олігофренопедагогіка",
+    "level": "master",
+    "specialty": "A6 02 Спеціальна освіта (Корекційна психопедагогіка)",
+    "email": "elena.kazachiner@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/97861ef7-684a-4b5e-b6ff-2f70640114e8",
+        "specialty": "A6 02 Спеціальна освіта (Корекційна психопедагогіка)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/804f33f7-ae90-42cd-a720-b4cdde4c48c6",
+        "specialty": "A6 02 Спеціальна освіта (Корекційна психопедагогіка)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "lohopediia-master",
+    "title": "Логопедія",
+    "level": "master",
+    "specialty": "А6 Спеціальна освіта",
+    "email": "sinopalnikova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/189cf2ce-415d-48aa-8255-f097b4c6ff2f",
+        "specialty": "А6 Спеціальна освіта"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/05ef3cba-88d9-4902-9ab4-b5e25d98ca7a",
+        "specialty": "А6 Спеціальна освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "tyflopedahohika-surdopedahohika-master",
+    "title": "Тифлопедагогіка. Сурдопедагогіка",
+    "level": "master",
+    "specialty": "A6 05 Спеціальна освіта (Тифлопедагогіка)",
+    "email": "sp_ped@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/5f4e9be1-1411-42b0-a193-85a8a103fce9",
+        "specialty": "A6 05 Спеціальна освіта (Тифлопедагогіка)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/ee2f66bd-d32f-4ca0-a77b-2be2e5603a8b",
+        "specialty": "A6 05 Спеціальна освіта (Тифлопедагогіка)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "trenerska-diialnist-v-obranomu-vydi-sportu-master",
+    "title": "Тренерська діяльність в обраному виді спорту",
+    "level": "master",
+    "specialty": "А7 Фізична культура і спорт",
+    "email": "vitalii.korobeinik@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/fd3a255e-737e-44df-9e39-bbde13222f76",
+        "specialty": "А7 Фізична культура і спорт"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/98d5e8cc-0a28-4e61-9370-ac617f027d64",
+        "specialty": "А7 Фізична культура і спорт"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "dyzain-master",
+    "title": "Дизайн",
+    "level": "master",
+    "specialty": "В2 Дизайн",
+    "email": "natalia.zhytienova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/7788f157-93a3-4988-bde2-9100c9187632",
+        "specialty": "В2 Дизайн"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "khoreohrafiia-master",
+    "title": "Хореографія",
+    "level": "master",
+    "specialty": "В6 Перфомативні мистецтва",
+    "email": "faculty-arts@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/23a88086-0cb2-4cca-ac9c-b4a1391542b3",
+        "specialty": "В6 Перфомативні мистецтва"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/81a45f8d-8a56-49ed-a49a-bc3b135b871c",
+        "specialty": "В6 Перфомативні мистецтва"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "anhliiska-mova-i-literatura-ta-pereklad-master",
+    "title": "Англійська мова і література та переклад",
+    "level": "master",
+    "specialty": "В11 041 Філологія (германські мови та літератури (переклад включно), перша-англійська)",
+    "email": "sazonova.yu@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/55cc257a-9af1-4b77-a15c-efcaa18e7ef5",
+        "specialty": "В11 041 Філологія (германські мови та літератури (переклад включно), перша-англійська)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/71b42f75-3eaf-45d6-afc4-8732dcf2ccc0",
+        "specialty": "В11 041 Філологія (германські мови та літератури (переклад включно), перша-англійська)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "kytaiska-mova-i-literatura-master",
+    "title": "Китайська мова і література",
+    "level": "master",
+    "specialty": "В11 065 Філологія (східні мови та літератури (переклад включно), перша-китайська)",
+    "email": "ruda.nv@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/3b29d333-41f6-4c20-8a61-402dc657446d",
+        "specialty": "В11 065 Філологія (східні мови та літератури (переклад включно), перша-китайська)"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/aa570a32-9e8a-4b6a-922c-b0c1e666d7d3",
+        "specialty": "В11 065 Філологія (східні мови та літератури (переклад включно), перша-китайська)"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "ukrainska-mova-i-literatura-master",
+    "title": "Українська мова і література",
+    "level": "master",
+    "specialty": "В11 Філологія",
+    "email": "oleksenkoolena@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/0325c89c-d613-400e-952c-199a53732bee",
+        "specialty": "В11 Філологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/ff8ca94b-bb89-4efd-8f66-9c1c1eebc6af",
+        "specialty": "В11 Філологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "politolohiia-master",
+    "title": "Політологія",
+    "level": "master",
+    "specialty": "C2 Політологія",
+    "email": "dibikova.yuliia@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/0b48e87a-3b66-4c02-aaaf-914907e3d04a",
+        "specialty": "C2 Політологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/920d9536-2d31-4344-bced-901b0de5e7b0",
+        "specialty": "C2 Політологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "psykholohiia-master",
+    "title": "Психологія",
+    "level": "master",
+    "specialty": "C4 Психологія",
+    "email": "tetyana.yelchaninova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/249eb7f0-d0d8-4423-8768-d3265160c793",
+        "specialty": "C4 Психологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/2c587eea-ffa6-4d32-8bf7-61424f004958",
+        "specialty": "C4 Психологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "reabilitatsiina-psykholohiia-master",
+    "title": "Реабілітаційна психологія",
+    "level": "master",
+    "specialty": "C4 Психологія",
+    "email": "tetyana.yelchaninova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/934ff67d-f531-419b-87c5-254b05926a46",
+        "specialty": "C4 Психологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/ad5b0a07-715c-47fc-a081-70017760919f",
+        "specialty": "C4 Психологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "menedzhment-orhanizatsii-i-administruvannia-master",
+    "title": "Менеджмент організацій і адміністрування",
+    "level": "master",
+    "specialty": "D3 Менеджмент",
+    "email": "talinahlebnikova@ukr.net",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/bae49a16-f42a-4fab-884c-e005c18a3ffe",
+        "specialty": "D3 Менеджмент"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/ddc3b094-c460-4f59-81c3-992381075926",
+        "specialty": "D3 Менеджмент"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "upravlinnia-zakladom-osvity-master",
+    "title": "Управління закладом освіти",
+    "level": "master",
+    "specialty": "D3 Менеджмент",
+    "email": "talinahlebnikova@ukr.net",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/680413b3-94fe-438b-9ef9-f20e40af376a",
+        "specialty": "D3 Менеджмент"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/9b0fa0a2-40ef-43b3-a304-cd136a4e5510",
+        "specialty": "D3 Менеджмент"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pravo-master",
+    "title": "Право",
+    "level": "master",
+    "specialty": "D8 Право",
+    "email": "n.zhdan@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/67aa2ce8-6c48-47f0-8db1-fb5110fa5068",
+        "specialty": "D8 Право"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/02c9a6da-e6f3-4eb5-b2c8-eabae3d424e4",
+        "specialty": "D8 Право"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-master",
+    "title": "Біологія",
+    "level": "master",
+    "specialty": "Е1 Біологія та біохімія",
+    "email": "t.markina@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/3e896ba0-a70a-41de-936e-41e0cd1a8034",
+        "specialty": "Е1 Біологія та біохімія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/4abe9898-f2b5-488c-a964-8f14f0b6d6e1",
+        "specialty": "Е1 Біологія та біохімія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "sotsialna-pedahohika-master",
+    "title": "Соціальна педагогіка",
+    "level": "master",
+    "specialty": "I10 Соціальна робота",
+    "email": "inna.romanova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/c6eb4a0d-934f-4c2c-b4f1-d7a9faaf0bf4",
+        "specialty": "I10 Соціальна робота"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/5d6b3084-f23a-4d53-a5fc-86739f2c9506",
+        "specialty": "I10 Соціальна робота"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "muzychne-mystetstvo-v-zakladakh-osvity-master",
+    "title": "Музичне мистецтво в закладах освіти",
+    "level": "master",
+    "specialty": "A4 13 Середня освіта (Мистецтво. Музичне мистецтво))",
+    "email": "a.sokolova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/bc97ea25-0c40-4b09-b289-0b2f890c9ccf",
+        "specialty": "A4 13 Середня освіта (Мистецтво. Музичне мистецтво))"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "hrafichnyi-dyzain-master",
+    "title": "Графічний дизайн",
+    "level": "master",
+    "specialty": "В2 01 Дизайн",
+    "email": "natalia.zhytienova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/a84528c7-b266-4945-9d0b-173dc720787c",
+        "specialty": "В2 01 Дизайн"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "istoryko-heohrafichnyi-rozvytok-i-pisliavoienne-vidnovlennia-rehioniv-master",
+    "title": "Історико-географічний розвиток і післявоєнне відновлення регіонів",
+    "level": "master",
+    "specialty": "В9 Історія та археологія, С6 Географія та регіональні студії",
+    "email": "faculty_history_law@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/55678270-be05-480b-a861-467f9476531e",
+        "specialty": "В9 Історія та археологія, С6 Географія та регіональні студії"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "sotsialna-robota-i-sotsialna-reabilitatsiia-master",
+    "title": "Соціальна робота і соціальна реабілітація",
+    "level": "master",
+    "specialty": "I10 Соціальна робота",
+    "email": "inna.romanova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/51e59449-9b2b-4df1-868a-0e6d2f2aa55e",
+        "specialty": "I10 Соціальна робота"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "osvitni-pedahohichni-nauky-phd",
+    "title": "Освітні, педагогічні науки",
+    "level": "graduate",
+    "specialty": "А1 Освітні науки",
+    "email": "liudmila_rybalko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2025,
+        "file": "/assets/d3f9f7de-ae0d-4080-86b7-e1900494828d",
+        "specialty": "А1 Освітні науки"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/962b2925-450f-4f1d-a4b5-a5134d398f16",
+        "specialty": "011 Освітні, педагогічні науки"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/30f1a602-614e-47e2-ba21-4fbb221c3bed",
+        "specialty": "011 Освітні, педагогічні науки"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "profesiina-osvita-phd",
+    "title": "Професійна освіта",
+    "level": "graduate",
+    "specialty": "015 Професійна освіта",
+    "email": "kaf-professional-edu@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2023,
+        "file": "/assets/aea9e846-0257-4f88-9be6-f4eaf21b2a2f",
+        "specialty": "015 Професійна освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "fizychna-kultura-i-sport-phd",
+    "title": "Фізична культура і спорт",
+    "level": "graduate",
+    "specialty": "А7 Фізична культура і спорт",
+    "email": "zhanneta.kozina@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/a12d9c82-1392-4958-8a4a-babbab0c8136",
+        "specialty": "А7 Фізична культура і спорт"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/bc061b8d-bd95-46aa-a99c-6929ff8bfff6",
+        "specialty": "А7 Фізична культура і спорт"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/8ffb56d2-5508-4015-9a16-c7db8a6c4884",
+        "specialty": "017 Фізична культура і спорт"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/8f17629a-84ce-4a5f-a4ea-3644483f70ab",
+        "specialty": "017 Фізична культура і спорт"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "istoriia-ta-arkheolohiia-phd",
+    "title": "Історія та археологія",
+    "level": "graduate",
+    "specialty": "В9 Історія та археологія",
+    "email": "bohdashyna@gmail.com",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/d78d2dbd-fdcc-4b67-ad96-e905a508b003",
+        "specialty": "В9 Історія та археологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/e643123c-ab28-4256-93c4-f3d3c9c62886",
+        "specialty": "В9 Історія та археологія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/d3db9618-0ee5-44ea-9507-87166cb86677",
+        "specialty": "032 Історія та археологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/eb20171c-b3ad-40db-8554-a6d737f04241",
+        "specialty": "032 Історія та археологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "filosofiia-phd",
+    "title": "Філософія",
+    "level": "graduate",
+    "specialty": "В10 Філософія",
+    "email": "nataliia.radionova@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/67b8d7b9-4570-4b84-bc97-6158f06b8a37",
+        "specialty": "В10 Філософія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/48d061d4-272f-413b-987a-c2a0b3de56d9",
+        "specialty": "В10 Філософія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/7b3d6768-b607-49c3-a6c2-f274fb2cc7d8",
+        "specialty": "033 Філософія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/1555060c-7d8e-41a5-b802-ec804e3685f3",
+        "specialty": "033 Філософія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "filolohiia-phd",
+    "title": "Філологія",
+    "level": "graduate",
+    "specialty": "В11 Філологія",
+    "email": "radchuk.o.v@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/090edec9-74a8-4c23-95f3-fda99f24ad35",
+        "specialty": "В11 Філологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/5604ea49-9dec-4431-b36d-d8448346eb02",
+        "specialty": "В11 Філологія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/6eb6f133-13d4-498d-bb0d-e77ae6c0101a",
+        "specialty": "035 Філологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/e4845f04-2de0-4618-a46c-cc772944b98c",
+        "specialty": "035 Філологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "politolohiia-phd",
+    "title": "Політологія",
+    "level": "graduate",
+    "specialty": "С2 Політологія",
+    "email": "kuts.halyna@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/50d6356d-6937-4a1e-a1bf-be7465f3a64b",
+        "specialty": "С2 Політологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/02bf2347-fe98-402c-b17b-1c3e442b061c",
+        "specialty": "С2 Політологія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/00f90c3c-d5f7-4c25-9b80-5838f1ecd6a8",
+        "specialty": "052 Політологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/7bbb880a-d31a-4a87-90d1-b90724c63681",
+        "specialty": "052 Політологія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "psykholohiia-phd",
+    "title": "Психологія",
+    "level": "graduate",
+    "specialty": "С4 Психологія",
+    "email": "karyna.fomenko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/347fae1c-b920-4b47-8947-3e2ff1db712f",
+        "specialty": "С4 Психологія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/d35f5d6d-da4b-428f-82a0-02e6d6358139",
+        "specialty": "С4 Психологія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/423e8a50-8a53-4802-9d53-1498a40b04c1",
+        "specialty": "053 Психологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/05389ab1-a323-4ebb-bc13-5dc5403e05d9",
+        "specialty": "053 Психології"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "biolohiia-phd",
+    "title": "Біологія",
+    "level": "graduate",
+    "specialty": "Е1 Біологія та біохімія",
+    "email": "dmitryleontyev@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/e31afd3b-9bdf-48db-8f25-a4cc4da0e173",
+        "specialty": "Е1 Біологія та біохімія"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/72fcf3c5-8602-45ec-98b5-44a652488bd7",
+        "specialty": "Е1 Біологія та біохімія"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/c40ec6f6-1ef1-4c20-a44e-05d8720618e0",
+        "specialty": "091 Біологія"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/9a64c2c8-4e85-4d92-bf69-03abede8558f",
+        "specialty": "091 Біологія та біохімія"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "pravo-phd",
+    "title": "Право",
+    "level": "graduate",
+    "specialty": "В8 Право",
+    "email": "kovalenko.olena@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/e413bfcd-5687-40ce-acec-81217945beaa",
+        "specialty": "В8 Право"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/3ad8688a-65a3-4b76-a103-c28abbfe1179",
+        "specialty": "В8 Право"
+      },
+      {
+        "year": 2024,
+        "file": "/assets/0b818264-1470-4da4-b470-9ea578706ee8",
+        "specialty": "081 Право"
+      },
+      {
+        "year": 2023,
+        "file": "/assets/42f70b4a-18da-40b2-9076-d695ac50cbcb",
+        "specialty": "081 Право"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "profesiina-osvita-tsyfrovi-tekhnolohii-phd",
+    "title": "Професійна освіта (Цифрові технології)",
+    "level": "graduate",
+    "specialty": "А5 Професійна освіта",
+    "email": "svetlana.dotsenko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/8d01dd5b-bdc9-48f9-9aba-9e292fba47c5",
+        "specialty": "А5 Професійна освіта"
+      },
+      {
+        "year": 2025,
+        "file": "/assets/83598398-022a-49da-8875-f8c408431c19",
+        "specialty": "А5 Професійна освіта"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "slug": "osvitni-nauky-phd",
+    "title": "Освітні науки",
+    "level": "graduate",
+    "specialty": "А1 Освітні науки",
+    "email": "liudmila_rybalko@hnpu.edu.ua",
+    "versions": [
+      {
+        "year": 2026,
+        "file": "/assets/0f6fa7be-6309-4c2c-9a3b-cb90ef0be6b4",
+        "specialty": "А1 Освітні науки"
+      }
+    ],
+    "status": "published"
+  }
+]
