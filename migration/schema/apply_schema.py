@@ -540,6 +540,12 @@ NEW_DOCUMENT_SECTIONS = [
     {'text': 'Вступ — рейтингові списки вступників', 'value': 'admissions-rating-lists'},
     {'text': 'Вступ — рекомендації до зарахування', 'value': 'admissions-recommendations'},
     {'text': 'Вступ — накази про зарахування', 'value': 'admissions-enrolment-orders'},
+    {'text': 'Вільний вибір — силабуси (бакалавр)', 'value': 'free-choice-bachelor-syllabi'},
+    {'text': 'Вільний вибір — розклад занять (бакалавр)', 'value': 'free-choice-bachelor-schedule'},
+    {'text': 'Вільний вибір — силабуси (магістр)', 'value': 'free-choice-master-syllabi'},
+    {'text': 'Вільний вибір — розклад занять (магістр)', 'value': 'free-choice-master-schedule'},
+    {'text': 'Рейтингове оцінювання науково-педагогічних працівників', 'value': 'staff-rating'},
+    {'text': 'Спортивний клуб', 'value': 'sports-club'},
 ]
 
 

@@ -28,6 +28,8 @@ Every `extract_*.py` emits the same envelope, so one loader covers all of them:
 Row keys starting with `_` are directives, everything else is written as-is:
 
   `_file`      — URL to download and re-host; becomes the row's `file` field
+  `_fileId`    — id of a file already in the target (uploaded by `drive-assets/push_assets.py`),
+                 used when the source is a Drive folder or a page the old site no longer serves
   `_fileField` — write the uploaded id to this field instead of `file`
   `_ref`       — name this row so child batches can point at it
   `_parent`    — the `_ref` of the parent row
@@ -139,6 +141,9 @@ def main() -> int:
                 if row.get('_ref'):
                     refs[row['_ref']] = done[key]
                 continue
+
+            if row.get('_fileId'):
+                payload[row.get('_fileField', 'file')] = row['_fileId']
 
             source = row.get('_file')
             if source:
