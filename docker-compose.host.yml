@@ -1,0 +1,11 @@
+# Publish Directus to the host loopback so Hestia's nginx can proxy to it.
+#
+# On the dev42hub server Caddy sits inside `webnet` and reaches the container by name, so
+# no port is published there. Here nginx runs on the host, and 127.0.0.1 keeps the API off
+# the public interface — only nginx (and root over SSH) can reach it.
+#
+#   docker compose -f docker-compose.prod.yml -f docker-compose.host.yml up -d
+services:
+  directus:
+    ports:
+      - "127.0.0.1:8055:8055"

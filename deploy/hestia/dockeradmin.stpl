@@ -1,0 +1,39 @@
+# admin.hnpu.edu.ua — HTTPS in front of the Directus container (published on
+# 127.0.0.1:8055 by docker-compose.host.yml).
+server {
+    listen      %ip%:%proxy_ssl_port% ssl;
+    http2       on;
+    server_name %domain_idn% %alias_idn%;
+
+    ssl_certificate     %ssl_pem%;
+    ssl_certificate_key %ssl_key%;
+
+    location ^~ /.well-known/acme-challenge/ {
+        root         %home%/%user%/web/%domain%/public_html;
+        default_type text/plain;
+        try_files    $uri =404;
+    }
+
+    # Editors upload scans and newspaper issues of tens of megabytes through the admin app.
+    client_max_body_size 512m;
+
+    location / {
+        proxy_pass http://127.0.0.1:8055;
+        proxy_http_version 1.1;
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        # Directus runs a websocket endpoint (/websocket) for realtime + live preview.
+        proxy_set_header Upgrade           $http_upgrade;
+        proxy_set_header Connection        $connection_upgrade;
+        # Range requests on PDFs must reach the client untouched — pdf.js fetches issues
+        # in chunks instead of downloading the whole file for a thumbnail.
+        proxy_buffering off;
+        proxy_request_buffering off;
+        proxy_read_timeout 300s;
+        proxy_send_timeout 300s;
+    }
+
+    include %home%/%user%/conf/web/%domain%/nginx.conf_*;
+}

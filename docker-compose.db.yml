@@ -1,0 +1,41 @@
+# Own Postgres for the hnpu.edu.ua server.
+#
+# On the dev42hub server the database lives in a Postgres container shared with another
+# project, so this file does not exist there. Here Postgres belongs to this stack: same
+# role, database and password as in `.env`, so nothing else has to change.
+#
+#   docker compose -f docker-compose.db.yml up -d
+#
+# The data volume is `knpu-university-be_pgdata`; `docker compose down -v` deletes it, so
+# never pass -v on this stack.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: knpu-university-postgres
+    restart: unless-stopped
+    shm_size: 256m
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      # Ukrainian content sorts and matches on ICU collations; the alpine image defaults
+      # to POSIX unless initdb is told otherwise.
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C.UTF-8"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    # dbnet only: the database is never reachable from the host or from the web network.
+    networks:
+      - dbnet
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+volumes:
+  pgdata:
+
+networks:
+  dbnet:
+    external: true

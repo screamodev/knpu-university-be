@@ -29,60 +29,57 @@
 
 ---
 
-## Етап 0. Дві передумови, без яких переїзд не почнеться
+## Етап 0. Передумови (закриті 23.08.2026)
 
-Розвідка 23.08.2026 показала на сервері B (`hosting.hnpu.edu.ua`, Debian 12, 4 vCPU, 7.8 ГБ RAM):
+Розвідка 23.08.2026 знайшла на сервері B (`hosting.hnpu.edu.ua`, Debian 12, 4 vCPU, 7.8 ГБ RAM)
+дві перешкоди — **обидві зняті адміністратором**:
 
-**1. Диску не вистачає.** `/dev/sda1` — 9.7 ГБ усього, вільно 5.9 ГБ. Стек важить незрівнянно
-більше:
+1. **Диск** був 9.7 ГБ при потребі 40–60 ГБ (том `uploads` Directus сам по собі ~15 ГБ, образ
+   фронту з шарами складання ще 4–6 ГБ, база ~0.1–1 ГБ, образи 1 ГБ, своп 4 ГБ) — **ресайзнуто**.
+2. **Права**: користувач `hnpu` не мав `sudo`, тож не міг ні поставити Docker, ні покласти шаблон
+   nginx, ні випустити сертифікат — **`sudo` видано**.
 
-| Що | Скільки |
-|---|---|
-| том `uploads` Directus (файли сайту) | **~15 ГБ** |
-| база Postgres | ~0.1–1 ГБ |
-| образ фронту + шари складання | ~4–6 ГБ |
-| образи Directus/Postgres | ~1 ГБ |
-| своп | 4 ГБ |
-
-Разом із запасом — **40–60 ГБ**. Треба або збільшити диск, або підмонтувати окремий том і
-перенести на нього `/var/lib/docker` та том `uploads`.
-
-**2. Користувач `hnpu` не має прав.** `sudo` заборонено, `hestia.conf` не читається, тож із-під
-нього неможливо: поставити Docker, створити шаблон nginx, випустити сертифікат, змінити DNS-зону
-через CLI. Панель (`:31121`) дає лише те, що адміністратор відкрив користувачеві.
-
-Тому спершу — запит до адміністратора сервера (зразок у кінці документа), і тільки потім
-етапи 1–10.
-
-### Що ще перевірити на B (уже з правами)
+Тому переїзд починається з етапу 1. Спершу — контрольні заміри на B:
 
 ```bash
 ssh -p 10163 root@193.105.7.20
 
-df -h; lsblk                                  # чи з'явився окремий том під дані
+df -h; lsblk                                  # має бути ≥ 40 ГБ вільних під / та /var/lib/docker
+free -h                                       # своп: якщо 0 — етап 1.1
 grep -E 'WEB_SYSTEM|PROXY_SYSTEM|WEB_PORT|WEB_SSL_PORT' /usr/local/hestia/conf/hestia.conf
 v-list-web-domains hnpu                       # має бути hnpu.edu.ua
 v-list-dns-domains hnpu
 docker --version
 ```
 
-Запиши, що показав `WEB_SYSTEM` / `PROXY_SYSTEM` — від цього залежить, куди класти шаблон у
-етапі 1.3 (`nginx` — коли nginx єдиний веб-сервер; `nginx` + `apache2` — коли nginx стоїть
-проксі перед apache).
+`WEB_SYSTEM` / `PROXY_SYSTEM` визначають, куди лягає шаблон nginx (етап 1.5). Розбиратися вручну
+не треба — `install-templates.sh` читає `hestia.conf` сам; але подивитися варто, щоб знати, чого
+чекати: `PROXY_SYSTEM=nginx` — nginx проксі перед apache, `WEB_SYSTEM=nginx` без проксі — nginx
+єдиний веб-сервер.
+
+Якщо диск виявиться меншим, ніж домовлялися, — зупинитися тут: том `uploads` не влізе, а
+складання фронту впаде на середині й лишить по собі мертві шари.
 
 ## Етап 1. Підготувати сервер B
 
 ### 1.1 Своп і Docker
 
+Своп потрібен навіть при 7.8 ГБ RAM: складання фронту бере ~3 ГБ понад те, що вже тримають
+Directus, Postgres і сам Hestia.
+
 ```bash
-# своп, якщо RAM < 4 ГБ
+swapon --show                                  # якщо порожньо — робимо
 fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
 echo '/swapfile none swap sw 0 0' >> /etc/fstab
 
 curl -fsSL https://get.docker.com | sh
+usermod -aG docker hnpu                        # щоб не ходити під root щоразу
 docker network create webnet
 docker network create dbnet
 ```
+
+`webnet` і `dbnet` — зовнішні мережі, на які посилаються всі compose-файли; без них
+`docker compose up` одразу впаде.
 
 ### 1.2 Каталоги й код
 
@@ -90,125 +87,91 @@ docker network create dbnet
 cd ~
 git clone https://github.com/screamodev/knpu-university-be.git
 git clone https://github.com/screamodev/knpu-university-fe.git
-cd knpu-university-be && git checkout dev && cd ../knpu-university-fe && git checkout dev
+cd ~/knpu-university-be && git checkout dev
+cd ~/knpu-university-fe && git checkout dev
 ```
 
 Приватні репозиторії — знадобиться deploy key або токен.
 
+Усе, що потрібно саме для сервера B, уже лежить у гілці `dev` (якщо клон робився раніше —
+`git pull`):
+
+| Файл | Що це |
+|---|---|
+| `knpu-university-be/docker-compose.db.yml` | власна Postgres 16 на `dbnet`, том `pgdata` |
+| `knpu-university-be/docker-compose.host.yml` | Directus на `127.0.0.1:8055` |
+| `knpu-university-fe/docker-compose.host.yml` | Nuxt на `127.0.0.1:3000` |
+| `knpu-university-be/deploy/hestia/dockerapp.{tpl,stpl}` | vhost сайту (проксі на 3000) |
+| `knpu-university-be/deploy/hestia/dockeradmin.{tpl,stpl}` | vhost адмінки (проксі на 8055) |
+| `knpu-university-be/deploy/hestia/install-templates.sh` | кладе шаблони куди треба й вішає на домени |
+
 ### 1.3 Власна Postgres
 
-На A база живе в чужому контейнері; на B робимо свою. Створи
-`~/knpu-university-be/docker-compose.db.yml`:
+На A база живе в чужому контейнері (спільному з іншим проєктом); на B піднімаємо свою —
+`docker-compose.db.yml`. Ім'я ролі, бази й пароль беруться з `.env`, тобто з тих самих, що на A,
+і `.env` через це міняти не доводиться. Запускати після того, як `.env` опиниться на місці
+(етап 2.3):
 
-```yaml
-services:
-  postgres:
-    image: postgres:16-alpine
-    container_name: knpu-university-postgres
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: ${DB_DATABASE}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    networks: [dbnet]
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-
-volumes:
-  pgdata:
-
-networks:
-  dbnet:
-    external: true
+```bash
+cd ~/knpu-university-be
+set -a; . ./.env; set +a
+docker compose -f docker-compose.db.yml up -d
+docker compose -f docker-compose.db.yml ps      # має бути healthy
 ```
+
+Дані живуть у томі `knpu-university-be_pgdata`. `docker compose down -v` на цьому стеку не
+запускати ніколи — `-v` зносить том разом із базою.
 
 ### 1.4 Публікація портів для nginx
 
-Робочі compose-файли портів не відкривають (на A їх бачив Caddy зсередини мережі). На B nginx
-працює на хості, тож треба прокинути порти **тільки на loopback**. Створи
-`~/knpu-university-be/docker-compose.host.yml`:
+Робочі compose-файли портів не відкривають (на A їх бачив Caddy зсередини мережі `webnet`). На B
+nginx працює на хості, тож порти прокидаємо **тільки на loopback** — це роблять оверлеї
+`docker-compose.host.yml` в обох репозиторіях. Далі всі команди на B запускати з обома файлами:
 
-```yaml
-services:
-  directus:
-    ports: ["127.0.0.1:8055:8055"]
+```bash
+docker compose -f docker-compose.prod.yml -f docker-compose.host.yml up -d
 ```
 
-і `~/knpu-university-fe/docker-compose.host.yml`:
-
-```yaml
-services:
-  app:
-    ports: ["127.0.0.1:3000:3000"]
-```
-
-Далі всі команди на B запускати з обома файлами:
-`docker compose -f docker-compose.prod.yml -f docker-compose.host.yml …`
+Забути другий `-f` = отримати від nginx `502`, бо порт не опублікований. Забути його в `down` /
+`ps` — теж плутанина: compose вважатиме конфігурацію іншою.
 
 ### 1.5 Домен адмінки й шаблони nginx
 
 ```bash
 v-add-web-domain hnpu admin.hnpu.edu.ua
 v-add-dns-record hnpu hnpu.edu.ua admin A 193.105.7.20
+v-add-web-domain-alias hnpu hnpu.edu.ua www.hnpu.edu.ua
 ```
 
-Шаблони-проксі. Поклади два файли (для `WEB_SYSTEM=nginx` — у
-`/usr/local/hestia/data/templates/web/nginx/`; якщо nginx стоїть проксі перед apache — у
-`/usr/local/hestia/data/templates/web/nginx/` теж, але як **proxy**-шаблон):
-
-`dockerapp.tpl` (HTTP)
-
-```nginx
-server {
-    listen      %ip%:%proxy_port%;
-    server_name %domain_idn% %alias_idn%;
-    return 301 https://$host$request_uri;
-}
-```
-
-`dockerapp.stpl` (HTTPS)
-
-```nginx
-server {
-    listen      %ip%:%proxy_ssl_port% ssl;
-    http2       on;
-    server_name %domain_idn% %alias_idn%;
-    ssl_certificate     %ssl_pem%;
-    ssl_certificate_key %ssl_key%;
-    client_max_body_size 512m;
-
-    location / {
-        proxy_pass http://127.0.0.1:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Host              $host;
-        proxy_set_header X-Real-IP         $remote_addr;
-        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header Upgrade           $http_upgrade;
-        proxy_set_header Connection        "upgrade";
-        proxy_read_timeout 300s;
-    }
-
-    include %home%/%user%/conf/web/%domain%/nginx.conf_*;
-}
-```
-
-Копія тієї ж пари під адмінку — `dockeradmin.tpl` / `dockeradmin.stpl`, різниця лише в
-`proxy_pass http://127.0.0.1:8055;` (і `client_max_body_size` лишити великим — через адмінку
-завантажують PDF на десятки мегабайт).
-
-Призначити:
+Далі — шаблони. Скрипт сам читає `hestia.conf` і робить решту:
 
 ```bash
-v-change-web-domain-tpl hnpu hnpu.edu.ua dockerapp
-v-change-web-domain-tpl hnpu admin.hnpu.edu.ua dockeradmin
-v-add-web-domain-alias hnpu hnpu.edu.ua www.hnpu.edu.ua
-v-restart-service nginx
+bash ~/knpu-university-be/deploy/hestia/install-templates.sh
+```
+
+Що він вирішує за тебе:
+
+- **куди класти** — `data/templates/web/nginx/` при `PROXY_SYSTEM=nginx` (nginx проксі перед
+  apache) або `data/templates/web/nginx/php-fpm/` при `WEB_SYSTEM=nginx`, з заміною
+  `%proxy_port%` → `%web_port%` у другому випадку;
+- **`http2`** — окремою директивою для nginx ≥ 1.25.1, інакше на рядку `listen … ssl http2;`;
+- **`$connection_upgrade`** — додає `map` у `/etc/nginx/conf.d/`, якщо його ще ніде немає
+  (без нього websocket'и Directus і live preview не працюють);
+- **призначення** — `v-change-web-domain-proxy-tpl` або `v-change-web-domain-tpl` на
+  `hnpu.edu.ua` (`dockerapp`) і `admin.hnpu.edu.ua` (`dockeradmin`), потім `nginx -t` і рестарт.
+
+Прапорці: `--user`, `--site`, `--admin` — якщо імена інші; `--no-assign` — тільки покласти файли.
+Наявні шаблони з такими іменами скрипт перед перезаписом копіює поруч із суфіксом `.bak.<дата>`.
+
+Обидва `.tpl` віддають `/.well-known/acme-challenge/` з `public_html` **до** редіректу на HTTPS —
+без цього `v-add-letsencrypt-domain` (етап 7) падає, бо ACME-сервер отримує 301.
+
+Перевірка після встановлення (контейнерів ще немає, тож 502 — очікуваний результат; головне, що
+відповідає саме наш vhost):
+
+```bash
+nginx -T | grep -A5 'server_name .*hnpu.edu.ua' | head -40
+curl -sI http://hnpu.edu.ua -H 'Host: hnpu.edu.ua' --resolve hnpu.edu.ua:80:193.105.7.20 | head -3
 ```
 
 ## Етап 2. Перенести дані (перший, «тренувальний» прогін)
@@ -245,9 +208,10 @@ scp -P 10163 ~/knpu-university-fe/.env root@193.105.7.20:/root/transfer/fe.env
 
 ### 2.3 Розгорнути на B
 
+`.env` кладемо в клони з етапу 1.2 — вони вже на місці.
+
 ```bash
 ssh -p 10163 root@193.105.7.20
-mkdir -p ~/knpu-university-be ~/knpu-university-fe
 cp /root/transfer/.env    ~/knpu-university-be/.env
 cp /root/transfer/fe.env  ~/knpu-university-fe/.env
 
@@ -259,7 +223,10 @@ sed -i 's#^CORS_ORIGIN=.*#CORS_ORIGIN=https://hnpu.edu.ua,https://www.hnpu.edu.u
 
 set -a; . ./.env; set +a
 docker compose -f docker-compose.db.yml up -d
-sleep 15
+
+# дочекатися, поки база підніметься, — pg_restore у порожнечу впаде
+until [ "$(docker inspect -f '{{.State.Health.Status}}' knpu-university-postgres)" = healthy ]; do
+  sleep 3; done
 
 # відновити базу
 docker run --rm -i --network dbnet -e PGPASSWORD="$DB_PASSWORD" \
@@ -273,8 +240,11 @@ docker run --rm -v knpu-university-be_uploads:/uploads -v /root/transfer:/backup
   tar xzf /backup/knpu-uploads-move.tar.gz -C /uploads
 
 docker compose -f docker-compose.prod.yml -f docker-compose.host.yml up -d
-curl -s localhost:8055/server/health
+curl -s localhost:8055/server/health          # {"status":"ok"}
 ```
+
+Directus на старті проганяє власні міграції — перший запуск після відновлення бази довший за
+звичайний, це нормально.
 
 Фронт (збірка з новою адресою адмінки — вона запікається в бандл):
 
@@ -285,6 +255,8 @@ docker compose -f docker-compose.prod.yml -f docker-compose.host.yml build app
 docker compose -f docker-compose.prod.yml -f docker-compose.host.yml up -d app
 curl -sI localhost:3000 | head -3
 ```
+
+Складання фронту з'їдає ~3 ГБ RAM — своп із етапу 1.1 має бути вже увімкнений.
 
 ### 2.4 Перевірити до перемикання DNS
 
@@ -474,28 +446,29 @@ v-change-dns-record hnpu hnpu.edu.ua <ID_A_запису> ... 193.105.7.18
    відновлюємо в нього; імена ролі й бази лишаємо ті самі, щоб `.env` не міняти.
 6. **Збірка фронту** потребує ~3 ГБ RAM — без свопу на 1–2 ГБ машині вона впаде з OOM.
 7. **Пошта живе на Google** — MX/SPF/DKIM у зоні не чіпати; переїзд сайту на них не впливає.
+8. **`-f docker-compose.host.yml` у кожній команді** — без нього порт на loopback не
+   публікується і nginx віддає 502.
+9. **ACME проходить через `public_html`** — шаблони віддають `/.well-known/acme-challenge/` з
+   диска до редіректу на HTTPS. Якщо шаблон правитимеш руками, цей блок не чіпати.
 
 ---
 
-## Додаток. Що попросити в адміністратора сервера B
+## Додаток. Запит до адміністратора сервера B (закритий 23.08.2026)
 
-1. **Диск**: розширити до 60 ГБ (або підмонтувати окремий том під `/var/lib/docker` і дані сайту).
-2. **Права**: `sudo` для користувача `hnpu` — або виконання адміністратором чотирьох кроків:
-   - `curl -fsSL https://get.docker.com | sh` і `usermod -aG docker hnpu`
-     (членство в групі `docker` рівносильне root — якщо це неприйнятно, лишається варіант «без
-     Docker», див. нижче);
-   - `fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile`
-     плюс рядок у `/etc/fstab`;
-   - покласти шаблони `dockerapp.tpl/.stpl` і `dockeradmin.tpl/.stpl` (етап 1.5) і призначити їх
-     доменам через `v-change-web-domain-tpl`;
-   - `v-add-web-domain hnpu admin.hnpu.edu.ua` і випуск Let's Encrypt для `hnpu.edu.ua`,
-     `www.hnpu.edu.ua`, `admin.hnpu.edu.ua`.
-3. **DNS**: доступ до зони `hnpu.edu.ua` у панелі (вона на цьому ж сервері) — або виконання
-   адміністратором етапу 4 і етапу 7.
+Лишається тут як історія й як чекліст, якщо доведеться повторювати на іншій машині.
+
+1. **Диск**: розширити до 60 ГБ (або підмонтувати окремий том під `/var/lib/docker` і дані
+   сайту). — **зроблено.**
+2. **Права**: `sudo` для користувача `hnpu`. — **зроблено.** Далі все з етапів 1–10 робиться
+   самостійно: Docker (`curl -fsSL https://get.docker.com | sh`, `usermod -aG docker hnpu`),
+   своп, шаблони nginx (`deploy/hestia/install-templates.sh`), домен адмінки, Let's Encrypt.
+3. **DNS**: зона `hnpu.edu.ua` обслуговується цим же сервером — етапи 4 і 7 робляться в панелі
+   Hestia або через `v-*-dns-record`.
 
 ### Варіант «без Docker», якщо root не дадуть
 
-Робочий, але помітно незручніший:
+Не знадобився — `sudo` видали. Лишаю опис на випадок іншої машини; робочий, але помітно
+незручніший:
 
 - Node 22 і pnpm — під користувача (`fnm`/`nvm` у `~/.local`), фронт запускати як
   `node .output/server/index.mjs` на порту > 1024;
