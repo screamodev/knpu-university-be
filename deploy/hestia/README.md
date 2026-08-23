@@ -23,8 +23,11 @@ The script figures out the rest:
 
 Existing templates of the same name are backed up next to them before being overwritten.
 
-Both `.tpl` files serve `/.well-known/acme-challenge/` from `public_html` **before** the
-redirect to HTTPS — without that `v-add-letsencrypt-domain` fails, because the ACME server
-gets a 301 to a port it does not check.
+Neither `.tpl` redirects to HTTPS on its own. Before a certificate exists there is no vhost
+on 443 for the name, the default server answers instead, and `v-add-letsencrypt-domain`
+dies with "Redirect loop detected". The order is: install templates → issue the certificate
+→ `v-add-web-domain-ssl-force`, which writes the `nginx.forcessl.conf` the templates
+include. Both halves serve `/.well-known/acme-challenge/` from `public_html`, so renewals
+work with force-SSL on (ACME follows the redirect to 443).
 
 Full context: [`MIGRATION-TO-HNPU-DOMAIN.md`](../../MIGRATION-TO-HNPU-DOMAIN.md), stage 1.5.

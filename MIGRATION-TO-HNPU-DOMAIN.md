@@ -163,8 +163,17 @@ bash ~/knpu-university-be/deploy/hestia/install-templates.sh
 Прапорці: `--user`, `--site`, `--admin` — якщо імена інші; `--no-assign` — тільки покласти файли.
 Наявні шаблони з такими іменами скрипт перед перезаписом копіює поруч із суфіксом `.bak.<дата>`.
 
-Обидва `.tpl` віддають `/.well-known/acme-challenge/` з `public_html` **до** редіректу на HTTPS —
-без цього `v-add-letsencrypt-domain` (етап 7) падає, бо ACME-сервер отримує 301.
+Жоден `.tpl` **не редіректить** на HTTPS сам по собі. Поки сертифіката немає, vhost'а на 443 з
+цим іменем теж немає — відповідає дефолтний сервер, і `v-add-letsencrypt-domain` падає з
+`Redirect loop detected`. Порядок такий: шаблони → сертифікат → примусовий HTTPS:
+
+```bash
+v-add-letsencrypt-domain  hnpu admin.hnpu.edu.ua
+v-add-web-domain-ssl-force hnpu admin.hnpu.edu.ua
+```
+
+`v-add-web-domain-ssl-force` пише `nginx.forcessl.conf`, який шаблон уже підключає. ACME-локація
+є в обох половинах, тож продовження сертифіката з увімкненим редіректом теж проходить.
 
 Перевірка після встановлення (контейнерів ще немає, тож 502 — очікуваний результат; головне, що
 відповідає саме наш vhost):
@@ -374,10 +383,13 @@ v-change-dns-record hnpu hnpu.edu.ua <ID_A_запису> ... 193.105.7.20
 dig +short @1.1.1.1 hnpu.edu.ua
 dig +short @ns3.therecom.net hnpu.edu.ua
 
-# сертифікати на B
-v-add-letsencrypt-domain hnpu hnpu.edu.ua www.hnpu.edu.ua
-v-add-letsencrypt-domain hnpu admin.hnpu.edu.ua
+# сертифікат на апекс — тільки коли DNS уже показує на B, інакше ACME не достукається
+v-add-letsencrypt-domain   hnpu hnpu.edu.ua www.hnpu.edu.ua
+v-add-web-domain-ssl-force hnpu hnpu.edu.ua
 ```
+
+Сертифікат для `admin.hnpu.edu.ua` береться раніше (етап 1.5) — його A-запис не залежить від
+перемикання.
 
 Cloudflare тут ні до чого — зона обслуговується Hestia, сертифікати від Let's Encrypt
 випускаються прямо на B.
@@ -449,7 +461,10 @@ v-change-dns-record hnpu hnpu.edu.ua <ID_A_запису> ... 193.105.7.18
 8. **`-f docker-compose.host.yml` у кожній команді** — без нього порт на loopback не
    публікується і nginx віддає 502.
 9. **ACME проходить через `public_html`** — шаблони віддають `/.well-known/acme-challenge/` з
-   диска до редіректу на HTTPS. Якщо шаблон правитимеш руками, цей блок не чіпати.
+   диска на обох портах. Якщо шаблон правитимеш руками, цей блок не чіпати.
+10. **Редірект на HTTPS вмикається після сертифіката**, і не в шаблоні, а
+    `v-add-web-domain-ssl-force`. Жорсткий `return 301` у `.tpl` = `Redirect loop detected`
+    від Let's Encrypt, бо на 443 ще нікого немає.
 
 ---
 

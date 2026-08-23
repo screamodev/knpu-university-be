@@ -8,7 +8,8 @@ server {
     ssl_certificate     %ssl_pem%;
     ssl_certificate_key %ssl_key%;
 
-    # Renewals reuse the http-01 challenge, and Hestia may probe over HTTPS.
+    # Renewals: with force-SSL on, the http-01 fetch is redirected here, and ACME does
+    # follow that redirect — so the challenge has to be served on 443 too.
     location ^~ /.well-known/acme-challenge/ {
         root         %home%/%user%/web/%domain%/public_html;
         default_type text/plain;
