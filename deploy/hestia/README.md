@@ -23,11 +23,17 @@ The script figures out the rest:
 
 Existing templates of the same name are backed up next to them before being overwritten.
 
-Neither `.tpl` redirects to HTTPS on its own. Before a certificate exists there is no vhost
-on 443 for the name, the default server answers instead, and `v-add-letsencrypt-domain`
-dies with "Redirect loop detected". The order is: install templates → issue the certificate
-→ `v-add-web-domain-ssl-force`, which writes the `nginx.forcessl.conf` the templates
-include. Both halves serve `/.well-known/acme-challenge/` from `public_html`, so renewals
-work with force-SSL on (ACME follows the redirect to 443).
+Two things the templates deliberately leave alone:
+
+- **The HTTPS redirect.** Neither `.tpl` redirects on its own — before a certificate exists
+  there is no vhost on 443 for the name, the default server answers instead, and
+  `v-add-letsencrypt-domain` dies with "Redirect loop detected". Order: install templates →
+  issue the certificate → `v-add-web-domain-ssl-force`, which writes the
+  `nginx.forcessl.conf` the templates include.
+- **The ACME challenge.** Hestia does not drop a token on disk; it writes
+  `conf/web/<domain>/nginx.conf_letsencrypt`, a regex location that returns the response
+  inline, and the `include … nginx.conf_*` at the bottom of every template pulls it in. A
+  `location ^~ /.well-known/acme-challenge/` of our own would win over that regex (a `^~`
+  prefix beats regex) and break issuance. Keep that include, and add no acme location.
 
 Full context: [`MIGRATION-TO-HNPU-DOMAIN.md`](../../MIGRATION-TO-HNPU-DOMAIN.md), stage 1.5.

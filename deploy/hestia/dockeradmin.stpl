@@ -1,5 +1,9 @@
 # admin.hnpu.edu.ua — HTTPS in front of the Directus container (published on
 # 127.0.0.1:8055 by docker-compose.host.yml).
+# ACME is not handled here: Hestia writes conf/web/<domain>/nginx.conf_letsencrypt with a
+# regex location that returns the token response, and the `include … nginx.conf_*` at the
+# bottom pulls it in. A `location ^~ /.well-known/acme-challenge/` of our own would take
+# precedence over that regex and break issuance.
 server {
     listen      %ip%:%proxy_ssl_port% ssl;
     http2       on;
@@ -7,14 +11,6 @@ server {
 
     ssl_certificate     %ssl_pem%;
     ssl_certificate_key %ssl_key%;
-
-    # Renewals: with force-SSL on, the http-01 fetch is redirected here, and ACME does
-    # follow that redirect — so the challenge has to be served on 443 too.
-    location ^~ /.well-known/acme-challenge/ {
-        root         %home%/%user%/web/%domain%/public_html;
-        default_type text/plain;
-        try_files    $uri =404;
-    }
 
     # Editors upload scans and newspaper issues of tens of megabytes through the admin app.
     client_max_body_size 512m;

@@ -7,17 +7,13 @@
 #
 # Ports are written for a Hestia *proxy* template; install-templates.sh rewrites
 # %proxy_port% to %web_port% when nginx is the web server itself.
+# ACME is not handled here: Hestia writes conf/web/<domain>/nginx.conf_letsencrypt with a
+# regex location that returns the token response, and the `include … nginx.conf_*` at the
+# bottom pulls it in. A `location ^~ /.well-known/acme-challenge/` of our own would take
+# precedence over that regex and break issuance.
 server {
     listen      %ip%:%proxy_port%;
     server_name %domain_idn% %alias_idn%;
-
-    # Let's Encrypt http-01: Hestia drops the token into public_html, so it is served from
-    # disk and never reaches the app.
-    location ^~ /.well-known/acme-challenge/ {
-        root         %home%/%user%/web/%domain%/public_html;
-        default_type text/plain;
-        try_files    $uri =404;
-    }
 
     # Written by v-add-web-domain-ssl-force; absent until then, and the trailing * keeps
     # nginx quiet about that.

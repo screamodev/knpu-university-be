@@ -163,17 +163,26 @@ bash ~/knpu-university-be/deploy/hestia/install-templates.sh
 Прапорці: `--user`, `--site`, `--admin` — якщо імена інші; `--no-assign` — тільки покласти файли.
 Наявні шаблони з такими іменами скрипт перед перезаписом копіює поруч із суфіксом `.bak.<дата>`.
 
-Жоден `.tpl` **не редіректить** на HTTPS сам по собі. Поки сертифіката немає, vhost'а на 443 з
-цим іменем теж немає — відповідає дефолтний сервер, і `v-add-letsencrypt-domain` падає з
-`Redirect loop detected`. Порядок такий: шаблони → сертифікат → примусовий HTTPS:
+Дві речі шаблони навмисно не роблять самі:
+
+- **не редіректять на HTTPS** — поки сертифіката немає, vhost'а на 443 з цим іменем теж немає,
+  відповідає дефолтний сервер, і `v-add-letsencrypt-domain` падає з `Redirect loop detected`;
+- **не обробляють ACME** — Hestia не кладе токен на диск, а пише
+  `conf/web/<домен>/nginx.conf_letsencrypt` з regex-локацією, яка віддає відповідь інлайн;
+  її підтягує `include … nginx.conf_*` наприкінці шаблону. Власна
+  `location ^~ /.well-known/acme-challenge/` перебиває цей regex (префікс із `^~` сильніший) —
+  і випуск сертифіката ламається.
+
+Порядок такий: шаблони → сертифікат → примусовий HTTPS:
 
 ```bash
 v-add-letsencrypt-domain  hnpu admin.hnpu.edu.ua
 v-add-web-domain-ssl-force hnpu admin.hnpu.edu.ua
 ```
 
-`v-add-web-domain-ssl-force` пише `nginx.forcessl.conf`, який шаблон уже підключає. ACME-локація
-є в обох половинах, тож продовження сертифіката з увімкненим редіректом теж проходить.
+`v-add-web-domain-ssl-force` пише `nginx.forcessl.conf`, який шаблон уже підключає. Продовження
+сертифіката з увімкненим редіректом проходить: ACME йде за 301 на 443, а `nginx.conf_letsencrypt`
+підключений в обох половинах шаблону.
 
 Перевірка після встановлення (контейнерів ще немає, тож 502 — очікуваний результат; головне, що
 відповідає саме наш vhost):
@@ -460,8 +469,9 @@ v-change-dns-record hnpu hnpu.edu.ua <ID_A_запису> ... 193.105.7.18
 7. **Пошта живе на Google** — MX/SPF/DKIM у зоні не чіпати; переїзд сайту на них не впливає.
 8. **`-f docker-compose.host.yml` у кожній команді** — без нього порт на loopback не
    публікується і nginx віддає 502.
-9. **ACME проходить через `public_html`** — шаблони віддають `/.well-known/acme-challenge/` з
-   диска на обох портах. Якщо шаблон правитимеш руками, цей блок не чіпати.
+9. **ACME обробляє сама Hestia** через `nginx.conf_letsencrypt`. У шаблоні має лишатися
+   `include %home%/%user%/conf/web/%domain%/nginx.conf_*;` — і жодної своєї локації на
+   `/.well-known/acme-challenge/`, інакше вона перебиває рідну regex-локацію.
 10. **Редірект на HTTPS вмикається після сертифіката**, і не в шаблоні, а
     `v-add-web-domain-ssl-force`. Жорсткий `return 301` у `.tpl` = `Redirect loop detected`
     від Let's Encrypt, бо на 443 ще нікого немає.
