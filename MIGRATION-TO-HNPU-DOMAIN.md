@@ -389,9 +389,56 @@ C:\lego.exe --email admin@hnpu.edu.ua --path C:\lego_certs --accept-tos --http \
 
 **Vhost `hnpu.edu.ua` на C поки лишається** — до перемикання DNS він і обслуговує домен.
 
-> Автопродовження сертифікатів на цій машині **не налаштоване** — у планувальнику лише два
-> завдання бекапу. Усі чотири сертифікати (`hnpu`, `www`, `smc`, `journals`, `old`) поновлюються
-> руками. Варто завести завдання з `C:\lego.exe ... renew` раз на тиждень.
+### Посилання на апекс усередині старого сайту
+
+У контенті Drupal лишилися абсолютні посилання на `https://hnpu.edu.ua/uk/...` — після
+перемикання вони вели б на новий сайт, де таких сторінок немає (у `legacy_redirects` їх теж
+немає). Масово правити базу Drupal ризиковано, тож переписуємо на льоту в nginx — у блоці
+`old.hnpu.edu.ua` на 443:
+
+```nginx
+    sub_filter_once  off;
+    sub_filter_types text/html;
+    sub_filter 'https://hnpu.edu.ua'      'https://old.hnpu.edu.ua';
+    sub_filter 'http://hnpu.edu.ua'       'https://old.hnpu.edu.ua';
+    sub_filter 'https://www.hnpu.edu.ua'  'https://old.hnpu.edu.ua';
+    sub_filter 'http://www.hnpu.edu.ua'   'https://old.hnpu.edu.ua';
+```
+
+Модуль у збірці є (`nginx -V` → `--with-http_sub_module`). Перевірка:
+`curl -s https://old.hnpu.edu.ua/uk | grep -c 'https://hnpu.edu.ua'` → `0`.
+
+### Автопродовження сертифікатів
+
+Налаштоване 24.08.2026 — доти його не було взагалі. Щоб перевірка ACME проходила для всіх
+доменів, у **обох** блоках на 80-му порту (`hnpu`+`www`+`smc`+`journals` і `old`) `return 301`
+перенесений усередину `location /`, а перед ним стоїть спільна ACME-локація:
+
+```nginx
+    location ^~ /.well-known/acme-challenge/ {
+        root         "C:/lego_certs/webroot";
+        default_type text/plain;
+        try_files    $uri =404;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+```
+
+`return 301` на рівні `server` виконується у фазі rewrite — тобто **до** вибору локації, і ACME
+до неї не доходить. Це та сама пастка, що й з Hestia на сервері B.
+
+Скрипт `C:\lego_certs\renew-certs.bat` проганяє `lego ... renew --days 30` по чотирьох
+сертифікатах (`hnpu.edu.ua` + `www` в одному, `smc`, `journals`, `old`) і в кінці перечитує
+конфіг nginx. Завдання в планувальнику:
+
+```
+schtasks /create /tn "LEGO renew certs" /tr "C:\lego_certs\renew-certs.bat" ^
+  /sc weekly /d SUN /st 04:30 /ru SYSTEM /rl HIGHEST
+```
+
+Створювати треба з PowerShell, запущеного від адміністратора, інакше `Отказано в доступе`.
 
 ## Етап 4. Підготовка DNS (за добу до переїзду)
 
