@@ -29,6 +29,21 @@
 
 ---
 
+## Стан на 24.08.2026
+
+| Етап | Стан |
+|---|---|
+| 0. Передумови (диск, sudo) | зроблено |
+| 1. Сервер B: своп, Docker, репи, Postgres, шаблони nginx | зроблено |
+| 1.5 Сертифікат `admin.hnpu.edu.ua` | зроблено, force-SSL увімкнено |
+| 2. Перенос даних (17 ГБ файлів + дамп), Directus і фронт на B | зроблено, `admin.hnpu.edu.ua` віддає 200 |
+| 3. `old.hnpu.edu.ua` на сервері C | **чекає адміністратора C — блокує етап 7** |
+| 4. DNS: піддомени відв'язані, TTL | піддомени зроблено; TTL apex лишається довести до 300 |
+| 5. Переписані 610 посилань на `old.hnpu.edu.ua` | зроблено, у `origin/dev` |
+| 6. Фінальна синхронізація | попереду, у день переїзду |
+| 7. Перемикання | попереду |
+| 10. Бекап бази в крон на B | зроблено достроково |
+
 ## Етап 0. Передумови (закриті 23.08.2026)
 
 Розвідка 23.08.2026 знайшла на сервері B (`hosting.hnpu.edu.ua`, Debian 12, 4 vCPU, 7.8 ГБ RAM)
@@ -194,7 +209,9 @@ curl -sI http://hnpu.edu.ua -H 'Host: hnpu.edu.ua' --resolve hnpu.edu.ua:80:193.
 
 ## Етап 2. Перенести дані (перший, «тренувальний» прогін)
 
-### 2.1 Знімок на сервері A
+### 2.1 Дамп бази на сервері A
+
+База маленька (11 МБ у `-Fc`), її переносимо файлом:
 
 ```bash
 ssh root@165.232.84.116
@@ -203,22 +220,47 @@ set -a; . ./.env; set +a
 
 docker run --rm --network dbnet -e PGPASSWORD="$DB_PASSWORD" -v "$PWD":/backup postgres:16-alpine \
   pg_dump -h "$DB_HOST" -p "${DB_PORT:-5432}" -U "$DB_USER" -d "$DB_DATABASE" \
-  -Fc -f /backup/knpu-move.dump
-
-docker volume ls | grep uploads            # переконатися в імені тому
-docker run --rm -v knpu-university-be_uploads:/uploads -v "$PWD":/backup alpine \
-  tar czf /backup/knpu-uploads-move.tar.gz -C /uploads .
-
-ls -lh knpu-move.dump knpu-uploads-move.tar.gz
+  -Fc -f /backup/knpu-move.dump && ls -lh knpu-move.dump
 ```
+
+Том `uploads` (17 ГБ, 22 494 файли) **не пакуємо**: на A вільно всього 18 ГБ, а gzip на одному
+vCPU тягнувся б годинами. Ллємо теку тому напряму `rsync`'ом — без місця під архів, без
+розпакування на тому боці й із докачкою після обриву.
 
 ### 2.2 Передати на B
 
+Root по SSH на B закритий (`permitrootlogin no`), тож ходимо під `hnpu`. Ключ з A — у
+`/home/hnpu/.ssh/authorized_keys` на B (`ssh-keygen -t ed25519` на A, якщо ключа ще немає).
+
 ```bash
-# з сервера A (порт SSH на B нестандартний)
-scp -P 10163 knpu-move.dump knpu-uploads-move.tar.gz \
-    ~/knpu-university-be/.env  root@193.105.7.20:/root/transfer/
-scp -P 10163 ~/knpu-university-fe/.env root@193.105.7.20:/root/transfer/fe.env
+# дамп і обидва .env
+cd ~/knpu-university-be && cp ~/knpu-university-fe/.env /tmp/fe.env
+rsync -avP -e 'ssh -p 10163' knpu-move.dump .env /tmp/fe.env hnpu@193.105.7.20:/home/hnpu/transfer/
+
+# файли Directus — довго, тримати у screen
+screen -S move -d -m rsync -avP -e 'ssh -p 10163' \
+  /var/lib/docker/volumes/knpu-university-be_uploads/_data/ \
+  hnpu@193.105.7.20:/home/hnpu/transfer/uploads/
+```
+
+Слеші в кінці обох шляхів обов'язкові. Прогрес — `screen -r move`, назад — `Ctrl+A`, `D`.
+Обірветься — повторити той самий рядок, rsync дошле різницю. Перевірка після завершення:
+
+```bash
+rsync -ain -e 'ssh -p 10163' /var/lib/docker/volumes/knpu-university-be_uploads/_data/ \
+  hnpu@193.105.7.20:/home/hnpu/transfer/uploads/ | head
+```
+
+Порожній вивід = все на місці (рядки `<f` — ще не долиті файли; `-n` нічого не пише).
+
+На B перекласти в том. `/home` і `/var/lib/docker` — один розділ, тож `mv` це перейменування,
+без другої копії. Власник файлів на A — `1000:1000` (користувач `node` у контейнері Directus):
+
+```bash
+docker volume create knpu-university-be_uploads
+mv /home/hnpu/transfer/uploads/* /var/lib/docker/volumes/knpu-university-be_uploads/_data/
+chown -R 1000:1000 /var/lib/docker/volumes/knpu-university-be_uploads/_data
+du -sh /var/lib/docker/volumes/knpu-university-be_uploads/_data      # 17G
 ```
 
 `.env` тягнемо з A, щоб **не змінилися `KEY` і `SECRET`** — інакше Directus не прочитає наявні
@@ -288,49 +330,73 @@ curl -sI localhost:3000 | head -3
 
 ## Етап 3. Старий сайт на old.hnpu.edu.ua (сервер C)
 
-DNS-запис `old` уже вказує на C, тому сертифікат можна випустити **до** перемикання.
+**Блокує перемикання.** Після етапу 7 apex віддамо новому сайту, і старий стане недосяжним ні за
+якою адресою — а на нього ведуть 610 переписаних посилань (етап 5), стара пошукова видача й
+посилання в зовнішніх реєстрах. DNS-запис `old` на `193.105.7.18` уже є, vhost і сертифіката
+немає.
 
-```bash
-ssh root@193.105.7.18
+Доступу до сервера C у нас немає (24.08.2026), і ззовні він не відповідає ні на `curl`, ні на
+`openssl s_client` — фільтрує все, що не браузер. Тому це запит до адміністратора C:
 
-# 1. vhost: скопіювати наявний конфіг hnpu.edu.ua і замінити server_name
-ls /etc/nginx/sites-available/ /etc/nginx/conf.d/ 2>/dev/null
-cp /etc/nginx/sites-available/hnpu.edu.ua /etc/nginx/sites-available/old.hnpu.edu.ua
-sed -i 's/server_name .*/server_name old.hnpu.edu.ua;/' /etc/nginx/sites-available/old.hnpu.edu.ua
-ln -s /etc/nginx/sites-available/old.hnpu.edu.ua /etc/nginx/sites-enabled/
-nginx -t && systemctl reload nginx
+> На сервері `193.105.7.18`:
+> 1. створити vhost `old.hnpu.edu.ua` — копію наявного конфігу `hnpu.edu.ua` зі зміненим
+>    `server_name`;
+> 2. випустити сертифікат: `certbot --nginx -d old.hnpu.edu.ua`;
+> 3. у `settings.php` Drupal: `$base_url = 'https://old.hnpu.edu.ua';` і
+>    `$settings['trusted_host_patterns'] = ['^old\.hnpu\.edu\.ua$', '^hnpu\.edu\.ua$'];`
+>
+> Vhost `hnpu.edu.ua` поки лишити робочим — він обслуговує домен до перемикання.
 
-# 2. сертифікат
-certbot --nginx -d old.hnpu.edu.ua
+Якщо доступу так і не дадуть, є обхід **без сервера C**: перевести `old.hnpu.edu.ua` на B і
+проксувати звідти на `193.105.7.18` з `Host: hnpu.edu.ua`, сертифікат брати на B. Мінус — Drupal
+може редіректити на канонічний хост і зациклитися; лікується `sub_filter`, який переписує
+`hnpu.edu.ua` на `old.hnpu.edu.ua` у HTML. Це варто протестувати **до** перемикання, поки apex ще
+показує на C.
 
-# 3. Drupal: settings.php
-#    $base_url = 'https://old.hnpu.edu.ua';
-#    $settings['trusted_host_patterns'] = ['^old\.hnpu\.edu\.ua$', '^hnpu\.edu\.ua$'];
-grep -n "base_url\|trusted_host" /var/www/*/sites/default/settings.php
-```
-
-Перевірка: `curl -sI https://old.hnpu.edu.ua/uk | head -3` → 200, сторінка старого сайту,
-сертифікат валідний.
-
-**Vhost `hnpu.edu.ua` на C поки лишається** — до перемикання DNS він і обслуговує домен.
+Перевірка (з будь-якої машини, коли зроблено): `curl -sI https://old.hnpu.edu.ua/uk | head -3`
+→ 200 і валідний сертифікат.
 
 ## Етап 4. Підготовка DNS (за добу до переїзду)
 
-У Hestia (`https://193.105.7.20:31121` → DNS → `hnpu.edu.ua`):
+Виконано 24.08.2026. Зона на сервері B, тож усе через `v-*` (або панель на `:31121`).
 
-1. **Прибити піддомени, які зараз CNAME на apex** — інакше вони поїдуть за новим сайтом:
+1. **Відв'язати піддомени, які були CNAME на apex** — інакше вони поїдуть за новим сайтом.
+   ID видно у `v-list-dns-records hnpu hnpu.edu.ua`; CNAME і A з тим самим іменем співіснувати
+   не можуть, тому видалення й додавання йдуть одним ланцюжком:
 
 ```bash
-v-delete-dns-record hnpu hnpu.edu.ua <ID_smc>      # ID видно у v-list-dns-records
-v-add-dns-record    hnpu hnpu.edu.ua smc      A 193.105.7.18
-v-add-dns-record    hnpu hnpu.edu.ua journals A 193.105.7.18
-v-add-dns-record    hnpu hnpu.edu.ua ftp      A 193.105.7.18
+v-delete-dns-record hnpu hnpu.edu.ua <ID_smc>      && v-add-dns-record hnpu hnpu.edu.ua smc      A 193.105.7.18
+v-delete-dns-record hnpu hnpu.edu.ua <ID_journals> && v-add-dns-record hnpu hnpu.edu.ua journals A 193.105.7.18
+v-delete-dns-record hnpu hnpu.edu.ua <ID_ftp>      && v-add-dns-record hnpu hnpu.edu.ua ftp      A 193.105.7.18
 ```
 
-`www` лишається CNAME на apex — він має їхати за новим сайтом.
+`www` лишається CNAME на apex — він має їхати за новим сайтом. У зоні знайшлося **два однакові
+записи `www`** (ID 10 і 66) — дубль видалено, лишився один.
 
-2. **Знизити TTL** на `hnpu.edu.ua` і `www` з 14400 до 300 — мінімум за 4 години до перемикання.
-3. Переконатися, що MX (Google), SPF/DKIM/DMARC TXT і записи `lms`, `dspace`, `library`,
+2. **Знизити TTL** — мінімум за 4 години до перемикання (стільки живе старий кеш 14400).
+   Команди `v-change-dns-record-ttl` у цій збірці Hestia **немає**, є тільки на всю зону:
+
+```bash
+v-change-dns-domain-ttl hnpu hnpu.edu.ua 300
+v-list-dns-records hnpu hnpu.edu.ua | awk 'NR==1 || $NF!=300 {print}'   # що не піддалося
+```
+
+Перевір другою командою: у нас частина записів (зокрема apex A) з першого разу лишилася на
+14400. Якщо повтор не допомагає — перевидати запис із явним TTL останнім аргументом:
+
+```bash
+v-delete-dns-record hnpu hnpu.edu.ua <ID_apex> && v-add-dns-record hnpu hnpu.edu.ua '@' A 193.105.7.18 '' '' 300
+```
+
+3. **Вторинний NS відстає.** `ns3.therecom.net` тягне зону за `refresh` із SOA — 7200 с, тобто до
+   двох годин. Поки він віддає старий apex, частина резолверів ітиме на старий сервер незалежно
+   від TTL. Перед етапом 7 серіали мають зійтися:
+
+```bash
+dig +short hnpu.edu.ua SOA @193.105.7.20; dig +short hnpu.edu.ua SOA @ns3.therecom.net
+```
+
+4. Переконатися, що MX (Google), SPF/DKIM/DMARC TXT і записи `lms`, `dspace`, `library`,
    `catalog`, `mail`, `webmail`, `ns` лишилися недоторканими.
 
 ```bash
@@ -344,13 +410,17 @@ v-list-dns-records hnpu hnpu.edu.ua | less
 (`@hnpu.edu.ua`), `sites.google.com/hnpu.edu.ua/...` і піддомени (`smc.`, `lms.`, `dspace.`,
 `journals.`, `library.`, `catalog.`) він не чіпає.
 
-На робочій машині:
+Виконано 24.08.2026 (коміт `content: point legacy links at old.hnpu.edu.ua` у `dev`). На робочій
+машині:
 
 ```bash
 cd knpu-university-be/migration/cleanup
-python3 rewrite_legacy_links.py --dry-run     # очікувано 610 посилань у 258 файлах
+python3 rewrite_legacy_links.py --dry-run     # 610 посилань у 258 файлах
 python3 rewrite_legacy_links.py
 ```
+
+Після цього сайт посилається на `old.hnpu.edu.ua`, якого ще немає — тому етап 3 має бути
+закритий **до** перемикання, інакше всі 610 посилань ведуть у нікуди.
 
 Під зміну потрапляють і константи `app/utils/externalSites.ts` (`LEGACY_SITE_URL`,
 `ADMISSIONS_LEGACY_URL`, `WINTER_ADMISSIONS_LEGACY_URL`), і списки посилань у
@@ -373,8 +443,18 @@ grep -rn "//hnpu\.edu\.ua\|//www\.hnpu\.edu\.ua" knpu-university-fe/app | grep -
 ## Етап 6. Фінальна синхронізація (у день переїзду)
 
 1. Попередити редакторів: з цього моменту **не редагувати** контент на старій адмінці.
-2. Повторити етап 2.1–2.3 (свіжий дамп + том `uploads`). `pg_restore --clean --if-exists`
-   перезаписує вміст, повторний прогін безпечний.
+2. Повторити етап 2.1–2.3. Другий прогін швидкий: `rsync` дошле лише те, що змінилося з
+   першого разу (нові файли редакторів), а `pg_restore --clean --if-exists` перезаписує вміст,
+   тож повторний прогін безпечний. Файли цього разу ллються одразу в том — на B:
+
+```bash
+# на A
+rsync -avP -e 'ssh -p 10163' /var/lib/docker/volumes/knpu-university-be_uploads/_data/ \
+  hnpu@193.105.7.20:/home/hnpu/transfer/uploads/
+# на B
+mv /home/hnpu/transfer/uploads/* /var/lib/docker/volumes/knpu-university-be_uploads/_data/ 2>/dev/null
+chown -R 1000:1000 /var/lib/docker/volumes/knpu-university-be_uploads/_data
+```
 3. Перезапустити Directus і фронт на B, ще раз пройтися по сайту через `/etc/hosts`.
 
 ## Етап 7. Перемикання
@@ -451,7 +531,11 @@ v-change-dns-record hnpu hnpu.edu.ua <ID_A_запису> ... 193.105.7.18
 - на C прибрати vhost `hnpu.edu.ua` (лишити тільки `old.`), щоб не було двох сайтів з однією
   назвою;
 - `hnpu.dev42hub.uk` лишити як стенд або вимкнути — за домовленістю;
-- перевірити, що бекап бази на B у крон-розкладі (на A він робився руками перед деплоями).
+- бекап бази на B — уже в крон-розкладі (`/root/backup-directus.sh`, щоночі о 03:17,
+  дампи в `/root/backups`, зберігаються два тижні; том `uploads` не дампиться — 17 ГБ і
+  змінюється рідко, його страхує сервер A);
+- переглянути статичні токени Directus: після переїзду перевипустити ті, власники яких не
+  можуть пояснити, навіщо вони.
 
 ---
 
@@ -472,7 +556,11 @@ v-change-dns-record hnpu hnpu.edu.ua <ID_A_запису> ... 193.105.7.18
 9. **ACME обробляє сама Hestia** через `nginx.conf_letsencrypt`. У шаблоні має лишатися
    `include %home%/%user%/conf/web/%domain%/nginx.conf_*;` — і жодної своєї локації на
    `/.well-known/acme-challenge/`, інакше вона перебиває рідну regex-локацію.
-10. **Редірект на HTTPS вмикається після сертифіката**, і не в шаблоні, а
+10. **CORS звіряє схему, не лише хост.** Поки apex без сертифіката, сайт відкривається як
+    `http://hnpu.edu.ua` — і всі клієнтські запити до Directus ріже CORS, бо в `CORS_ORIGIN`
+    записано `https://`. Це нормально до етапу 7; перевірити можна так:
+    `curl -sI -H 'Origin: https://hnpu.edu.ua' https://admin.hnpu.edu.ua/items/articles?limit=1`.
+11. **Редірект на HTTPS вмикається після сертифіката**, і не в шаблоні, а
     `v-add-web-domain-ssl-force`. Жорсткий `return 301` у `.tpl` = `Redirect loop detected`
     від Let's Encrypt, бо на 443 ще нікого немає.
 
