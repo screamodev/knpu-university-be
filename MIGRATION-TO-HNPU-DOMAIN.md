@@ -37,7 +37,7 @@
 | 1. Сервер B: своп, Docker, репи, Postgres, шаблони nginx | зроблено |
 | 1.5 Сертифікат `admin.hnpu.edu.ua` | зроблено, force-SSL увімкнено |
 | 2. Перенос даних (17 ГБ файлів + дамп), Directus і фронт на B | зроблено, `admin.hnpu.edu.ua` віддає 200 |
-| 3. `old.hnpu.edu.ua` на сервері C | **чекає адміністратора C — блокує етап 7** |
+| 3. `old.hnpu.edu.ua` на сервері C | зроблено 24.08: vhost + сертифікат lego + `$base_url` у Drupal |
 | 4. DNS: піддомени відв'язані, TTL apex 300 | зроблено; чекаємо, поки розійдеться старий кеш 14400 |
 | 5. Переписані 610 посилань на `old.hnpu.edu.ua` | зроблено, у `origin/dev` |
 | 6. Фінальна синхронізація | попереду, у день переїзду |
@@ -330,31 +330,68 @@ curl -sI localhost:3000 | head -3
 
 ## Етап 3. Старий сайт на old.hnpu.edu.ua (сервер C)
 
-**Блокує перемикання.** Після етапу 7 apex віддамо новому сайту, і старий стане недосяжним ні за
-якою адресою — а на нього ведуть 610 переписаних посилань (етап 5), стара пошукова видача й
-посилання в зовнішніх реєстрах. DNS-запис `old` на `193.105.7.18` уже є, vhost і сертифіката
-немає.
+Зроблено 24.08.2026. Сервер C виявився зовсім не тим, що припускав план: не Linux з nginx і
+`certbot`, а **Windows Server 2008 R2 з OpenServer** (nginx 1.10, PHP 5.3, MySQL 5.5). Доступ —
+RDP на `193.105.7.22:17017`, звідти другим RDP на `192.168.20.2`. На цій же машині живуть
+`smc.hnpu.edu.ua` і `journals.hnpu.edu.ua` (OJS).
 
-Доступу до сервера C у нас немає (24.08.2026), і ззовні він не відповідає ні на `curl`, ні на
-`openssl s_client` — фільтрує все, що не браузер. Тому це запит до адміністратора C:
+### Як там влаштований nginx
 
-> На сервері `193.105.7.18`:
-> 1. створити vhost `old.hnpu.edu.ua` — копію наявного конфігу `hnpu.edu.ua` зі зміненим
->    `server_name`;
-> 2. випустити сертифікат: `certbot --nginx -d old.hnpu.edu.ua`;
-> 3. у `settings.php` Drupal: `$base_url = 'https://old.hnpu.edu.ua';` і
->    `$settings['trusted_host_patterns'] = ['^old\.hnpu\.edu\.ua$', '^hnpu\.edu\.ua$'];`
->
-> Vhost `hnpu.edu.ua` поки лишити робочим — він обслуговує домен до перемикання.
+Конфіг збирається OpenServer'ом із шаблонів у `C:\OpenServer\userdata\config\`:
+`Nginx-1.10_server.conf` (загальний) і `Nginx-1.10_vhost.conf` (віртуальні хости). Готовий
+`C:\OpenServer\modules\http\Nginx-1.10\conf\nginx.conf` **перезаписується при кожному
+старті** — правити його марно.
 
-Якщо доступу так і не дадуть, є обхід **без сервера C**: перевести `old.hnpu.edu.ua` на B і
-проксувати звідти на `193.105.7.18` з `Host: hnpu.edu.ua`, сертифікат брати на B. Мінус — Drupal
-може редіректити на канонічний хост і зациклитися; лікується `sub_filter`, який переписує
-`hnpu.edu.ua` на `old.hnpu.edu.ua` у HTML. Це варто протестувати **до** перемикання, поки apex ще
-показує на C.
+Дві пастки, на яких сервер уже полежав:
 
-Перевірка (з будь-якої машини, коли зроблено): `curl -sI https://old.hnpu.edu.ua/uk | head -3`
-→ 200 і валідний сертифікат.
+1. **`server.conf` не повинен закривати блок `http {`.** Закривну дужку OpenServer дописує сам,
+   разом зі згенерованими vhost'ами. Зайва `}` у шаблоні → `unexpected "}"`.
+2. **Хости зі списку доменів генеруються з `vhost.conf` і приклеюються в кінець файлу** — уже
+   *після* `http {}`, якщо в шаблоні немає плейсхолдера `%vhosts%`. Звідси
+   `"server" directive is not allowed here`. Рішення: тримати всі `server {}` прямо в
+   `server.conf` всередині `http {}`, а `vhost.conf` лишити порожнім (з коментарем).
+
+Ще одне: nginx не стартував, поки не існувало теки
+`C:\OpenServer\modules\http\Nginx-1.10\temp` — він не може створити в ній `client_body_temp`.
+У логах OpenServer при цьому лише «Не удалось запустить Nginx-1.10», без причини. Перевірка
+конфіга з консолі:
+
+```
+c:\openserver\modules\http\Nginx-1.10\nginx.exe -p c:\openserver\modules\http\Nginx-1.10 -t -c c:\openserver\modules\http\Nginx-1.10\conf\nginx.conf
+```
+
+### Що зроблено для old.hnpu.edu.ua
+
+1. У `Nginx-1.10_server.conf` доданий блок на 80-й порт із `root
+   "C:/OpenServer/domains/hnpu.edu.ua"` і окремою локацією
+   `^~ /.well-known/acme-challenge/` (щоб шлях не потрапляв у Drupal).
+2. Сертифікат — тим самим клієнтом, яким випущені решта: `C:\lego.exe`, обліковий запис
+   Let's Encrypt на `admin@hnpu.edu.ua`, сертифікати в `C:\lego_certs\certificates\`:
+
+```
+C:\lego.exe --email admin@hnpu.edu.ua --path C:\lego_certs --accept-tos --http \
+  --http.webroot "C:/OpenServer/domains/hnpu.edu.ua" --domains old.hnpu.edu.ua run
+```
+
+   Перевірка йде через теку сайту, зупиняти nginx не треба.
+3. Після випуску 80-й порт переведено на `return 301` (ACME-локація лишилася — для продовження),
+   доданий блок на 443 із новим сертифікатом, блокуванням ботів і тими самими правилами
+   `try_files` / `fastcgi_pass`, що й в основного сайту.
+4. `C:\OpenServer\domains\hnpu.edu.ua\sites\default\settings.php`, рядок 249:
+   `$base_url` змінено з `https://hnpu.edu.ua` на `https://old.hnpu.edu.ua`. Файл лежить
+   тільки для читання — `attrib -r` перед правкою, `attrib +r` після. Потім обов'язково
+   **скинути кеш Drupal** (`/admin/config/development/performance`), інакше сторінки
+   віддаються зі старими абсолютними адресами.
+
+Перевірка: `curl -sI https://old.hnpu.edu.ua/uk` → 200, `CN=old.hnpu.edu.ua`, а
+`curl -s https://old.hnpu.edu.ua/uk | grep -o 'https://[a-z.]*hnpu\.edu\.ua' | sort | uniq -c`
+показує, що майже всі посилання ведуть на `old.`.
+
+**Vhost `hnpu.edu.ua` на C поки лишається** — до перемикання DNS він і обслуговує домен.
+
+> Автопродовження сертифікатів на цій машині **не налаштоване** — у планувальнику лише два
+> завдання бекапу. Усі чотири сертифікати (`hnpu`, `www`, `smc`, `journals`, `old`) поновлюються
+> руками. Варто завести завдання з `C:\lego.exe ... renew` раз на тиждень.
 
 ## Етап 4. Підготовка DNS (за добу до переїзду)
 
