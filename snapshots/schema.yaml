@@ -6612,7 +6612,7 @@ fields:
             value: scientific-secretary
           - text: Спеціалізовані вчені ради
             value: specialized-councils
-          - text: Центр забезпечення якості освіти
+          - text: Центр якості освіти — нормативні документи
             value: quality-centre
           - text: Центр якості освіти — освітні програми
             value: quality-centre-programmes
@@ -6681,7 +6681,7 @@ fields:
             value: scientific-secretary
           - text: Спеціалізовані вчені ради
             value: specialized-councils
-          - text: Центр забезпечення якості освіти
+          - text: Центр якості освіти — нормативні документи
             value: quality-centre
           - text: Центр якості освіти — освітні програми
             value: quality-centre-programmes
