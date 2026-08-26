@@ -6600,6 +6600,8 @@ fields:
             value: postgraduate-regulations
           - text: Фінансова діяльність
             value: financial-activity
+          - text: Додаткові освітні послуги
+            value: extra-education-services
           - text: Ліцензія університету
             value: licenses
           - text: Нагороди та відзнаки
@@ -6669,6 +6671,8 @@ fields:
             value: postgraduate-regulations
           - text: Фінансова діяльність
             value: financial-activity
+          - text: Додаткові освітні послуги
+            value: extra-education-services
           - text: Ліцензія університету
             value: licenses
           - text: Нагороди та відзнаки
