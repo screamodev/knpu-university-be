@@ -6596,6 +6596,10 @@ fields:
             value: inclusive-support
           - text: Студентський парламент
             value: student-council
+          - text: Гуртожитки
+            value: dormitories
+          - text: Конференція трудового колективу — ухвали
+            value: staff-conference
           - text: Аспірантура і докторантура — нормативні документи
             value: postgraduate-regulations
           - text: Фінансова діяльність
@@ -6667,6 +6671,10 @@ fields:
             value: inclusive-support
           - text: Студентський парламент
             value: student-council
+          - text: Гуртожитки
+            value: dormitories
+          - text: Конференція трудового колективу — ухвали
+            value: staff-conference
           - text: Аспірантура і докторантура — нормативні документи
             value: postgraduate-regulations
           - text: Фінансова діяльність
