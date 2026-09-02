@@ -34,3 +34,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
+
+# Матеріали з Google Drive для ДВВ магістратури 2026/2028: ~300 МБ, качаються скриптом
+# за картою migration/dvv-2026/files.map.json.
+migration/dvv-2026/files/

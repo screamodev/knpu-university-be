@@ -1,0 +1,429 @@
+[
+  {
+    "cycle": "general",
+    "name": "Англійська повсякденної комунікації",
+    "department": "(кафедра теорії і практики англійської мови та зарубіжної літератури імені професора Михайла Гетманця)",
+    "text": "T_Anhl_povsiakden_komunik.pdf",
+    "presentation": "P_Anhl_povsiakden_komunik.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Апгрейд професії вчителя засобами штучного інтелекту",
+    "department": "(кафедра технологій дистанційного навчання та цифрової дидактики в дошкільній освіті)",
+    "text": "T_Aphreid_prof_vchyt_zasob_shtuchn_intelektu.pdf",
+    "presentation": "P_Aphreid_prof_vchyt_zasob_shtuchn_intelektu.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Візуальні образи історії України: живопис, скульптура, фотографія та кінематографія",
+    "department": "(кафедра історії України)",
+    "text": "T_Vizualni_obrazy_ist_Ukr.pdf",
+    "presentation": "P_Vizualni_obrazy_istorii_Ukraini.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Гнучкі навички (Soft Skills) фахівця",
+    "department": "(кафедра українознавства і лінгводидактики імені професора О.Г. Муромцевої)",
+    "text": "T_Soft_Skills_fakhivtsia.pdf",
+    "presentation": "P_Soft_Skills_fakhivtsia.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Ділова англійська мова",
+    "department": "(кафедра англійської філології)",
+    "text": "T_Dilova_anhliiska_mova.pdf",
+    "presentation": "P_Dilova_anhl_mova.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Доброчесність та антикорупція для педагогічного працівника",
+    "department": "(кафедра освітології та інноваційної педагогіки)",
+    "text": "T_Osvitolohy.pdf",
+    "presentation": "P_Dobrochesn_ta_antykorup_dlia_ped_pratsivnyka.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Індивідуальна траєкторія успіху: педагогічний дискурс",
+    "department": "(кафедра освітології та інноваційної педагогіки)",
+    "text": "T_Osvitolohy.pdf",
+    "presentation": "P_Indyvidual_traiekt_uspikhu_ped_dyskurs.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Кар’єрний супровід в системі шкільної освіти",
+    "department": "(кафедра інформатики, кафедра освітології та інноваційної педагогіки)",
+    "text": "T_Kariern_suprov_v_syst_shkil_osvity.pdf",
+    "presentation": "P_Kariern_suprov_v_syst_shkil_osvity.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Конспірологія у ХХІ столітті: аналітичні та прикладні аспекти",
+    "department": "(кафедра політології, соціології і культурології)",
+    "text": "T_Konspirol_u_ХХI_st__analit_ta_prykladni_aspekty.pdf",
+    "presentation": "P_Konspirol_u_ХХI_st_analit_ta_prykladni_aspekty.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Культура міжнародного ділового спілкування",
+    "department": "(кафедра англійської філології)",
+    "text": "T_Kultur_mizhnar_dilov_spilkuv.pdf",
+    "presentation": "P_Kultur_mizhnar_dilov_spilkuv.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Медіаосвіта в цифровому світі",
+    "department": "(кафедра інформатики)",
+    "text": "T_Mediaosvita_v_tsyfr_sviti.pdf",
+    "presentation": "P_Mediaosvita_v_tsyfr_sviti.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Психологія лідерства",
+    "department": "(кафедра психологічної та педагогічної антропології)",
+    "text": "T_Psykholohiia_liderstva.pdf",
+    "presentation": "P_Psykholohiia_liderstva.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Українознавство",
+    "department": "(кафедра українознавства і лінгводидактики імені професора О.Г. Муромцевої)",
+    "text": "T_Ukrainoznavstvo.pdf",
+    "presentation": "P_Ukrainoznavstvo.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Українство як етноментальний феномен",
+    "department": "(кафедра теорії і методики викладання суспільно-правових дисциплін)",
+    "text": "T_Ukrainstvo_yak_etnoment_fenomen.pdf",
+    "presentation": "P_Ukrainstvo_yak_etnoment_fenomen.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Фандрайзингова діяльність в освіті",
+    "department": "(кафедра освітології та інноваційної педагогіки)",
+    "text": "T_Osvitolohy.pdf",
+    "presentation": "P_Fandraizynhova_diial_v_osviti.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Цифрова безпека для освітян",
+    "department": "(кафедра технологій дистанційного навчання та цифрової дидактики в дошкільній освіті)",
+    "text": "T_Tsyfrova_bezpeka_dlia_osvitian.pdf",
+    "presentation": "P_Tsyfrova_bezpeka_dlia_osvitian.pdf"
+  },
+  {
+    "cycle": "general",
+    "name": "Штучний інтелект для молодого науковця",
+    "department": "(кафедра освітології та інноваційної педагогіки)",
+    "text": "T_Osvitolohy.pdf",
+    "presentation": "P_Shtuchn_intelekt_dlia_molod_naukovtsia.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Digital technologies: вибрані питання у професійній освіті",
+    "department": "(кафедра інформатики)",
+    "text": "T_Digital_technologies_vybrani_pytan_ prof_osviti.pdf",
+    "presentation": "P_Digital_technologies_vybrani_pytan_prof_osviti.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "EduGrowth: кар’єра викладача",
+    "department": "(кафедра освітології та інноваційної педагогіки)",
+    "text": "T_EduGrowth_kariera_vykladacha.pdf",
+    "presentation": "P_EduGrowth_kariera_vykladacha.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Адаптивні освітні стратегії",
+    "department": "(кафедра освітології та інноваційної педагогіки)",
+    "text": "T_Adaptyv_osvitni_stratehii.pdf",
+    "presentation": "P_Adaptyv_osvitni_stratehii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Адміністративний менеджмент",
+    "department": "(кафедра менеджменту та економіки)",
+    "text": "T_Administrat_menedzhment.pdf",
+    "presentation": "P_Administrat_menedzhment.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Актуальні китайськомовні філологічні студії",
+    "department": "(кафедра східних мов)",
+    "text": "T_Aktual_kytaiskomovni_filol_studii.pdf",
+    "presentation": "P_Aktual_kytaiskomovn_filol_studii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Актуальні напрями соціальної роботи",
+    "department": "(кафедра соціальної роботи і соціальної педагогіки)",
+    "text": "T_Aktual_napriamy_sotsialnoi_roboty.pdf",
+    "presentation": "P_Aktual_napriamy_sotsialnoi_roboty.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Актуальні питання біології",
+    "department": "(кафедра анатомії і фізіології людини імені професора Я.Р. Синельникова, кафедра ботаніки, кафедра зоології)",
+    "text": "T_Aktual_pytannia_biolohii.pdf",
+    "presentation": "P_Aktual_pytannia_biolohii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Актуальні питання вивчення та навчання математики",
+    "department": "(кафедра математики)",
+    "text": "T_Aktual_pytan_vyvchennia_ta_navchannia_matem.pdf",
+    "presentation": "P_Aktual_pytan_vyvchennia_ta_navchannia_matem.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Актуальні питання історичного розвитку України та світу",
+    "department": "(кафедра історії України; кафедра всесвітньої історії; кафедра теорії і методики викладання суспільно-правових дисциплін)",
+    "text": "T_Aktual_pytan_istor_rozvytku_Ukrainy_ta_svitu.pdf",
+    "presentation": "P_Aktual_pytan_istor_rozvytku_Ukrainy_ta_svitu.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Актуальні питання сучасної юриспруденції",
+    "department": "(кафедра цивільно-правових дисциплін і трудового права імені професора О.І.Процевського, державно-правових дисциплін, кримінального права і процесу)",
+    "text": "T_Aktual_pytan_such_yurysprudentsii.pdf",
+    "presentation": "P_Aktual_pytan_such_yurysprudentsii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Актуальні проблеми психологічної науки і практики",
+    "department": "(кафедра реабілітаційної психології)",
+    "text": "T_Aktual_probl_psykhol_nauky_i_praktyky.pdf",
+    "presentation": "P_Aktual_probl_psykhol_nauky_i_praktyky.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Англійська мова: інтенсивне навчання",
+    "department": "(кафедра теорії і практики англійської мови та зарубіжної літератури імені професора Михайла Гетманця)",
+    "text": "T_Anhl_mova_intensyvne_navchannia.pdf",
+    "presentation": "P_Anhl_mova_intensyvne_navchannia.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Англійська мова: ефективні стратегії комунікації",
+    "department": "(кафедра загального мовознавства і романо-германської філології, кафедра практики англійського усного і писемного мовлення, кафедра англійської філології)",
+    "text": "T_Аngliiska_mova_efektyvni_stratehii_komunikatsii.pdf",
+    "presentation": "P_Anhl_mova_efektivni_strategii_komunik.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Арт-менеджмент у мистецькій освіті",
+    "department": "(кафедра музичного мистецтва)",
+    "text": "T_Art_menedzhment_u_mystetskii_osviti.pdf",
+    "presentation": "P_Art_menedzhment_u_mystetskii_osviti.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Вибрані питання з фізики і хімії",
+    "department": "(кафедра фізикиі хімії)",
+    "text": "T_Vybrani_pytannia_z_fizyky_i_khimii.pdf",
+    "presentation": "P_Vybrani_pytannia_z_fizyky_i_khimii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Інформатика в профільній школі",
+    "department": "(кафедра інформатики)",
+    "text": "T_Informatyka_v_prof_shkoli.pdf",
+    "presentation": "P_Informatyka_v_prof_shkoli.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Інформаційний дизайн",
+    "department": "(кафедра дизайну та технологій)",
+    "text": "T_Informatsiinyi_dyzain.pdf",
+    "presentation": "P_Informatsiinyi_dyzain.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Інформаційні технології в освітній діяльності",
+    "department": "(кафедра інформатики)",
+    "text": "T_Inform_tekhnol_v_osvitnii_diialnosti.pdf",
+    "presentation": "P_Informatsiini_tekhnolohii_v_osvitnii_diialnosti.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Логопедія: актуальні питання теорії та практики",
+    "department": "(кафедра спеціальної педагогіки)",
+    "text": "T_Lohopediia_aktualni_pytannia_teorii_ta_praktyky.pdf",
+    "presentation": "P_Lohopediia_aktualni_pytannia_teorii_ta_praktyky.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Медіакомунікація",
+    "department": "(кафедра української літератури та журналістики імені професора Леоніда Ушкалова; кафедра українознавства і лінгводидактики імені професора О.Г. Муромцевої)",
+    "text": "T_Mediakomunikatsiia.pdf",
+    "presentation": "P_Mediakomunikatsiia.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Менеджмент дистанційного навчання",
+    "department": "(кафедра технологій дистанційного навчання та цифрової дидактики в дошкільній освіті)",
+    "text": "T_Menedzhment_dystan_navchannia.pdf",
+    "presentation": "P_Menedzhment_dystan_navchannia.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Менеджмент дошкільної освіти",
+    "department": "(кафедра теорії, технологій і методик дошкільної освіти)",
+    "text": "T_Menedzhment_doshkiln_osvity.pdf",
+    "presentation": "P_Menedzhment_doshkiln_osvity.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Мистецька освіта вихователя",
+    "department": "(кафедра теорії, технологій і методик дошкільної освіти)",
+    "text": "T_Mystetska_osvita_vykhovatelia.pdf",
+    "presentation": "P_Mystetska_osvita_vykhovatelia.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Навчання англійської мови: практичні аспекти",
+    "department": "(кафедра англійської філології, кафедра загального мовознавства і романо-германської філології, кафедра практики англійського усного і писемного мовлення)",
+    "text": "T_Navchannia_anhl_movy_praktychni aspekty.pdf",
+    "presentation": "P_Navchannia_anhl_movy_praktychni_aspekty.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Нові політологічні розвідки",
+    "department": "(кафедра політології, соціології і культурології)",
+    "text": "T_Novi_politolohichni_rozvidky.pdf",
+    "presentation": "P_Novi_politolohichni_rozvidky.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Організація освітнього процесу в початковій школі: інноваційні методики і сучасні практики",
+    "department": "(кафедра початкової та професійної освіти, кафедра теорії та методики викладання природничо-математичних дисциплін у дошкільній, початковій та спеціальній освіті, кафедра теорії та методики викладання філологічних дисциплін у дошкільній, початковій та спеціальній освіті)",
+    "text": "T_Orhaniz_osvitn_protsesu_v_pochat_shkoli.pdf",
+    "presentation": "P_Orhaniz_osvitn_protsesu_v_pochat_shkoli.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Польська мова (високий рівень володіння)",
+    "department": "(кафедра українознавства і лінгводидактики імені професора О.Г. Муромцевої)",
+    "text": "T_Polska_mova_(vysokyi_riven_vol).pdf",
+    "presentation": "P_Polska_mova_(vysokyi_riven_vol).pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Польська мова (початковий рівень)",
+    "department": "(кафедра українознавства і лінгводидактики)",
+    "text": "T_Polska_mova_(pochatkovyi_riven).pdf",
+    "presentation": "P_Polska_mova_(pochatkovyi_riven).pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Практикум цифрового образотворчого мистецтва",
+    "department": "(кафедра образотворчого мистецтва)",
+    "text": "T_Praktykum_tsyfrovoho_obrazotvorchoho_mystetstva.pdf",
+    "presentation": "P_Praktykum_tsyfrov_obrazotv_mystetstva.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Практичні аспекти природничих наук",
+    "department": "(кафедра анатомії і фізіології людини імені професора Я.Р. Синельникова, кафедра ботаніки, кафедра зоології)",
+    "text": "T_Praktychni_aspekty_pryrod_nauk.pdf",
+    "presentation": "P_Praktychni_aspekty_pryrod_nauk.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Прикладна лінгвістика",
+    "department": "(кафедра української мови імені професора Л.А. Лисиченко)",
+    "text": "T_Prykladna_linhvistyka.pdf",
+    "presentation": "P_Prykladna_linhvistyka.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Прикладні аспекти психології",
+    "department": "(кафедра психології)",
+    "text": "T_Prykladni_aspekty_psykholohii.pdf",
+    "presentation": "P_Prykladni_aspekty_psykholohii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Професійний розвиток вчителя початкової школи",
+    "department": "(кафедра початкової та професійної освіти, кафедра теорії та методики викладання природничо-математичних дисциплін у дошкільній, початковій та спеціальній освіті, кафедра теорії та методики викладання філологічних дисциплін у дошкільній, початковій та спеціальній освіті)",
+    "text": "T_Prof_rozv_vchytelia_pochatk_shkoly.pdf",
+    "presentation": "P_Prof_rozvitok_vchytelia_pochatk_shkoly.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Психологічний супровід процесу реабілітації",
+    "department": "(кафедра психології розвитку, реабілітаційної психології)",
+    "text": "T_Psykhol_suprovid_protsesu_reabilitatsii.pdf",
+    "presentation": "P_Psykhol_suprovid_protsesu_reabilitatsii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Робота з різними категоріями дітей з особливими освітніми потребами",
+    "department": "(кафедра початкової та професійної освіти, кафедра теорії та методики викладання природничо-математичних дисциплін у дошкільній, початковій та спеціальній освіті, кафедра теорії та методики викладання філологічних дисциплін у дошкільній, початковій та спеціальній освіті)",
+    "text": "T_Rob_z_rizn_katehor_ditei_z_soblyvymy_osvitn_potrebamy.pdf",
+    "presentation": "P_Robota_z_rizn_katehor_ditei_z_soblyvymy_osvitn_potrebamy.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Соціальна реабілітація",
+    "department": "(кафедра соціальної роботи і соціальної педагогіки)",
+    "text": "T_Sotsial_reabilitatsiia.pdf",
+    "presentation": "P_Sotsial_reabilitatsiia.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Спеціальна психологія",
+    "department": "(кафедра здоров’я людини, реабілітології і спеціальної психології; кафедра спеціальної педагогіки)",
+    "text": "T_Spetsial_psykholohiia.pdf",
+    "presentation": "P_Spetsial_psykholohiia.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Сучасні психотехнології",
+    "department": "(кафедра психологічної та педагогічної антропології)",
+    "text": "T_Such_psykhotekhnolohii.pdf",
+    "presentation": "P_Suchasni_psykhotekhnolohii.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Сучасні технології у фізичному вихованні",
+    "department": "(кафедра теорії, методики і практики фізичного виховання; спортивно-педагогічних дисциплін і фітнесу; олімпійського і професійного спорту, спортивних ігор та туризму)",
+    "text": "T_Suchas_tekhnol_u_fizychn_vykhovanni.pdf",
+    "presentation": "P_Suchas_tekhnol_u_fizychn_vykhovanni.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Сучасні технології у фізичному вихованні та підготовці молоді до захисту України",
+    "department": "(кафедра теорії, методики і практики фізичного виховання; спортивно-педагогічних дисциплін і фітнесу; олімпійського і професійного спорту, спортивних ігор та туризму)",
+    "text": "T_Such_tekhnol_u_fizychn_vykhovanni_ta_pidhot_molodi_do_zakhystu_Ukrainy.pdf",
+    "presentation": "P_Suchasni_tekhnol_u_fizychn_vykhovanni_ta_pidhot_molodi_do_zakhystu_Ukrainy.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Теоретико-методологічні основи хореографічної освіти",
+    "department": "(кафедра хореографії)",
+    "text": "T_Teoretyko_metodol_osnovy_khoreohraf_osvity.pdf",
+    "presentation": "P_Teoretyko-metodol_osnovy_khoreohraf_osvity.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Тренерська та викладацька діяльність у фізичному вихованні і спорті",
+    "department": "(кафедра олімпійського і професійного спорту, спортивних ігор та туризму; спортивно-педагогічних дисциплін і фітнесу, теорії, методики і практики фізичного виховання)",
+    "text": "T_Trenerska_ta_vykladats_diialnist_u_fiz_vykhovanni_i_sporti.pdf",
+    "presentation": "P_Trenerska_ta_vykladats_diialnist_u_fiz_vykhovanni_i_sporti.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Українознавчий кейс",
+    "department": "(кафедра українознавства і лінгводидактики імені професора О.Г. Муромцевої)",
+    "text": "T_Ukrainoznavchyi_keis.pdf",
+    "presentation": "P_Ukrainoznavchyi_keis.pdf"
+  },
+  {
+    "cycle": "prof",
+    "name": "Управлінські технології в освіті",
+    "department": "(кафедра менеджменту та економіки)",
+    "text": "T_Upravlin_tekhnol_v_osviti.pdf",
+    "presentation": "P_Upravlin_tekhnol_v_osviti.pdf"
+  }
+]
