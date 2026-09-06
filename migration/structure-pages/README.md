@@ -10,9 +10,43 @@ faculty's sidebar menu on the old site.
 | 3 | `3_load_images.py` | `images.list.json` | files in Directus + `images.map.json` |
 | 4 | `4_emit.py` | `content.draft.json` + `images.map.json` | `knpu-university-fe/app/content/structure/**` |
 | 8 | `8_fix_unit_content.py` | emitted content | repairs one unit: drops sections shared with another unit, moves a «Деканат» block between tabs |
+| 9 | `9_export_to_directus.py` | emitted content | `data/structure-pages.json` — конверт для `../pass2/load.py`, щоб вкладки редагувалися в адмінці |
 
 Only stages 3 and 4 write outside this folder. Everything is re-runnable; stage 3 is idempotent
 through its cache, stage 4 rewrites the same files with stable key order.
+
+## Stage 9 — віддати вкладки редакторам
+
+Стадії 1–8 кладуть тексти у фронт, звідки їх може змінити лише розробник зі складанням образу.
+Стадія 9 переносить те саме в колекцію `structure_pages`, і сайт починає читати вкладку звідти:
+`app/composables/useStructureTabContent.ts` спершу питає Directus, а якщо рядка немає або
+Directus недоступний — бере мігрований JSON, як раніше.
+
+Тому переносити можна **підрозділами**, а не все за раз, і будь-коли відкотитися — досить
+видалити рядки.
+
+```bash
+export DIRECTUS_URL=http://localhost:8055
+export DIRECTUS_EMAIL=admin@example.com DIRECTUS_PASSWORD=admin
+
+python3 9_export_to_directus.py kafedra-horeografiyi
+python3 ../pass2/load.py data/structure-pages.json --dry-run
+python3 ../pass2/load.py data/structure-pages.json
+```
+
+Що варто знати:
+
+- **Секції схлопуються в одне поле.** Заголовок секції стає `<h2>` у тілі, `[collapse]` —
+  `<details>`. У контенті підрозділів згорнутих секцій немає жодної, але конвертер той самий
+  знадобиться для `app/content/pages`, де їх 334.
+- **Підрозділ із блоком `people` експорт зупиняє.** Картки керівництва (54 особи в 11 файлах)
+  ще не мають куди переїхати; мовчки їх втратити гірше, ніж не мігрувати підрозділ.
+- **`links` лишаються у статиці** — їх читає ще й плитковий список на «Головній».
+- **`load.py` пропускає наявні рядки** (звірка за `unit_slug` + `tab`), тож повторний прогін не
+  затре написане редактором. Щоб перезалити вкладку з нуля, спершу видаліть рядок в адмінці.
+- **Пошук по сайту індексується зі статичних файлів на складанні**, тож правки редактора
+  потраплять у пошук лише після наступного білду. Коли дійде до масової міграції, це лікується
+  зворотним вивантаженням Directus → JSON перед складанням.
 
 ## Where the content comes from
 

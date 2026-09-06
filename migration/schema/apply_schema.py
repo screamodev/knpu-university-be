@@ -32,6 +32,25 @@ STATUS_CHOICES = [
     {'text': '$t:archived', 'value': 'archived', 'color': '#A2B5CD'},
 ]
 
+# Toolbar and link colours of the news WYSIWYG (`articles.content` in snapshots/schema.yaml),
+# repeated here so a body field on another collection looks and behaves the same.
+RICH_TEXT_TOOLBAR = [
+    'undo', 'redo', 'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript',
+    'h2', 'h3', 'h4', 'alignleft', 'aligncenter', 'alignright', 'alignjustify',
+    'bullist', 'numlist', 'outdent', 'indent', 'blockquote', 'customPre', 'customInlineCode',
+    'customLink', 'unlink', 'customImage', 'customMedia', 'table', 'hr', 'removeformat',
+    'code', 'fullscreen',
+]
+RICH_TEXT_CONTENT_CSS = (
+    'data:text/css;charset=utf-8,'
+    'a%2Ca%3Alink%2Ca%3Avisited%7Bcolor%3A%231b2e4b%21important%3B'
+    'text-decoration%3Aunderline%7Da%3Ahover%7Bcolor%3A%23c9a227%21important%7D'
+)
+
+# Тека «Медіа → Структура» з bootstrap-editor-experience.sh: світлини й файли, які редактор
+# вантажить із тіла сторінки підрозділу, лягають туди, а не в корінь бібліотеки.
+MEDIA_STRUCTURE_FOLDER = '03cbd78e-3aa5-4f2e-8273-f3fecc9a87df'
+
 
 class Directus:
     def __init__(self, base: str, token: str):
@@ -120,6 +139,25 @@ def multiline(name: str, note: str | None = None, *, required: bool = False) -> 
     return field(name, 'text', interface='input-multiline', note=note, required=required)
 
 
+def rich_text(name: str, note: str | None = None, *, folder: str | None = None) -> dict:
+    """
+    The same WYSIWYG the news editor uses, so an editor meets one toolbar on the whole site.
+
+    `extended_valid_elements` is the one addition: TinyMCE strips `<details>` from what the
+    «код» button pastes unless the element is declared, and drop-downs are how the migrated
+    pages carry long lists.
+    """
+    return field(name, 'text', interface='input-rich-text-html', note=note, options={
+        'folder': folder,
+        'font': 'sans-serif',
+        'toolbar': RICH_TEXT_TOOLBAR,
+        'tinymceOverrides': {
+            'content_css': RICH_TEXT_CONTENT_CSS,
+            'extended_valid_elements': 'details[open],summary',
+        },
+    })
+
+
 def select(name: str, choices: list[dict], note: str | None = None, *,
            required: bool = False, width: str = 'half') -> dict:
     return field(name, 'string', interface='select-dropdown', options={'choices': choices},
@@ -146,7 +184,7 @@ def o2m(name: str, note: str | None = None) -> dict:
 
 
 def collection(name: str, *, icon: str, note: str, template: str, fields: list[dict],
-               sort: int, singleton: bool = False) -> dict:
+               sort: int, singleton: bool = False, sort_field: str | None = 'order') -> dict:
     return {
         'collection': name,
         'meta': {
@@ -164,7 +202,10 @@ def collection(name: str, *, icon: str, note: str, template: str, fields: list[d
             # therefore no manual ordering.
             'singleton': singleton,
             'sort': sort,
-            'sort_field': None if singleton else 'order',
+            # Manual ordering needs a column to write into; a collection whose rows are addressed
+            # by a key rather than listed in order passes `sort_field=None` instead of carrying a
+            # `order` field nothing reads.
+            'sort_field': None if singleton else sort_field,
             'versioning': False,
         },
         'schema': {'name': name},
@@ -232,6 +273,63 @@ AGREEMENT_CATEGORIES = [
     {'text': 'Із закладами середньої, дошкільної освіти та відділами освіти', 'value': 'schools'},
     {'text': 'З організаціями й установами України', 'value': 'organizations'},
     {'text': 'Міжнародні договори, угоди, меморандуми', 'value': 'international'},
+]
+
+# Підрозділи, що мають сторінку на сайті, — ключі `app/content/structure/manifest.json`,
+# підписані так, як їх називає `app/utils/structure.ts`. Порядок: інститути, факультети,
+# відділ, кафедри — щоб редактор шукав очима, а не гортав алфавіт.
+STRUCTURE_UNITS = [
+    {'text': 'Навчально-науковий інститут спеціальної освіти та інклюзії', 'value': 'special-education'},
+    {'text': 'Навчально-науковий інститут української філології імені Г.Ф. Квітки-Основ’яненка', 'value': 'ukrainian-philology'},
+    {'text': 'Факультет дошкільної освіти', 'value': 'preschool'},
+    {'text': 'Факультет математики, інформатики і природничої освіти', 'value': 'mathematics-informatics'},
+    {'text': 'Факультет мистецтв', 'value': 'arts'},
+    {'text': 'Факультет соціально-гуманітарних наук і соціальних технологій', 'value': 'social-humanities'},
+    {'text': 'Факультет фізичного виховання і спорту', 'value': 'physical-education'},
+    {'text': 'Факультет іноземної філології', 'value': 'foreign-philology'},
+    {'text': 'Факультет історії і права', 'value': 'history-law'},
+    {'text': 'Відділ аспірантури і докторантури', 'value': 'postgraduate'},
+    {'text': 'Кафедра анатомії і фізіології людини та медичної підготовки імені професора Я.Р. Синельникова', 'value': 'kafedra-anatomiyi-i-fiziologiyi-lyudyny'},
+    {'text': 'Кафедра англійської філології', 'value': 'kafedra-angliyskoyi-filologiyi'},
+    {'text': 'Кафедра біології', 'value': 'kafedra-biologiyi'},
+    {'text': 'Кафедра всесвітньої історії', 'value': 'kafedra-vsesvitnoyi-istoriyi'},
+    {'text': 'Кафедра дизайну і технологій', 'value': 'kafedra-dyzaynu-i-tehnologiy'},
+    {'text': 'Кафедра загального мовознавства і романо-германської філології', 'value': 'kafedra-zagalnogo-movoznavstva'},
+    {'text': 'Кафедра корекційної психопедагогіки та здоров’я людини', 'value': 'kafedra-korekciynoyi-psyhopedagogiky'},
+    {'text': 'Кафедра менеджменту та економіки', 'value': 'kafedra-menedzhmentu-ta-ekonomiky'},
+    {'text': 'Кафедра музичного мистецтва', 'value': 'kafedra-muzychnogo-mystectva'},
+    {'text': 'Кафедра образотворчого мистецтва', 'value': 'kafedra-obrazotvorchogo-mystectva'},
+    {'text': 'Кафедра олімпійського і професійного спорту, спортивних ігор та туризму', 'value': 'kafedra-olimpiyskogo-i-profesiynogo-sportu'},
+    {'text': 'Кафедра політології, соціології і культурології', 'value': 'kafedra-politologiyi-sociologiyi-i-kulturologiyi'},
+    {'text': 'Кафедра практики англійського усного і писемного мовлення', 'value': 'kafedra-praktyky-angliyskogo-movlennya'},
+    {'text': 'Кафедра психологічної і педагогічної антропології', 'value': 'kafedra-psyhologichnoyi-i-pedagogichnoyi-antropologiyi'},
+    {'text': 'Кафедра психології розвитку', 'value': 'kafedra-psyhologiyi-rozvytku'},
+    {'text': 'Кафедра соціальної роботи і соціальної педагогіки', 'value': 'kafedra-socialnoyi-roboty'},
+    {'text': 'Кафедра спеціальної педагогіки', 'value': 'kafedra-specialnoyi-pedagogiky'},
+    {'text': 'Кафедра східних мов', 'value': 'kafedra-shidnyh-mov'},
+    {'text': 'Кафедра теорії і методики викладання суспільно-правових дисциплін', 'value': 'kafedra-teoriyi-i-metodyky-vykladannya-suspilno-pravovyh-dyscyplin'},
+    {'text': 'Кафедра теорії, методики і практики фізичного виховання', 'value': 'kafedra-teoriyi-metodyky-i-praktyky-fizychnogo-vyhovannya'},
+    {'text': 'Кафедра українознавства і лінгводидактики імені професора О.Г. Муромцевої', 'value': 'kafedra-ukrayinoznavstva-i-lingvodydaktyky'},
+    {'text': 'Кафедра української літератури та журналістики імені професора Леоніда Ушкалова', 'value': 'kafedra-ukrayinskoyi-literatury-ta-zhurnalistyky'},
+    {'text': 'Кафедра української мови імені професора Л. А. Лисиченко', 'value': 'kafedra-ukrayinskoyi-movy'},
+    {'text': 'Кафедра філософії імені професора М. Д. Култаєвої', 'value': 'kafedra-filosofiyi'},
+    {'text': 'Кафедра хореографії', 'value': 'kafedra-horeografiyi'},
+    {'text': 'Кафедра інформатики', 'value': 'kafedra-informatyky'},
+    {'text': 'Кафедра історії України', 'value': 'kafedra-istoriyi-ukrayiny'},
+]
+
+# Вкладки, тіло яких — проза. Решта з `STRUCTURE_TAB_IDS` фронту сюди не потрапляє: «Структура»
+# малюється з оргсхеми, «Новини» й «Оголошення» — це стрічка категорії, «Нормативні документи» —
+# розділ колекції documents. Рядок для них ніде б не показався.
+STRUCTURE_TABS = [
+    {'text': 'Головна', 'value': 'home'},
+    {'text': 'Вступнику', 'value': 'admission'},
+    {'text': 'Історія', 'value': 'history'},
+    {'text': 'Освіта', 'value': 'education'},
+    {'text': 'Наука', 'value': 'science'},
+    {'text': 'Студентство', 'value': 'students'},
+    {'text': 'Співпраця', 'value': 'cooperation'},
+    {'text': 'Докторанту', 'value': 'doctoral'},
 ]
 
 STUDENT_COUNCIL_GROUPS = [
@@ -493,6 +591,24 @@ COLLECTIONS = [
             text_field('url', 'Покликання на файл договору: /assets/<id> або зовнішня адреса.',
                        length=500),
             order_field(),
+        ],
+    ),
+    collection(
+        'structure_pages', icon='menu_book', sort=45, template='{{unit_slug}} · {{tab}}',
+        sort_field=None,
+        note='Тексти вкладок на сторінках підрозділів. Один рядок — одна вкладка одного '
+             'підрозділу; поки рядка немає, сайт показує текст, мігрований зі старого сайту.',
+        fields=[
+            id_field(), status_field(),
+            select('unit_slug', STRUCTURE_UNITS, 'Підрозділ, чию сторінку правимо.',
+                   required=True, width='full'),
+            select('tab', STRUCTURE_TABS, 'Вкладка на сторінці підрозділу.', required=True),
+            rich_text('body', 'Текст вкладки українською.', folder=MEDIA_STRUCTURE_FOLDER),
+            rich_text('bodyEn', 'Текст англійською. Порожньо — сайт покаже українську версію '
+                                'із приміткою про переклад.', folder=MEDIA_STRUCTURE_FOLDER),
+            field('date_updated', 'timestamp', interface='datetime', width='half',
+                  special=['date-updated'], meta={'readonly': True, 'hidden': True},
+                  display='datetime', display_options={'relative': True}),
         ],
     ),
 ]

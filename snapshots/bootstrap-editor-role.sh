@@ -195,6 +195,9 @@ add_crud newspaper_issues
 # Документи розділу «Відвідувачу» — накази, звіти, вакансії тощо
 add_crud documents
 
+# Тексти вкладок на сторінках підрозділів, факультетів і кафедр
+add_crud structure_pages
+
 # Media library — required for cover, Content images, attachments
 add_crud directus_files
 add_perm directus_folders read "$ALL" ""
@@ -251,4 +254,4 @@ log "Done."
 log "Role:   $ROLE_NAME ($ROLE_ID)"
 log "Policy: $POLICY_NAME ($POLICY_ID) — app_access=true, admin_access=false"
 log "Assign users to role \"$ROLE_NAME\" in Settings → Users, then they can open the Data Studio."
-log "Collections: articles, categories, articles_files, articles_categories, newspaper_issues, documents, directus_files (+ folders read)."
+log "Collections: articles, categories, articles_files, articles_categories, newspaper_issues, documents, structure_pages, directus_files (+ folders read)."

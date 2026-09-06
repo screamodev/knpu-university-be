@@ -156,6 +156,9 @@ add_perm dissertation_councils read "$ALL" "$PUBLISHED_FILTER"
 add_perm dissertation_council_files read "$ALL" "$PUBLISHED_FILTER"
 # Read by the Nuxt server middleware (unauthenticated) to 301 old hnpu.edu.ua URLs.
 add_perm legacy_redirects read "$ALL" "$PUBLISHED_FILTER"
+# Тексти вкладок підрозділів. Поки рядка немає, сайт бере мігрований JSON із бандла, тож без
+# цього права сторінки не ламаються — просто ніколи не показують те, що редактор написав.
+add_perm structure_pages read "$ALL" "$PUBLISHED_FILTER"
 
 # Categories has no status — read everything.
 add_perm categories read "$ALL" ""
