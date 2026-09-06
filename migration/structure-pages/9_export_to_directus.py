@@ -25,12 +25,25 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import os
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
-CONTENT = HERE.parents[2] / 'knpu-university-fe' / 'app' / 'content' / 'structure'
 DEFAULT_OUT = HERE / 'data' / 'structure-pages.json'
+
+
+def default_content_dir() -> Path:
+    """
+    Тека зі статичним контентом фронту — сусідній репозиторій.
+
+    Кроку потрібні обидва репозиторії поруч, тож це команда для машини розробника. У
+    контейнері на сервері змонтована сама `migration/`, і шлях просто не збереться — тому
+    результат експорту закомічено (`data/structure-pages.json`), а на проді запускають
+    одразу `pass2/load.py`.
+    """
+    root = HERE.parent.parent.parent
+    return root / 'knpu-university-fe' / 'app' / 'content' / 'structure'
 
 # Вкладки, тіло яких — проза: те саме, що в `STRUCTURE_TABS` у migration/schema/apply_schema.py.
 # «Структура», «Новини», «Оголошення» й «Нормативні документи» малюються з інших джерел, і рядок
@@ -71,14 +84,14 @@ def tab_body(content: dict) -> str:
     return '\n'.join(filter(None, (section_html(section) for section in content.get('sections') or []))).strip()
 
 
-def unit_rows(slug: str) -> list[dict]:
+def unit_rows(content: Path, slug: str) -> list[dict]:
     """
     Рядки для одного підрозділу: по одному на вкладку, з тілом уk і, якщо є, en.
 
     Файл із блоком `people` зупиняє експорт: картки керівництва живуть окремим полем у JSON і
     тут ще не мають куди переїхати. Мовчки втратити деканат гірше, ніж не мігрувати підрозділ.
     """
-    directory = CONTENT / slug
+    directory = content / slug
     if not directory.is_dir():
         raise SystemExit(f'{slug}: немає теки {directory}')
 
@@ -121,12 +134,22 @@ def main() -> int:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('units', nargs='+', help='слаги підрозділів, напр. kafedra-horeografiyi')
     parser.add_argument('--out', default=str(DEFAULT_OUT))
+    parser.add_argument('--content', default=os.environ.get('STRUCTURE_CONTENT_DIR'),
+                        help='тека app/content/structure фронту (типово — сусідній репозиторій)')
     args = parser.parse_args()
+
+    content = Path(args.content) if args.content else default_content_dir()
+    if not content.is_dir():
+        raise SystemExit(
+            f'немає теки зі статичним контентом: {content}\n'
+            'Крок потребує репозиторію knpu-university-fe поруч — це команда для машини '
+            'розробника. На сервері запускайте одразу pass2/load.py: результат експорту вже '
+            'закомічено в data/structure-pages.json.')
 
     rows: list[dict] = []
     for slug in args.units:
         print(f'{slug}:', file=sys.stderr)
-        unit = unit_rows(slug)
+        unit = unit_rows(content, slug)
         for row in unit:
             print(f'  + {row["tab"]}: {len(row["body"])} символів'
                   + (f' (+en {len(row["bodyEn"])})' if 'bodyEn' in row else ''), file=sys.stderr)
