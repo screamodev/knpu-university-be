@@ -198,6 +198,19 @@ add_crud documents
 # Тексти вкладок на сторінках підрозділів, факультетів і кафедр
 add_crud structure_pages
 
+# Графік освітнього процесу: семестри й ключові дати на /education/schedule, розклади на
+# /student/schedule. Без цих прав редактор бачить сторінки, але не може змінити навіть роки —
+# саме на це скаржилися 07.09.
+add_crud education_schedule_periods
+add_crud education_schedule_key_dates
+add_crud student_schedule_documents
+
+# Студентський парламент: сторінка /student/council поки що порожня, наповнювати її має
+# редактор, коли підрозділ надішле склад і напрями роботи.
+add_crud student_council_info
+add_crud student_council_members
+add_crud student_council_sectors
+
 # Media library — required for cover, Content images, attachments
 add_crud directus_files
 add_perm directus_folders read "$ALL" ""
@@ -254,4 +267,4 @@ log "Done."
 log "Role:   $ROLE_NAME ($ROLE_ID)"
 log "Policy: $POLICY_NAME ($POLICY_ID) — app_access=true, admin_access=false"
 log "Assign users to role \"$ROLE_NAME\" in Settings → Users, then they can open the Data Studio."
-log "Collections: articles, categories, articles_files, articles_categories, newspaper_issues, documents, structure_pages, directus_files (+ folders read)."
+log "Collections: articles, categories, junctions, newspaper_issues, documents, structure_pages, education/student schedules, student_council_*, directus_files (+ folders read)."
