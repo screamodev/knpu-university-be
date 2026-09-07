@@ -1,0 +1,55 @@
+{
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": [
+        "section",
+        "title"
+      ],
+      "rows": [
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу на 2026/2027 н. р. — перший (бакалаврський) рівень",
+          "documentDate": "2026-06-30",
+          "order": 1,
+          "_fileId": "04586c5b-edde-506d-aec8-63a38c98e7b8"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу на 2026/2027 н. р. — другий (магістерський) рівень",
+          "documentDate": "2026-06-30",
+          "order": 2,
+          "_fileId": "1c9a8553-9c49-5e3c-82eb-bc70ea898596"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу на 2026/2027 н. р. — третій (освітньо-науковий) рівень, І–ІІ курс",
+          "documentDate": "2026-08-27",
+          "order": 3,
+          "_fileId": "540553eb-51f1-56db-a374-f2fa56a98dc1"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Графік освітнього процесу на 2026/2027 н. р. — третій (освітньо-науковий) рівень, ІІІ–IV курс",
+          "documentDate": "2026-08-27",
+          "order": 4,
+          "_fileId": "9d143f4c-9d5d-5f68-bbbd-4e099f04d336"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Наказ № 122-од від 30.06.2026 «Про організацію освітнього процесу у 2026/2027 навчальному році»",
+          "documentDate": "2026-06-30",
+          "order": 5,
+          "_fileId": "5722e263-1c0b-56ba-9d5d-a2e6331844a0"
+        },
+        {
+          "section": "education-schedule",
+          "title": "Наказ № 154-од від 27.08.2026 «Про особливості організації освітнього процесу у 2026/2027 навчальному році»",
+          "documentDate": "2026-08-27",
+          "order": 6,
+          "_fileId": "521d733e-4fda-57e6-af19-69d9df180b64"
+        }
+      ]
+    }
+  ]
+}
