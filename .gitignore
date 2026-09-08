@@ -38,3 +38,7 @@ pnpm-debug.log*
 # Матеріали з Google Drive для ДВВ магістратури 2026/2028: ~300 МБ, качаються скриптом
 # за картою migration/dvv-2026/files.map.json.
 migration/dvv-2026/files/
+
+# Публічні файли з Drive для правок 08.09 качає migration/fixes-2026-09-08/push_assets.py
+# за картою files.map.json; у git лежать лише ті, у яких drive_id порожній.
+migration/fixes-2026-09-08/files/*.pdf

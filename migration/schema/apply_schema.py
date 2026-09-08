@@ -661,6 +661,20 @@ NEW_DOCUMENT_SECTIONS = [
     {'text': 'Вільний вибір — розклад занять (магістр)', 'value': 'free-choice-master-schedule'},
     {'text': 'Рейтингове оцінювання науково-педагогічних працівників', 'value': 'staff-rating'},
     {'text': 'Спортивний клуб', 'value': 'sports-club'},
+    {'text': 'Звіти Студентського Парламенту', 'value': 'student-council-reports'},
+]
+
+# Поля, які треба дописати до колекцій, створених раніше за цей скрипт (у COLLECTIONS їх
+# немає, тож `ensure_fields` до них не дійде).
+EXTRA_FIELDS = [
+    # Підзаголовок усередині списку документів. Графік освітнього процесу клієнт попросив
+    # розділити на «Денна форма», «Заочна форма», «Вечірня форма»; порожнє поле = документ
+    # іде без підзаголовка, як і раніше.
+    ('documents', text_field('group', 'Підзаголовок у списку на сайті — напр. «Денна форма». '
+                                      'Порожнє поле: документ показується без підзаголовка.',
+                             width='half', length=120)),
+    ('documents', text_field('groupEn', 'Той самий підзаголовок англійською.',
+                             width='half', length=120)),
 ]
 
 
@@ -686,6 +700,20 @@ def ensure_fields(directus: Directus, spec: dict, dry_run: bool) -> None:
         print(f'+ field {name}.{item["field"]}')
         if not dry_run:
             directus.request('POST', f'/fields/{name}', payload=item)
+
+
+def ensure_extra_fields(directus: Directus, dry_run: bool) -> None:
+    """Add single fields to collections that this script does not own."""
+    cache: dict[str, set[str]] = {}
+    for name, spec in EXTRA_FIELDS:
+        if name not in cache:
+            cache[name] = {row['field'] for row in (directus.get(f'/fields/{name}') or [])}
+        if spec['field'] in cache[name]:
+            continue
+        print(f'+ field {name}.{spec["field"]}')
+        if not dry_run:
+            directus.request('POST', f'/fields/{name}', payload=spec)
+        cache[name].add(spec['field'])
 
 
 def ensure_relations(directus: Directus, dry_run: bool) -> None:
@@ -803,6 +831,7 @@ def main() -> int:
 
     try:
         ensure_collections(directus, args.dry_run)
+        ensure_extra_fields(directus, args.dry_run)
         ensure_relations(directus, args.dry_run)
         ensure_document_sections(directus, args.dry_run)
         ensure_monitoring_areas(directus, args.dry_run)

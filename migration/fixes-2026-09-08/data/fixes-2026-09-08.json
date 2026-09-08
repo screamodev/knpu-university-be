@@ -1,0 +1,106 @@
+{
+  "batches": [
+    {
+      "collection": "categories",
+      "identity": [
+        "slug"
+      ],
+      "rows": [
+        {
+          "slug": "navchalno-metodychnyi-inklyuzyvnyi-tsentr",
+          "name": "Навчально-методичний інклюзивний центр",
+          "nameEn": "Educational and Methodological Inclusive Centre"
+        }
+      ]
+    },
+    {
+      "collection": "science_conferences",
+      "identity": [
+        "title"
+      ],
+      "rows": [
+        {
+          "status": "published",
+          "title": "МОДЕЛІ ЖИТТЄТВОРЧОСТІ У СУЧАСНИХ СОЦІОКУЛЬТУРНИХ КОНТЕКСТАХ",
+          "conferenceType": "Науково-практична інтернет-конференція",
+          "location": "Кафедра психологічної та педагогічної антропології ХНПУ імені Г. С. Сковороди",
+          "description": "Кафедра психологічної та педагогічної антропології ХНПУ імені Г. С. Сковороди запрошує взяти участь у науково-практичній інтернет-конференції для викладачів, аспірантів, вчителів і здобувачів вищої освіти.\nВідбудеться 15 жовтня 2026 року.",
+          "eventDate": "2026-10-15T09:00:00",
+          "isUpcoming": true,
+          "order": 1
+        },
+        {
+          "status": "published",
+          "title": "АКТУАЛЬНІ ПРОБЛЕМИ ДОШКІЛЬНОЇ ОСВІТИ",
+          "conferenceType": "ІІІ науково-практична студентська конференція",
+          "location": "Кафедра теорії, технологій і методик дошкільної освіти ХНПУ імені Г. С. Сковороди",
+          "description": "Кафедра теорії, технологій і методик дошкільної освіти ХНПУ імені Г. С. Сковороди запрошує до участі в ІІІ науково-практичній студентській конференції.\nВідбудеться 29 жовтня 2026 року.",
+          "eventDate": "2026-10-29T09:00:00",
+          "isUpcoming": true,
+          "order": 2
+        }
+      ]
+    },
+    {
+      "collection": "documents",
+      "identity": [
+        "section",
+        "title"
+      ],
+      "rows": [
+        {
+          "section": "student-council-reports",
+          "order": 2,
+          "title": "Звіт Студентського Парламенту за 2023 рік",
+          "documentDate": "2023-12-31",
+          "status": "published",
+          "_fileId": "ce1fbd65-7f89-5f36-9fc3-3fd5eaa5942e"
+        },
+        {
+          "section": "student-council-reports",
+          "order": 3,
+          "title": "Звіт Студентського Парламенту за 2024 рік",
+          "documentDate": "2024-12-31",
+          "status": "published",
+          "_fileId": "ddbd62a7-af94-5e73-a2bd-7132f51e36c8"
+        },
+        {
+          "section": "student-council-reports",
+          "order": 1,
+          "title": "Звіт Студентського Парламенту за 2022 рік",
+          "status": "published",
+          "_fileId": "0a0d760a-6160-53c2-a452-cfb1fbcbed9d",
+          "documentDate": "2022-12-31"
+        },
+        {
+          "section": "inclusive-support",
+          "order": 11,
+          "title": "План заходів Центру інклюзивної освіти у 2021–2022 навчальному році",
+          "status": "published",
+          "_fileId": "14dbde2b-46d1-585a-9ee6-c1224e2a8d10"
+        },
+        {
+          "section": "inclusive-support",
+          "order": 13,
+          "title": "План заходів Центру інклюзивної освіти у 2023–2024 навчальному році",
+          "status": "published",
+          "_fileId": "4bdb798e-6ae1-5eb2-b803-19ab9b85141b"
+        },
+        {
+          "section": "inclusive-support",
+          "order": 14,
+          "title": "План заходів Центру інклюзивної освіти у 2024–2025 навчальному році",
+          "status": "published",
+          "_fileId": "14299232-75eb-5ffa-9619-0fcf9ae644bc"
+        },
+        {
+          "section": "inclusive-support",
+          "order": 15,
+          "title": "План заходів Центру інклюзивної освіти у 2025–2026 навчальному році",
+          "status": "published",
+          "_fileId": "8e99333e-87ac-5b81-82ba-a21d63b5f49c"
+        }
+      ]
+    }
+  ]
+}
