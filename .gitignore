@@ -45,4 +45,7 @@ migration/fixes-2026-09-08/files/*.pdf
 
 # Документи ради 09.09 качає migration/fixes-2026-09-09/push_assets.py за files.map.json;
 # у git лежать лише зменшені фотографії (drive_id порожній).
-migration/fixes-2026-09-09/files/*.pdf
+migration/fixes-2026-09-09/files/bohdan-*.pdf
+migration/fixes-2026-09-09/files/leonidova-*.pdf
+migration/fixes-2026-09-09/files/podenko-*.pdf
+migration/fixes-2026-09-09/files/spped-*.pdf
