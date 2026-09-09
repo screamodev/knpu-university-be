@@ -1,0 +1,331 @@
+{
+  "batches": [
+    {
+      "collection": "gallery_items",
+      "identity": [
+        "title"
+      ],
+      "rows": [
+        {
+          "status": "published",
+          "title": "Навчальний корпус на вулиці Чернишевській",
+          "titleEn": "Chernyshevska Street building",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 3,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "ad172ba1-31ff-5257-b898-4f3040d85a9c",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Вхід до головного корпусу",
+          "titleEn": "Main building entrance",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 4,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "ad93e0a2-a30a-59fc-840f-d2f122fc9049",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Фасад головного корпусу",
+          "titleEn": "Main building façade",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 5,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "12b65ca6-2821-5831-8a7c-ff3c9409a6f2",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Головний корпус, вигляд із вулиці",
+          "titleEn": "Main building from the street",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 6,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "ae88e0b6-c726-5883-842e-2fa0f6e67b4c",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Пам’ятник Г. С. Сковороді",
+          "titleEn": "Monument to H. S. Skovoroda",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 7,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "c492a9bf-b3b0-5c45-b67a-0d24f5375746",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Випускники біля пам’ятника Сковороді",
+          "titleEn": "Graduates by the Skovoroda monument",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 8,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "c7ef017a-8e00-554e-8e4a-771c60ffb015",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Скульптура «Учителька»",
+          "titleEn": "The Teacher sculpture",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 9,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "2b08b05b-f5c6-544f-98a4-f1aab06bc33c",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Спортивний майданчик",
+          "titleEn": "Outdoor sports ground",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 10,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "227da576-a27f-5f3e-aa67-6b03aa8eaea5",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Гімнастична зала",
+          "titleEn": "Gymnastics hall",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 11,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "5b021755-4777-509e-af94-b9aaa4ebac1b",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Футбольне поле",
+          "titleEn": "Football pitch",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 12,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "16249513-056b-529b-8785-dbbe0f972698",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Простір для занять з дітьми",
+          "titleEn": "Room for work with children",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 13,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "4990c2af-8d44-54ed-8757-358fc964c9d7",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Заняття в лабораторії",
+          "titleEn": "Laboratory class",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 14,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "d20ffecc-7800-5823-9cd8-64db725c775b",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Наукова лабораторія",
+          "titleEn": "Research laboratory",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 15,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "abd4770b-e6ac-5007-b367-f516352e6ca6",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Заняття біля інтерактивної дошки",
+          "titleEn": "Class at the interactive board",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 16,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "928b9064-29f1-5bd9-baa1-46906a0eef32",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Лекційна авдиторія",
+          "titleEn": "Lecture hall",
+          "category": "e1090364-ab55-495f-9dca-f8a3f3ac9beb",
+          "order": 17,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "ea781f7f-7129-5897-9765-b374eb4238ef",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Толока на території університету",
+          "titleEn": "Campus clean-up day",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 18,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "cb6c0c0f-1963-53c3-b7e3-514bf505c6ae",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Народні танці на святі",
+          "titleEn": "Folk dances at a university celebration",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 19,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "4c608e46-149e-5de9-814f-7d449df6f3a3",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Козацький дух, козацька воля",
+          "titleEn": "Cossack spirit, Cossack will",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 20,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "ab0d21e2-55a3-5f0b-a698-7625a6be089c",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Святковий концерт",
+          "titleEn": "Gala concert",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 21,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "adeb245d-3356-585e-862f-35a4aebea042",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Урочиста церемонія з державним прапором",
+          "titleEn": "Ceremony with the national flag",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 22,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "1629514f-a188-5203-96e1-2e1704039453",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Тренінг для студентів",
+          "titleEn": "Student training session",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 23,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "34d2a453-3eff-5392-9dd6-d224bbd08237",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Виступ танцювального колективу",
+          "titleEn": "Dance ensemble performance",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 24,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "93fdd618-4e92-5754-99e8-4e209574cd89",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Студентське свято",
+          "titleEn": "Student celebration",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 25,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "3859ee0b-3b29-53f4-866a-5f0ecdbd3e14",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Випускники з державним прапором",
+          "titleEn": "Graduates with the national flag",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 26,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "91439b7c-31a5-54ca-ac7c-599fdd89da35",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Вручення дипломів",
+          "titleEn": "Graduation ceremony",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 27,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "27ab1f8a-fc86-559d-b726-58293595f3bb",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Зустріч студентів і викладачів",
+          "titleEn": "Students and staff gathering",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 28,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "c8b0e02b-bdf9-5f23-adb0-3c6d194a9bbd",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Змагання з фехтування",
+          "titleEn": "Fencing competition",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 29,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "9ef1901c-d289-50b5-ad87-9c566f77adb1",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Випуск магістрів",
+          "titleEn": "Master’s graduation",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 30,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "8a97ac35-005f-5bc7-9c28-29eceac9f16d",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Спільне фото учасників заходу",
+          "titleEn": "Group photo of event participants",
+          "category": "42242fc3-01d6-4558-99b5-d5e247dbf68b",
+          "order": 31,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_fileId": "445e5131-3b81-5b2f-b538-e719526d6162",
+          "_fileField": "image"
+        }
+      ]
+    }
+  ]
+}
