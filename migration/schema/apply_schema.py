@@ -320,6 +320,16 @@ STRUCTURE_UNITS = [
 # Вкладки, тіло яких — проза. Решта з `STRUCTURE_TAB_IDS` фронту сюди не потрапляє: «Структура»
 # малюється з оргсхеми, «Новини» й «Оголошення» — це стрічка категорії, «Нормативні документи» —
 # розділ колекції documents. Рядок для них ніде б не показався.
+# Окремі сторінки, перенесені зі старого сайту, тексти яких клієнт просив редагувати в
+# адмінці. Список поповнюється в міру потреби: поки slug немає тут, сайт показує мігрований
+# файл з `app/content/pages/<slug>.uk.json`.
+STATIC_PAGE_SLUGS = [
+    {'text': 'Спеціалізована вчена рада Д 64.053.01', 'value': 'council-d-64-053-01'},
+    {'text': 'Спеціалізована вчена рада К 64.053.05', 'value': 'council-k-64-053-05'},
+    {'text': 'Спеціалізована вчена рада Д 64.053.08', 'value': 'council-d-64-053-08'},
+]
+
+
 STRUCTURE_TABS = [
     {'text': 'Головна', 'value': 'home'},
     {'text': 'Вступнику', 'value': 'admission'},
@@ -603,6 +613,24 @@ COLLECTIONS = [
                    required=True, width='full'),
             select('tab', STRUCTURE_TABS, 'Вкладка на сторінці підрозділу.', required=True),
             rich_text('body', 'Текст вкладки українською.', folder=MEDIA_STRUCTURE_FOLDER),
+            rich_text('bodyEn', 'Текст англійською. Порожньо — сайт покаже українську версію '
+                                'із приміткою про переклад.', folder=MEDIA_STRUCTURE_FOLDER),
+            field('date_updated', 'timestamp', interface='datetime', width='half',
+                  special=['date-updated'], meta={'readonly': True, 'hidden': True},
+                  display='datetime', display_options={'relative': True}),
+        ],
+    ),
+    collection(
+        'static_pages', icon='description', sort=46, template='{{slug}}',
+        sort_field=None,
+        note='Тексти окремих сторінок, перенесених зі старого сайту (спеціалізовані вчені ради '
+             'тощо). Один рядок — одна сторінка; поки рядка немає, сайт показує мігрований '
+             'текст. Таблиці й гіперпосилання редагуються просто в полі «body».',
+        fields=[
+            id_field(), status_field(),
+            select('slug', STATIC_PAGE_SLUGS, 'Сторінка, яку правимо.',
+                   required=True, width='full'),
+            rich_text('body', 'Текст сторінки українською.', folder=MEDIA_STRUCTURE_FOLDER),
             rich_text('bodyEn', 'Текст англійською. Порожньо — сайт покаже українську версію '
                                 'із приміткою про переклад.', folder=MEDIA_STRUCTURE_FOLDER),
             field('date_updated', 'timestamp', interface='datetime', width='half',
