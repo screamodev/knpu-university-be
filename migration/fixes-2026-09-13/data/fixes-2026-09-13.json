@@ -1,0 +1,154 @@
+{
+  "batches": [
+    {
+      "collection": "gallery_categories",
+      "identity": [
+        "slug"
+      ],
+      "rows": [
+        {
+          "status": "published",
+          "name": "Студентський парламент",
+          "nameEn": "Student Parliament",
+          "slug": "student-parliament",
+          "order": 3,
+          "_ref": "student-parliament"
+        }
+      ]
+    },
+    {
+      "collection": "gallery_items",
+      "identity": [
+        "title",
+        "order"
+      ],
+      "parent": {
+        "from": "_category",
+        "field": "category"
+      },
+      "rows": [
+        {
+          "status": "published",
+          "title": "Всеукраїнський Форум лідерів органів студентського самоврядування «Студентство сьогодні і завтра: від мрії до дії»",
+          "titleEn": "All-Ukrainian Forum of Student Government Leaders “Students Today and Tomorrow: From Dream to Action”",
+          "order": 101,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "20a727f8-d0da-46f0-83f4-33bdd42dbd04",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Всеукраїнський Форум лідерів органів студентського самоврядування «Студентство сьогодні і завтра: від мрії до дії»",
+          "titleEn": "All-Ukrainian Forum of Student Government Leaders “Students Today and Tomorrow: From Dream to Action”",
+          "order": 102,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "5565670e-1fd3-494e-8667-8e18839021e7",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Всеукраїнський Форум лідерів органів студентського самоврядування «Студентство сьогодні і завтра: від мрії до дії»",
+          "titleEn": "All-Ukrainian Forum of Student Government Leaders “Students Today and Tomorrow: From Dream to Action”",
+          "order": 103,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "4f490b55-6a32-4848-918b-e4ca31d72c22",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Всеукраїнський Форум лідерів органів студентського самоврядування «Студентство сьогодні і завтра: від мрії до дії»",
+          "titleEn": "All-Ukrainian Forum of Student Government Leaders “Students Today and Tomorrow: From Dream to Action”",
+          "order": 104,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "60876186-8183-4146-9da2-b95afc54508e",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Всеукраїнський Форум лідерів органів студентського самоврядування «Студентство сьогодні і завтра: від мрії до дії»",
+          "titleEn": "All-Ukrainian Forum of Student Government Leaders “Students Today and Tomorrow: From Dream to Action”",
+          "order": 105,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "417f9468-95c7-40a2-9805-4070f63ccae4",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Квартирник «Коли серце говорить вголос»",
+          "titleEn": "House concert “When the Heart Speaks Out Loud”",
+          "order": 201,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "b0a14208-56b0-534b-b1aa-1e7bd38b5743",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Квартирник «Коли серце говорить вголос»",
+          "titleEn": "House concert “When the Heart Speaks Out Loud”",
+          "order": 202,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "0a84acf1-629f-5569-8dbd-a0fa73d1f13e",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Квартирник «Коли серце говорить вголос»",
+          "titleEn": "House concert “When the Heart Speaks Out Loud”",
+          "order": 203,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "34bf3011-3dff-5a9b-a469-8e9b68b98d73",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Квартирник «Коли серце говорить вголос»",
+          "titleEn": "House concert “When the Heart Speaks Out Loud”",
+          "order": 204,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "67b12515-cc11-5f3d-9466-68bdc53cd9c1",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Квартирник «Коли серце говорить вголос»",
+          "titleEn": "House concert “When the Heart Speaks Out Loud”",
+          "order": 205,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "29dc9a78-dc76-5c3f-9a6a-9bfbb2bbdf57",
+          "_fileField": "image"
+        },
+        {
+          "status": "published",
+          "title": "Квартирник «Коли серце говорить вголос»",
+          "titleEn": "House concert “When the Heart Speaks Out Loud”",
+          "order": 206,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "_category": "student-parliament",
+          "_fileId": "654ef2c8-9fa9-5365-891d-4302e18cee36",
+          "_fileField": "image"
+        }
+      ]
+    }
+  ]
+}

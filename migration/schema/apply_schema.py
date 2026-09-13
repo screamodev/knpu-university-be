@@ -642,6 +642,8 @@ COLLECTIONS = [
 
 # field → collection it points at; used to create the relations Directus needs.
 RELATIONS = [
+    ('student_council_info', 'emblem', 'directus_files', None),
+    ('student_council_info', 'photo', 'directus_files', None),
     # (collection, field, related_collection, one_field)
     ('monitoring_surveys', 'programmeFile', 'directus_files', None),
     ('monitoring_survey_results', 'survey', 'monitoring_surveys', 'results'),
@@ -703,6 +705,13 @@ EXTRA_FIELDS = [
                              width='half', length=120)),
     ('documents', text_field('groupEn', 'Той самий підзаголовок англійською.',
                              width='half', length=120)),
+    # Студентський парламент попросив емблему й загальне фото на сторінку та абзац про
+    # нормативну базу з посиланнями над списком документів (правка 13.09).
+    ('student_council_info', file_field('emblem', 'Емблема Студентського Парламенту.')),
+    ('student_council_info', file_field('photo', 'Загальне фото на початку сторінки.')),
+    ('student_council_info', field('legalBasis', 'text', interface='input-rich-text-html',
+                                   note='Нормативна база — абзац над списком документів, '
+                                        'з посиланнями на закони й положення.')),
 ]
 
 
