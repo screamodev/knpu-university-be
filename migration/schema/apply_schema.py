@@ -692,6 +692,8 @@ NEW_DOCUMENT_SECTIONS = [
     {'text': 'Рейтингове оцінювання науково-педагогічних працівників', 'value': 'staff-rating'},
     {'text': 'Спортивний клуб', 'value': 'sports-club'},
     {'text': 'Звіти Студентського Парламенту', 'value': 'student-council-reports'},
+    {'text': 'Центр кар’єрного зростання — одноразова допомога випускникам',
+     'value': 'career-graduate-payments'},
 ]
 
 # Поля, які треба дописати до колекцій, створених раніше за цей скрипт (у COLLECTIONS їх
@@ -707,6 +709,10 @@ EXTRA_FIELDS = [
                              width='half', length=120)),
     # Студентський парламент попросив емблему й загальне фото на сторінку та абзац про
     # нормативну базу з посиланнями над списком документів (правка 13.09).
+    # Посилання на інформаційний лист конференції: відділ просив, щоб картка вела на нього
+    # (правка 11.09).
+    ('science_conferences', text_field('url', 'Посилання на інформаційний лист — Google Drive '
+                                              'або сторінка кафедри.', length=500)),
     ('student_council_info', file_field('emblem', 'Емблема Студентського Парламенту.')),
     ('student_council_info', file_field('photo', 'Загальне фото на початку сторінки.')),
     ('student_council_info', field('legalBasis', 'text', interface='input-rich-text-html',
