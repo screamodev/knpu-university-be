@@ -37,6 +37,20 @@
           "status": "published",
           "section": "career-graduate-payments",
           "order": 1,
+          "title": "Виплати випускникам за тристоронньою угодою",
+          "_fileId": "623906ee-ca49-5825-beb0-4673761e9fd4"
+        },
+        {
+          "status": "published",
+          "section": "career-graduate-payments",
+          "order": 2,
+          "title": "Постанова КМУ № 1361 від 26.09.2006 «Про надання одноразової адресної грошової допомоги деяким категоріям випускників вищих навчальних закладів»",
+          "_fileId": "19ceeb4d-4844-56c6-a422-bfbcb45e9deb"
+        },
+        {
+          "status": "published",
+          "section": "career-graduate-payments",
+          "order": 3,
           "title": "Бланк тристороннього договору (2026)",
           "_fileId": "e5012faf-72f8-5354-aba2-97b945b80e0e"
         }

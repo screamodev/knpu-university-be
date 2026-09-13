@@ -9,7 +9,7 @@ PDF «Второстепенные 11.09.2026», пункти до познач�
 | --- | --- |
 | контингент здобувачів денної та заочної форми на 01.09.2026 | медіатека + `contingent_reports`, рік «2026-2027» |
 | фото О. С. Казачінер | медіатека; `app/content/pages/inclusive-support.uk.json` |
-| бланк тристороннього договору | медіатека + `documents`, розділ `career-graduate-payments` |
+| «Виплати за договором», постанова КМУ № 1361, бланк тристороннього договору | медіатека + `documents`, розділ `career-graduate-payments` |
 | поле `science_conferences.url` і розділ документів `career-graduate-payments` | схема |
 | посилання на інформаційні листи двох конференцій і нова конференція кафедри філософії | `science_conferences` (`update_conferences.py`) |
 
@@ -23,7 +23,7 @@ cd migration
 python3 schema/apply_schema.py --dry-run     # + science_conferences.url, + documents.section career-graduate-payments
 python3 schema/apply_schema.py
 
-python3 fixes-2026-09-11/push_assets.py --dry-run   # 4 файли
+python3 fixes-2026-09-11/push_assets.py --dry-run   # 6 файлів
 python3 fixes-2026-09-11/push_assets.py
 
 python3 pass2/load.py fixes-2026-09-11/data/fixes-2026-09-11.json --dry-run
@@ -41,7 +41,5 @@ python3 fixes-2026-09-11/update_conferences.py
 * **Положення про проведення наукових заходів** і **Інститут модернізації змісту освіти** — у PDF
   лише скриншот, посилань немає.
 * **Інформаційний лист конференції «Від бароко до постмодерну»** — посилання в PDF немає.
-* **«Виплати за договором» і постанова КМУ № 1361 (RTF)** — Gmail не віддав файли із зовнішнього
-  листа; центр сам обіцяв додати документи в розділ, постанова КМУ вже є посиланням у тексті.
 * **Лабораторія LEGO-технологій** (пункт 7 кафедри антропології) — документ відкрито, але що саме
   з ним зробити, у правках не сказано.
