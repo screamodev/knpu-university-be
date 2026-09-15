@@ -159,6 +159,8 @@ add_perm legacy_redirects read "$ALL" "$PUBLISHED_FILTER"
 # Тексти вкладок підрозділів. Поки рядка немає, сайт бере мігрований JSON із бандла, тож без
 # цього права сторінки не ламаються — просто ніколи не показують те, що редактор написав.
 add_perm structure_pages read "$ALL" "$PUBLISHED_FILTER"
+# Окремі сторінки (спецради). Та сама пастка: без права сайт мовчки показує мігровану копію.
+add_perm static_pages read "$ALL" "$PUBLISHED_FILTER"
 
 # Categories has no status — read everything.
 add_perm categories read "$ALL" ""

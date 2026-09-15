@@ -198,6 +198,9 @@ add_crud documents
 # Тексти вкладок на сторінках підрозділів, факультетів і кафедр
 add_crud structure_pages
 
+# Окремі сторінки: спеціалізовані вчені ради
+add_crud static_pages
+
 # Графік освітнього процесу: семестри й ключові дати на /education/schedule, розклади на
 # /student/schedule. Без цих прав редактор бачить сторінки, але не може змінити навіть роки —
 # саме на це скаржилися 07.09.
@@ -267,4 +270,4 @@ log "Done."
 log "Role:   $ROLE_NAME ($ROLE_ID)"
 log "Policy: $POLICY_NAME ($POLICY_ID) — app_access=true, admin_access=false"
 log "Assign users to role \"$ROLE_NAME\" in Settings → Users, then they can open the Data Studio."
-log "Collections: articles, categories, junctions, newspaper_issues, documents, structure_pages, education/student schedules, student_council_*, directus_files (+ folders read)."
+log "Collections: articles, categories, junctions, newspaper_issues, documents, structure_pages, static_pages, education/student schedules, student_council_*, directus_files (+ folders read)."
