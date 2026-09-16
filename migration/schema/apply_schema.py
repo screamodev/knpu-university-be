@@ -315,6 +315,8 @@ STRUCTURE_UNITS = [
     {'text': 'Кафедра хореографії', 'value': 'kafedra-horeografiyi'},
     {'text': 'Кафедра інформатики', 'value': 'kafedra-informatyky'},
     {'text': 'Кафедра історії України', 'value': 'kafedra-istoriyi-ukrayiny'},
+    {'text': 'Центр розвитку компетентностей учителя', 'value': 'teacher-competence-centre'},
+    {'text': 'Центр ментального здоров’я', 'value': 'mental-health-centre'},
 ]
 
 # Вкладки, тіло яких — проза. Решта з `STRUCTURE_TAB_IDS` фронту сюди не потрапляє: «Структура»
@@ -327,6 +329,7 @@ STATIC_PAGE_SLUGS = [
     {'text': 'Спеціалізована вчена рада Д 64.053.01', 'value': 'council-d-64-053-01'},
     {'text': 'Спеціалізована вчена рада К 64.053.05', 'value': 'council-k-64-053-05'},
     {'text': 'Спеціалізована вчена рада Д 64.053.08', 'value': 'council-d-64-053-08'},
+    {'text': 'Аспіранти — іноземні громадяни', 'value': 'postgraduate-foreign-students'},
 ]
 
 
@@ -339,6 +342,8 @@ STRUCTURE_TABS = [
     {'text': 'Студентство', 'value': 'students'},
     {'text': 'Співпраця', 'value': 'cooperation'},
     {'text': 'Докторанту', 'value': 'doctoral'},
+    {'text': 'Співробітники', 'value': 'staff'},
+    {'text': 'Скринька довіри', 'value': 'trust'},
 ]
 
 STUDENT_COUNCIL_GROUPS = [
@@ -781,6 +786,32 @@ def ensure_relations(directus: Directus, dry_run: bool) -> None:
         directus.request('POST', '/relations', payload=payload)
 
 
+def ensure_select_choices(directus: Directus, collection: str, field_name: str,
+                          wanted: list[dict], dry_run: bool) -> None:
+    """
+    Дописати до вже створеного select-поля варіанти, яких там ще немає. `ensure_fields` поле,
+    що існує, не чіпає, тож без цього нова сторінка чи вкладка не з'являлася б у випадайці
+    адмінки. Наявні варіанти й порядок лишаються.
+    """
+    current = directus.get(f'/fields/{collection}/{field_name}')
+    if not current:
+        return
+    choices = list(((current.get('meta') or {}).get('options') or {}).get('choices') or [])
+    known = {choice['value'] for choice in choices}
+    added = [choice for choice in wanted if choice['value'] not in known]
+    if not added:
+        return
+    choices.extend(added)
+    print(f'+ {collection}.{field_name}: ' + ', '.join(choice['value'] for choice in added))
+    if dry_run:
+        return
+    meta = {
+        'options': {**(current['meta'].get('options') or {}), 'choices': choices},
+        'display_options': {**(current['meta'].get('display_options') or {}), 'choices': choices},
+    }
+    directus.request('PATCH', f'/fields/{collection}/{field_name}', payload={'meta': meta})
+
+
 def ensure_document_sections(directus: Directus, dry_run: bool) -> None:
     current = directus.get('/fields/documents/section')
     choices = list(current['meta']['options']['choices'])
@@ -878,6 +909,9 @@ def main() -> int:
         ensure_extra_fields(directus, args.dry_run)
         ensure_relations(directus, args.dry_run)
         ensure_document_sections(directus, args.dry_run)
+        ensure_select_choices(directus, 'static_pages', 'slug', STATIC_PAGE_SLUGS, args.dry_run)
+        ensure_select_choices(directus, 'structure_pages', 'unit_slug', STRUCTURE_UNITS, args.dry_run)
+        ensure_select_choices(directus, 'structure_pages', 'tab', STRUCTURE_TABS, args.dry_run)
         ensure_monitoring_areas(directus, args.dry_run)
         ensure_category_parent(directus, args.dry_run)
     except urllib.error.HTTPError as exc:

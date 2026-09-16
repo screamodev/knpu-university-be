@@ -44,6 +44,8 @@ PAGES: dict[str, str] = {
     'art-diplomas': '/uk/diplomni-roboty-vypusknykiv-kafedry-obrozotvorchogo-mystectva',
     'art-semester': '/uk/semestrovi-roboty-studentiv-kafedry-obrazotvorche-mystectvo',
     'art-graduates': '/uk/division/vypusknyky-kafedry-obrazotvorchogo-mystectva',
+    # Центр ментального здоров'я — вкладка «Валеоклуб».
+    'mental-valeoclub': '/uk/studentskyy-naukovyy-valeologichnyy-klub',
 }
 
 BODY_RE = re.compile(
