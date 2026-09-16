@@ -694,6 +694,7 @@ NEW_DOCUMENT_SECTIONS = [
     {'text': 'Звіти Студентського Парламенту', 'value': 'student-council-reports'},
     {'text': 'Центр кар’єрного зростання — одноразова допомога випускникам',
      'value': 'career-graduate-payments'},
+    {'text': 'Структура університету — організаційно-структурна схема', 'value': 'university-structure'},
 ]
 
 # Поля, які треба дописати до колекцій, створених раніше за цей скрипт (у COLLECTIONS їх

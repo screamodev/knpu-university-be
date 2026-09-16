@@ -1,0 +1,20 @@
+{
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": [
+        "section",
+        "title"
+      ],
+      "rows": [
+        {
+          "status": "published",
+          "section": "university-structure",
+          "order": 1,
+          "title": "Організаційно-структурна схема ХНПУ імені Г.С. Сковороди (станом на 31.08.2026)",
+          "_fileId": "f26e3dc1-520e-5022-9dd6-34bc4a3caeb9"
+        }
+      ]
+    }
+  ]
+}
