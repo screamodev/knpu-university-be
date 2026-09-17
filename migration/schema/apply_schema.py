@@ -358,6 +358,8 @@ STRUCTURE_TABS = [
     {'text': 'Докторанту', 'value': 'doctoral'},
     {'text': 'Співробітники', 'value': 'staff'},
     {'text': 'Скринька довіри', 'value': 'trust'},
+    {'text': 'Центр', 'value': 'centre'},
+    {'text': 'Лабораторія', 'value': 'laboratory'},
 ]
 
 STUDENT_COUNCIL_GROUPS = [
