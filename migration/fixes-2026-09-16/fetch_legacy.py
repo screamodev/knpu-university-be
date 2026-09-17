@@ -58,6 +58,8 @@ PAGES: dict[str, str] = {
     'sci-publication-activity': '/uk/publikaciyna-aktyvnist-naukovo-pedagogichnyh-pracivnykiv-universytetu',
     'sci-publishing-regulations': '/uk/division/normatyvna-dokumentaciya-redakciyno-vydavnychogo-viddilu',
     'sci-events': '/uk/division/naukovi-zahody',
+    # Правки аспірантури (docx «Аспірантура сайт»): окрема сторінка аспірантів-громадян України.
+    'pg-ukrainian-students': '/uk/division/aspiranty-gromadyany-ukrayiny',
 }
 
 BODY_RE = re.compile(

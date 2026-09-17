@@ -34,6 +34,19 @@ PATCHES = [
         '<p><strong><a href="/university/structure/postgraduate-foreign-students">'
         'Аспіранти-іноземні громадяни</a></strong></p>',
     ),
+    # Правки аспірантури (17.09): «Аспіранти-громадяни України» — окрема сторінка…
+    (
+        'postgraduate', 'students',
+        '<p><strong>Аспіранти-громадяни України</strong></p>',
+        '<p><strong><a href="/university/structure/postgraduate-ukrainian-students">'
+        'Аспіранти-громадяни України</a></strong></p>',
+    ),
+    # …а «Дисципліни вільного вибору» з вкладки прибрати.
+    (
+        'postgraduate', 'students',
+        '<p><strong><a href="/education/quality?tab=students">Дисципліни вільного вибору</a></strong></p>\n',
+        '',
+    ),
 ]
 
 
@@ -62,7 +75,7 @@ def main() -> int:
             continue
         row = rows[0]
         body = row.get('body') or ''
-        if new in body:
+        if (new and new in body) or (not new and old not in body):
             print(f'  = {unit}/{tab}: уже виправлено', file=sys.stderr)
             continue
         if body.count(old) != 1:
