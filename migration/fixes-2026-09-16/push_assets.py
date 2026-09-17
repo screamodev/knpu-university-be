@@ -6,7 +6,9 @@
 
 * файли з публічних тек Google Drive — у карті стоїть `drive_id`, скрипт качає їх сам і кладе
   поруч у `files/` (у git їх немає);
-* усе інше (пошта, старий сайт) — фото вже зменшені до вебформату (довша сторона 1600 px, JPEG),
+* документи зі старого сайту — у карті стоїть `url` на old.hnpu.edu.ua, скрипт качає їх сам
+  (у git їх немає, разом це ~220 МБ);
+* усе інше (пошта, фото зі старого сайту) — фото вже зменшені до вебформату (довша сторона 1600 px, JPEG),
   байти лежать у `files/` в git.
 
 uuid кожного файла детермінований (uuid5 від імені), тож `/assets/<uuid>` у текстах сторінок
@@ -52,13 +54,25 @@ def fetch_from_drive(drive_id: str) -> bytes:
     return body
 
 
-def local_copy(name: str, drive_id: str | None) -> bytes:
+def fetch_from_url(url: str) -> bytes:
+    request = urllib.request.Request(url, headers={'User-Agent': UA})
+    with urllib.request.urlopen(request, timeout=600) as response:
+        body = response.read()
+    if body[:15].lstrip().lower().startswith((b'<!doctype', b'<html')):
+        raise OSError('старий сайт віддав HTML-сторінку замість файла')
+    return body
+
+
+def local_copy(name: str, drive_id: str | None, url: str | None = None) -> bytes:
     path = FILES / name
     if path.exists() and path.stat().st_size > 1024:
         return path.read_bytes()
-    if not drive_id:
+    if drive_id:
+        content = fetch_from_drive(drive_id)
+    elif url:
+        content = fetch_from_url(url)
+    else:
         raise OSError(f'{name}: файл має лежати в files/, а його там немає')
-    content = fetch_from_drive(drive_id)
     FILES.mkdir(exist_ok=True)
     path.write_bytes(content)
     return content
@@ -94,7 +108,7 @@ def main() -> int:
     for file_id, meta in todo:
         name = meta['name']
         try:
-            content = local_copy(name, meta.get('drive_id'))
+            content = local_copy(name, meta.get('drive_id'), meta.get('url'))
         except (urllib.error.HTTPError, OSError) as exc:
             print(f'  ! {name}: {exc}', file=sys.stderr)
             failed += 1

@@ -49,3 +49,17 @@ migration/fixes-2026-09-09/files/bohdan-*.pdf
 migration/fixes-2026-09-09/files/leonidova-*.pdf
 migration/fixes-2026-09-09/files/podenko-*.pdf
 migration/fixes-2026-09-09/files/spped-*.pdf
+
+# Документи зі старого сайту для правок 16.09 качає migration/fixes-2026-09-16/push_assets.py за
+# адресою `url` у files.map.json; фото й файли з пошти лежать у git.
+migration/fixes-2026-09-16/files/sci-*.pdf
+migration/fixes-2026-09-16/files/sci-*.doc
+migration/fixes-2026-09-16/files/sci-*.docx
+migration/fixes-2026-09-16/files/sci-*.xls
+migration/fixes-2026-09-16/files/sci-*.xlsx
+migration/fixes-2026-09-16/files/sci-*.ppt
+migration/fixes-2026-09-16/files/sci-*.pptx
+migration/fixes-2026-09-16/files/sci-*.rtf
+
+# Службові файли агента (oh-my-claudecode), не для репозиторію.
+.omc/

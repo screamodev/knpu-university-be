@@ -329,7 +329,19 @@ STATIC_PAGE_SLUGS = [
     {'text': 'Спеціалізована вчена рада Д 64.053.01', 'value': 'council-d-64-053-01'},
     {'text': 'Спеціалізована вчена рада К 64.053.05', 'value': 'council-k-64-053-05'},
     {'text': 'Спеціалізована вчена рада Д 64.053.08', 'value': 'council-d-64-053-08'},
-    {'text': 'Аспіранти — іноземні громадяни', 'value': 'postgraduate-foreign-students'},
+    {'text': 'Аспіранти — іноземні громадяни', 'value': 'postgraduate-foreign-students'},    {'text': 'Наука — Бібліографічні покажчики', 'value': 'science-bibliographic-indexes'},
+    {'text': 'Наука — Видатні вчені ХНПУ імені Г. С. Сковороди', 'value': 'science-notable-scientists'},
+    {'text': 'Наука — Невичерпний скарб', 'value': 'science-inexhaustible-treasure'},
+    {'text': 'Наука — Проєкти наукової бібліотеки', 'value': 'science-library-projects'},
+    {'text': 'Наука — Доступ до наукометричних баз', 'value': 'science-scientometric-databases'},
+    {'text': 'Наука — Університет у рейтингах', 'value': 'science-rankings'},
+    {'text': 'Наука — Грантова і проєктна діяльність', 'value': 'science-grants'},
+    {'text': 'Наука — Публікаційна активність', 'value': 'science-publication-activity'},
+    {'text': 'Наука — Нормативна документація редакційно-видавничого відділу', 'value': 'science-publishing-regulations'},
+    {'text': 'Наука — Про редакційно-видавничий відділ', 'value': 'science-publishing-about'},
+    {'text': 'Наука — Порядок рекомендації видань', 'value': 'science-publishing-recommendation'},
+    {'text': 'Наука — Супровідна документація щодо затвердження до друку видань', 'value': 'science-publishing-accompanying'},
+    {'text': 'Наука — Корисні посилання', 'value': 'science-publishing-useful-links'},
 ]
 
 

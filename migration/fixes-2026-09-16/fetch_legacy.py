@@ -17,6 +17,7 @@ import html
 import importlib.util
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -46,6 +47,17 @@ PAGES: dict[str, str] = {
     'art-graduates': '/uk/division/vypusknyky-kafedry-obrazotvorchogo-mystectva',
     # Центр ментального здоров'я — вкладка «Валеоклуб».
     'mental-valeoclub': '/uk/studentskyy-naukovyy-valeologichnyy-klub',
+    # Меню «Наука» (правка 16.09, п. 2): жовті пункти — сторінки старого сайту, які переносимо.
+    'sci-bibliographic-indexes': '/uk/bibliografichni-pokazhchyky-naukovoyi-biblioteky-hnpu-imeni-g-s-skovorody',
+    'sci-notable-scientists': '/uk/naukovi-praci-profesoriv-hnpu-imeni-g-s-skovorody',
+    'sci-inexhaustible-treasure': '/uk/nevycherpnyy-skarb',
+    'sci-library-projects': '/uk/proyekty-naukovoyi-biblioteky-hnpu-imeni-gsskovorody',
+    'sci-scientometric-databases': '/uk/division/dostup-do-mizhnarodnyh-naukometrychnyh-baz',
+    'sci-rankings': '/uk/pokaznyky-reytynguvannya-universytetu',
+    'sci-grants': '/uk/grantova-ta-proyektna-diyalnist',
+    'sci-publication-activity': '/uk/publikaciyna-aktyvnist-naukovo-pedagogichnyh-pracivnykiv-universytetu',
+    'sci-publishing-regulations': '/uk/division/normatyvna-dokumentaciya-redakciyno-vydavnychogo-viddilu',
+    'sci-events': '/uk/division/naukovi-zahody',
 }
 
 BODY_RE = re.compile(
@@ -129,7 +141,12 @@ def convert_page(key: str, path: str, mapping: dict[str, dict]) -> str:
         src = html.unescape(m.group(1))
         if not re.search(r'hnpu\.edu\.ua/sites/', src):
             return m.group(0)
-        asset = add_image(cached(to_old(src)), local_name(key, src) + '.jpg', mapping)
+        try:
+            source = cached(to_old(src))
+        except urllib.error.HTTPError as exc:
+            print(f'    ! {src}: {exc.code}, зображення пропущено', file=sys.stderr)
+            return m.group(0).replace(m.group(1), '')
+        asset = add_image(source, local_name(key, src) + '.jpg', mapping)
         return m.group(0).replace(m.group(1), asset)
 
     def swap_doc(m: re.Match[str]) -> str:
@@ -137,11 +154,23 @@ def convert_page(key: str, path: str, mapping: dict[str, dict]) -> str:
         if not re.search(r'hnpu\.edu\.ua/sites/', href) or not href.lower().endswith(DOC_EXT):
             return m.group(0)
         suffix = Path(urllib.parse.urlsplit(href).path).suffix.lower()
-        asset = add_file(cached(to_old(href)), local_name(key, href) + suffix, mapping)
+        try:
+            source = cached(to_old(href))
+        except urllib.error.HTTPError as exc:
+            print(f'    ! {href}: {exc.code}, посилання лишається на старий сайт', file=sys.stderr)
+            return m.group(0).replace(m.group(1), to_old(href))
+        name = local_name(key, href) + suffix
+        asset = add_file(source, name, mapping)
+        # Документи старого сайту важать сотні мегабайт — у git їх немає, push_assets.py качає
+        # їх зі старого сайту за цією адресою.
+        mapping[asset.split('/')[-1]]['url'] = to_old(href)
         return m.group(0).replace(m.group(1), asset)
 
     body = re.sub(r'<img[^>]*\bsrc="([^"]+)"', swap_img, body)
     body = re.sub(r'<a[^>]*\bhref="([^"]+)"', swap_doc, body)
+    body = re.sub(r'<img[^>]*\bsrc=""[^>]*>', '', body)
+    # Внутрішні посилання старого сайту: hnpu.edu.ua тепер новий сайт, стара сторінка — на old.
+    body = re.sub(r'https?://(?:www\.)?hnpu\.edu\.ua/(uk/|sites/|division/|node/)', r'https://old.hnpu.edu.ua/\1', body)
     return as_gallery(body) if key in GALLERIES else body
 
 
