@@ -1,6 +1,19 @@
 {
   "batches": [
     {
+      "collection": "categories",
+      "identity": [
+        "slug"
+      ],
+      "rows": [
+        {
+          "name": "Центр ментального здоров’я",
+          "nameEn": "Mental Health Centre",
+          "slug": "mental-health-centre"
+        }
+      ]
+    },
+    {
       "collection": "documents",
       "identity": [
         "section",
