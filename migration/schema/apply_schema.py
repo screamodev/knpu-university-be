@@ -699,6 +699,7 @@ NEW_DOCUMENT_SECTIONS = [
     {'text': 'Наукові заходи', 'value': 'science-events'},
     {'text': 'Вчена рада — ухвали', 'value': 'academic-council-decisions'},
     {'text': 'На допомогу здобувачу', 'value': 'candidate-support'},
+    {'text': 'На допомогу здобувачу наукового ступеня доктора наук', 'value': 'doctor-of-science-support'},
     {'text': 'На допомогу здобувачу вченого звання', 'value': 'academic-title-support'},
     {'text': 'Вартість навчання', 'value': 'tuition'},
     {'text': 'Вступ — перелік освітніх програм і ліцензовані обсяги',

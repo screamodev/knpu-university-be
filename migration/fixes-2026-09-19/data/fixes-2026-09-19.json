@@ -1,0 +1,20 @@
+{
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": [
+        "section",
+        "title"
+      ],
+      "rows": [
+        {
+          "status": "published",
+          "section": "doctor-of-science-support",
+          "order": 1,
+          "title": "Зразки документів на здобуття наукового ступеня доктора наук",
+          "externalUrl": "https://docs.google.com/document/d/1FfFQbZC-1C_LRtQj4l9cAlUDpq13XR8bcHzWbUgYf0w/edit?tab=t.0"
+        }
+      ]
+    }
+  ]
+}
