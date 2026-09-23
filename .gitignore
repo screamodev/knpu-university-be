@@ -61,6 +61,10 @@ migration/fixes-2026-09-16/files/sci-*.ppt
 migration/fixes-2026-09-16/files/sci-*.pptx
 migration/fixes-2026-09-16/files/sci-*.rtf
 
+# Освітні програми кафедри образотворчого мистецтва для правок 22.09 качає
+# migration/fixes-2026-09-23/push_assets.py за drive_id у files.map.json; у git не лежать.
+migration/fixes-2026-09-23/files/*.pdf
+
 # Службові файли агента (oh-my-claudecode), не для репозиторію.
 .omc/
 
