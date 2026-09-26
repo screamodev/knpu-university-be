@@ -1,0 +1,19 @@
+{
+  "batches": [
+    {
+      "collection": "categories",
+      "identity": ["slug"],
+      "rows": [
+        { "_ref": "mental", "name": "Центр ментального здоров’я", "nameEn": "Mental Health Centre", "slug": "mental-health-centre" }
+      ]
+    },
+    {
+      "collection": "categories",
+      "identity": ["slug"],
+      "parent": { "from": "_parentRef", "field": "parent" },
+      "rows": [
+        { "_parentRef": "mental", "name": "Валеоклуб", "nameEn": "Valeology club", "slug": "valeoklub" }
+      ]
+    }
+  ]
+}
