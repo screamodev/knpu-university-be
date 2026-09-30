@@ -1,0 +1,123 @@
+{
+  "batches": [
+    {
+      "collection": "monitoring_surveys",
+      "identity": [
+        "number",
+        "title"
+      ],
+      "rows": [
+        {
+          "number": "1/0",
+          "area": "educational-ecosystem",
+          "title": "Анкета по факультетам",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": null,
+          "order": 29,
+          "status": "published"
+        },
+        {
+          "number": "1/1",
+          "area": "educational-ecosystem",
+          "title": "Факультет історії і права",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScuR2JyHWvsFb5ag4v2C49DK2ZnwcP4eIPMT9GvgaWB7GyhMw/viewform?usp=dialog",
+          "order": 30,
+          "status": "published"
+        },
+        {
+          "number": "1/2",
+          "area": "educational-ecosystem",
+          "title": "Факультет математики, інформатики і природничої освіти",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSemmAy5uRwQEFhw6G_BokXASwko9mjG7SQOmYv15Fv7w8Folw/viewform?usp=dialog",
+          "order": 31,
+          "status": "published"
+        },
+        {
+          "number": "1/3",
+          "area": "educational-ecosystem",
+          "title": "Факультет початкового навчання",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfubed9DWh_FgGjLe8e_QDYCFAn9C72s2JIjeE8xH_ZC6233Q/viewform?usp=dialog",
+          "order": 32,
+          "status": "published"
+        },
+        {
+          "number": "1/4",
+          "area": "educational-ecosystem",
+          "title": "Факультет дошкільної освіти",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScGMuy1Z1NOiQUi3EbmkoinBfzKqKr9yyZPjnhaH6a6e0jw9g/viewform?usp=dialog",
+          "order": 33,
+          "status": "published"
+        },
+        {
+          "number": "1/5",
+          "area": "educational-ecosystem",
+          "title": "Факультет мистецтв",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScagKRD6XqhkDp3QquGf93rw6JKMwEsfJ0RB__63z7_Hz77Ew/viewform?usp=dialog",
+          "order": 34,
+          "status": "published"
+        },
+        {
+          "number": "1/6",
+          "area": "educational-ecosystem",
+          "title": "Факультет іноземної філології",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdx-JalqIqmSJU1Jvlp2VI7X0mgAlnKE0LkIMnFnrSutqpwnA/viewform?usp=dialog",
+          "order": 35,
+          "status": "published"
+        },
+        {
+          "number": "1/7",
+          "area": "educational-ecosystem",
+          "title": "Факультет фізичного виховання і спорту",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdjH5dvdfeAAV5iMhtjF6ycZ2MHjNFo5LYlFfRitBmvEekFlg/viewform?usp=dialog",
+          "order": 36,
+          "status": "published"
+        },
+        {
+          "number": "1/8",
+          "area": "educational-ecosystem",
+          "title": "Факультет соціально-гуманітарних наук і соціальних технологій",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScaR_Yhhi45OSAwGJdcGPVdeWY3nlRarOynRfIGKm9j_LCBgg/viewform?usp=dialog",
+          "order": 37,
+          "status": "published"
+        },
+        {
+          "number": "1/9",
+          "area": "educational-ecosystem",
+          "title": "Навчально-науковий інститут української філології імені Г.Ф. Квітки-Основ'яненка",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScyICLforM9x1q7kjjdMRyCwZ26Gp_TAogZuTc9HFLXWTbkGw/viewform?usp=dialog",
+          "order": 38,
+          "status": "published"
+        },
+        {
+          "number": "1/10",
+          "area": "educational-ecosystem",
+          "title": "Навчально-науковий інститут спеціальної освіти та інклюзії",
+          "titleEn": null,
+          "researchGroup": null,
+          "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfJXCa6ZZR7T6SASNcavb9Roo8P-ar7e4VfJBbe6t45rYe46w/viewform?usp=dialog",
+          "order": 39,
+          "status": "published"
+        }
+      ]
+    }
+  ]
+}
