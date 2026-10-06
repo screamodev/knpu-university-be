@@ -1,0 +1,157 @@
+{
+  "batches": [
+    {
+      "collection": "student_council_members",
+      "identity": [
+        "group",
+        "name"
+      ],
+      "rows": [
+        {
+          "status": "published",
+          "group": "chair",
+          "name": "Чижик Софія Олексіївна",
+          "position": null,
+          "faculty": null,
+          "email": "sofia.chizhik@hnpu.edu.ua",
+          "phone": "+380 97 045 19 29",
+          "instagram": null,
+          "telegram": null,
+          "order": 1
+        },
+        {
+          "status": "published",
+          "group": "deputy",
+          "name": "Лісовий Володимир Дмитрович",
+          "position": null,
+          "faculty": null,
+          "email": "vova.lisovoy.07@gmail.com",
+          "phone": "+380 96 884 50 69",
+          "instagram": null,
+          "telegram": null,
+          "order": 1
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Гусак Ольга Віталіївна",
+          "position": "в.о. голови факультету історії і права",
+          "faculty": null,
+          "email": "o.gusak@hnpu.edu.ua",
+          "phone": "0985240496",
+          "instagram": "@olia_yalo",
+          "telegram": "@olia_yalo",
+          "order": 1
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Мукієнко Руф Михайлівна",
+          "position": "голова факультету навчально-наукового інституту спеціальної освіти та інклюзії",
+          "faculty": null,
+          "email": "rufmukienko@gmail.com",
+          "phone": "0930580181",
+          "instagram": null,
+          "telegram": "@RufaMukienko",
+          "order": 2
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Стадник Анастасія Олексіївна",
+          "position": "в.о. голови факультету дошкільної освіти",
+          "faculty": null,
+          "email": "xsss9160@gmail.com",
+          "phone": "0633525491",
+          "instagram": "@7.14.anastyesha",
+          "telegram": "@Nassttiiz",
+          "order": 3
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Коваленко Єлизавета Миколаївна",
+          "position": "в.о. голови факультету іноземної філології",
+          "faculty": null,
+          "email": "kovalenkoelizaveta215@gmail.com",
+          "phone": "0979445757",
+          "instagram": "@_libbertyyy_",
+          "telegram": "@lizzokkkkk",
+          "order": 4
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Ємельянова Вероніка Едуардівна",
+          "position": "голова навчально-наукового інституту української філології імені Г. Ф. Квітки-Основ’яненка",
+          "faculty": null,
+          "email": "veronikaemelanova071@gmail.com",
+          "phone": "0993915317",
+          "instagram": "@ronnie.n_",
+          "telegram": "@ronnienakahara",
+          "order": 5
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Мовчан Анна Миколаївна",
+          "position": "в.о. голови факультету мистецтв",
+          "faculty": null,
+          "email": "winxmovchan2.0@gmail.com",
+          "phone": "0970462247",
+          "instagram": "@winxmovchan",
+          "telegram": "@winxmovchan",
+          "order": 6
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Бабич Марія Олександрівна",
+          "position": "в.о. голови факультету початкового навчання",
+          "faculty": null,
+          "email": "mashababich12@hnpu.edu.ua",
+          "phone": "0679493783",
+          "instagram": "@marusya_babych",
+          "telegram": "@Marunya04",
+          "order": 7
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Коваленко Дарина Сергіївна",
+          "position": "голова факультету соціально-гуманітарних наук і соціальних технологій",
+          "faculty": null,
+          "email": "ffbdnbkfbkb@gmail.com",
+          "phone": "0660706614",
+          "instagram": "@darina_kharkiv99",
+          "telegram": "@LollipopHiroshi",
+          "order": 8
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Бурсала Тимур Дмитрович",
+          "position": "голова факультету фізичного виховання і спорту",
+          "faculty": null,
+          "email": "fentesi2004@gmail.com",
+          "phone": "0993962640",
+          "instagram": "@bboy_fantasy_",
+          "telegram": "@fanOtas0yo",
+          "order": 9
+        },
+        {
+          "status": "published",
+          "group": "faculty-chair",
+          "name": "Табах Софія Валеріївна",
+          "position": "голова факультету математики, інформатики та природничої освіти",
+          "faculty": null,
+          "email": "sofi060907@gmail.com",
+          "phone": "0973446657",
+          "instagram": "@say._.fik",
+          "telegram": "@selinka2",
+          "order": 10
+        }
+      ]
+    }
+  ]
+}
