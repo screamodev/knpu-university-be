@@ -12,8 +12,8 @@
 * пише `files.map.json` і `data/exhibitions.uk.json` — тіло вкладки для
   `knpu-university-fe/app/content/structure/kafedra-obrazotvorchogo-mystectva/exhibitions.uk.json`.
 
-Каталог «Байки Харківські» лежить у `files/` як є; RENAISSANCE (181 МБ) у git не йде — в карті
-він з `drive_id`, його качає `push_assets.py`.
+Каталог «Байки Харківські» лежить у `files/` як є. RENAISSANCE поки не підключено — див.
+`PENDING_CATALOGS` нижче.
 
 Pillow тут немає, тож через контейнер:
 
@@ -43,13 +43,20 @@ OLD_SITE = 'https://old.hnpu.edu.ua'
 OUT = HERE / 'data' / 'exhibitions.uk.json'
 
 # Назви лінків узяті з обкладинок PDF: у самих файлів текстового шару немає. Третє поле — `drive_id`
-# для файла, якого немає в git: RENAISSANCE важить 181 МБ, а ліміт GitHub — 100 МБ.
+# для файла, якого немає в git.
 CATALOGS = [
+    ('bajky-kharkivski-2021.pdf', 'Григорій Сковорода. Байки Харківські (2021)', None),
+]
+
+# Каталог RENAISSANCE (181 МБ — більший за ліміт GitHub, тож у git його немає) чекає, поки на Drive
+# відкриють доступ «Усі, хто має посилання»: без цього `push_assets.py` не заллє файл, а лінк на
+# сторінці вів би в 404. Коли доступ відкрито — перенести запис у CATALOGS першим елементом,
+# перезібрати (README, «Увімкнути каталог RENAISSANCE»).
+PENDING_CATALOGS = [
     ('renaissance-catalog-2022.pdf',
      'RENAISSANCE. Каталог виставки студентів кафедри образотворчого мистецтва ХНПУ імені '
      'Г. С. Сковороди (Харків, 2022)',
      '1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz'),
-    ('bajky-kharkivski-2021.pdf', 'Григорій Сковорода. Байки Харківські (2021)', None),
 ]
 
 

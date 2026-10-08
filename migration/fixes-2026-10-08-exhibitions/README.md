@@ -8,13 +8,14 @@
 
 | Що | Звідки | Файлів у карті |
 | --- | --- | --- |
-| Каталог «RENAISSANCE… Харків, 2022» | посилання на Drive в листі | 1 PDF, 181 МБ, з `drive_id` |
 | «Григорій Сковорода. Байки Харківські (2021)» | вкладення листа «Книга до друку.pdf» | 1 PDF, 19 МБ |
 | «Незламні» (20 робіт) | Google Sites кафедри `…/poza/vystavky/nezlamni` | 16 фото + 4 анімації (з прев'ю) |
 | «Прогулянка Харковом» (21 робота) | Google Sites кафедри `…/poza/vystavky/Beketov` | 20 фото + 1 анімація (з прев'ю) |
 | «Мистецтво без кордонів» (31 робота + портрет) | `old.hnpu.edu.ua/uk/chzhen-syandun-vystavka-zhyvopysu` | 32 фото (оригінали, не мініатюри) |
 
-Усього в карті 80 файлів: 73 JPEG, 5 mp4, 2 PDF.
+Усього в карті 79 файлів: 73 JPEG, 5 mp4, 1 PDF.
+
+Каталог «RENAISSANCE» (лист просить прикріпити «два каталоги») **поки не підключено** — див. нижче.
 
 ## Чому на старому сайті «зникли всі картини»
 
@@ -54,22 +55,14 @@ DRUN() { docker run --rm --network webnet \
   -e DIRECTUS_EMAIL="$ADMIN_EMAIL" -e DIRECTUS_PASSWORD="$ADMIN_PASSWORD" \
   -e DIRECTUS_TOKEN= \
   -v /root/knpu-university-be/migration:/m -w /m python:3.12-slim python3 "$@"; }
-DRUN fixes-2026-10-08-exhibitions/push_assets.py --dry-run   # 80 файлів
-DRUN fixes-2026-10-08-exhibitions/push_assets.py             # в кінці: uploaded=80 failed=0
+DRUN fixes-2026-10-08-exhibitions/push_assets.py --dry-run   # 79 файлів
+DRUN fixes-2026-10-08-exhibitions/push_assets.py             # в кінці: uploaded=79 failed=0
 cd /root/knpu-university-fe && git pull
 docker compose -f docker-compose.prod.yml up -d --build
 docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N seconds
 ```
 
-Анімації (5 mp4, ~11 МБ) і каталог RENAISSANCE (181 МБ) `push_assets.py` качає з Drive сам, тож
-заливка йде довго; каталог скрипт тримає в пам'яті цілком.
-
-**Умова для каталога RENAISSANCE:** файл на Drive («КАТАЛОГ Сковорода друк.pdf») має бути
-відкритий за посиланням — «Усі, хто має посилання», роль «Читач». Станом на 08.10 доступ лише для
-домену hnpu.edu.ua. Поки він закритий, скрипт залишить саме цей файл незалитим
-(`failed=1`, «доступ до файла закрито»), а лінк на каталог на сторінці вестиме в 404. Решта
-вкладки працює. Після відкриття доступу достатньо запустити `push_assets.py` ще раз: те, що вже
-залито, він пропускає.
+Анімації (5 mp4, ~11 МБ) `push_assets.py` качає з Drive сам.
 
 ## Правки в підписах (технічні)
 
@@ -82,9 +75,23 @@ docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N secon
 
 ## Чого тут немає і чому
 
-* **Каталог RENAISSANCE на проді, поки на Drive закритий доступ** — див. умову вище. Файл у git не
-  кладемо: 181 МБ перевищує ліміт GitHub у 100 МБ. Альтернатива, якщо доступ відкривати не
-  хочуть, — стиснути PDF до веб-версії менш як 100 МБ і закомітити, але це вже змінений документ.
+* **Каталог RENAISSANCE** (`КАТАЛОГ Сковорода друк.pdf`, 181 МБ, 68 стор.) — не підключено.
+  На Drive доступ лише для домену hnpu.edu.ua, тож `push_assets.py` не міг би його скачати, а
+  лінк на сторінці вів би в 404. У git файл не кладемо: він більший за ліміт GitHub (100 МБ).
+  Клієнту треба відкрити доступ: «Усі, хто має посилання», роль «Читач».
+
+  **Увімкнути каталог RENAISSANCE**, коли доступ відкрито:
+
+  1. Перевірити, що файл віддається без входу в акаунт:
+     `curl -sL -r 0-3 "https://drive.usercontent.google.com/download?id=1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz&export=download&confirm=t" | head -c 4` → `%PDF`.
+  2. У `build.py` перенести запис із `PENDING_CATALOGS` у `CATALOGS` першим елементом.
+  3. Перезібрати (команда з розділу «Як це влаштовано»), скопіювати `data/exhibitions.uk.json`
+     у `knpu-university-fe/app/content/structure/kafedra-obrazotvorchogo-mystectva/exhibitions.uk.json`.
+  4. Закомітити обидва репо, на проді: `git pull` обох, `push_assets.py` (залиє один файл,
+     решту пропустить), `up -d --build` фронта.
+
+  Альтернатива без відкриття доступу — стиснути PDF до веб-версії менш як 100 МБ і закомітити
+  в `files/`, але це вже змінений документ.
 * **Виставка «До 300-річчя Г.С. Сковороди»** — пропущена за вказівкою документа.
 * **Назви двох лінків на каталоги** взяті з обкладинок PDF (текстового шару в файлах немає);
   клієнтка називає їх у листі лише «каталоги». Якщо хоче інакше — міняється в
