@@ -8,9 +8,10 @@
 * фото й каталог «Байки Харківські» — у `files/` (в git), заливаються як є;
 * анімації (mp4) — у карті стоїть `drive_id` публічного файла на Google Drive, скрипт качає їх
   сам і кладе поруч у `files/` (в git їх немає);
-* каталог RENAISSANCE (181 МБ) — більший за ліміт GitHub, у git його немає: файл
-  `files/renaissance-catalog-2022.pdf` треба покласти на сервер руками (див. README), інакше
-  скрипт скаже, що файла немає в `files/`.
+* каталог RENAISSANCE (181 МБ) — більший за ліміт GitHub, у git його немає: у карті стоїть
+  `drive_id`, скрипт качає його з Drive сам. Файл на Drive має бути відкритий за посиланням
+  («Усі, хто має посилання»); якщо доступ закрито, скрипт скаже про це й залишить файл
+  незалитим — після відкриття доступу достатньо запустити його ще раз.
 
 uuid кожного файла детермінований (uuid5 від імені), тож `/assets/<uuid>` у тексті сторінки
 збігається на локалі й на проді.
@@ -46,12 +47,15 @@ UA = 'Mozilla/5.0'
 
 
 def fetch_from_drive(drive_id: str) -> bytes:
-    url = f'https://drive.usercontent.google.com/download?id={drive_id}&export=download'
+    # `confirm=t` — для файлів, завеликих для перевірки на віруси (RENAISSANCE, 181 МБ): без нього
+    # Drive віддає сторінку-попередження замість файла.
+    url = f'https://drive.usercontent.google.com/download?id={drive_id}&export=download&confirm=t'
     request = urllib.request.Request(url, headers={'User-Agent': UA})
-    with urllib.request.urlopen(request, timeout=600) as response:
+    with urllib.request.urlopen(request, timeout=1800) as response:
         body = response.read()
     if body[:15].lstrip().lower().startswith((b'<!doctype', b'<html')):
-        raise OSError('Drive віддав HTML-сторінку замість файла — імовірно, доступ закрили')
+        raise OSError('Drive віддав HTML-сторінку замість файла — доступ до файла закрито '
+                      '(потрібен «Усі, хто має посилання»)')
     return body
 
 

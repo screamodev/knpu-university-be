@@ -12,7 +12,8 @@
 * пише `files.map.json` і `data/exhibitions.uk.json` — тіло вкладки для
   `knpu-university-fe/app/content/structure/kafedra-obrazotvorchogo-mystectva/exhibitions.uk.json`.
 
-Два PDF-каталоги лежать у `files/` як є (див. README: один із них 181 МБ, у git він не йде).
+Каталог «Байки Харківські» лежить у `files/` як є; RENAISSANCE (181 МБ) у git не йде — в карті
+він з `drive_id`, його качає `push_assets.py`.
 
 Pillow тут немає, тож через контейнер:
 
@@ -41,12 +42,14 @@ UA = 'Mozilla/5.0'
 OLD_SITE = 'https://old.hnpu.edu.ua'
 OUT = HERE / 'data' / 'exhibitions.uk.json'
 
-# Назви лінків узяті з обкладинок PDF: у самих файлів текстового шару немає.
+# Назви лінків узяті з обкладинок PDF: у самих файлів текстового шару немає. Третє поле — `drive_id`
+# для файла, якого немає в git: RENAISSANCE важить 181 МБ, а ліміт GitHub — 100 МБ.
 CATALOGS = [
     ('renaissance-catalog-2022.pdf',
      'RENAISSANCE. Каталог виставки студентів кафедри образотворчого мистецтва ХНПУ імені '
-     'Г. С. Сковороди (Харків, 2022)'),
-    ('bajky-kharkivski-2021.pdf', 'Григорій Сковорода. Байки Харківські (2021)'),
+     'Г. С. Сковороди (Харків, 2022)',
+     '1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz'),
+    ('bajky-kharkivski-2021.pdf', 'Григорій Сковорода. Байки Харківські (2021)', None),
 ]
 
 
@@ -167,11 +170,14 @@ def main() -> int:
     mapping: dict[str, dict] = {}
 
     items = []
-    for name, label in CATALOGS:
-        if not (FILES / name).exists():
+    for name, label, catalog_drive_id in CATALOGS:
+        if catalog_drive_id:
+            mapping[file_id(name)] = {'name': name, 'drive_id': catalog_drive_id}
+        elif (FILES / name).exists():
+            mapping[file_id(name)] = {'name': name}
+        else:
             print(f'  ! {name}: файла немає в files/', file=sys.stderr)
             return 1
-        mapping[file_id(name)] = {'name': name}
         items.append(f'<li>{link(file_id(name), esc(label))}</li>')
     blocks = ['<ul>\n' + '\n'.join(items) + '\n</ul>']
 

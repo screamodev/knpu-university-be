@@ -8,7 +8,7 @@
 
 | Що | Звідки | Файлів у карті |
 | --- | --- | --- |
-| Каталог «RENAISSANCE… Харків, 2022» | посилання на Drive в листі (доступ лише для домену) | 1 PDF, 181 МБ |
+| Каталог «RENAISSANCE… Харків, 2022» | посилання на Drive в листі | 1 PDF, 181 МБ, з `drive_id` |
 | «Григорій Сковорода. Байки Харківські (2021)» | вкладення листа «Книга до друку.pdf» | 1 PDF, 19 МБ |
 | «Незламні» (20 робіт) | Google Sites кафедри `…/poza/vystavky/nezlamni` | 16 фото + 4 анімації (з прев'ю) |
 | «Прогулянка Харковом» (21 робота) | Google Sites кафедри `…/poza/vystavky/Beketov` | 20 фото + 1 анімація (з прев'ю) |
@@ -45,15 +45,6 @@ Google припинив віддавати їх у такому вигляді, 
 
 ## Накотити на прод (виконує людина)
 
-Каталог RENAISSANCE більший за ліміт GitHub (100 МБ), тому в git його немає — після `git pull`
-його треба покласти на сервер руками, **до** `push_assets.py`:
-
-```bash
-# з машини, де лежить файл (локально він у files/ цього бандла)
-scp migration/fixes-2026-10-08-exhibitions/files/renaissance-catalog-2022.pdf \
-  <сервер>:/root/knpu-university-be/migration/fixes-2026-10-08-exhibitions/files/
-```
-
 ```bash
 cd /root/knpu-university-be && git pull
 cd migration
@@ -63,15 +54,22 @@ DRUN() { docker run --rm --network webnet \
   -e DIRECTUS_EMAIL="$ADMIN_EMAIL" -e DIRECTUS_PASSWORD="$ADMIN_PASSWORD" \
   -e DIRECTUS_TOKEN= \
   -v /root/knpu-university-be/migration:/m -w /m python:3.12-slim python3 "$@"; }
-ls -la fixes-2026-10-08-exhibitions/files/renaissance-catalog-2022.pdf   # ~181 МБ
 DRUN fixes-2026-10-08-exhibitions/push_assets.py --dry-run   # 80 файлів
-DRUN fixes-2026-10-08-exhibitions/push_assets.py
+DRUN fixes-2026-10-08-exhibitions/push_assets.py             # в кінці: uploaded=80 failed=0
 cd /root/knpu-university-fe && git pull
 docker compose -f docker-compose.prod.yml up -d --build
 docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N seconds
 ```
 
-Анімації (5 mp4, ~11 МБ) `push_assets.py` качає з Drive сам.
+Анімації (5 mp4, ~11 МБ) і каталог RENAISSANCE (181 МБ) `push_assets.py` качає з Drive сам, тож
+заливка йде довго; каталог скрипт тримає в пам'яті цілком.
+
+**Умова для каталога RENAISSANCE:** файл на Drive («КАТАЛОГ Сковорода друк.pdf») має бути
+відкритий за посиланням — «Усі, хто має посилання», роль «Читач». Станом на 08.10 доступ лише для
+домену hnpu.edu.ua. Поки він закритий, скрипт залишить саме цей файл незалитим
+(`failed=1`, «доступ до файла закрито»), а лінк на каталог на сторінці вестиме в 404. Решта
+вкладки працює. Після відкриття доступу достатньо запустити `push_assets.py` ще раз: те, що вже
+залито, він пропускає.
 
 ## Правки в підписах (технічні)
 
@@ -84,6 +82,9 @@ docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N secon
 
 ## Чого тут немає і чому
 
+* **Каталог RENAISSANCE на проді, поки на Drive закритий доступ** — див. умову вище. Файл у git не
+  кладемо: 181 МБ перевищує ліміт GitHub у 100 МБ. Альтернатива, якщо доступ відкривати не
+  хочуть, — стиснути PDF до веб-версії менш як 100 МБ і закомітити, але це вже змінений документ.
 * **Виставка «До 300-річчя Г.С. Сковороди»** — пропущена за вказівкою документа.
 * **Назви двох лінків на каталоги** взяті з обкладинок PDF (текстового шару в файлах немає);
   клієнтка називає їх у листі лише «каталоги». Якщо хоче інакше — міняється в
