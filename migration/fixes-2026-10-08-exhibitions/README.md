@@ -1,0 +1,93 @@
+# Правки 08.10.2026 — кафедра образотворчого мистецтва, вкладка «Виставкова діяльність»
+
+Останній пункт документа «Правки 06-08.10.26» (ТЕРМІНОВО) і лист завкафедри Т. В. Паньок
+«Прохання» (08.10): нова вкладка «Виставкова діяльність» після «Співпраця»
+(`/university/structure/kafedra-obrazotvorchogo-mystectva/exhibitions`) з двома каталогами й
+виставками зі старого сайту. «До 300-річчя Г.С. Сковороди» пропущено, як сказано в документі
+(віртуальну виставку вже відновлено). Решту три виставки зроблено розкривними блоками.
+
+| Що | Звідки | Файлів у карті |
+| --- | --- | --- |
+| Каталог «RENAISSANCE… Харків, 2022» | посилання на Drive в листі (доступ лише для домену) | 1 PDF, 181 МБ |
+| «Григорій Сковорода. Байки Харківські (2021)» | вкладення листа «Книга до друку.pdf» | 1 PDF, 19 МБ |
+| «Незламні» (20 робіт) | Google Sites кафедри `…/poza/vystavky/nezlamni` | 16 фото + 4 анімації (з прев'ю) |
+| «Прогулянка Харковом» (21 робота) | Google Sites кафедри `…/poza/vystavky/Beketov` | 20 фото + 1 анімація (з прев'ю) |
+| «Мистецтво без кордонів» (31 робота + портрет) | `old.hnpu.edu.ua/uk/chzhen-syandun-vystavka-zhyvopysu` | 32 фото (оригінали, не мініатюри) |
+
+Усього в карті 80 файлів: 73 JPEG, 5 mp4, 2 PDF.
+
+## Чому на старому сайті «зникли всі картини»
+
+Обидві виставки були на Google Sites і тягнули картинки через `drive.google.com/uc?export=view`;
+Google припинив віддавати їх у такому вигляді, тому на старому сайті лишилися порожні рамки.
+Самі файли на Drive живі й публічні, підписи збереглися в HTML сторінок — звідти все й узято.
+
+## Як це влаштовано
+
+* `exhibitions.json` — виставки, підписи, джерела (звірено зі сторінками-джерелами).
+* `build.py` — качає джерела в `.cache/`, стискає фото до JPEG ≤1600 px (Pillow), пише
+  `files/`, `files.map.json` і `data/exhibitions.uk.json`. Pillow на цій машині немає, тож
+  через контейнер:
+
+  ```bash
+  cd migration
+  docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -e PYTHONPATH=/tmp/pil \
+    -v "$PWD:/m" -w /m/fixes-2026-10-08-exhibitions python:3.12-slim \
+    sh -c 'pip install -q --target /tmp/pil Pillow && python3 build.py'
+  ```
+
+* `data/exhibitions.uk.json` скопійовано у фронт:
+  `knpu-university-fe/app/content/structure/kafedra-obrazotvorchogo-mystectva/exhibitions.uk.json`.
+  Вкладку читає статичний JSON (рядків у `structure_pages` для кафедри немає), тож фронт треба
+  перезібрати.
+* Картки з анімацією: превью-картинка й слово «(анімація)» ведуть на mp4 в Directus.
+  Санітайзер тег `<video>` не пропускає, а посилання браузер відкриває й програє сам.
+
+## Накотити на прод (виконує людина)
+
+Каталог RENAISSANCE більший за ліміт GitHub (100 МБ), тому в git його немає — після `git pull`
+його треба покласти на сервер руками, **до** `push_assets.py`:
+
+```bash
+# з машини, де лежить файл (локально він у files/ цього бандла)
+scp migration/fixes-2026-10-08-exhibitions/files/renaissance-catalog-2022.pdf \
+  <сервер>:/root/knpu-university-be/migration/fixes-2026-10-08-exhibitions/files/
+```
+
+```bash
+cd /root/knpu-university-be && git pull
+cd migration
+set -a; . /root/knpu-university-be/.env; set +a
+DRUN() { docker run --rm --network webnet \
+  -e DIRECTUS_URL=http://knpu-university-directus:8055 \
+  -e DIRECTUS_EMAIL="$ADMIN_EMAIL" -e DIRECTUS_PASSWORD="$ADMIN_PASSWORD" \
+  -e DIRECTUS_TOKEN= \
+  -v /root/knpu-university-be/migration:/m -w /m python:3.12-slim python3 "$@"; }
+ls -la fixes-2026-10-08-exhibitions/files/renaissance-catalog-2022.pdf   # ~181 МБ
+DRUN fixes-2026-10-08-exhibitions/push_assets.py --dry-run   # 80 файлів
+DRUN fixes-2026-10-08-exhibitions/push_assets.py
+cd /root/knpu-university-fe && git pull
+docker compose -f docker-compose.prod.yml up -d --build
+docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N seconds
+```
+
+Анімації (5 mp4, ~11 МБ) `push_assets.py` качає з Drive сам.
+
+## Правки в підписах (технічні)
+
+Підписи перенесено дослівно, крім трьох явних збоїв у джерелі:
+
+* «Cєдиx Aнacтaciя» і «Opинa» були набрані латиницею всередині слів → «Сєдих Анастасія»,
+  «Орина» (пошук і скрінрідери ламалися на змішаному алфавіті);
+* «Манкаускайте Жанна , 3 курс» — зайвий пробіл перед комою;
+* «<«За вікном»» — сторонній символ `<` на початку підпису.
+
+## Чого тут немає і чому
+
+* **Виставка «До 300-річчя Г.С. Сковороди»** — пропущена за вказівкою документа.
+* **Назви двох лінків на каталоги** взяті з обкладинок PDF (текстового шару в файлах немає);
+  клієнтка називає їх у листі лише «каталоги». Якщо хоче інакше — міняється в
+  `build.py: CATALOGS` і в `exhibitions.uk.json`.
+* **Картка «Карнаух Софія, 3 курс, 3Б. "Бекетов."»** («Прогулянка Харковом») веде на mp4, але в
+  підписі джерела слова «(анімація)» немає — додавати від себе не стали.
+* **Старі сторінки на Google Sites** лишаються як були; їх прибирає або лишає кафедра.
