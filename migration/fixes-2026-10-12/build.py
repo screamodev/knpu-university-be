@@ -7,8 +7,9 @@
 `knpu-university-fe/app/content/structure/history-law/students.uk.json` — одразу після першого
 `<hr />`, над «Посвятою у першокурсники» (новіші події йдуть зверху).
 
-Текст дослівно з `News_10_01.docx`; заголовка в документі немає, тож його не вигадуємо: блок
-починається з жирної дати, як записи про кураторські години нижче на сторінці.
+Текст дослівно з `News_10_01.docx`. Заголовка в документі немає — його дала людина (12.10):
+«Урок "Козацька слава" (он-лайн)», як `<p><strong>…</strong></p>` перед текстом, так само, як
+заголовок «Посвята у першокурсники».
 
 Pillow тут немає, тож через контейнер. Репо монтуються за тими самими шляхами, що на хості (бандл
 сам знаходить фронт поруч), а SRC — теку з розпакованим zip — передати аргументом:
@@ -34,6 +35,8 @@ from PIL import Image, ImageOps
 from bundle import FE_STUDENTS, FILES, JPEG_QUALITY, MAX_SIDE, file_id, save_map
 
 MARKER = '<strong>01 жовтня 2026 р.</strong>'
+MARKER_PARAGRAPH = '<p>' + MARKER
+HEADING = '<p><strong>Урок "Козацька слава" (он-лайн)</strong></p>'
 ALT = 'Урок «Козацька слава» (онлайн), 01.10.2026'
 PHOTOS = [f'news_01_10_{n}.jpg' for n in range(1, 6)]
 
@@ -70,11 +73,17 @@ def main() -> int:
                        f'alt="{html.escape(ALT)}" /></figure>')
     save_map(mapping)
 
-    block = '\n\n'.join(PARAGRAPHS + ['<div class="photo-grid gallery">' + ''.join(figures) + '</div>'])
+    block = '\n\n'.join([HEADING] + PARAGRAPHS + ['<div class="photo-grid gallery">' + ''.join(figures) + '</div>'])
     data = json.loads(FE_STUDENTS.read_text(encoding='utf-8'))
     body = data['sections'][0]['html']
     if MARKER in body:
-        print('блок уже вставлено, фронт не чіпаю', file=sys.stderr)
+        if HEADING in body:
+            print('блок уже вставлено, фронт не чіпаю', file=sys.stderr)
+            return 0
+        # Блок вставлено раніше без заголовка (правки 12.10, перша версія) — дописати заголовок.
+        data['sections'][0]['html'] = body.replace(MARKER_PARAGRAPH, HEADING + '\n\n' + MARKER_PARAGRAPH, 1)
+        FE_STUDENTS.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print('заголовок дописано до вже вставленого блока', file=sys.stderr)
         return 0
     divider = '<hr />'
     at = body.index(divider) + len(divider)
