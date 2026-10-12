@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-Зібрати вкладку «Виставкова діяльність» кафедри образотворчого мистецтва (правки 08.10).
+Зібрати вкладку «Виставкова діяльність» кафедри образотворчого мистецтва (правки 08.10 і 12.10).
 
 Читає `exhibitions.json` (виставки, підписи, джерела) і робить три речі:
 
 * качає джерела в `.cache/` — публічні файли Google Drive (галереї «Незламні» і «Прогулянка
-  Харковом» зі старого Google Sites кафедри) та оригінали картин «Мистецтво без кордонів» зі старого
-  сайту;
+  Харковом» зі старого Google Sites кафедри) та оригінали картин «Шляхами Г. Сковороди» і
+  «Мистецтво без кордонів» зі старого сайту;
 * стискає фото до JPEG ≤1600 px у `files/` (в git); анімації (mp4) туди не потрапляють — вони в
   карті з `drive_id`, а `push_assets.py` качає їх сам;
 * пише `files.map.json` і `data/exhibitions.uk.json` — тіло вкладки для
   `knpu-university-fe/app/content/structure/kafedra-obrazotvorchogo-mystectva/exhibitions.uk.json`.
 
-Каталог «Байки Харківські» лежить у `files/` як є. RENAISSANCE поки не підключено — див.
-`PENDING_CATALOGS` нижче.
+Каталог «Байки Харківські» лежить у `files/` як є, RENAISSANCE — посилання на Drive (див.
+`CATALOGS` нижче).
 
 Pillow тут немає, тож через контейнер:
 
@@ -42,21 +42,18 @@ UA = 'Mozilla/5.0'
 OLD_SITE = 'https://old.hnpu.edu.ua'
 OUT = HERE / 'data' / 'exhibitions.uk.json'
 
-# Назви лінків узяті з обкладинок PDF: у самих файлів текстового шару немає. Третє поле — `drive_id`
-# для файла, якого немає в git.
+# Назви лінків узяті з обкладинок PDF: у самих файлів текстового шару немає. Перше поле — файл у
+# `files/`, третє — зовнішнє посилання замість файла.
 CATALOGS = [
-    ('bajky-kharkivski-2021.pdf', 'Григорій Сковорода. Байки Харківські (2021)', None),
-]
-
-# Каталог RENAISSANCE (181 МБ — більший за ліміт GitHub, тож у git його немає) чекає, поки на Drive
-# відкриють доступ «Усі, хто має посилання»: без цього `push_assets.py` не заллє файл, а лінк на
-# сторінці вів би в 404. Коли доступ відкрито — перенести запис у CATALOGS першим елементом,
-# перезібрати (README, «Увімкнути каталог RENAISSANCE»).
-PENDING_CATALOGS = [
-    ('renaissance-catalog-2022.pdf',
+    # RENAISSANCE («КАТАЛОГ Сковорода друк.pdf», 181 МБ) більший за ліміт GitHub, а на Drive відкритий
+    # лише домену hnpu.edu.ua, тож у Directus його не заливаємо — за правками 12.10 він стоїть
+    # посиланням на Drive. Для всіх відвідувачів запрацює, щойно кафедра відкриє доступ «Усі, хто має
+    # посилання».
+    (None,
      'RENAISSANCE. Каталог виставки студентів кафедри образотворчого мистецтва ХНПУ імені '
      'Г. С. Сковороди (Харків, 2022)',
-     '1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz'),
+     'https://drive.google.com/file/d/1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz/view'),
+    ('bajky-kharkivski-2021.pdf', 'Григорій Сковорода. Байки Харківські (2021)', None),
 ]
 
 
@@ -168,6 +165,40 @@ def build_legacy(key: str, group: dict, mapping: dict[str, dict]) -> str:
     ])
 
 
+def build_skovoroda(key: str, group: dict, mapping: dict[str, dict]) -> str:
+    """Роботи з одним фото йдуть спільною сіткою з підписами; серія чи триптих — окремою сіткою, під
+    нею підпис, як на старій сторінці."""
+    blocks = [f'<p>{esc(paragraph)}</p>' for paragraph in group['intro']]
+    for part in group['parts']:
+        blocks.append(f'<p><strong>{esc(part["heading"])}</strong></p>')
+        singles: list[str] = []
+        for work in part['works']:
+            caption = work['caption']
+            ids = []
+            for path in work['images']:
+                name = f'exh-{key}-{slugify(Path(path).stem)}.jpg'
+                compress(old_site(path), name)
+                mapping[file_id(name)] = {'name': name}
+                ids.append(file_id(name))
+            if len(ids) == 1:
+                singles.append(figure(link(ids[0], img(ids[0], caption)), esc(caption)))
+                continue
+            if singles:
+                blocks.append(gallery(singles))
+                singles = []
+            blocks.append(gallery([f'<figure>{link(fid, img(fid, caption))}</figure>' for fid in ids]))
+            blocks.append(f'<p>{esc(caption)}</p>')
+        if singles:
+            blocks.append(gallery(singles))
+    blocks += [f'<p>{esc(paragraph)}</p>' for paragraph in group['outro']]
+    blocks.append('<p><em>' + '<br />'.join(esc(line) for line in group['signature']) + '</em></p>')
+    return details(group['summary'], blocks)
+
+
+def gallery(figures: list[str]) -> str:
+    return '<div class="photo-grid gallery">' + ''.join(figures) + '</div>'
+
+
 def details(summary: str, blocks: list[str]) -> str:
     return f'<details><summary><strong>{esc(summary)}</strong></summary>\n\n' + '\n\n'.join(blocks) + '\n\n</details>'
 
@@ -177,18 +208,19 @@ def main() -> int:
     mapping: dict[str, dict] = {}
 
     items = []
-    for name, label, catalog_drive_id in CATALOGS:
-        if catalog_drive_id:
-            mapping[file_id(name)] = {'name': name, 'drive_id': catalog_drive_id}
-        elif (FILES / name).exists():
-            mapping[file_id(name)] = {'name': name}
-        else:
+    for name, label, href in CATALOGS:
+        if href:
+            items.append(f'<li><a href="{href}" target="_blank" rel="noopener noreferrer">{esc(label)}</a></li>')
+            continue
+        if not (FILES / name).exists():
             print(f'  ! {name}: файла немає в files/', file=sys.stderr)
             return 1
+        mapping[file_id(name)] = {'name': name}
         items.append(f'<li>{link(file_id(name), esc(label))}</li>')
     blocks = ['<ul>\n' + '\n'.join(items) + '\n</ul>']
 
     groups = spec['groups']
+    blocks.append(build_skovoroda('sk', groups['skovoroda'], mapping))
     blocks.append(build_google_sites('nezlamni', groups['nezlamni'], mapping))
     blocks.append(build_google_sites('promenade', groups['promenade'], mapping))
     blocks.append(build_legacy('mbk', groups['mbk'], mapping))
@@ -198,7 +230,7 @@ def main() -> int:
     body = {
         'sections': [{'html': '\n\n'.join(blocks)}],
         'sourceUrls': [group['source'] for group in groups.values()],
-        'capturedAt': '2026-10-08',
+        'capturedAt': '2026-10-12',
     }
     OUT.write_text(json.dumps(body, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     kinds = {'.jpg': 0, '.mp4': 0, '.pdf': 0}

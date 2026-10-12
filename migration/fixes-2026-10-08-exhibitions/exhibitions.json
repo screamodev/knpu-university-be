@@ -1,5 +1,269 @@
 {
   "groups": {
+    "skovoroda": {
+      "summary": "Шляхами Г. Сковороди",
+      "source": "https://old.hnpu.edu.ua/uk/virtualna-vystavka-prysvyachene-300-richchyu-z-dnya-narodzhennya-g-s-skovorody",
+      "intro": [
+        "В Україні на державному рівні відзначатимуть 300-річчя з дня народження філософа, а 2022 рік офіційно проголошений роком Григорія Сковороди.",
+        "Студенти кафедри образотворчого мистецтва натхненно й плідно готувалися до цієї знаменної дати і разом з викладачами планували провести виставку студентських робіт в музеях Харкова й області. Проте ворог втрутився в наші плани і знищив одну із справжніх святинь нашого краю, позбавивши художників, натхненних генієм Сковороди, можливості експонувати свої твори в такому благословенному місці – у музеї великого українського філософа."
+      ],
+      "parts": [
+        {
+          "heading": "Живопис",
+          "works": [
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/01_Kandelaki_01.jpg"
+              ],
+              "caption": "Канделакі Таісія. «Не равное всєм равенство», 2020, полотно, олія, 60х70. Науковий керівник – проф. Т. Паньок."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/02_Kandelaki_01.jpg"
+              ],
+              "caption": "Канделакі Таісія. «Шляхами Г. Сковороди», 2021, полотно, олія, 100х80. Науковий керівник – проф. Т. Паньок."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/03_Demchenko_01.jpg"
+              ],
+              "caption": "Демченко Світлана. «Сад Сковороди», 2020, полотно, олія, 60х50. Науковий керівник – доц. А. Алтухова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/04_Melanko_01.jpg"
+              ],
+              "caption": "Меланко Ольга. «Портрет Григорія Сковороди в яблуневому саду», 2021, полотно, олія, 60х80. Науковий керівник – доц. Д. Чаус."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/05_Marakhovska_01.jpg"
+              ],
+              "caption": "Мараховська Олена. «Портрет Г. С. Сковороди», 2021, полотно, олія, 100х80. Науковий керівник – проф. Т. Паньок."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/06_Breslavets_01.jpg"
+              ],
+              "caption": "Бреславець Дар'я. «Народження Г. Сковороди в с. Чорнухи», полотно, олія, 80х60. Науковий керівник – проф. Т. Паньок."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/07_Velichenko_01.jpg"
+              ],
+              "caption": "Веліченко Анна. «Селище Чорнухи, Полтавської області», 2021, полотно, олія, 70х80. Науковий керівник – ст. викл. М. Азаркіна."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/Panyok.jpg"
+              ],
+              "caption": "Паньок Тетяна, проф. кафедри образотворчого мистецтва. «Дуб Г. Сковороди», 2007, полотно, олія, 70х60."
+            }
+          ]
+        },
+        {
+          "heading": "Графіка",
+          "works": [
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/01_Nekhaienko_01.jpg"
+              ],
+              "caption": "Нехаєнко Маріанна. «Світ ловив мене, але не співмав», 2021, папір, друк, 40х60."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/02_Zinchenko_01.jpg"
+              ],
+              "caption": "Зінченко Катерина. «Дерево життя Г. С. Сковороди», 2021, офорт (травлений штрих), 40х40. Науковий керівник – доц. Л. Лісунова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/03_Hadada_01.jpg"
+              ],
+              "caption": "Гадада Юлія. «Байки Харківські», 2019, офорт (акватинта) 50х50. Науковий керівник – доц. Л. Лісунова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/07_Soldatenko_01.jpg"
+              ],
+              "caption": "Солдатенко Ірина. «Дуб Г. Сковороди», 2021, папір, авторська графічна техніка, 70х70. Науковий керівник – доц. П. Моценко."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/04_Umirzakova_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/04_Umirzakova_02.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/04_Umirzakova_03.jpg"
+              ],
+              "caption": "Умірзакова Кароліна. «Пісенний світ Г. Сковороди», триптих папір, олівець, чорна ручка, вугілля, 32×42. Науковий керівник – доц. А. Алтухова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_02.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_03.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_04.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_05.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_06.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_07.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Hlushych_08.jpg"
+              ],
+              "caption": "Глушич Лариса. «Байки Г. Сковороди», 2021, ліногравюра, авторська техніка, 30х50. Науковий керівник – проф. Т. Паньок."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/06_Molchanova_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/06_Molchanova_02.jpg"
+              ],
+              "caption": "Молчанова Марія. «Всякому місту звичай і права», 2021, папір, техніка виконання змішана (туш, перо, пастель), 50х70 см. Науковий керівник – доц. П. Моценко."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/10_Devianina_01.jpg"
+              ],
+              "caption": "Девяніна Марія. «Сюжетно-тематична композиція за мотивами творів Г. С. Сковороди», 2021, творчий малюнок, акварель, гуаш, 35 x 80. Науковий керівник – доц. А. Алтухова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/12_Romanova_01.jpg"
+              ],
+              "caption": "Романова Тетяна. «Духовні стежки Г. Сковороди», 2020, папір, акварель, 100х70. Науковий керівник – ст. викл. М. Азаркіна."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/13_Kuksina_01.jpg"
+              ],
+              "caption": "Куксіна Анастасія. Байки Сковороди. Книжка, флет-дизайн. Науковий керівник – доц. А. Алтухова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/14_Lisunova_01.jpg"
+              ],
+              "caption": "Людмила Лісунова, доц. кафедри образотворчого мистецтва. «Заповіт Г. Сковороди», 2019, офорт"
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/15_Fuat_Akdenizli_01.jpg"
+              ],
+              "caption": "Фуат Акденізлі, проф. факультету образотворчого мистецтва Університету дев’ятого вересня, Ізмір. Туреччина. «Шана Г. Сковороді!», 2021, ліногравюра, 20х30."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/08_Meleshko_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/08_Meleshko_02.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/08_Meleshko_03.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/08_Meleshko_04.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/08_Meleshko_05.jpg"
+              ],
+              "caption": "Мелешко Юлія. «Байки Сковороди», 2021, комп’ютерна графіка, 30х50. Науковий керівник – доц. Н. Чен."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/17_Harahata_01.jpg"
+              ],
+              "caption": "Гарагата Альона. «З усіх утрат втрата часу найтяжча». Комп’ютерна графіка, 2021. Науковий керівник – викл. Макаренко В. П."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/17_Harahata_02.jpg"
+              ],
+              "caption": "Гарагата Альона. «З усіх утрат втрата часу найтяжча». Комп’ютерна графіка, 2021. Науковий керівник – викл. Макаренко В. П."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/09_Isichenko_01.jpg"
+              ],
+              "caption": "Ісіченко Валерія. «Світ Г. Сковороди», папір, витинанка, 40х60."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/11_Kryshtal_01.jpg"
+              ],
+              "caption": "Кришталь Дар’я. «Байки сковороди. Бджола», 2021, папір, авторська техніка, 30х40. Науковий керівник – доц. Д. Чаус."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_01.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_02.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_03.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_04.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_05.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_06.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_07.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_08.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_09.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_10.png",
+                "/sites/default/files/galereya/300_Skovorodi/16_Silchenko_11.png"
+              ],
+              "caption": "Сільченко Євгенія. «Філософія та мандри Г. Сковороди». Авторська графіка, 2021. Науковий керівник – доц. А. Алтухова."
+            }
+          ]
+        },
+        {
+          "heading": "Декоративне мистецтво",
+          "works": [
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/01_Kolaieva_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/01_Kolaieva_02.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/01_Kolaieva_03.jpg"
+              ],
+              "caption": "Колаєва Олександра. «Стежками Г. Сковороди» 40х50 та 50х70, холодний батик. Науковий керівник – доц. Н. Чєн."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/03_Sitnik_01.jpg"
+              ],
+              "caption": "Сітнік Ірина. Декоративне панно «Портрет філософа Г. С. Сковороди» присвячене 300-річчю з дня народження Г. С. Сковороди, 2021 гуаш, підлаковий розпис. Науковий керівник – доц. Л. Лісунова"
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/06_Ivantsiv_01.jpg"
+              ],
+              "caption": "Іванців Ірина. Рельєф, «Світ Г. Сковороди», 2021, дерево, художнє різьблення, липа, 2.80 х 2.50. Науковий керівник – доц. П. Моценко."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/02_Asadulova_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/02_Asadulova_02.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/02_Asadulova_03.jpg"
+              ],
+              "caption": "Асадулова Малейко. «Музика Г. Сковороди», 2021, полотно, акріл, авторська вишивка. Науковий керівник – доц. А. Алтухова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/04_Sham_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/04_Sham_02.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/04_Sham_03.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/04_Sham_04.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/04_Sham_05.jpg"
+              ],
+              "caption": "Шам Маргарита. «Філософія Сковороди», 2021, d40 см., d35 см. Петриківський розпис, дерево, гуашь (підлаковий розпис). Науковий керівник – доц. Л. Лісунова."
+            },
+            {
+              "images": [
+                "/sites/default/files/galereya/300_Skovorodi/05_Myroniuk_01.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Myroniuk_02.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Myroniuk_03.jpg",
+                "/sites/default/files/galereya/300_Skovorodi/05_Myroniuk_04.jpg"
+              ],
+              "caption": "Миронюк Оксана. «Байки Харківські. Г. Сковороди», 2021, Петриківський розпис, Поліграфічна продукція. Науковий керівник – доц. Л. Лісунова."
+            }
+          ]
+        }
+      ],
+      "outro": [
+        "У ніч проти 7 травня 2022 р. окупанти ракетою знищили Національний літературно-меморіальний музей Григорія Сковороди, що розташований у садибі Ковалинських (сел. Сковородинівка в Харківській області).",
+        "Сама будівля музею була пам'яткою національного значення, адже у маєтку Ковалинських у XVIII столітті проживав український філософ, педагог, письменник і поет Григорій Савич Сковорода. І саме в селі Сковородинівка (до 1922 року Пан-Іванівка), неподалік від знищеної будівлі, слобожанський Сократ і був похований.",
+        "У 1972 році на території маєтку відкрито Національний літературно-меморіальний комплекс Г. С. Сковороди — будинок-музей, де зберігалися особисті речі Григорія Савича, книжки, картини, документи, та унікальний парк з його особливою аурою. Багато вчених спеціально приїжджали, щоб вивчати унікальні артефакти, пов’язані з особистістю філософа, подивитися на унікальну скрипку, якої торкалися руки Сковороди – мислителя й митця універсального типу.",
+        "Незважаючи на військові дії, постійні обстріли й значні руйнування Харківщини, ми зібрали фото наших робіт та організували онлайн-виставку.",
+        "А після закінчення війни, за згодою працівників музею, ми подаруємо ці картини музею на знак нашої шани, якої достойний великий український мислитель і митець."
+      ],
+      "signature": [
+        "Паньок Т.В.,",
+        "канд. мистецтвознавства,",
+        "доктор педагогічних наук."
+      ]
+    },
     "nezlamni": {
       "summary": "Незламні",
       "subtitle": "\"Forever, Fine art, Freedom\" До дня народження Шевченка",

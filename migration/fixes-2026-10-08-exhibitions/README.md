@@ -15,7 +15,34 @@
 
 Усього в карті 79 файлів: 73 JPEG, 5 mp4, 1 PDF.
 
-Каталог «RENAISSANCE» (лист просить прикріпити «два каталоги») **поки не підключено** — див. нижче.
+Каталог «RENAISSANCE» (лист просить прикріпити «два каталоги») 08.10 не підключено; з 12.10 він
+стоїть посиланням на Drive — див. нижче.
+
+## Правки 12.10.2026
+
+Документ «Правки 12.10.26» (ТЕРМІНОВО), той самий лист «Прохання»:
+
+* **«Шляхами Г. Сковороди»**: матеріали пункту «До 300-річчя Г.С. Сковороди» зі старої сторінки кафедри,
+  розділ названо, як просить документ (так само названа й сама стара сторінка), і поставлено перед
+  «Незламні».
+
+  | Що | Звідки | Файлів у карті |
+  | --- | --- | --- |
+  | «Шляхами Г. Сковороди» (32 роботи: живопис, графіка, декоративне мистецтво) | `old.hnpu.edu.ua/uk/virtualna-vystavka-prysvyachene-300-richchyu-z-dnya-narodzhennya-g-s-skovorody` | 67 фото (оригінали → JPEG ≤1600 px) |
+
+  Вступ, підрозділи, підписи, текст про знищений музей і підпис Т. В. Паньок перенесено дослівно
+  (`exhibitions.json`, група `skovoroda`). Роботи з одним фото — спільною сіткою з підписами; серії й
+  триптихи (Умірзакова, Глушич, Мелешко, Сільченко, Колаєва, Асадулова, Шам, Миронюк, Молчанова) —
+  окремою сіткою, під нею підпис, як на старій сторінці. Технічно прибрано лише zero-width space і
+  підкреслену крапку `<u>.</u>`. Однаковий підпис двох робіт Гарагати лишено, як у джерелі.
+* **Каталог RENAISSANCE** стоїть першим у списку каталогів **посиланням на Drive**
+  (`https://drive.google.com/file/d/1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz/view`), у Directus не заливається.
+  Доступ на Drive досі лише для домену hnpu.edu.ua (12.10 перевірено: без входу — сторінка логіна).
+  Сторонні відвідувачі побачать логін Google, поки кафедра не відкриє доступ «Усі, хто має посилання»,
+  роль «Читач». Після цього посилання запрацює саме, без передеплою.
+
+Тепер у карті 146 файлів: 140 JPEG, 5 mp4, 1 PDF. На проді `push_assets.py` пропустить залиті 08.10 і
+доллє 67 нових.
 
 ## Чому на старому сайті «зникли всі картини»
 
@@ -55,8 +82,8 @@ DRUN() { docker run --rm --network webnet \
   -e DIRECTUS_EMAIL="$ADMIN_EMAIL" -e DIRECTUS_PASSWORD="$ADMIN_PASSWORD" \
   -e DIRECTUS_TOKEN= \
   -v /root/knpu-university-be/migration:/m -w /m python:3.12-slim python3 "$@"; }
-DRUN fixes-2026-10-08-exhibitions/push_assets.py --dry-run   # 79 файлів
-DRUN fixes-2026-10-08-exhibitions/push_assets.py             # в кінці: uploaded=79 failed=0
+DRUN fixes-2026-10-08-exhibitions/push_assets.py --dry-run   # 146 у карті (після 08.10 — 67 залити)
+DRUN fixes-2026-10-08-exhibitions/push_assets.py             # в кінці: failed=0
 cd /root/knpu-university-fe && git pull
 docker compose -f docker-compose.prod.yml up -d --build
 docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N seconds
@@ -75,24 +102,12 @@ docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N secon
 
 ## Чого тут немає і чому
 
-* **Каталог RENAISSANCE** (`КАТАЛОГ Сковорода друк.pdf`, 181 МБ, 68 стор.) — не підключено.
-  На Drive доступ лише для домену hnpu.edu.ua, тож `push_assets.py` не міг би його скачати, а
-  лінк на сторінці вів би в 404. У git файл не кладемо: він більший за ліміт GitHub (100 МБ).
-  Клієнту треба відкрити доступ: «Усі, хто має посилання», роль «Читач».
-
-  **Увімкнути каталог RENAISSANCE**, коли доступ відкрито:
-
-  1. Перевірити, що файл віддається без входу в акаунт:
-     `curl -sL -r 0-3 "https://drive.usercontent.google.com/download?id=1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz&export=download&confirm=t" | head -c 4` → `%PDF`.
-  2. У `build.py` перенести запис із `PENDING_CATALOGS` у `CATALOGS` першим елементом.
-  3. Перезібрати (команда з розділу «Як це влаштовано»), скопіювати `data/exhibitions.uk.json`
-     у `knpu-university-fe/app/content/structure/kafedra-obrazotvorchogo-mystectva/exhibitions.uk.json`.
-  4. Закомітити обидва репо, на проді: `git pull` обох, `push_assets.py` (залиє один файл,
-     решту пропустить), `up -d --build` фронта.
-
-  Альтернатива без відкриття доступу — стиснути PDF до веб-версії менш як 100 МБ і закомітити
-  в `files/`, але це вже змінений документ.
-* **Виставка «До 300-річчя Г.С. Сковороди»** — пропущена за вказівкою документа.
+* **Файл каталогу RENAISSANCE** (`КАТАЛОГ Сковорода друк.pdf`, 181 МБ, 68 стор.) у Directus і в git
+  немає: він більший за ліміт GitHub (100 МБ), а на Drive доступний лише домену hnpu.edu.ua. З 12.10
+  на сторінці стоїть посилання на Drive (див. «Правки 12.10.2026»). Чи відкрито доступ, перевіряється
+  так: `curl -sL -r 0-3 "https://drive.usercontent.google.com/download?id=1RNSstrtfREFUOSxMoAsJewQ_v4vSDSqz&export=download&confirm=t" | head -c 4`
+  → `%PDF` (а не `<!do`). Якщо колись треба буде своя копія замість Drive, її доведеться стиснути до
+  веб-версії менш як 100 МБ, але це вже змінений документ.
 * **Назви двох лінків на каталоги** взяті з обкладинок PDF (текстового шару в файлах немає);
   клієнтка називає їх у листі лише «каталоги». Якщо хоче інакше — міняється в
   `build.py: CATALOGS` і в `exhibitions.uk.json`.
