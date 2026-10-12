@@ -49,3 +49,52 @@ docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N secon
   (колекція `articles`, категорія «Факультет історії і права», `fakultet-istoriyi-i-prava`); текст і
   фото ті самі, фото — послідовними `<p><img>` (кнопка «Додати фото до Content»). Заголовок для вкладки
   вже визначено: «Урок "Козацька слава" (он-лайн)».
+
+---
+
+# Правки 12.10.2026, п. 5 — Моніторинг: видалено «Анкету по факультетам» з АНКЕТИ № 1
+
+Документ «Правки 12.10.26», пункт 5 (ТЕРМІНОВО): `/education/monitoring`, розділ «Освітня
+екосистема», АНКЕТА № 1 — видалити вкладену «Анкету по факультетам». Людина уточнила (12.10):
+видаляється і заголовок, і всі 10 вкладених анкет.
+
+Це 11 рядків `monitoring_surveys`, створені бандлом `fixes-2026-09-30`: `1/0` «Анкета по факультетам»
+і `1/1…1/10` (10 факультетів/інститутів). `delete_monitoring_faculties.py` знаходить їх за парою
+(number, title) з `fixes-2026-09-30/data/monitoring-faculties.json` (id на локалі й проді різні) і
+видаляє. Рядок із результатами чи файлом програми не видаляє — зупиняється з кодом 1. Ідемпотентний.
+Сама анкета № 1 (`number = 1`, результати 2021–2026) не чіпається. Фронт без змін — перебудова не потрібна.
+
+## Накотити на прод (виконує людина)
+
+```bash
+# 1. Бекап бази
+cd /root/knpu-university-be
+set -a; . ./.env; set +a
+docker run --rm --network dbnet -e PGPASSWORD="$DB_PASSWORD" -v "$PWD":/backup postgres:16-alpine \
+  pg_dump -h "$DB_HOST" -p "${DB_PORT:-5432}" -U "$DB_USER" -d "$DB_DATABASE" \
+  -Fc -f /backup/knpu-2026-10-12-before-monitoring-delete.dump
+ls -lh knpu-2026-10-12-before-monitoring-delete.dump
+
+# 2. Код і видалення
+git pull
+cd migration
+DRUN() { docker run --rm --network webnet \
+  -e DIRECTUS_URL=http://knpu-university-directus:8055 \
+  -e DIRECTUS_EMAIL="$ADMIN_EMAIL" -e DIRECTUS_PASSWORD="$ADMIN_PASSWORD" \
+  -e DIRECTUS_TOKEN= \
+  -v /root/knpu-university-be/migration:/m -w /m python:3.12-slim python3 "$@"; }
+DRUN fixes-2026-10-12/delete_monitoring_faculties.py --dry-run   # 11 рядків «- 1/N …», «до видалення: 11»
+DRUN fixes-2026-10-12/delete_monitoring_faculties.py             # «видалено: 11»
+
+# 3. Перевірка (має бути порожньо)
+curl -s -G "https://admin.hnpu.edu.ua/items/monitoring_surveys" \
+  --data-urlencode "filter[number][_starts_with]=1/" --data-urlencode "fields=number,title"
+```
+
+Відкат: `DRUN pass2/load.py fixes-2026-09-30/data/monitoring-faculties.json` створить ті самі 11 рядків
+заново (або відновлення з дампа кроку 1).
+
+## Чого тут немає і чому
+
+* `CLUSTERED_NUMBERS` у `monitoring.vue` лишається з `1`: механізм «анкета в анкеті» (`N/0`) знадобиться
+  надалі й нічого не ламає, коли вкладених рядків немає.
