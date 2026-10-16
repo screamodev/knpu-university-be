@@ -352,6 +352,7 @@ STRUCTURE_TABS = [
     {'text': 'Вступнику', 'value': 'admission'},
     {'text': 'Історія', 'value': 'history'},
     {'text': 'Освіта', 'value': 'education'},
+    {'text': 'Спортивні споруди', 'value': 'facilities'},
     {'text': 'Наука', 'value': 'science'},
     {'text': 'Студентський гурток', 'value': 'student-circle'},
     {'text': 'Університетські кафедри', 'value': 'university-departments'},
