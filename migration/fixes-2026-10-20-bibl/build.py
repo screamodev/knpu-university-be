@@ -40,9 +40,9 @@ UA = 'Mozilla/5.0'
 FIRST_YEAR_MARK = re.compile(r'2019 році:')
 LAST_LINK_PART = 'inkluzivna'
 
-# Файл покажчика Лозової (2019) на старому сайті віддає 404 — опис переноситься без посилання,
-# поки клієнт не надішле файл.
-MISSING_ON_OLD_SITE = {'lozova_biobibliograf.pdf'}
+# Файл покажчика Лозової (2019) на старому сайті віддає 404. 21.10 клієнт надіслав його сам:
+# лежить у `files/` (у git), у карті без `url`.
+FROM_CLIENT = {'lozova_biobibliograf.pdf'}
 
 YEARS = ('2019', '2018', '2017')
 
@@ -124,12 +124,13 @@ def build_block(lines) -> tuple[str, dict[str, dict]]:
             out.append(f'<hr /><p><strong>{escaped}</strong></p>')
         elif href is None and subheading.match(text):
             out.append(f'<p><strong>{escaped}</strong></p>')
-        elif href is None or old_file_name(href) in MISSING_ON_OLD_SITE:
+        elif href is None:
             out.append(f'<p>{escaped}</p>')
         else:
             old_name = old_file_name(href)
             name = map_name(old_name)
-            mapping[file_id(name)] = {'name': name, 'url': OLD_FILES + old_name}
+            mapping[file_id(name)] = ({'name': name} if old_name in FROM_CLIENT
+                                      else {'name': name, 'url': OLD_FILES + old_name})
             out.append(f'<p><a href="/assets/{file_id(name)}">{escaped}</a></p>')
 
     if tuple(seen_years) != YEARS:
@@ -225,7 +226,29 @@ def main() -> int:
     data = json.loads(FE_PAGE.read_text(encoding='utf-8'))
     body = data['sections'][0]['html']
     if re.search(r'2018 році:</strong></p>', body):
-        print('сторінка вже містить блок 2018 року — нічого не змінюю', file=sys.stderr)
+        # Блок уже на сторінці (правки 20.10): лише обгортаємо в посилання описи файлів від клієнта.
+        patched = body
+        for uuid, meta in mapping.items():
+            if 'url' in meta:
+                continue
+            link = next(line for line in block.splitlines() if f'/assets/{uuid}' in line)
+            plain = '<p>' + re.sub(r'^<p><a [^>]*>|</a></p>$', '', link) + '</p>'
+            if f'/assets/{uuid}' in patched:
+                continue
+            if patched.count(plain) != 1:
+                raise SystemExit(f'опис «{meta["name"]}» на сторінці не знайдено рівно один раз')
+            patched = patched.replace(plain, link)
+        page_check = check(patched)
+        print('перевірка сторінки загалом:', file=sys.stderr)
+        for problem in page_check.problems or ['без зауважень']:
+            print(f'  · {problem}', file=sys.stderr)
+        if args.apply and patched != body:
+            data['sections'][0]['html'] = patched
+            FE_PAGE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n',
+                               encoding='utf-8')
+            print(f'записано: {FE_PAGE}', file=sys.stderr)
+        elif patched == body:
+            print('сторінка вже містить блок і посилання — нічого не змінюю', file=sys.stderr)
         return 0
 
     # Хвіст сторінки до правки: «…Фрізман</a>\n<hr /><strong>…у 2019 році:</strong></p>» — <p>
