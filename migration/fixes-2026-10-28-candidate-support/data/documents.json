@@ -1,0 +1,16 @@
+{
+  "batches": [
+    {
+      "collection": "documents",
+      "identity": ["section", "title"],
+      "rows": [
+        {
+          "section": "candidate-support",
+          "title": "Вимоги до оформлення дисертації",
+          "order": 5,
+          "externalUrl": "https://zakon.rada.gov.ua/laws/show/z0155-17#Text"
+        }
+      ]
+    }
+  ]
+}
