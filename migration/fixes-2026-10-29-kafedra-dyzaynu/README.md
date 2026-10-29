@@ -9,6 +9,7 @@
 | Що | Куди |
 | --- | --- |
 | `hryhorova-2026-10.jpg` (JPEG 1096×1435 із надісланого PNG) | `home.uk.json`, секція «Співробітники», замість `/assets/207adcad-4dd9-485a-8ebf-d66f1c7bb0a1` |
+| `graf-design-plakat-2026-10.jpg` (JPEG 1098×1600 із надісланого плаката 4817×7016) | `home.uk.json`, секція «Головна», замість `/assets/4f17cb88-c34f-40c6-aee6-9ba0917f1091` |
 
 ```bash
 cd /root/knpu-university-be && git pull
@@ -19,7 +20,7 @@ DRUN() { docker run --rm --network webnet \
   -e DIRECTUS_EMAIL="$ADMIN_EMAIL" -e DIRECTUS_PASSWORD="$ADMIN_PASSWORD" \
   -e DIRECTUS_TOKEN= \
   -v /root/knpu-university-be/migration:/m -w /m python:3.12-slim python3 "$@"; }
-DRUN fixes-2026-10-29-kafedra-dyzaynu/push_assets.py --dry-run   # 1 файл
+DRUN fixes-2026-10-29-kafedra-dyzaynu/push_assets.py --dry-run   # 2 файли
 DRUN fixes-2026-10-29-kafedra-dyzaynu/push_assets.py
 cd /root/knpu-university-fe && git pull
 docker compose -f docker-compose.prod.yml up -d --build
@@ -31,7 +32,7 @@ docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N secon
 `app/content/structure/kafedra-dyzaynu-i-tehnologiy/home.uk.json` (вкладка читається зі
 статичного JSON — у Directus `structure_pages` для цієї кафедри рядків немає):
 
-* **Секція «Головна»**: лишилися два плакати (`753ea9c4-…` дизайн одягу, `4f17cb88-…` графічний
+* **Секція «Головна»**: лишилися два плакати (`753ea9c4-…` дизайн одягу, `52938342-…` графічний
   дизайн); плакат «Дизайн середовища» (`927ab3f0-…`) прибрано. Увесь текст під плакатами
   (рядок «Абітурієнту кафедри», картинка 924383.jpg, старий опис кафедри, вимоги до творчого
   іспиту 2022 з прикладами) замінено текстом із docx «інформація кафедра.docx» дослівно:
@@ -41,9 +42,12 @@ docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N secon
 
 ## Чого тут немає і чому
 
-* **Плаката «Графічний дизайн»**: файл «graf_design_plakat - копия.jpg» від клієнта збігається
-  побайтно (md5) із плакатом, що вже стоїть на сайті (`4f17cb88-…`, graf_design_plakat.jpg,
-  4817×7016), тож нового ассета не залито — просто прибрано плакат «Дизайн середовища».
-* **Старі ассети** (плакат `927ab3f0-…`, картинка `1ee1f502-…` 924383.jpg, фото `207adcad-…`,
+* **Чому плакат «Графічний дизайн» замінено новим файлом.** Надісланий клієнтом
+  «graf_design_plakat - копия.jpg» побайтно збігається (md5) із плакатом, що вже стояв на сайті
+  (`4f17cb88-…`, 4817×7016), і той не показувався: висота 7016 px перевищує ліміт Directus на
+  трансформації зображень (за замовчуванням 6000), тож `?width=1200`, яким карусель просить
+  картинку, повертає 400 `ILLEGAL_ASSET_TRANSFORMATION`. Тому той самий плакат стиснуто до ≤1600 px
+  (`graf-design-plakat-2026-10.jpg`) і підставлено в `home.uk.json`. Лімит на Directus не чіпали.
+* **Старі ассети** (плакати `927ab3f0-…` і `4f17cb88-…`, картинка `1ee1f502-…` 924383.jpg, фото `207adcad-…`,
   приклади творчого іспиту) з медіатеки не видаляються: чистити прод без підтвердження не можна.
 * **Англійська версія**: `home.en.json` для цієї кафедри немає, текст лише українською.
