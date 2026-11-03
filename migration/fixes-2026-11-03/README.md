@@ -1,7 +1,8 @@
 # Правки 03.11.2026
 
 Документ «Правки 02-06.11.2026», вкладка «Правки 03.11.26». Матеріали — лист Н. О. Пономарьової
-«Оновлення сторінки Lecture» (03.11, 11 вкладень: 6 docx + PL.png, PL1–PL3.jpg, news.png).
+«Оновлення сторінки Lecture» (03.11, 11 вкладень: 6 docx + PL.png, PL1–PL3.jpg, news.png); листи В. В. Піддубної
+«сайт кафедри українознавства і лінгводидактики» (2 jpg + docx) і «розміщення інформації» (docx «Авторський семінар О.М. Ніколенко 2026»).
 
 | Пункт | Що | Куди (FE) |
 | --- | --- | --- |
@@ -12,11 +13,13 @@
 | LECTURE, «Робоча група» | `teamLecture` | `erasmus-lecture-team.uk.json` |
 | LECTURE, «Контакти» | `contactLecture`; жовтий фрагмент (ПІБ координатора) — посилання на sites.google.com/hnpu.edu.ua/ponomarova/ | `erasmus-lecture-contacts.uk.json` |
 | LECTURE, «Новини проєкту» | `newsrLecture`; по центру news, під нею посилання на Facebook | `erasmus-lecture-news.uk.json` |
+| Кафедра українознавства, «Наукова діяльність» → гурток → секція «Українсько-польські порівняльні студії» → «Новини гуртка» | засідання 27 жовтня і 29 вересня (docx дослівно, фото після тексту, як позначено) — першими, перед «14 грудня 2023» | `app/content/structure/kafedra-ukrayinoznavstva-i-lingvodydaktyky/science.uk.json` |
+| Лабораторія з методики викладання філологічних дисциплін | секція «Авторський семінар для вчителів Ольги Ніколенко» над «Звітом роботи лабораторії у 2025 році» | `app/content/structure/philology-teaching-lab/home.uk.json` |
 
 Сторінки — окремі маршрути `/university/erasmus/lecture[/partners|documents|team|contacts|news]`
 з рядком вкладок (`app/components/shared/ErasmusLectureShell.vue`, `app/utils/lectureTabs.ts`).
 
-Файли — п'ять зображень у `files/` (оригінали з листа, усі ≤1600 px), `files.map.json` — карта uuid5.
+Файли — сім зображень у `files/` (оригінали з листа, усі ≤1600 px), `files.map.json` — карта uuid5.
 
 ```bash
 cd /root/knpu-university-be && git pull
@@ -48,5 +51,6 @@ docker ps --filter name=knpu-university-fe --format "{{.Status}}"   # Up N secon
   посиланнями на ці адреси Drive, самі підказки на сторінку не потрапили.
 - За вказівкою розробника виправлено: «в. Алчевських» → «вул. Алчевських», «інженера» → «інженер»,
   додано закриваючу лапку в «EDEN DIGITAL LEARNING EUROPE MITTETULUNDUSUHING».
+- Гурток: у docx «В.В.  Піддубної» (подвійний пробіл) — зведено до одного; жирний пробіл після дати винесено за тег. «Авторський семінар»: заголовок секції — перший рядок docx; фото в docx немає.
 - Залишено як у клієнтки: «Тернопільський академічний ліцей «Генеза» … Бердянськ»,
   «Уманська гімназія Уманська гімназія».
