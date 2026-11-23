@@ -267,7 +267,7 @@ REDIRECT_KINDS = [
 ]
 
 AGREEMENT_CATEGORIES = [
-    {'text': 'З Інститутами НАПН та НАН України', 'value': 'napn'},
+    {'text': 'З установами НАН, НАПН та НАМН України', 'value': 'napn'},
     {'text': 'Із закладами вищої освіти України', 'value': 'universities'},
     {'text': 'Із закладами середньої, дошкільної освіти та відділами освіти', 'value': 'schools'},
     {'text': 'З організаціями й установами України', 'value': 'organizations'},
