@@ -270,6 +270,7 @@ AGREEMENT_CATEGORIES = [
     {'text': 'З установами НАН, НАПН та НАМН України', 'value': 'napn'},
     {'text': 'Із закладами вищої освіти України', 'value': 'universities'},
     {'text': 'Із закладами середньої, дошкільної освіти та відділами освіти', 'value': 'schools'},
+    {'text': 'З управліннями та відділами освіти України', 'value': 'education-departments'},
     {'text': 'З організаціями й установами України', 'value': 'organizations'},
     {'text': 'Міжнародні договори, угоди, меморандуми', 'value': 'international'},
 ]
@@ -602,7 +603,7 @@ COLLECTIONS = [
     ),
     collection(
         'cooperation_agreements', icon='handshake', sort=44, template='{{number}} · {{partner}}',
-        note='Договори, угоди та меморандуми про співпрацю. П’ять розділів — по одній сторінці на '
+        note='Договори, угоди та меморандуми про співпрацю. Шість розділів — по одній сторінці на '
              'кожен, як накази з основної діяльності.',
         fields=[
             id_field(), status_field(),
@@ -835,6 +836,32 @@ def ensure_select_choices(directus: Directus, collection: str, field_name: str,
     directus.request('PATCH', f'/fields/{collection}/{field_name}', payload={'meta': meta})
 
 
+def sync_select_choices(directus: Directus, collection: str, field_name: str,
+                        wanted: list[dict], dry_run: bool) -> None:
+    """
+    Як `ensure_select_choices`, але ще оновлює підписи й порядок наявних варіантів за `wanted`.
+    Варіанти, яких немає в `wanted`, лишаються в кінці списку.
+    """
+    current = directus.get(f'/fields/{collection}/{field_name}')
+    if not current:
+        return
+    meta = current.get('meta') or {}
+    options = meta.get('options') or {}
+    display_options = meta.get('display_options') or {}
+    old = list(options.get('choices') or [])
+    wanted_values = {choice['value'] for choice in wanted}
+    choices = wanted + [choice for choice in old if choice['value'] not in wanted_values]
+    if choices == old and display_options.get('choices') == choices:
+        return
+    print(f'~ {collection}.{field_name}: ' + ', '.join(choice['value'] for choice in choices))
+    if dry_run:
+        return
+    directus.request('PATCH', f'/fields/{collection}/{field_name}', payload={'meta': {
+        'options': {**options, 'choices': choices},
+        'display_options': {**display_options, 'choices': choices},
+    }})
+
+
 def ensure_document_sections(directus: Directus, dry_run: bool) -> None:
     current = directus.get('/fields/documents/section')
     choices = list(current['meta']['options']['choices'])
@@ -935,6 +962,8 @@ def main() -> int:
         ensure_select_choices(directus, 'static_pages', 'slug', STATIC_PAGE_SLUGS, args.dry_run)
         ensure_select_choices(directus, 'structure_pages', 'unit_slug', STRUCTURE_UNITS, args.dry_run)
         ensure_select_choices(directus, 'structure_pages', 'tab', STRUCTURE_TABS, args.dry_run)
+        sync_select_choices(directus, 'cooperation_agreements', 'category', AGREEMENT_CATEGORIES,
+                            args.dry_run)
         ensure_monitoring_areas(directus, args.dry_run)
         ensure_category_parent(directus, args.dry_run)
     except urllib.error.HTTPError as exc:
